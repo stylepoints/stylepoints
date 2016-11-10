@@ -1,0 +1,74 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  width: 100vw;
+}
+
+.gameTracker {
+  height: 8vh;
+  width: 100vw;
+  align-self: flex-start;
+  text-align: center;
+  border: 1px solid black;
+  position: fixed;
+  left: 0px;
+  top: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameImage {
+  width: 100vw;
+  height: 74vh;
+  position: fixed;
+  top: 16vh;
+  border: 1px solid black;
+  left: 0px;
+  align-self: flex-start;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2vh;
+  left: 0px;
+  border: 1px solid black;
+}
+
+.noButton {
+  position: fixed;
+  width: 30vw;
+  border: 1px solid black;
+  left: 10vw;
+  border-radius: 5vw;
+  display: flex;
+  justify-content: center;
+  height: 4vh;
+  align-items: center;
+}
+
+.yesButton {
+  position: fixed;
+  width: 30vw;
+  border: 1px solid black;
+  right: 10vw;
+  border-radius: 5vw;
+  display: flex;
+  justify-content: center;
+  height: 4vh;
+  align-items: center;
+}
