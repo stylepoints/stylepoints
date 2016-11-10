@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-unused-vars": 1,
+    "no-else-return": 0,
+    "comma-dangle": 0,
+    "new-cap": 1,
+    "react/jsx-filename-extension": 0,
+  },
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "expect": true,
+    "shallow": true
+  }
+}
