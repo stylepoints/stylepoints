@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="30px" viewBox="0 0 44 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>BURGER</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="2.0-Dress-Game" transform="translate(-29.000000, -167.000000)" stroke="#D9D9D9" stroke-width="4">
+            <g id="App" transform="translate(0.000000, 128.000000)">
+                <g id="NAV">
+                    <g id="BURGER" transform="translate(31.000000, 39.000000)">
+                        <path d="M0,2 L40,2" id="Line"></path>
+                        <path d="M0,15 L40,15" id="Line"></path>
+                        <path d="M0,28 L40,28" id="Line"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
