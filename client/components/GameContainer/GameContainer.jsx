@@ -18,10 +18,10 @@ class GameContainer extends Component {
         </div>
         <div className={style.buttonContainer}>
           <div className={style.noButton}>
-            No
+            <span className={style.no} />
           </div>
           <div className={style.yesButton}>
-            Yes
+            <span className={style.yes} />
           </div>
         </div>
       </div>
