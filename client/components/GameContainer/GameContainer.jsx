@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-
+import GameTracker from '../GameTracker';
 import style from './GameContainer.css';
 
 class GameContainer extends Component {
@@ -10,9 +10,7 @@ class GameContainer extends Component {
   render() {
     return (
       <div className={style.gameContainer}>
-        <div className={style.gameTracker}>
-          Game Tracker
-        </div>
+        <GameTracker currentIndex={1} totalImages={10}/>
         <div className={style.gameImage}>
           Game Image
         </div>
