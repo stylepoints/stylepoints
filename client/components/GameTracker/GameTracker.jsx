@@ -11,7 +11,8 @@ const GameTracker = ({ currentIndex, totalImages }) => (
     <div className={style.gameTrackerClose}>
       <button className={style.gameTrackerCloseButton}></button>
     </div>
-    <hr className={style.gameTrackerProgress} />
+    <progress max="100" value="10" className={style.gameTrackerProgress} />
+
   </div>
 );
 
