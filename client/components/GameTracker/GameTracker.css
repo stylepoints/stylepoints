@@ -49,5 +49,11 @@
   margin: 0 auto;
   margin-right: 15px;
   display: block;
+}
 
+.gameTrackerProgress {
+  width: 100vw;
+  height: 5px;
+  position: fixed;
+  top: 16vh;
 }
