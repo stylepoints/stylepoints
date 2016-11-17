@@ -55,7 +55,9 @@ function buildDom() {
   gameContainer.appendChild(ctaButton);
 
   gameContainer.addEventListener('click', function() {
-    alert('Sup');
+    while (gameContainer.hasChildNodes()) {
+      gameContainer.removeChild(gameContainer.lastChild);
+    }
   });
 
 
