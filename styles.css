@@ -1,0 +1,54 @@
+section {
+  font-family: sans-serif;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+}
+#gameContainer {
+  border: 1px solid black;
+  height: 30vh;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+}
+
+#gameImage {
+  width: 50%;
+  height: 100%;
+  align-self: center;
+}
+
+#publisherLogo {
+  height: 5vw;
+  margin-top: 10px;
+  width: 15vw;
+  margin-left: 10px;
+}
+
+#additionalText {
+  font-size: 1em;
+  margin: 12.5px 0px 0px 10px;
+  font-family: sans-serif;
+}
+
+#callToAction {
+  position: fixed;
+  margin: 50px 0px 0px 180px;
+  color: red;
+  font-size: 1em;
+  text-align: left;
+  width: 175px;
+  height: 100px;
+}
+
+#ctaButton {
+  background-color: red;
+  border: 1px solid black;
+  height: 25px;
+  width: 100px;
+  position: fixed;
+  left: 220px;
+  top: 275px;
+  color: white;
+}
