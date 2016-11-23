@@ -34,7 +34,7 @@ var buildInitialDom = function() {
   gameContainer.append(ctaButton);
 
   ctaButton.addEventListener('click', function(event) {
-    buildSecondaryDom();
+    // buildSecondaryDom();
   });
 }
 
