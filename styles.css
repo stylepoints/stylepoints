@@ -27,28 +27,32 @@ section {
 }
 
 #additionalText {
-  font-size: 1em;
-  margin: 12.5px 0px 0px 10px;
+  font-size: 0.75em;
+  width: 100px;
+  margin-top: 15px;
+  margin-left: -25px;
   font-family: sans-serif;
 }
 
 #callToAction {
+  margin-top: 60px;
+  margin-left: 200px;
+  width: 125px;
   position: fixed;
-  margin: 50px 0px 0px 180px;
-  color: red;
+  color: black;
   font-size: 1em;
   text-align: left;
-  width: 175px;
   height: 100px;
 }
 
 #ctaButton {
   background-color: red;
   border: 1px solid black;
-  height: 25px;
+  height: 35px;
   width: 100px;
-  position: fixed;
-  left: 220px;
-  top: 275px;
+  top: 45vh;
   color: white;
+  position: fixed;
+  left: 60vw;
+  font-size: 0.75em;
 }
