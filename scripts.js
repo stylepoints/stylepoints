@@ -38,15 +38,50 @@ var buildInitialDom = function() {
   gameContainer.append(informationContainer);
 
   ctaButton.addEventListener('click', function(event) {
-    // buildSecondaryDom();
+    buildGameDom();
   });
 }
 
 var buildGameDom = function() {
-  var gameImage = $.create('img', {
-    id: 'gameImage',
-    src: 'http://placekitten.com/200/175'
+  var gameImage = $('#gameImage');
+  var informationContainer = $('#informationContainer');
+
+  informationContainer.removeChild( $('#ctaButton') );
+
+  oldMessage = $('#callToAction');
+  oldMessage.innerHTML = '';
+  var gameMessage = $.set($('#callToAction'), {
+    id: 'gameMessage',
+    contents: 'Is your style classy & classic?'
   });
+  
+  var negativeButton = $.create('div', {
+    id: 'negativeButton',
+    contents: 'Not for me'
+  });
+
+  var positiveButton = $.create('div', {
+    id: 'positiveButton',
+    contents: 'Love it!'
+  });
+
+  negativeImage = $.create('img',
+  {
+    'src': 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIzMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjUiPgogICAgICAgIDxnIGlkPSIwLjItRGVza3RvcC1pbmxpbmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MDEuMDAwMDAwLCAtMzA4LjAwMDAwMCkiIGZpbGw9IiM1RTVFNUUiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTQ2LjAwMDAwMCwgMjkzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjE4MC40Njk2NzkgMTUgMTcwLjAxNzgzNiAyNS40NTE4NDMgMTU5LjU2NTk5MyAxNSAxNTUgMTkuNTMwMzIxIDE2NS40NTE4NDMgMjkuOTgyMTY0MSAxNTUgNDAuNDM0MDA3MSAxNTkuNTY1OTkzIDQ1IDE3MC4wMTc4MzYgMzQuNTQ4MTU3IDE4MC40Njk2NzkgNDUgMTg1IDQwLjQzNDAwNzEgMTc0LjU0ODE1NyAyOS45ODIxNjQxIDE4NSAxOS41MzAzMjEiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+',
+    'id': 'negativeImage'
+  });
+
+  positiveImage = $.create('img',
+  {
+    'src': 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzVweCIgaGVpZ2h0PSIzM3B4IiB2aWV3Qm94PSIwIDAgMzUgMzMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iMC4yLURlc2t0b3AtaW5saW5lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjk4LjAwMDAwMCwgLTM2OS4wMDAwMDApIiBmaWxsPSIjOUZERTlGIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU0Ni4wMDAwMDAsIDI5My4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC03IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MS4wMDAwMDAsIDczLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC02IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MS4wMDAwMDAsIDMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNC45NTMxLDguMTkwMzQ0OTcgQzM0LjQ4NjU1LDMuNTg5NjEwNzkgMzAuNjA5NiwwIDI1Ljg5NTgsMCBDMjIuMTE3NTUsMCAxOC44NzgzLDIuMzA1OTc4NiAxNy41LDUuNTg5NDExNTQgQzE2LjEyMTcsMi4zMDU5Nzg2IDEyLjg4MjQ1LDAgOS4xMDQ1NSwwIEM0LjM5MDQsMCAwLjUxMzEsMy41ODk2MTA3OSAwLjA0NjksOC4xOTAzNDQ5NyBDMC4wMTU3NSw4LjQ5Njg3MzUzIDAsOC44MDgzMTIxNiAwLDkuMTIzMjU3OTggQzAsMjAuMjA4MDg4MyAxMy41NzU4LDI1LjQzOTc2NjMgMTcuNSwzMi44MzI5MjY2IEwxNy41LDMyLjgzMjkyNjYgQzIxLjQyNDIsMjUuNDQwMTE3IDM1LDIwLjIwODQzOSAzNSw5LjEyMzI1Nzk4IEMzNSw4LjgwODMxMjE2IDM0Ljk4NDI1LDguNDk2ODczNTMgMzQuOTUzMSw4LjE5MDM0NDk3IFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+',
+    'id': 'positiveImage'
+  });
+
+  negativeButton.append(negativeImage);
+  positiveButton.append(positiveImage);
+  
+  informationContainer.append(negativeButton);
+  informationContainer.append(positiveButton);
 
   
 }
