@@ -39,6 +39,7 @@ section {
 }
 
 #publisherLogo {
+  left: 30px;
   height: 23px;
   width: 58px;
   position: relative;
@@ -49,7 +50,7 @@ section {
   font-size: 1em;
   font-family: sans-serif;
   position: relative;
-  left: 65px;
+  left: 95px;
   font-family: 'karlaregular';
 }
 
@@ -62,6 +63,7 @@ section {
   justify-content: center;
   position: relative;
   font-family: 'playfair';
+  margin-left: 55px;
 }
 
 #gameMessage {
@@ -73,6 +75,7 @@ section {
   justify-content: center;
   position: relative;
   font-family: 'playfair';
+  margin-left: 55px;
 }
 
 #ctaButton {
