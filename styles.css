@@ -32,19 +32,24 @@ section {
   border-top: 1px solid #F0F0F0;
   border-bottom: 1px solid #F0F0F0;
   height: 300px;
-  width: 650px;
+  width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
 
-#gameImage {
-  width: 100%;
-  height: 80%;
+.gameImage {
+  width: 380px;
+  height: 240px;
   padding: 30px 10px 0px 10px;
+  overflow-x: hidden;
 }
 
-#gameImageDiv {
+.gameImageDiv {
+  position: absolute;
+}
+
+#imageContainer {
   width: 50%;
 }
 
@@ -176,3 +181,51 @@ section {
   font-family: 'playfair';
   font-size: 1em;
 }
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(50%);
+  }
+  65%{
+    transform: translateX(65%);
+  }
+  80%{
+    transform: translateX(85%);
+  }
+  95%{
+    transform: translateX(95%);
+  }     
+  100% {
+    transform: translateX(100%);
+  }   
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  50%{
+    -webkit-transform: translateX(50%);
+  }
+  65%{
+    -webkit-transform: translateX(65%);
+  }
+  80%{
+    -webkit-transform: translateX(85%);
+  }
+  95%{
+    -webkit-transform: translateX(95%);
+  }     
+  100% {
+    -webkit-transform: translateX(100%);
+  } 
+}
+
+.hidden {
+  display: none;
+}
+
+
