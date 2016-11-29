@@ -41,26 +41,47 @@ positiveIndicator = $.create('img', {
 });
 
 
+var presentFinalScreen = function() {
   var interactionContainer = $("#interactionContainer");
-  });
-  var ctaButton = $.create('button', {
-    id: 'ctaButton', 
-    contents: 'Let\'s go!'
+  
+  var oldGameMessage = $('#gameMessage');
+  oldGameMessage.innerHTML = '';
+  var resultMessageHeader = $.set(oldGameMessage, {
+    contents: binaryCopy.resultMessageHeader
   });
 
-  mainContainer.append(gameContainer);
-  gameContainer.append(gameImage);
-  informationContainer.append(publisherLogo);
-  informationContainer.append(additionalText);
-  informationContainer.append(callToAction);
-  informationContainer.append(ctaButton);
-  gameContainer.append(informationContainer);
-
-  ctaButton.addEventListener('click', function(event) {
-    buildGameDom();
+  var oldGameImage = $('#gameImage');
+  var newGameImage = $.set(oldGameImage, {
+      src: binaryCopy.resultImage
   });
+
+
+  var emailSubmitForm = $.create('form', {
+    id: 'emailSubmitForm',
+    contents: [
+      {
+        tag: 'label',
+        id: 'resultMessageText',
+        contents: binaryCopy.resultMessageText
+      },
+      {
+        tag: 'input',
+        id: 'emailFormInput',
+        type: 'text',
+      },
+      {
+        tag: 'input',
+        type: 'submit',
+        id: 'emailFormButton',
+        value: binaryCopy.emailFormButtonText
+      }
+    ]
+  });
+
   interactionContainer.removeChild($("#negativeButton"));
   interactionContainer.removeChild($("#positiveButton"));
+
+  interactionContainer.append(emailSubmitForm);
 }
 
 var nextAnswer = function(answer) {
