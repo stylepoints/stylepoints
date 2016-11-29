@@ -140,3 +140,36 @@ section {
   position: relative;
   left: 20px;
 }
+
+#resultMessageText {
+  font-family: 'Open Sans';
+  width: 100%;
+  font-size: 1em;
+  color: #999999;
+  text-align: left;
+  margin-left: 27.5px;
+  display: block;
+}
+
+#emailFormInput {
+  display: block;
+  margin-left: 27.5px;
+  width: 100%;
+  background-color: #F6F6F6;
+  border: none;
+  height: 30px;
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  padding-left: 10px;
+}
+
+#emailFormButton {
+  width: 100%;
+  margin-left: 27.5px;
+  margin-top: 10px;
+  height: 30px;
+  border: 1px solid #F6F6F6;
+  background-color: white;
+  font-family: 'playfair';
+  font-size: 1em;
+}
