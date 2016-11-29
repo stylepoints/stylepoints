@@ -1,4 +1,3 @@
-var answer1, answer2, answer3;
 var binaryCopy = {
   "type": "binary",
   "additionalText": "For you",
@@ -142,7 +141,12 @@ var positiveAnswer = function(index, answer) {
 
 }
 var buildGameDom = function() {
+
   var gameImage = $('#gameImage');
+
+  var newGameImage = $.set(gameImage, {
+    src: binaryCopy.gameImage1
+  });
 
   var interactionContainer = $('#interactionContainer');
 
