@@ -181,8 +181,6 @@ var buildGameDom = function() {
   negativeButton.append(negativeImage);
   positiveButton.append(positiveImage);
   
-  informationContainer.append(negativeButton);
-  informationContainer.append(positiveButton);
   interactionContainer.append(negativeButton);
   interactionContainer.append(positiveButton);
 
