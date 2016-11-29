@@ -94,6 +94,48 @@ var buildGameDom = function() {
   
 }
 
+var buildInitialDom = function() {
+  var mainContainer = $('#container');
+  var gameContainer = $.create('div', {
+    id: 'gameContainer'
+  });
+  var gameImage = $.create('img', {
+    id: 'gameImage',
+    src: binaryCopy.initialImage
+  });
+  var interactionContainer = $.create('div', {
+    id: 'interactionContainer'
+  });
+  var publisherLogo = $.create('img', {
+    id: 'publisherLogo',
+    src: binaryCopy.publisherLogo
+  });
+  var callToAction = $.create('div', {
+    id: 'callToAction',
+    contents: binaryCopy.callToActionMessage
+  });
+  var additionalText = $.create('p', {
+    id: 'additionalText',
+    contents: binaryCopy.additionalText
+  });
+  var ctaButton = $.create('button', {
+    id: 'ctaButton', 
+    contents: binaryCopy.callToActionButtonText
+  });
+
+  mainContainer.append(gameContainer);
+  gameContainer.append(gameImage);
+  interactionContainer.append(publisherLogo);
+  interactionContainer.append(additionalText);
+  interactionContainer.append(callToAction);
+  interactionContainer.append(ctaButton);
+  gameContainer.append(interactionContainer);
+
+  ctaButton.addEventListener('click', function(event) {
+    buildGameDom();
+  });
+}
+
 buildInitialDom();
 
 
