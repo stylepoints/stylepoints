@@ -42,6 +42,7 @@ positiveIndicator = $.create('img', {
 
 
 var presentFinalScreen = function() {
+
   var interactionContainer = $("#interactionContainer");
   
   var oldGameMessage = $('#gameMessage');
@@ -224,9 +225,12 @@ var buildInitialDom = function() {
   var gameContainer = $.create('div', {
     id: 'gameContainer'
   });
-  var gameImage = $.create('img', {
-    id: 'gameImage',
-    src: binaryCopy.initialImage
+  var gameImageDiv = $.create('div', {
+    contents: [{id: 'gameImage',
+      src: binaryCopy.initialImage,
+      'tag': 'img'
+      }
+    ], id: 'gameImageDiv'
   });
   var interactionContainer = $.create('div', {
     id: 'interactionContainer'
@@ -249,7 +253,7 @@ var buildInitialDom = function() {
   });
 
   mainContainer.append(gameContainer);
-  gameContainer.append(gameImage);
+  gameContainer.append(gameImageDiv);
   interactionContainer.append(publisherLogo);
   interactionContainer.append(additionalText);
   interactionContainer.append(callToAction);
