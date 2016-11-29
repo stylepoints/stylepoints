@@ -126,9 +126,7 @@ var positiveAnswer = function(index, answer) {
 }
 var buildGameDom = function() {
   var gameImage = $('#gameImage');
-  var informationContainer = $('#informationContainer');
 
-  informationContainer.removeChild( $('#ctaButton') );
   var interactionContainer = $('#interactionContainer');
 
   interactionContainer.removeChild( $('#ctaButton') );
