@@ -25,7 +25,9 @@ var binaryCopy = {
 
 var answer1, answer2, answer3, image1, image2, image3;
 
-var index = 1;
+var index = 0;
+
+
 
 
 negativeIndicator = $.create('img', {
@@ -51,10 +53,7 @@ var presentFinalScreen = function() {
     contents: binaryCopy.resultMessageHeader
   });
 
-  var oldGameImage = $('#gameImage');
-  var newGameImage = $.set(oldGameImage, {
-      src: binaryCopy.resultImage
-  });
+  
 
 
   var emailSubmitForm = $.create('form', {
@@ -90,14 +89,22 @@ var nextAnswer = function(answer) {
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
   index++;
 
+  console.log(index, 'index');
 
-  var gameImage = $('#gameImage');
   var gameMessage = $('#gameMessage');
 
-  if (index === 2) {
-    var newGameImage = $.set(gameImage, {
-      src: binaryCopy.gameImage2
+  var gameImages = $$('.gameImageDiv');
+
+
+  if (index === 1) {
+    gameMessage.innerHTML = '';
+    var newGameMessage = $.set(gameMessage, {
+      contents: binaryCopy.gameMessageTextOne
     });
+  }
+
+  if (index === 2) {
+    
     gameMessage.innerHTML = '';
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextTwo
@@ -105,14 +112,12 @@ var nextAnswer = function(answer) {
   }
 
   if (index === 3) {
-    newGameImage = $.set(gameImage, {
-      src: binaryCopy.gameImage3
-    });
     gameMessage.innerHTML = '';
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextThree
     });
   }
+  
   
   if (index === 4) {
     presentFinalScreen();
@@ -141,6 +146,9 @@ var negativeAnswer = function(index, answer) {
     nextAnswer(answer);
   }
 
+  if (index === 4) {
+    presentFinalScreen();
+  } 
 }
 
 var positiveAnswer = function(index, answer) {
@@ -161,18 +169,56 @@ var positiveAnswer = function(index, answer) {
     nextAnswer(answer);
   }
 
+  if (index === 4) {
+    presentFinalScreen();
+  }  
+
 }
 var buildGameDom = function() {
 
-  var gameImage = $('#gameImage');
+  
 
-  var newGameImage = $.set(gameImage, {
-    src: binaryCopy.gameImage1
-  });
+  console.log(index, 'index');
 
   var interactionContainer = $('#interactionContainer');
 
+  var gameImageDiv = $.create('div', {
+    contents: [{
+        className: 'gameImage ',
+        src: binaryCopy.gameImage1,
+        'tag': 'img'
+      }], className: 'gameImageDiv'
+    });
+  var gameImageDiv2 = $.create('div', {
+    contents: [{
+        className: 'gameImage hidden',
+        src: binaryCopy.gameImage2,
+        'tag': 'img'
+      }], className: 'gameImageDiv'
+    }); 
+  var gameImageDiv3 = $.create('div', {
+    contents: [{
+        className: 'gameImage hidden',
+        src: binaryCopy.gameImage3,
+        'tag': 'img'
+      }], className: 'gameImageDiv'
+    }); 
+  var gameImageDiv4 = $.create('div', {
+    contents: [{
+        className: 'gameImage hidden',
+        src: binaryCopy.resultImage,
+        'tag': 'img'
+      }], className: 'gameImageDiv'
+    });
+
+  var gameImageDivs = [gameImageDiv, gameImageDiv2, gameImageDiv3, gameImageDiv4];
+  
+  for (image in gameImageDivs) 
+  {
+    imageContainer.append(gameImageDivs[image]);
+  }
   interactionContainer.removeChild( $('#ctaButton') );
+
 
   oldMessage = $('#callToAction');
   oldMessage.innerHTML = '';
@@ -225,13 +271,18 @@ var buildInitialDom = function() {
   var gameContainer = $.create('div', {
     id: 'gameContainer'
   });
-  var gameImageDiv = $.create('div', {
-    contents: [{id: 'gameImage',
-      src: binaryCopy.initialImage,
-      'tag': 'img'
-      }
-    ], id: 'gameImageDiv'
+  var imageContainer = $.create('div', {
+    id: 'imageContainer'
   });
+  var initialGameImage = $.create('div', {
+    contents: [{
+        className: 'gameImage',
+        src: binaryCopy.initialImage,
+        'tag': 'img'
+      }], className: 'gameImageDiv'
+    });
+  
+
   var interactionContainer = $.create('div', {
     id: 'interactionContainer'
   });
@@ -253,7 +304,10 @@ var buildInitialDom = function() {
   });
 
   mainContainer.append(gameContainer);
-  gameContainer.append(gameImageDiv);
+  
+  gameContainer.append(imageContainer);
+
+  
   interactionContainer.append(publisherLogo);
   interactionContainer.append(additionalText);
   interactionContainer.append(callToAction);
@@ -261,6 +315,7 @@ var buildInitialDom = function() {
   gameContainer.append(interactionContainer);
 
   ctaButton.addEventListener('click', function(event) {
+    index++;
     buildGameDom();
   });
 }
