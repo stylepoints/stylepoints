@@ -23,6 +23,8 @@ var buildInitialDom = function() {
   var additionalText = $.create('p', {
     id: 'additionalText',
     contents: 'For you'
+var answer1, answer2, answer3, image1, image2, image3;
+var index = 1;
   var interactionContainer = $("#interactionContainer");
   });
   var ctaButton = $.create('button', {
@@ -45,6 +47,83 @@ var buildInitialDom = function() {
   interactionContainer.removeChild($("#positiveButton"));
 }
 
+var nextAnswer = function(answer) {
+
+  console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
+  index++;
+
+
+  var gameImage = $('#gameImage');
+  var gameMessage = $('#gameMessage');
+
+  if (index === 2) {
+    var newGameImage = $.set(gameImage, {
+      src: binaryCopy.gameImage2
+    });
+    gameMessage.innerHTML = '';
+    var newGameMessage = $.set(gameMessage, {
+      contents: binaryCopy.gameMessageTextTwo
+    });
+  }
+
+  if (index === 3) {
+    newGameImage = $.set(gameImage, {
+      src: binaryCopy.gameImage3
+    });
+    gameMessage.innerHTML = '';
+    var newGameMessage = $.set(gameMessage, {
+      contents: binaryCopy.gameMessageTextThree
+    });
+  }
+  
+  if (index === 4) {
+    presentFinalScreen();
+  } 
+
+
+
+}
+
+var negativeAnswer = function(index, answer) {
+  console.log('negative answer');
+
+
+  if (index === 1) {
+    answer1 = answer;
+    nextAnswer(answer);
+  }
+
+  if (index === 2) {
+    answer2 = answer;
+    nextAnswer(answer);
+  }
+
+  if (index === 3) {
+    answer3 = answer;
+    nextAnswer(answer);
+  }
+
+}
+
+var positiveAnswer = function(index, answer) {
+  console.log('positive answer');
+
+  if (index === 1) {
+    answer1 = answer;
+    nextAnswer(answer);
+  }
+
+  if (index === 2) {
+    answer2 = answer;
+    nextAnswer(answer);
+  }
+
+  if (index === 3) {
+    answer3 = answer;
+    nextAnswer(answer);
+  }
+
+}
 var buildGameDom = function() {
   var gameImage = $('#gameImage');
   var informationContainer = $('#informationContainer');
@@ -91,6 +170,13 @@ var buildGameDom = function() {
   interactionContainer.append(negativeButton);
   interactionContainer.append(positiveButton);
 
+  negativeButton.addEventListener('click', function(event) {
+    negativeAnswer(index, false);
+  });
+
+  positiveButton.addEventListener('click', function(event) {
+    positiveAnswer(index, true);
+  });
   
 }
 
