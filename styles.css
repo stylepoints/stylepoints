@@ -94,7 +94,7 @@ section {
   font-family: 'playfair';
 }
 
-#informationContainer {
+#interactionContainer {
   display: flex;
   flex-direction: column;
   width: 50%;

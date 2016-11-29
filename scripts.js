@@ -23,6 +23,7 @@ var buildInitialDom = function() {
   var additionalText = $.create('p', {
     id: 'additionalText',
     contents: 'For you'
+  var interactionContainer = $("#interactionContainer");
   });
   var ctaButton = $.create('button', {
     id: 'ctaButton', 
@@ -40,6 +41,8 @@ var buildInitialDom = function() {
   ctaButton.addEventListener('click', function(event) {
     buildGameDom();
   });
+  interactionContainer.removeChild($("#negativeButton"));
+  interactionContainer.removeChild($("#positiveButton"));
 }
 
 var buildGameDom = function() {
@@ -47,6 +50,9 @@ var buildGameDom = function() {
   var informationContainer = $('#informationContainer');
 
   informationContainer.removeChild( $('#ctaButton') );
+  var interactionContainer = $('#interactionContainer');
+
+  interactionContainer.removeChild( $('#ctaButton') );
 
   oldMessage = $('#callToAction');
   oldMessage.innerHTML = '';
@@ -82,6 +88,8 @@ var buildGameDom = function() {
   
   informationContainer.append(negativeButton);
   informationContainer.append(positiveButton);
+  interactionContainer.append(negativeButton);
+  interactionContainer.append(positiveButton);
 
   
 }
