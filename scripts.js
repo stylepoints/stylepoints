@@ -112,6 +112,8 @@ var animateExit = function() {
 
 }
 
+var nextQuestion = function() {
+
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
   index++;
 
@@ -123,6 +125,9 @@ var animateExit = function() {
 
 
   if (index === 1) {
+
+    animateExit();
+
     gameMessage.innerHTML = '';
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextOne
@@ -130,7 +135,9 @@ var animateExit = function() {
   }
 
   if (index === 2) {
-    
+
+    animateExit();
+
     gameMessage.innerHTML = '';
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextTwo
@@ -138,6 +145,8 @@ var animateExit = function() {
   }
 
   if (index === 3) {
+
+    animateExit();
     gameMessage.innerHTML = '';
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextThree
@@ -146,6 +155,7 @@ var animateExit = function() {
   
   
   if (index === 4) {
+    animateExit();
     presentFinalScreen();
   } 
 
