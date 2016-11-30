@@ -85,6 +85,32 @@ var presentFinalScreen = function() {
 }
 
 var nextAnswer = function(answer) {
+var animateExit = function() {
+  var gameImages = $$('.gameImageDiv');
+
+  for (image in gameImages)
+  {
+    
+    if (image == index)
+    {
+      
+      slideRight = $.transition(gameImages[image - 1], 
+      {
+          left: "500px",
+          transition: "left 1s"
+      });
+
+      
+      showNext = $.style(gameImages[image],
+      {
+          "z-index": -200 * index,
+          "display": "block"
+      });
+
+    }
+  }
+
+}
 
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
   index++;
