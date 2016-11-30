@@ -84,7 +84,6 @@ var presentFinalScreen = function() {
   interactionContainer.append(emailSubmitForm);
 }
 
-var nextAnswer = function(answer) {
 var animateExit = function() {
   var gameImages = $$('.gameImageDiv');
 
