@@ -163,84 +163,93 @@ var nextQuestion = function() {
 }
 
 var negativeAnswer = function(index, answer) {
+  
+
   console.log('negative answer');
 
-
-  if (index === 1) {
+  if (index === 0)
+  {
+    nextQuestion();
+  }
+  else if (index === 1) {
     answer1 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 2) {
+  else if (index === 2) {
     answer2 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 3) {
+  else if (index === 3) {
     answer3 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 4) {
-    presentFinalScreen();
-  } 
+  else if (index === 4) {
+    nextQuestion();
+  }
 }
 
 var positiveAnswer = function(index, answer) {
+  
   console.log('positive answer');
 
-  if (index === 1) {
+  if (index === 0)
+  {
+    nextQuestion();
+  }
+  else if (index === 1) {
     answer1 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 2) {
+  else if (index === 2) {
     answer2 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 3) {
+  else if (index === 3) {
     answer3 = answer;
-    nextAnswer(answer);
+    nextQuestion();
   }
-
-  if (index === 4) {
-    presentFinalScreen();
-  }  
+  else if (index === 4) {
+    nextQuestion();
+  }
 
 }
 var buildGameDom = function() {
 
   
-
+  index++;
   console.log(index, 'index');
 
   var interactionContainer = $('#interactionContainer');
 
   var gameImageDiv = $.create('div', {
     contents: [{
-        className: 'gameImage ',
+        className: 'gameImage',
         src: binaryCopy.gameImage1,
-        'tag': 'img'
-      }], className: 'gameImageDiv'
+        'tag': 'img',
+
+      }], className: 'gameImageDiv',
+      style: {
+          display: 'block',
+          "z-index": -1
+        }
     });
   var gameImageDiv2 = $.create('div', {
     contents: [{
-        className: 'gameImage hidden',
+        className: 'gameImage',
         src: binaryCopy.gameImage2,
         'tag': 'img'
       }], className: 'gameImageDiv'
     }); 
   var gameImageDiv3 = $.create('div', {
     contents: [{
-        className: 'gameImage hidden',
+        className: 'gameImage',
         src: binaryCopy.gameImage3,
         'tag': 'img'
       }], className: 'gameImageDiv'
     }); 
   var gameImageDiv4 = $.create('div', {
     contents: [{
-        className: 'gameImage hidden',
+        className: 'gameImage',
         src: binaryCopy.resultImage,
         'tag': 'img'
       }], className: 'gameImageDiv'
@@ -314,7 +323,7 @@ var buildInitialDom = function() {
         className: 'gameImage',
         src: binaryCopy.initialImage,
         'tag': 'img'
-      }], className: 'gameImageDiv'
+      }], className: 'gameImageDiv', style: { "display": "block" }
     });
   
 
@@ -342,6 +351,8 @@ var buildInitialDom = function() {
   
   gameContainer.append(imageContainer);
 
+  imageContainer.append(initialGameImage);
+
   
   interactionContainer.append(publisherLogo);
   interactionContainer.append(additionalText);
@@ -350,8 +361,14 @@ var buildInitialDom = function() {
   gameContainer.append(interactionContainer);
 
   ctaButton.addEventListener('click', function(event) {
-    index++;
+    slideRight = $.transition(initialGameImage, 
+    {
+        left: "500px",
+        transition: "left 1s"
+    });
+
     buildGameDom();
+
   });
 }
 

@@ -42,15 +42,27 @@ section {
   width: 380px;
   height: 240px;
   padding: 30px 10px 0px 10px;
-  overflow-x: hidden;
+   
 }
 
 .gameImageDiv {
   position: absolute;
+  width: 100%;
+  overflow: hidden;
+  -moz-transition: left 1s; 
+  -webkit-transition: left 1s;  
+  -ms-transition: left 1s;  
+  -o-transition: left 1s;  
+  transition: left 1s;  
+  left: 0px;
+  z-index: 1;
+  display: none;
 }
 
 #imageContainer {
   width: 50%;
+  overflow: hidden;
+  position: relative;
 }
 
 #publisherLogo {
@@ -182,50 +194,14 @@ section {
   font-size: 1em;
 }
 
-@keyframes slideRight {
-  0% {
-    transform: translateX(0%);
-  }
-  50%{
-    transform: translateX(50%);
-  }
-  65%{
-    transform: translateX(65%);
-  }
-  80%{
-    transform: translateX(85%);
-  }
-  95%{
-    transform: translateX(95%);
-  }     
-  100% {
-    transform: translateX(100%);
-  }   
+.slideRight {
+  left: 10000px;
 }
 
-@-webkit-keyframes slideRight {
-  0% {
-    -webkit-transform: translateX(0%);
-  }
-  50%{
-    -webkit-transform: translateX(50%);
-  }
-  65%{
-    -webkit-transform: translateX(65%);
-  }
-  80%{
-    -webkit-transform: translateX(85%);
-  }
-  95%{
-    -webkit-transform: translateX(95%);
-  }     
-  100% {
-    -webkit-transform: translateX(100%);
-  } 
+
+.lower {
+  z-index: -9999;
 }
 
-.hidden {
-  display: none;
-}
 
 
