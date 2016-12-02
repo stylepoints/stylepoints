@@ -6,7 +6,7 @@ var binaryCopy = {
   "callToActionButtonText": "Let’s go!",
   "positiveButtonText": "love it!",
   "negativeButtonText": "not for me",
-  "gameMessageTextOne": "IS YOUR STYLE CLASSY & CLASSIC?",
+  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSYDDDDDDDDDDDDDDDDDDDDDD",
   "gameMessageTextTwo": "or is it insert text here.",
   "gameMessageTextThree": "and what about insert text here?",
   "resultMessageHeader": "here it is. Your perfect Little Black Dress",
@@ -128,6 +128,17 @@ var nextQuestion = function() {
     animateExit();
 
     gameMessage.innerHTML = '';
+
+    if (binaryCopy.gameMessageTextOne.length > 32) {
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage gameMessageSmallText'
+      });
+    }
+    else {
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage'
+      });
+    }
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextOne
     });
@@ -138,6 +149,17 @@ var nextQuestion = function() {
     animateExit();
 
     gameMessage.innerHTML = '';
+
+    if (binaryCopy.gameMessageTextTwo.length > 32) {
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage gameMessageSmallText'
+      });
+    }
+    else {
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage'
+      });
+    }
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextTwo
     });
@@ -147,6 +169,18 @@ var nextQuestion = function() {
 
     animateExit();
     gameMessage.innerHTML = '';
+
+    if (binaryCopy.gameMessageTextThree.length > 32) {
+      console.log('hi');
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage gameMessageSmallText'
+      });
+    }
+    else {
+      var changeToSmallText = $.set(gameMessage, {
+        className: 'gameMessage'
+      });
+    }
     var newGameMessage = $.set(gameMessage, {
       contents: binaryCopy.gameMessageTextThree
     });
@@ -267,11 +301,23 @@ var buildGameDom = function() {
   oldMessage = $('#callToAction');
   oldMessage.innerHTML = '';
 
+
+
   var gameMessage = $.set($('#callToAction'), {
     id: 'gameMessage',
-    contents: binaryCopy.gameMessageTextOne
+    contents: binaryCopy.gameMessageTextOne,
+    className: 'gameMessage'
   });
+
+  if (binaryCopy.gameMessageTextOne.length > 32) {
+    changeToSmallText = $.set(gameMessage, {
+      className: 'gameMessage gameMessageSmallText'
+    })
+  }
   
+  var buttonContainer = $.create('div', {
+    id: 'buttonContainer'
+  });
   var negativeButton = $.create('div', {
     id: 'negativeButton',
     contents: binaryCopy.negativeButtonText
@@ -296,9 +342,11 @@ var buildGameDom = function() {
 
   negativeButton.append(negativeImage);
   positiveButton.append(positiveImage);
+
+  buttonContainer.append(negativeButton);
+  buttonContainer.append(positiveButton);
   
-  interactionContainer.append(negativeButton);
-  interactionContainer.append(positiveButton);
+  interactionContainer.append(buttonContainer);
 
   negativeButton.addEventListener('click', function(event) {
     negativeAnswer(index, false);
@@ -363,8 +411,7 @@ var buildInitialDom = function() {
   ctaButton.addEventListener('click', function(event) {
     slideRight = $.transition(initialGameImage, 
     {
-        left: "500px",
-        transition: "left 1s"
+        left: "500px"
     });
 
     buildGameDom();
