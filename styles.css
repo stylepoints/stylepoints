@@ -28,6 +28,29 @@ section {
   margin: 0 auto;
   padding: 40px 0px 40px 0px;
 }
+
+.indexMarker {
+	height: 10px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.5);
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	margin-right: 10px;
+}
+
+.highlighted {
+	background: rgba(255, 255, 255, 1);
+}
+
+.indexMarkerContainer {
+	width: 75px;
+display: inline-block;
+position: relative;
+top: -65px;
+margin: 0 auto;
+text-align: center;
+}
 #gameContainer {
 	height: 460px;
 width: 350px;

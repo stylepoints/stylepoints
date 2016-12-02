@@ -54,6 +54,7 @@ var presentFinalScreen = function() {
 
   imageContainer.append(overlay);
 
+  removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = '';
 
@@ -167,7 +168,18 @@ var nextQuestion = function() {
 
   if (index === 2) {
 
+    
+  
+
     animateExit();
+
+    var removeHighlight = $.set($$('.indexMarker')[0], {
+      className: 'indexMarker'
+    });
+    
+    var highlightNext = $.set($$('.indexMarker')[1], {
+      className: 'indexMarker highlighted'
+    });
 
     gameMessage.innerHTML = '';
 
@@ -181,6 +193,15 @@ var nextQuestion = function() {
   if (index === 3) {
 
     animateExit();
+
+    var removeHighlight = $.set($$('.indexMarker')[1], {
+      className: 'indexMarker'
+    });
+    
+    var highlightNext = $.set($$('.indexMarker')[2], {
+      className: 'indexMarker highlighted'
+    });
+
     gameMessage.innerHTML = '';
 
     var setText = $.set(gameMessage, {
@@ -258,13 +279,34 @@ var buildGameDom = function() {
 
   var interactionContainer = $('#interactionContainer');
 
+  var indexMarkerContainer = $.create('div', {
+    className: 'indexMarkerContainer'
+  });
+
+
+  for (var i = 0; i < 3; i++) {
+    var indexMarker = $.create('div',
+    {
+      className: 'indexMarker',
+    });
+    indexMarkerContainer.append(indexMarker);
+  }
+
+
+
+  gameContainer.append(indexMarkerContainer);
+  
+  highlightInitialIndex = $.set($$('.indexMarker')[0], {
+    className: 'indexMarker highlighted'
+  });
+
+
   var gameImageDiv = $.create('div', {
     contents: [{
         className: 'gameImage',
         src: binaryCopy.gameImage1,
         'tag': 'img',
-
-      }], className: 'gameImageDiv',
+        }], className: 'gameImageDiv',
       style: {
           display: 'block',
           "z-index": -1
@@ -309,14 +351,8 @@ var buildGameDom = function() {
   var gameMessage = $.set($('#callToAction'), {
     id: 'gameMessage',
     contents: binaryCopy.gameMessageTextOne,
-    className: 'gameMessage'
+    className: gameMessageTextType(binaryCopy.gameMessageTextOne)
   });
-
-  if (binaryCopy.gameMessageTextOne.length > 32) {
-    changeToSmallText = $.set(gameMessage, {
-      className: 'gameMessage gameMessageSmallText'
-    })
-  }
   
   var buttonContainer = $.create('div', {
     id: 'buttonContainer'
@@ -331,13 +367,13 @@ var buildGameDom = function() {
     contents: binaryCopy.positiveButtonText
   });
 
-  negativeImage = $.create('img',
+  var negativeImage = $.create('img',
   {
     'src': binaryCopy.negativeButtonImage,
     'id': 'negativeImage'
   });
 
-  positiveImage = $.create('img',
+  var positiveImage = $.create('img',
   {
     'src': binaryCopy.positiveButtonImage,
     'id': 'positiveImage'
