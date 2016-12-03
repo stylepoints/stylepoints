@@ -153,19 +153,7 @@ var nextQuestion = function() {
 
   if (index === 2) {
 
-    
-  
-
-    animateExit();
-
-    var removeHighlight = $.set($$('.indexMarker')[0], {
-      className: 'indexMarker'
-    });
-    
-    var highlightNext = $.set($$('.indexMarker')[1], {
-      className: 'indexMarker highlighted'
-    });
-
+    animateExit();    
     gameMessage.innerHTML = '';
 
     var setText = $.set(gameMessage, {
@@ -178,14 +166,6 @@ var nextQuestion = function() {
   if (index === 3) {
 
     animateExit();
-
-    var removeHighlight = $.set($$('.indexMarker')[1], {
-      className: 'indexMarker'
-    });
-    
-    var highlightNext = $.set($$('.indexMarker')[2], {
-      className: 'indexMarker highlighted'
-    });
 
     gameMessage.innerHTML = '';
 
@@ -201,61 +181,58 @@ var nextQuestion = function() {
     presentFinalScreen();
   } 
 
-
-
-}
-
-var negativeAnswer = function(index, answer) {
-  
-
-  console.log('negative answer');
-
-  if (index === 0)
+  setTimeout(function()
   {
-    nextQuestion();
-  }
-  else if (index === 1) {
-    answer1 = answer;
-    nextQuestion();
-  }
-  else if (index === 2) {
-    answer2 = answer;
-    nextQuestion();
-  }
-  else if (index === 3) {
-    answer3 = answer;
-    nextQuestion();
-  }
-  else if (index === 4) {
-    nextQuestion();
-  }
+    for (star in $$('.starRating'))
+    {
+      $.set($$('.starRating')[star], 
+      {
+        className: 'starRating'
+      });
+    }
+  }, 400);
+
 }
 
-var positiveAnswer = function(index, answer) {
+var highlightStars = function(event) {
+  console.log( event );
+  var stars = $$('.starRating');
+
+  for (star in stars) {
+
+    if (stars[star].id <= event.id)
+    {
+      console.log('Highlighting');
+      $.set(stars[star], {
+        className: 'starRating highlightStar'
+      });
+    }
+  }
+
+  var answer = event.id.substring(10,11);
   
-  console.log('positive answer');
-
-  if (index === 0)
+  if (answer !== 0 && answer !== 5)
   {
-    nextQuestion();
+    console.log(answer);
   }
-  else if (index === 1) {
+
+  if (index === 1)
+  {
     answer1 = answer;
-    nextQuestion();
   }
-  else if (index === 2) {
+  else if (index === 2)
+  {
     answer2 = answer;
-    nextQuestion();
   }
-  else if (index === 3) {
+  else if (index === 3)
+  {
     answer3 = answer;
-    nextQuestion();
   }
-  else if (index === 4) {
-    nextQuestion();
-  }
+
+  nextQuestion()
 
 }
+
 var buildGameDom = function() {
 
   
@@ -264,27 +241,40 @@ var buildGameDom = function() {
 
   var interactionContainer = $('#interactionContainer');
 
-  var indexMarkerContainer = $.create('div', {
-    className: 'indexMarkerContainer'
+  var starRatingContainer = $.create('div', 
+  {
+    className: 'starRatingContainer',
   });
 
-
-  for (var i = 0; i < 3; i++) {
-    var indexMarker = $.create('div',
+  for (var i = 1; i < 6; i++)
+  {
+    var starRatingInput = $.create('div',
     {
-      className: 'indexMarker',
+      id: 'starRating' + i,
+      'className': 'starRating'
     });
-    indexMarkerContainer.append(indexMarker);
+
+    var selectRating = starRatingInput.addEventListener('click', function(event){
+      highlightStars(event.target);
+    });
+    starRatingContainer.append(starRatingInput);
   }
 
 
-
-  gameContainer.append(indexMarkerContainer);
-  
-  highlightInitialIndex = $.set($$('.indexMarker')[0], {
-    className: 'indexMarker highlighted'
-  });
-
+  for (var i = 1; i <= 5; i++)
+  {
+    var gameImageDiv = $.create('div', {
+    contents: [{
+        className: 'gameImage',
+        src: ratingCopy.gameImage + i,
+        'tag': 'img',
+        }], className: 'gameImageDiv',
+      style: {
+          display: 'block',
+          "z-index": -1
+        }
+    });
+  }
 
   var gameImageDiv = $.create('div', {
     contents: [{
@@ -339,46 +329,10 @@ var buildGameDom = function() {
     className: gameMessageTextType(ratingCopy.gameMessageTextOne)
   });
   
-  var buttonContainer = $.create('div', {
-    id: 'buttonContainer'
-  });
-  var negativeButton = $.create('div', {
-    id: 'negativeButton',
-    contents: ratingCopy.negativeButtonText
-  });
-
-  var positiveButton = $.create('div', {
-    id: 'positiveButton',
-    contents: ratingCopy.positiveButtonText
-  });
-
-  var negativeImage = $.create('img',
-  {
-    'src': ratingCopy.negativeButtonImage,
-    'id': 'negativeImage'
-  });
-
-  var positiveImage = $.create('img',
-  {
-    'src': ratingCopy.positiveButtonImage,
-    'id': 'positiveImage'
-  });
-
-  negativeButton.append(negativeImage);
-  positiveButton.append(positiveImage);
-
-  buttonContainer.append(negativeButton);
-  buttonContainer.append(positiveButton);
   
-  interactionContainer.append(buttonContainer);
+  interactionContainer.append(starRatingContainer);
 
-  negativeButton.addEventListener('click', function(event) {
-    negativeAnswer(index, false);
-  });
-
-  positiveButton.addEventListener('click', function(event) {
-    positiveAnswer(index, true);
-  });
+  
   
 }
 

@@ -44,12 +44,12 @@ section {
 }
 
 .indexMarkerContainer {
-width: 75px;
-display: inline-block;
-position: relative;
-top: -65px;
-margin: 0 auto;
-text-align: center;
+  width: 75px;
+  display: inline-block;
+  position: relative;
+  top: -65px;
+  margin: 0 auto;
+  text-align: center;
 }
 #gameContainer {
 	height: 460px;
