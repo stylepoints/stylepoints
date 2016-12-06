@@ -76,27 +76,12 @@ padding-bottom: 50px;
 	top: 0px;
 	width: 350px;
 	z-index: 2;
-	height: 320px;
+	height: 300px;
 
 }
 
 .pushDown {
 	margin-top: 50px;
-}
-
-.gameImageDiv {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  -moz-transition: left 1s; 
-  -webkit-transition: left 1s;  
-  -ms-transition: left 1s;  
-  -o-transition: left 1s;  
-  transition: left 1s;  
-  left: 0px;
-  z-index: 1;
-  display: none;
-  clear: both;
 }
 
 #imageContainer {
@@ -109,6 +94,27 @@ padding-bottom: 50px;
 
 #publisherLogo {
   display: none;
+}
+
+.gameImageGrid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: row;
+	width: 350px;
+	height: 300px;
+	background-color: black;
+	overflow: hidden;
+	position: absolute;
+	transition: left 1s;
+	left: 0px;
+}
+
+.gameImageGridImage {
+	width: 175px;
+	height: 159px;
+	padding: 0px;
+	margin-top: -7px;
+
 }
 
 .starRatingContainer {
@@ -183,19 +189,19 @@ top: 280px;
 }
 
 #ctaButton {
-	border: 1px solid #FF3264;
+	border: 1px solid #F0F0F0;
 	height: 50px;
-	width: 325px;
-	background-color: #FF3264;
-	font-size: 1.25em;
+	width: 350px;
+	color: #000000;
+	background: transparent;
+	font-size: 1em;
 	justify-content: center;
 	align-self: center;
 	font-family: 'playfair';
-	z-index: 2;
+	
 	position: relative;
-	top: 225px;
+	top: 280px;
 	flex: none;
-	color: white;
 }
 
 #interactionContainer {
@@ -205,6 +211,11 @@ width: 350px;
 height: 400px;
 position: relative;
 left: 0px;
+
+}
+
+.lowZIndex {
+	z-index: -1;
 }
 
 #negativeButton {
@@ -219,6 +230,10 @@ font-family: 'playfair';
 margin-right: 10px;
 font-size: 1.25em;
 
+}
+
+.lighten {
+	filter: brightness(1.5);
 }
 
 #positiveButton {
@@ -301,7 +316,7 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
 }
 
 .slideRight {
-  left: 10000px;
+  left: 500px;
 }
 
 

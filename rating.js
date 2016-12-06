@@ -33,10 +33,9 @@ var presentFinalScreen = function() {
 
   var interactionContainer = $("#interactionContainer");
   var imageContainer = $("#imageContainer");
-  var oldGameMessage = $('#gameMessage');
-  oldGameMessage.innerHTML = ''
-  interactionContainer.removeChild($(".starRatingContainer"));
   
+  interactionContainer.removeChild($(".starRatingContainer"));
+
   if (ratingCopy.resultMessageHeader.length > 32) {
     var changeToSmallText = $.set(oldGameMessage, {
       className: 'gameMessage gameMessageSmallText'
@@ -74,6 +73,7 @@ var presentFinalScreen = function() {
       }
     ]
   });
+
 
   interactionContainer.append(emailSubmitForm);
 }
