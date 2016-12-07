@@ -24,7 +24,7 @@
 
 section {
   font-family: sans-serif;
-  width: 960px;
+  width: 90vw;
   margin: 0 auto;
   padding: 40px 0px 40px 0px;
 }
@@ -60,6 +60,7 @@ display: flex;
 flex-direction: column;
 padding-top: 20px;
 padding-bottom: 50px;
+overflow: hidden;
 }
 
 .gameImage {
@@ -89,6 +90,7 @@ padding-bottom: 50px;
   left: 0px;
   z-index: 1;
   display: none;
+  overflow: hidden;
   clear: both;
 }
 
@@ -97,6 +99,7 @@ padding-bottom: 50px;
   margin-top: 50px;
   width: 350px;
   height: 320px;
+  overflow: hidden;
 }
 
 #publisherLogo {

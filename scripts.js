@@ -117,11 +117,13 @@ var animateExit = function() {
       });
 
       
+      
       showNext = $.style(gameImages[image],
       {
           "z-index": -200 * index,
           "display": "block"
       });
+
 
     }
   }
