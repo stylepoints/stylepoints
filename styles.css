@@ -29,6 +29,14 @@ section {
   padding: 40px 0px 40px 0px;
 }
 
+.top {
+	background-image: url('images/top.png');
+}
+
+.bottom {
+	background-image: url('images/bottom.png');
+}
+
 .indexMarker {
 	height: 10px;
 	border-radius: 10px;
@@ -99,6 +107,7 @@ overflow: hidden;
   margin-top: 50px;
   width: 350px;
   height: 320px;
+  overflow: hidden;
 }
 
 #publisherLogo {
