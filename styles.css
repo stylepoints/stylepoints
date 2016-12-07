@@ -23,18 +23,19 @@
 }
 
 section {
-  font-family: sans-serif;
-  width: 90vw;
-  margin: 0 auto;
-  padding: 40px 0px 40px 0px;
+ 
 }
 
 .top {
 	background-image: url('images/top.png');
+	width: 353px;
+	height: 516px;
 }
 
 .bottom {
 	background-image: url('images/bottom.png');
+	width: 346px;
+	height: 372px;
 }
 
 .indexMarker {
@@ -60,19 +61,19 @@ section {
   text-align: center;
 }
 #gameContainer {
-	height: 460px;
+height: 460px;
 width: 350px;
 margin: 0 auto;
-margin-top: 30px;
+padding-top: 30px;
 display: flex;
 flex-direction: column;
-padding-top: 20px;
-padding-bottom: 50px;
+
 overflow: hidden;
 }
 
 .gameImage {
   width: 350px;
+  left: 0px;
   height: 320px;  
 }
 
@@ -89,17 +90,14 @@ overflow: hidden;
 .gameImageDiv {
   position: absolute;
   width: 100%;
-  overflow: hidden;
   -moz-transition: left 1s; 
   -webkit-transition: left 1s;  
   -ms-transition: left 1s;  
   -o-transition: left 1s;  
   transition: left 1s;  
-  left: 0px;
   z-index: 1;
+  left: 0px;
   display: none;
-  overflow: hidden;
-  clear: both;
 }
 
 #imageContainer {

@@ -54,6 +54,7 @@ var presentFinalScreen = function() {
 
   imageContainer.append(overlay);
 
+
   removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = '';
@@ -121,9 +122,9 @@ var animateExit = function() {
       showNext = $.style(gameImages[image],
       {
           "z-index": -200 * index,
-          "display": "block"
+          "display": "block",
+          "left": "0px"
       });
-
 
     }
   }
