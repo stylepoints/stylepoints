@@ -1,9 +1,10 @@
 var ratingCopy = {
   "type": "binary",
-  "additionalText": "For you",
+  "additionalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus velit non mauris tristique eleifend. ",
   "publisherLogo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAXCAYAAABaiVzAAAAABGdBTUEAALGPC/xhBQAABYVJREFUWAmdmN+LVVUUx++9ZpozU6NTWaip40iC5qhRvQRiZSUVURAFg4HpS2UlFQX11D8QBRVFxRgUEkEl0UM9VPrSZMlQptgPbMqcNDXHJscfOXP7fI57D+eeOfdXC75nr71+7L3X3muvc+4tFgqF6WAS6ABFcBIcB3+DMdAIdWPkOJ1A/xNgBzgIGqHlGOk/H/wDRkAfOAwinQ9zIZgNpoB/wX7gOk+DSNNgukALMJ4fwFFQaAVLisXiEDhVKpVeCbKSyjo0E/tebB4BbpTkIu5irF20j4Na48zG/21sHgIzgDQV3IP/d7QbFQTyMFqR94My+JG+m3Ne0MdmMswd6N2A9cCAx2k+ipOgzMQvj0trM3Ow34P961XMesJ4r6F3kVnqRP8z/i9lFaG/Lvi/SN+TkRAVdyoHe+l7ynl0LcINeQonHXGABgOdiu0XwDS7PG9AZKiL20EZ/omMzTTkfWAI+SUZXexOCjb6PxiEJWTpQM2eLLmpBpq3uYVmA93IhG7Kluwsmf4G7cAx5PNSuieD/+aULI9N5sH2EMpkQ+HrBToXW1O6gmrdnwrDVKeNyTbZHxsb+ywlz2O3IbQ4tYN1waAd/0flG/D/HLMz4FLQA+qRxco76sZW0P8JdBUjLACmlAWnFv2G8lcNCO7OYLiadg6wou8OsmrNPhT7VeJ/N43p6Lx5ZCyzQDJf1qDpQEnXNWEQ7+dgdsBM/zT9X4JsEa1V1kCl46Cev9kwAKTFwA0atZND3nVfI752JlCzgZbK5fKKMIrl28XWJE4iORGMLBxX478kOOg7HPiqDf6/B6VpaSblBeorxKvxJ8ilZgN1MtNDOgFOJVyNB/fwSErth8VloW9GeOL1KO1f7UQfZkOeY6CF1QZrNtA2BhKSi8zb3USZehhQQqTtFTCtoWuKnQ181YaNckMjWdTSd9QxlhLkM7S+U3tALjUbqBXNgiClJzwnyX+6mEhuUvySMchGxkj7pz8Q9HU9y8BFwIJloBVfQsqlZgN18Li4YjJC/UfcGC09XautZMCNjJH2tzhF0ncu+AD0B2EX7S2Br2iaDTR9Ly9gJHe0HmmXEGk4ABPvpcWprj/p7rdvpMMwcc1+vI+AYQrcW9GAU10f+XQbndKyWryV0hIuedfGg0gkOQ8WmqRVUO2kjZXawpYOIsc7EUV/M2EAxBM2yFhl34OP67oBfjGooGYD9TR+CiO4gBkVo+V3ZgbxX7RfgYHQt7BMD3zVhtOK/ocwcu54x/WJqT/ISX6oAHLz1iZc6tFsoAUm/jL4e5rzUmPlsth7j6SvwdGUvxkRderzyEB8pUh9wFPLXTPX4k10yVuAoO+Dj5kAW8Up0eQ/XNy3wLSR4sfDud7Epye2QDEBvhPUH9HGSro8yKo1F6PoVJnyr2a7A4WbIbmBtyVceOTuTtogw1vV/mDHtiqnvSmjz3a7EZh6e8D7QelGfSLfgL8b0QH6wce6gGo0ymb0RiVjPwA/wb7Rn2mP4bwSLGQg/5Gw3C8CuUQhehWbMso1GYNlyIeBr5vkxDP6pIt/Lzam441BX+/3aAf2B4A/Da0nEzKmkUD9se1prAqT3kv/DIvZEvrZ5ir0pvhTWUXor0V/Fv/NVfQr0PuJuSmlR1TxezT9ARHNnsfGQN3gF6LQ1nfZlVHJxG8EmXJhFetC/m5wvp5+pFuRfU/nWTAlCmn9D8pUNX1q0e3Y7cbgaeBckbqRb6VzfxTQ+lppQb4LGMg++r6ilEfyKl6DbjTYHKE/C0w2h/3INpjrgIYHgH88RbK6ejd18Efwp8ABIrXA3AxWshnu4igVcDvtN2AQ1KM2DFYD/X1X6r+N1ip9EERyjRYnU901edp7wVDgaZI42mmXBt743Mhj/wFdiT/K3dup9wAAAABJRU5ErkJggg==",
   "callToActionMessage": "WHICH ONE OF THESE DRESSES IS YOUR FAVORITE?",
   "callToActionButtonText": "Let’s go!",
+  "instruction": "Rate these out of five",
   "positiveButtonText": "Love it!",
   "negativeButtonText": "Not for me",
   "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSYDDDDDDDDDDDDDDDDDDDDDD",
@@ -31,17 +32,9 @@ var index = 0;
 var presentFinalScreen = function() {
 
   var interactionContainer = $("#interactionContainer");
-  var imageContainer = $("#imageContainer")
-
-  var overlay = $.create('div', {
-    className: 'overlay'
-  });
-
-  imageContainer.append(overlay);
-
-  removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
-  var oldGameMessage = $('#gameMessage');
-  oldGameMessage.innerHTML = '';
+  var imageContainer = $("#imageContainer");
+  
+  interactionContainer.removeChild($(".starRatingContainer"));
 
   if (ratingCopy.resultMessageHeader.length > 32) {
     var changeToSmallText = $.set(oldGameMessage, {
@@ -81,7 +74,6 @@ var presentFinalScreen = function() {
     ]
   });
 
-  $("#buttonContainer").innerHTML = "";
 
   interactionContainer.append(emailSubmitForm);
 }
@@ -127,6 +119,8 @@ var gameMessageTextType = function(message) {
 }
 
 var nextQuestion = function() {
+
+  $('#additionalText').innerHTML = '';
 
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
   index++;
@@ -240,6 +234,13 @@ var buildGameDom = function() {
   console.log(index, 'index');
 
   var interactionContainer = $('#interactionContainer');
+
+  $('#additionalText').innerHTML = '';
+  var showInstructions = $.set($('#additionalText'),
+  {
+    contents: [ratingCopy.instruction],
+    className: 'additionalText pushDown'
+  });
 
   var starRatingContainer = $.create('div', 
   {
@@ -361,10 +362,6 @@ var buildInitialDom = function() {
   var interactionContainer = $.create('div', {
     id: 'interactionContainer'
   });
-  var publisherLogo = $.create('img', {
-    id: 'publisherLogo',
-    src: ratingCopy.publisherLogo
-  });
   var callToAction = $.create('div', {
     id: 'callToAction',
     contents: ratingCopy.callToActionMessage
@@ -386,7 +383,6 @@ var buildInitialDom = function() {
 
   imageContainer.append(overlay);
   
-  interactionContainer.append(publisherLogo);
   interactionContainer.append(additionalText);
   interactionContainer.append(callToAction);
   interactionContainer.append(ctaButton);
