@@ -28,7 +28,10 @@ var answer1, answer2, answer3, image1, image2, image3;
 var index = 0;
 
 
-
+var saveEmail = function()
+{
+  console.log('test');
+}
 
 negativeIndicator = $.create('img', {
   src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAABIlJREFUWAnVmT9P20AYxh0DCUwBIaESoS5VF8bSqkgwdAaFEKb2M3TqVtQZla0Tn6EbaRTBF2iQErV0Yqu6VCitkPiTCRL+pM9j7oJ9ie/OiRXoK1k+n++e+/nN67vzm4TTp+3s7DxqNBpZyMwlEokMzplWq8XzJI5j1NVwrqGO5/1UKlVaXl7+i3LPluilZ6lUenx9ff0GIDn0n8fZWgcP0UKfCs7FoaGhz9ls9ndUBuvBKLy9vU3vfcDxFkcSR7/WhMAWjo21tbVjWzEr6N3d3dTFxcU7iL7HkbYVj9Cujrabo6Ojn5aWlhqmfkZoEbMFCM2bxGK4X0HM500xr4VG7D67vLwsAmYmBiBbicORkZEcYv1HWAc37EaxWFwBcBn3BwlMnBmOy/HD2Lp6ulAozGFG+IpOY2EdB1B/Do8vdvN4h6cZwwD+cs/A9MkYQ5M8qoMC0JwlsFDwpRt0SKhc8nqGPOSSFTwHoMW0ZpwlhoeHnYWFBWdiYsKvFamcTqc9DYSAqd+84Gq3a8e0WDh+4Y52HuYgEhg/n7O3t+ecnp62BW0KBF5cXHSSyaRzdnbmlMtlh1oa4zz+RC5Afk9zpbMG5gD+B+C1jfmB2X58fNx7AIPHyUU+zzxPcy+BJ/2JGu3STA9PTU2JrncnW4+rwHcKjnN0dOT9av46pdzEgz3lXsXzNDc/aKAFpsDBwYHTbHK7EDQbj+uAqUltgyUF5+2LeHNzs2ro4N2u1+te/EUFNwEzpqltMsmZ4DwICO532y+lqbMOQg0VXVs+vC0wmbitxcubcdFxJQowO9t6PE5gjktOfnAwpudYEdVswOW0pmpH9bC/P7z9nNDT/sooZRM452HV+gEWWtOE5vdcz6YDV0VjAKZkxkWc9AVNFRvwmIAZ1xl6mt99fZvruny7Q3V4j21isEmqWH9Qhg3IjRNXS91SbLMAhekr9ccuPFBTKiNd2gBLwTjAyUtP9wytA+YiwzhWLQbwGl/EnqBNwNyycrWLG5y89PS+6g3TtQ0w99i6WaUPj++7zK0hTpiqsjJbYCkWJzg5yesyMQKXV+UgunNUYKkVI3iFvN7EifmTX99Gm52d7TqtqTu7bkImcGqbDJ5m4uh2P83sJcqdr7qiUq1WnZOTk0CtDbDsEAbO+Ke2wZqC8xZapFuZvdTa1dWV90kkwaMAS2EVnMCcaahtsC3BGUghbKCT8fNBgstvuqhf4gST4FKDD28wcpHPs8BmAWkEpnI/insP6bSO9MGmBPJeRHnB/DDKFXn9QM4VwdXGCXiatSIf/Q3Fh5AaO8S8/ELNVwc8TWg2wGqVQ/Gc1/dozJrmVGDydECzkulVTC+vUbwv8HOOTw7yqNYRHv4GIk/NhWeQoXKIRWQ1n8+H7om00HwAEeMFFI3ZVLbv06z+c+kaHv6BGVN4e1+hbh2HcR73941Qpu46x+kWw6qO0dP+Dv/V/4h+cJblP7bMrSH+XmKXaP3w3F5yV8lNGvcScmlWx9BdWw8WJiJygfwnipkqJn66/jeO+j+A/c79sE0IoH2o/QOb+aFXL4WJVwAAAABJRU5ErkJggg==',
@@ -90,7 +93,7 @@ var presentFinalScreen = function() {
       },
       {
         tag: 'input',
-        type: 'submit',
+        type: 'button',
         id: 'emailFormButton',
         value: binaryCopy.emailFormButtonText
       }
@@ -99,7 +102,29 @@ var presentFinalScreen = function() {
 
   $("#buttonContainer").innerHTML = "";
 
+  
+  
+
   interactionContainer.append(emailSubmitForm);
+
+  var submitButton = $('#emailFormButton').addEventListener('click', function()
+  {
+    var input = $('#emailFormInput');
+
+    var email = input.value;
+
+    $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
+    {
+      method: "POST"
+    }).then(function()
+    {
+      console.log('Posted');
+    });
+
+
+  });
+
+
 }
 
 var animateExit = function() {
@@ -170,9 +195,6 @@ var nextQuestion = function() {
   }
 
   if (index === 2) {
-
-    
-  
 
     animateExit();
 
