@@ -27,6 +27,7 @@ var answer1, answer2, answer3, image1, image2, image3;
 
 var index = 0;
 
+var directionSwiped = "";
 
 var saveEmail = function()
 {
@@ -135,14 +136,22 @@ var animateExit = function() {
     
     if (image == index)
     {
-      
-      slideRight = $.transition(gameImages[image - 1], 
+      if (directionSwiped === "left")
       {
-          left: "500px",
-          transition: "left 1s"
-      });
-
-
+        console.log('test');
+        slideLeft = $.transition(gameImages[image - 1], 
+        {
+            left: "-500px",
+            transition: "left 1s"
+        });
+      } 
+      else {
+        slideRight = $.transition(gameImages[image - 1], 
+        {
+            left: "500px",
+            transition: "left 1s"
+        });
+      }
       
       showNext = $.style(gameImages[image],
       {
@@ -247,9 +256,6 @@ var nextQuestion = function() {
 
 var negativeAnswer = function(index, answer) {
   
-
-  console.log('negative answer');
-
   if (index === 0)
   {
     nextQuestion();
@@ -273,8 +279,6 @@ var negativeAnswer = function(index, answer) {
 
 var positiveAnswer = function(index, answer) {
   
-  console.log('positive answer');
-
   if (index === 0)
   {
     nextQuestion();
@@ -311,11 +315,13 @@ var buildGameDom = function() {
 
   mc.on("swipeleft", function(ev)
   {
+    directionSwiped = "left";
     negativeAnswer(index, false);
   });
 
   mc.on("swiperight", function(ev)
   {
+    directionSwiped = "right";
     positiveAnswer(index, true);
   });
 
