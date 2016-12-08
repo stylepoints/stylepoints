@@ -300,9 +300,24 @@ var buildGameDom = function() {
 
   
   index++;
-  console.log(index, 'index');
+  
+  var imageContainer = $('#imageContainer');
 
+  
   var interactionContainer = $('#interactionContainer');
+
+
+  var mc = new Hammer(interactionContainer);
+
+  mc.on("swipeleft", function(ev)
+  {
+    negativeAnswer(index, false);
+  });
+
+  mc.on("swiperight", function(ev)
+  {
+    positiveAnswer(index, true);
+  });
 
   var indexMarkerContainer = $.create('div', {
     className: 'indexMarkerContainer'
