@@ -119,7 +119,7 @@ var presentFinalScreen = function() {
       method: "POST"
     }).then(function()
     {
-      console.log('Posted');
+      input.value = "";
     });
 
 
