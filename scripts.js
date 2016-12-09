@@ -444,7 +444,7 @@ var buildGameDom = function() {
 }
 
 var buildInitialDom = function() {
-  var mainContainer = $('#container');
+  var mainContainer = $('#binary-container');
   var gameContainer = $.create('div', {
     id: 'gameContainer'
   });

@@ -338,7 +338,7 @@ var buildGameDom = function() {
 }
 
 var buildInitialDom = function() {
-  var mainContainer = $('#container');
+  var mainContainer = $('#rating-container');
   var gameContainer = $.create('div', {
     id: 'gameContainer'
   });
