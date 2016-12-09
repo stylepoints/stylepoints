@@ -280,25 +280,31 @@ input[type="text"]{
 }
 
 .slideRight {
-  left: 10000px;
+  	left: 10000px;
 }
 
 
 .lower {
-  z-index: -9999;
+  	z-index: -9999;
 }
 
 .gameMessageSmallText {
-     font-size: 1.125em;
-    top: -10px;
+	font-size: 1.125em;
+	top: -10px;
 }
 
 .gameMessageMediumText {
 	top: -10px;
 }
 
-@media (max-width:600px){
+@media (max-height:400px){
+	#binary-container {
+		transform: scale(0.75);
+	}
 
-	
+	section {
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
