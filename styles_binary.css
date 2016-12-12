@@ -26,6 +26,7 @@ section {
  
 }
 
+
 .top {
 	background-image: url('images/top.png');
 	width: 353px;
@@ -59,10 +60,6 @@ section {
   top: -65px;
   margin: 0 auto;
   text-align: center;
-}
-
-#binary-container {
-	margin-top: 50px;
 }
 #gameContainer {
 height: 460px;
