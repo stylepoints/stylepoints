@@ -21,12 +21,21 @@
     font-weight: normal;
     font-style: normal;
 }
+.top {
+	background-image: url('images/top.png');
+	width: 353px;
+	height: 516px;
+}
 
+.bottom {
+	background-image: url('images/bottom.png');
+	width: 346px;
+	height: 372px;
+}
 section {
   font-family: sans-serif;
   width: 960px;
   margin: 0 auto;
-  padding: 40px 0px 40px 0px;
 }
 
 .indexMarker {
@@ -55,11 +64,9 @@ text-align: center;
 	height: 460px;
 width: 350px;
 margin: 0 auto;
-margin-top: 30px;
+margin-top: 50px;
 display: flex;
 flex-direction: column;
-padding-top: 20px;
-padding-bottom: 50px;
 }
 
 .gameImage {
