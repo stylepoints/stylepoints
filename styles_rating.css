@@ -21,7 +21,17 @@
     font-weight: normal;
     font-style: normal;
 }
+.top {
+	background-image: url('images/top.png');
+	width: 353px;
+	height: 516px;
+}
 
+.bottom {
+	background-image: url('images/bottom.png');
+	width: 346px;
+	height: 372px;
+}
 section {
   font-family: sans-serif;
   width: 960px;
@@ -55,11 +65,10 @@ text-align: center;
 	height: 460px;
 width: 350px;
 margin: 0 auto;
-margin-top: 30px;
 display: flex;
 flex-direction: column;
-padding-top: 20px;
-padding-bottom: 50px;
+margin-top: 40px;
+margin-bottom: -50px;
 }
 
 .gameImage {

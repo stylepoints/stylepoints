@@ -36,6 +36,9 @@ var presentFinalScreen = function() {
   
   interactionContainer.removeChild($(".starRatingContainer"));
 
+  var oldGameMessage = $('#gameMessage');
+  oldGameMessage.innerHTML = '';
+  
   if (ratingCopy.resultMessageHeader.length > 32) {
     var changeToSmallText = $.set(oldGameMessage, {
       className: 'gameMessage gameMessageSmallText'
