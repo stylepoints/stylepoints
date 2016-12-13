@@ -434,10 +434,12 @@ var buildGameDom = function() {
   interactionContainer.append(buttonContainer);
 
   negativeButton.addEventListener('click', function(event) {
+    directionSwiped = 'left';
     negativeAnswer(index, false);
   });
 
   positiveButton.addEventListener('click', function(event) {
+    directionSwiped = 'right';
     positiveAnswer(index, true);
   });
   
