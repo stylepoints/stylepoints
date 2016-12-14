@@ -19,9 +19,12 @@ mkdir build
 
 #copy required files to /build
 cp index.html $BUILD_DIR/index.html
-cp scripts.js $BUILD_DIR/scripts.js
+cp rating.html $BUILD_DIR/rating.html
+cp rating.js $BUILD_DIR/rating.js
+cp binary.js $BUILD_DIR/binary.js
 cp bliss.js $BUILD_DIR/bliss.js
-cp styles.css $BUILD_DIR/styles.css
+cp styles_binary.css $BUILD_DIR/styles_binary.css
+cp styles_rating.css $BUILD_DIR/styles_rating.css
 cp -r images $BUILD_DIR/
 cp -r external_scripts $BUILD_DIR/
 

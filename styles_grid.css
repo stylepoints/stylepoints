@@ -112,8 +112,6 @@ flex-direction: column;
 	background-color: black;
 	overflow: hidden;
 	position: absolute;
-	transition: left 1s;
-	left: 0px;
 }
 
 .gameImageGridImage {
