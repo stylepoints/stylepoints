@@ -36,6 +36,11 @@ var presentFinalScreen = function() {
   
   interactionContainer.removeChild($(".starRatingContainer"));
 
+  lowerOverlay = $.set($('.overlay'),
+  {
+    className: 'overlay lowerOverlay'
+  });
+
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = '';
   
@@ -67,6 +72,7 @@ var presentFinalScreen = function() {
         tag: 'input',
         id: 'emailFormInput',
         type: 'text',
+        'placeholder': 'myemail@myemailprovider.com'
       },
       {
         tag: 'input',
@@ -77,8 +83,22 @@ var presentFinalScreen = function() {
     ]
   });
 
-
   interactionContainer.append(emailSubmitForm);
+
+  var submitButton = $('#emailFormButton').addEventListener('click', function()
+  {
+    var input = $('#emailFormInput');
+
+    var email = input.value;
+
+    $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
+    {
+      method: "POST"
+    }).then(function()
+    {
+      input.value = "";
+    });
+  });
 }
 
 var animateExit = function() {
