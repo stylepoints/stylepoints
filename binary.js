@@ -59,7 +59,7 @@ var presentFinalScreen = function() {
   imageContainer.append(overlay);
 
 
-  removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
+  // removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = '';
 
@@ -91,6 +91,7 @@ var presentFinalScreen = function() {
         tag: 'input',
         id: 'emailFormInput',
         type: 'text',
+        'placeholder': 'myemail@myemailprovider.com'
       },
       {
         tag: 'input',
@@ -207,13 +208,13 @@ var nextQuestion = function() {
 
     animateExit();
 
-    var removeHighlight = $.set($$('.indexMarker')[0], {
-      className: 'indexMarker'
-    });
+    // var removeHighlight = $.set($$('.indexMarker')[0], {
+    //   className: 'indexMarker'
+    // });
     
-    var highlightNext = $.set($$('.indexMarker')[1], {
-      className: 'indexMarker highlighted'
-    });
+    // var highlightNext = $.set($$('.indexMarker')[1], {
+    //   className: 'indexMarker highlighted'
+    // });
 
     gameMessage.innerHTML = '';
 
@@ -228,13 +229,13 @@ var nextQuestion = function() {
 
     animateExit();
 
-    var removeHighlight = $.set($$('.indexMarker')[1], {
-      className: 'indexMarker'
-    });
+    // var removeHighlight = $.set($$('.indexMarker')[1], {
+    //   className: 'indexMarker'
+    // });
     
-    var highlightNext = $.set($$('.indexMarker')[2], {
-      className: 'indexMarker highlighted'
-    });
+    // var highlightNext = $.set($$('.indexMarker')[2], {
+    //   className: 'indexMarker highlighted'
+    // });
 
     gameMessage.innerHTML = '';
 
@@ -325,26 +326,26 @@ var buildGameDom = function() {
     positiveAnswer(index, true);
   });
 
-  var indexMarkerContainer = $.create('div', {
-    className: 'indexMarkerContainer'
-  });
+  // var indexMarkerContainer = $.create('div', {
+  //   className: 'indexMarkerContainer'
+  // });
 
 
-  for (var i = 0; i < 3; i++) {
-    var indexMarker = $.create('div',
-    {
-      className: 'indexMarker',
-    });
-    indexMarkerContainer.append(indexMarker);
-  }
+  // for (var i = 0; i < 3; i++) {
+  //   var indexMarker = $.create('div',
+  //   {
+  //     className: 'indexMarker',
+  //   });
+  //   indexMarkerContainer.append(indexMarker);
+  // }
 
 
 
-  gameContainer.append(indexMarkerContainer);
+  // gameContainer.append(indexMarkerContainer);
   
-  highlightInitialIndex = $.set($$('.indexMarker')[0], {
-    className: 'indexMarker highlighted'
-  });
+  // highlightInitialIndex = $.set($$('.indexMarker')[0], {
+  //   className: 'indexMarker highlighted'
+  // });
 
 
   var gameImageDiv = $.create('div', {
