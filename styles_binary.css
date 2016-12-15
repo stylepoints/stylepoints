@@ -232,13 +232,14 @@ color: white;
     top: 100px;
 }
 
+
+
 #emailFormInput {
   display: block;
 margin-left: 9px;
 width: 333px;
 border: none;
 height: 50px;
-margin-top: 10px;
 font-family: 'Open Sans';
 padding-left: 17px;
 position: relative;
