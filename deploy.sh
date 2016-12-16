@@ -23,6 +23,7 @@ cp bliss.js $BUILD_DIR/bliss.js
 cp index.html $BUILD_DIR/index.html
 cp scripts.js $BUILD_DIR/scripts.js
 cp styles.css $BUILD_DIR/styles.css
+cp -r images $BUILD_DIR/
 
 cp index_four_images.html $BUILD_DIR/index_four_images.html
 cp four_images.js $BUILD_DIR/four_images.js

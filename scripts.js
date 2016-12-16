@@ -6,7 +6,7 @@ var binaryCopy = {
   "callToActionButtonText": "Let’s go!",
   "positiveButtonText": "Love it!",
   "negativeButtonText": "Not for me",
-  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSYDDDDDDDDDDDDDDDDDDDDDD",
+  "gameMessageTextOne": "DO YOU THINK YOUR STYLE IS CLASSIC & CLASSY?",
   "gameMessageTextTwo": "OR IS IT INSERT TEXT HERE.",
   "gameMessageTextThree": "AND WHAT ABOUT INSERT TEXT HERE",
   "resultMessageHeader": "HERE IT IS. YOUR PERFECT LITTLE BLACK DRESS",
@@ -53,6 +53,7 @@ var presentFinalScreen = function() {
   });
 
   imageContainer.append(overlay);
+
 
   removeIndexMarker = $('#gameContainer').removeChild($('.indexMarkerContainer'));
   var oldGameMessage = $('#gameMessage');
@@ -121,9 +122,9 @@ var animateExit = function() {
       showNext = $.style(gameImages[image],
       {
           "z-index": -200 * index,
-          "display": "block"
+          "display": "block",
+          "left": "0px"
       });
-
 
     }
   }
