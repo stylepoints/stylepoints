@@ -59,13 +59,17 @@ var gridImagesFour = [fourImagesCopy.gameImageGridThirteen, fourImagesCopy.gameI
 // The presentFinalScreen function shows the final email screen and POSTs email data to the server.
 var presentFinalScreen = function() {
 
+  // Select containers we're going to modify.
   var interactionContainer = $("#interactionContainer");
+  var imageContainer = $("#imageContainer");
 
+  // Remove lowZIndex class from the interactionContainer.
   raiseInteractionContainer = $.set(interactionContainer, {
     className: ''
   });
 
-  var imageContainer = $("#imageContainer");
+  // Select current game message and remove content so we can 
+  // re set it.
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = ''
  
@@ -84,6 +88,7 @@ var presentFinalScreen = function() {
     }]
   }));
 
+  // Make sure resultMessage is correctly sized.
   if (fourImagesCopy.resultMessageHeader.length > 32) {
     var changeToSmallText = $.set(oldGameMessage, {
       className: 'gameMessage gameMessageSmallText'
@@ -95,10 +100,12 @@ var presentFinalScreen = function() {
     });
   }
 
+  // Set new result message
   var resultMessageHeader = $.set(oldGameMessage, {
     contents: fourImagesCopy.resultMessageHeader
   });
 
+  // Create email submit form and append it to the interactionContainer.
   var emailSubmitForm = $.create('form', {
     id: 'emailSubmitForm',
     contents: [
@@ -124,6 +131,7 @@ var presentFinalScreen = function() {
 
   interactionContainer.append(emailSubmitForm);
 
+  // Create submit button event listener so that we can POST emails.
   var submitButton = $('#emailFormButton').addEventListener('click', function()
   {
     var input = $('#emailFormInput');

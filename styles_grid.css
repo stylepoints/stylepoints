@@ -126,9 +126,6 @@ text-align: center;
 	opacity: 0;
 }
 
-.highlightStar {
-	opacity: 1;
-}
 
 .hidden {
 	display: none !important;
@@ -172,6 +169,7 @@ text-align: center;
 }
 
 #ctaButton {
+
 	border: 1px solid #F0F0F0;
 	height: 50px;
 	width: 350px;
@@ -199,53 +197,6 @@ left: 0px;
 
 .lowZIndex {
 	z-index: -1;
-}
-
-#negativeButton {
-width: 172px;
-height: 50px;
-border: 1px solid #F0F0F0;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-font-family: 'playfair';
-margin-right: 10px;
-font-size: 1.25em;
-
-}
-
-.lighten {
-	filter: brightness(1.5);
-}
-
-#positiveButton {
-width: 172px;
-height: 50px;
-border: 1px solid #F0F0F0;
-display: flex;
-font-size: 1.25em;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-font-family: 'playfair';
-background-color: #9FDE9F;
-color: white;
-
-}
-
-#positiveImage {
-  position: relative;
-  left: 10px;
-  width: 25px;
-  height: 25px;
-}
-
-#negativeImage {
-  position: relative;
-  left: 10px;
-  width: 25px;
-  height: 25px;
 }
 
 #resultMessageText {
@@ -308,15 +259,6 @@ input[type="text"]{
 	appearance: none;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
-}
-
-.slideRight {
-  left: 500px;
-}
-
-
-.lower {
-  z-index: -9999;
 }
 
 .gameMessageSmallText {
