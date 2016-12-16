@@ -304,6 +304,9 @@ input[type="text"]{
     box-sizing:        border-box;
 }
 
+.left {
+	left: 500px;
+}
 #emailFormButton {
 	width: 95%;
 	margin-left: 9px;

@@ -23,24 +23,29 @@ var ratingCopy = {
 }
 
 
-
+// Create global variables for answers to questions.
 var answer1, answer2, answer3, image1, image2, image3;
 
+// Initialize global view index to zero.
 var index = 0;
 
-
+// The presentFinalScreen function shows the final email screen and POSTs email data to the server.
 var presentFinalScreen = function() {
 
+  // Select containers we're going to modify.
   var interactionContainer = $("#interactionContainer");
   var imageContainer = $("#imageContainer");
   
+  // Remove star rating container
   interactionContainer.removeChild($(".starRatingContainer"));
 
+  // Lower the z-index of the overlay so we can interact with the widget
   lowerOverlay = $.set($('.overlay'),
   {
     className: 'overlay lowerOverlay'
   });
 
+  // Reset old game message content so we can change it.
   var oldGameMessage = $('#gameMessage');
   oldGameMessage.innerHTML = '';
   
@@ -85,6 +90,7 @@ var presentFinalScreen = function() {
 
   interactionContainer.append(emailSubmitForm);
 
+  // Create submit button event listener so that we can POST emails.
   var submitButton = $('#emailFormButton').addEventListener('click', function()
   {
     var input = $('#emailFormInput');
@@ -101,25 +107,26 @@ var presentFinalScreen = function() {
   });
 }
 
+// This function handles animation transitions for 
+// the image.
 var animateExit = function() {
   var gameImages = $$('.gameImageDiv');
 
   for (image in gameImages)
   {
     
-    if (image == index)
+    if (Number(image) === index)
     {
       
-      slideRight = $.transition(gameImages[image - 1], 
+      slideRight = $.set(gameImages[image - 1], 
       {
-          left: "500px",
-          transition: "left 1s"
+          className: 'gameImageDiv left'
       });
 
-      
+      // Set z-index based on position in game.
       showNext = $.style(gameImages[image],
       {
-          "z-index": -200 * index,
+          "z-index": -5 * index,
           "display": "block"
       });
 
@@ -128,8 +135,8 @@ var animateExit = function() {
 
 }
 
+// This function correctly sets the message text type.
 var gameMessageTextType = function(message) {
-  console.log(message.length);
   if (message.length < 30) {
     return "gameMessage"
   } else if (message.length > 30 && message.length < 35 ) {
@@ -141,6 +148,8 @@ var gameMessageTextType = function(message) {
 
 }
 
+// This function handles recording of answers and calls transition functions
+// after each answer is recorded.
 var nextQuestion = function() {
 
   $('#additionalText').innerHTML = '';
@@ -148,56 +157,53 @@ var nextQuestion = function() {
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
   index++;
 
-  console.log(index, 'index');
-
   var gameMessage = $('#gameMessage');
-
   var gameImages = $$('.gameImageDiv');
 
+  var ratingText = $.create('span', {
+    className: "ratingText"
+  });
 
   if (index === 1) {
-
+    var setRatingText = $.set(ratingText, 
+    {
+      contents: [{ answer1 }]
+    });
+    gameImages[index].append(setRatingText);
     animateExit();
-
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextOne),     
       contents: ratingCopy.gameMessageTextOne
     });
-    
   }
 
   if (index === 2) {
-
     animateExit();    
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextTwo),     
       contents: ratingCopy.gameMessageTextTwo
     });
-
   }
 
   if (index === 3) {
-
     animateExit();
-
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextThree),     
       contents: ratingCopy.gameMessageTextThree
     });
   }
   
-  
   if (index === 4) {
     animateExit();
     presentFinalScreen();
   } 
 
+
+
+  // 
   setTimeout(function()
   {
     for (star in $$('.starRating'))

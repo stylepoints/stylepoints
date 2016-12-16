@@ -129,6 +129,7 @@ var presentFinalScreen = function() {
     ]
   });
 
+
   interactionContainer.append(emailSubmitForm);
 
   // Create submit button event listener so that we can POST emails.
