@@ -152,6 +152,9 @@ margin-bottom: -50px;
 	opacity: 1;
 }
 
+.ratingText {
+	font-family: 'playfair';
+}
 #additionalText {
 	font-size: 1em;
 	position: absolute;

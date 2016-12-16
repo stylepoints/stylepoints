@@ -7,7 +7,7 @@ var ratingCopy = {
   "instruction": "Rate these out of five",
   "positiveButtonText": "Love it!",
   "negativeButtonText": "Not for me",
-  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSYDDDDDDDDDDDDDDDDDDDDDD",
+  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSY",
   "gameMessageTextTwo": "OR IS IT INSERT TEXT HERE.",
   "gameMessageTextThree": "AND WHAT ABOUT INSERT TEXT HERE",
   "resultMessageHeader": "HERE IT IS. YOUR PERFECT LITTLE BLACK DRESS",
@@ -155,22 +155,21 @@ var nextQuestion = function() {
   $('#additionalText').innerHTML = '';
 
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
-  index++;
-
+  
+  var interactionContainer = $('#interactionContainer');
   var gameMessage = $('#gameMessage');
   var gameImages = $$('.gameImageDiv');
 
-  var ratingText = $.create('span', {
-    className: "ratingText"
-  });
 
   if (index === 1) {
-    var setRatingText = $.set(ratingText, 
+    var ratingText = $.create('span', 
     {
-      contents: [{ answer1 }]
+      contents: String(answer1),
+      className: 'ratingText' 
     });
-    gameImages[index].append(setRatingText);
+    gameImages[index].append(ratingText);
     animateExit();
+    index++;
     gameMessage.innerHTML = '';
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextOne),     
@@ -178,7 +177,8 @@ var nextQuestion = function() {
     });
   }
 
-  if (index === 2) {
+  else if (index === 2) {
+    
     animateExit();    
     gameMessage.innerHTML = '';
     var setText = $.set(gameMessage, {
@@ -187,7 +187,7 @@ var nextQuestion = function() {
     });
   }
 
-  if (index === 3) {
+  else if (index === 3) {
     animateExit();
     gameMessage.innerHTML = '';
     var setText = $.set(gameMessage, {
@@ -196,12 +196,12 @@ var nextQuestion = function() {
     });
   }
   
-  if (index === 4) {
+  else if (index === 4) {
     animateExit();
     presentFinalScreen();
   } 
 
-
+  index++;
 
   // 
   setTimeout(function()
@@ -256,6 +256,7 @@ var highlightStars = function(event) {
 
 }
 
+// This function builds the game DOM, including all the images.
 var buildGameDom = function() {
 
   
@@ -290,6 +291,8 @@ var buildGameDom = function() {
     starRatingContainer.append(starRatingInput);
   }
 
+
+  // All divs are displayed with a z-index of -1 to start.
 
   for (var i = 1; i <= 5; i++)
   {
@@ -366,6 +369,7 @@ var buildGameDom = function() {
   
 }
 
+// This function builds initial DOM.
 var buildInitialDom = function() {
   var mainContainer = $('#rating-container');
   var gameContainer = $.create('div', {
@@ -417,6 +421,7 @@ var buildInitialDom = function() {
   interactionContainer.append(ctaButton);
   gameContainer.append(interactionContainer);
 
+  // Transition for initial image. Should be changed to class instead of direct element styling.
   ctaButton.addEventListener('click', function(event) {
     slideRight = $.transition(initialGameImage, 
     {
@@ -425,9 +430,24 @@ var buildInitialDom = function() {
 
     buildGameDom();
 
+    // Increment view index
+    index++;
+
   });
+
+
+  // Append all containers to the DOM
+  gameContainer.append(imageContainer);
+  imageContainer.append(initialGameImage);
+  imageContainer.append(overlay);
+  interactionContainer.append(additionalText);
+  interactionContainer.append(callToAction);
+  interactionContainer.append(ctaButton);
+  gameContainer.append(interactionContainer);
+  mainContainer.append(gameContainer);
 }
 
+// Bliss won't execute any JS until the page is ready, so we are fine calling this as a global function call.
 buildInitialDom();
 
 
