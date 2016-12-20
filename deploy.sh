@@ -17,7 +17,19 @@ echo "creating build in $BUILD_DIR"
 rm -Rf build
 mkdir build
 
+
 #copy required files to /build
+cp index.html $BUILD_DIR/index.html
+cp binary.js $BUILD_DIR/binary.js
+cp styles_binary.css $BUILD_DIR/styles_binary.css
+cp rating.html $BUILD_DIR/rating.html
+cp rating.js $BUILD_DIR/rating.js
+cp styles_rating.css $BUILD_DIR/styles_rating.css
+cp grid.html $BUILD_DIR/grid.html
+cp grid.js $BUILD_DIR/grid.js
+cp styles_grid.css $BUILD_DIR/styles_grid.css
+
+
 cp bliss.js $BUILD_DIR/bliss.js
 
 cp index.html $BUILD_DIR/index.html
@@ -26,6 +38,7 @@ cp styles.css $BUILD_DIR/styles.css
 cp -r images $BUILD_DIR/
 
 cp index_four_images.html $BUILD_DIR/index_four_images.html
+cp -r external_scripts $BUILD_DIR/
 cp four_images.js $BUILD_DIR/four_images.js
 cp styles_four_images.css $BUILD_DIR/styles_four_images.css
 
