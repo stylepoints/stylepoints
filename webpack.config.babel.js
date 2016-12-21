@@ -1,6 +1,5 @@
 import path from 'path';
 
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import nested from 'postcss-nested';
 import cssimport from 'postcss-import';
@@ -14,9 +13,9 @@ export default {
 	debug: false,
   devtool: !isProduction ? 'eval-source-map' : '',
   entry: {
-    binary: [ './external_scripts/bliss.js', './external_scripts/hammer.min.js', './binary.js' ],
-    rating: [ './external_scripts/bliss.js', './external_scripts/hammer.min.js', './rating.js' ],
-    grid: [ './external_scripts/bliss.js', './external_scripts/hammer.min.js', './grid.js', ],
+    binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
+    rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
+    grid: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './grid.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -37,8 +36,6 @@ export default {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        // loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-        // loader: 'style-loader!css-loader'
         loaders: [
           'style-loader',
           'css-loader?importLoaders=1',
@@ -87,7 +84,6 @@ export default {
       filename: 'index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin('styles_[name].css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
