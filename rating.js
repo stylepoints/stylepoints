@@ -7,7 +7,7 @@ var ratingCopy = {
   "instruction": "Rate these out of five",
   "positiveButtonText": "Love it!",
   "negativeButtonText": "Not for me",
-  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSYDDDDDDDDDDDDDDDDDDDDDD",
+  "gameMessageTextOne": "IS YOUR STLYE CLASSIC & CLASSY",
   "gameMessageTextTwo": "OR IS IT INSERT TEXT HERE.",
   "gameMessageTextThree": "AND WHAT ABOUT INSERT TEXT HERE",
   "resultMessageHeader": "HERE IT IS. YOUR PERFECT LITTLE BLACK DRESS",
@@ -23,19 +23,32 @@ var ratingCopy = {
 }
 
 
-
+// Create global variables for answers to questions.
 var answer1, answer2, answer3, image1, image2, image3;
 
+// Initialize global view index to zero.
 var index = 0;
 
-
+// The presentFinalScreen function shows the final email screen and POSTs email data to the server.
 var presentFinalScreen = function() {
 
+  // Select containers we're going to modify.
   var interactionContainer = $("#interactionContainer");
   var imageContainer = $("#imageContainer");
   
+  // Remove star rating container
   interactionContainer.removeChild($(".starRatingContainer"));
 
+  // Lower the z-index of the overlay so we can interact with the widget
+  lowerOverlay = $.set($('.overlay'),
+  {
+    className: 'overlay lowerOverlay'
+  });
+
+  // Reset old game message content so we can change it.
+  var oldGameMessage = $('#gameMessage');
+  oldGameMessage.innerHTML = '';
+  
   if (ratingCopy.resultMessageHeader.length > 32) {
     var changeToSmallText = $.set(oldGameMessage, {
       className: 'gameMessage gameMessageSmallText'
@@ -64,6 +77,7 @@ var presentFinalScreen = function() {
         tag: 'input',
         id: 'emailFormInput',
         type: 'text',
+        'placeholder': 'myemail@myemailprovider.com'
       },
       {
         tag: 'input',
@@ -74,29 +88,45 @@ var presentFinalScreen = function() {
     ]
   });
 
-
   interactionContainer.append(emailSubmitForm);
+
+  // Create submit button event listener so that we can POST emails.
+  var submitButton = $('#emailFormButton').addEventListener('click', function()
+  {
+    var input = $('#emailFormInput');
+
+    var email = input.value;
+
+    $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
+    {
+      method: "POST"
+    }).then(function()
+    {
+      input.value = "";
+    });
+  });
 }
 
+// This function handles animation transitions for 
+// the image.
 var animateExit = function() {
   var gameImages = $$('.gameImageDiv');
 
   for (image in gameImages)
   {
     
-    if (image == index)
+    if (Number(image) === index)
     {
       
-      slideRight = $.transition(gameImages[image - 1], 
+      slideRight = $.set(gameImages[image - 1], 
       {
-          left: "500px",
-          transition: "left 1s"
+          className: 'gameImageDiv left'
       });
 
-      
+      // Set z-index based on position in game.
       showNext = $.style(gameImages[image],
       {
-          "z-index": -200 * index,
+          "z-index": -5 * index,
           "display": "block"
       });
 
@@ -105,8 +135,8 @@ var animateExit = function() {
 
 }
 
+// This function correctly sets the message text type.
 var gameMessageTextType = function(message) {
-  console.log(message.length);
   if (message.length < 30) {
     return "gameMessage"
   } else if (message.length > 30 && message.length < 35 ) {
@@ -118,63 +148,62 @@ var gameMessageTextType = function(message) {
 
 }
 
+// This function handles recording of answers and calls transition functions
+// after each answer is recorded.
 var nextQuestion = function() {
 
   $('#additionalText').innerHTML = '';
 
   console.log('answer1', answer1, 'answer2', answer2, 'answer3', answer3);
-  index++;
-
-  console.log(index, 'index');
-
+  
+  var interactionContainer = $('#interactionContainer');
   var gameMessage = $('#gameMessage');
-
   var gameImages = $$('.gameImageDiv');
 
 
   if (index === 1) {
-
+    var ratingText = $.create('span', 
+    {
+      contents: String(answer1),
+      className: 'ratingText' 
+    });
+    gameImages[index].append(ratingText);
     animateExit();
-
+    index++;
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextOne),     
       contents: ratingCopy.gameMessageTextOne
     });
-    
   }
 
-  if (index === 2) {
-
+  else if (index === 2) {
+    
     animateExit();    
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextTwo),     
       contents: ratingCopy.gameMessageTextTwo
     });
-
   }
 
-  if (index === 3) {
-
+  else if (index === 3) {
     animateExit();
-
     gameMessage.innerHTML = '';
-
     var setText = $.set(gameMessage, {
       className: gameMessageTextType(ratingCopy.gameMessageTextThree),     
       contents: ratingCopy.gameMessageTextThree
     });
   }
   
-  
-  if (index === 4) {
+  else if (index === 4) {
     animateExit();
     presentFinalScreen();
   } 
 
+  index++;
+
+  // 
   setTimeout(function()
   {
     for (star in $$('.starRating'))
@@ -227,6 +256,7 @@ var highlightStars = function(event) {
 
 }
 
+// This function builds the game DOM, including all the images.
 var buildGameDom = function() {
 
   
@@ -261,6 +291,8 @@ var buildGameDom = function() {
     starRatingContainer.append(starRatingInput);
   }
 
+
+  // All divs are displayed with a z-index of -1 to start.
 
   for (var i = 1; i <= 5; i++)
   {
@@ -337,8 +369,9 @@ var buildGameDom = function() {
   
 }
 
+// This function builds initial DOM.
 var buildInitialDom = function() {
-  var mainContainer = $('#container');
+  var mainContainer = $('#rating-container');
   var gameContainer = $.create('div', {
     id: 'gameContainer'
   });
@@ -388,6 +421,7 @@ var buildInitialDom = function() {
   interactionContainer.append(ctaButton);
   gameContainer.append(interactionContainer);
 
+  // Transition for initial image. Should be changed to class instead of direct element styling.
   ctaButton.addEventListener('click', function(event) {
     slideRight = $.transition(initialGameImage, 
     {
@@ -396,9 +430,24 @@ var buildInitialDom = function() {
 
     buildGameDom();
 
+    // Increment view index
+    index++;
+
   });
+
+
+  // Append all containers to the DOM
+  gameContainer.append(imageContainer);
+  imageContainer.append(initialGameImage);
+  imageContainer.append(overlay);
+  interactionContainer.append(additionalText);
+  interactionContainer.append(callToAction);
+  interactionContainer.append(ctaButton);
+  gameContainer.append(interactionContainer);
+  mainContainer.append(gameContainer);
 }
 
+// Bliss won't execute any JS until the page is ready, so we are fine calling this as a global function call.
 buildInitialDom();
 
 

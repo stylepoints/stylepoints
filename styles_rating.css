@@ -21,7 +21,17 @@
     font-weight: normal;
     font-style: normal;
 }
+.top {
+	background-image: url('images/top.png');
+	width: 353px;
+	height: 516px;
+}
 
+.bottom {
+	background-image: url('images/bottom.png');
+	width: 346px;
+	height: 372px;
+}
 section {
   font-family: sans-serif;
   width: 960px;
@@ -55,11 +65,10 @@ text-align: center;
 	height: 460px;
 width: 350px;
 margin: 0 auto;
-margin-top: 30px;
 display: flex;
 flex-direction: column;
-padding-top: 20px;
-padding-bottom: 50px;
+margin-top: 40px;
+margin-bottom: -50px;
 }
 
 .gameImage {
@@ -78,6 +87,10 @@ padding-bottom: 50px;
 	z-index: 2;
 	height: 320px;
 
+}
+
+.lowerOverlay {
+	z-index: -1;
 }
 
 .pushDown {
@@ -139,6 +152,9 @@ padding-bottom: 50px;
 	opacity: 1;
 }
 
+.ratingText {
+	font-family: 'playfair';
+}
 #additionalText {
 	font-size: 1em;
 	position: absolute;
@@ -259,17 +275,15 @@ color: white;
   text-align: center;
   display: block;
       position: relative;
-    top: 100px;
+    top: 90px;
 }
 
 #emailFormInput {
   display: block;
-  z-index: 6;
 margin-left: 9px;
-width: 90%;
+width: 333px;
 border: none;
 height: 50px;
-margin-top: 10px;
 font-family: 'Open Sans';
 padding-left: 17px;
 position: relative;
@@ -282,11 +296,22 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+
 }
 
+input[type="text"]{
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+.left {
+	left: 500px;
+}
 #emailFormButton {
 	width: 95%;
-	z-index: 6;
 	margin-left: 9px;
 	height: 50px;
 	border: 1px solid #F6F6F6;
@@ -298,6 +323,9 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
 	text-align: center;
 	align-self: center;
 	flex: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
 }
 
 .slideRight {
@@ -318,8 +346,19 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
 	top: -10px;
 }
 
-@media (max-width:600px){
+@media (max-height:400px){
+	#rating-container {
+		transform: scale(0.75);
+	}
 
-	
+	section {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	#gameContainer {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0px 0px 0px 0px;
+	}
 }
-
