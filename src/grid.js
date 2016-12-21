@@ -1,6 +1,5 @@
 
 var css = require("./styles/styles_grid.css");
-
 var fourImagesCopy = {
   "type": "binary",
   "additionalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus velit non mauris tristique eleifend. ",
@@ -429,11 +428,5 @@ var buildInitialDom = function() {
 
 // Bliss won't execute any JS until the page is ready, so we are fine calling this as a global function call.
 buildInitialDom();
-
-
-
-
-
-
 
 
