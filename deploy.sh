@@ -17,7 +17,6 @@ echo "creating build in $BUILD_DIR"
 rm -Rf build
 mkdir build
 
-
 #copy required files to /build
 cp index.html $BUILD_DIR/index.html
 cp binary.js $BUILD_DIR/binary.js
@@ -45,6 +44,7 @@ cp styles_four_images.css $BUILD_DIR/styles_four_images.css
 cp index_rating.html $BUILD_DIR/index_rating.html
 cp styles_rating.css $BUILD_DIR/styles_rating.css
 cp rating.js $BUILD_DIR/rating.js
+
 
 echo "deploying build to $S3_BUCKET"
 aws s3  --profile 'stylepoints' sync ./build $S3_BUCKET --delete --exclude 'deploy.sh' --exclude '.DS_Store'
