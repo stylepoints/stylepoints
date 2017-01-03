@@ -88,6 +88,12 @@ export default {
       filename: 'index.html',
       inject: 'body'
     }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/index-article.tpl.ejs',
+      filename: 'index-article.html',
+      inject: 'body'
+    }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
