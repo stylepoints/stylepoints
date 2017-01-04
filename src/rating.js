@@ -208,8 +208,9 @@
       animateExit();
       setTimeout(function()
       {
+        
         presentFinalScreen();
-      }, 400);
+      }, 1000);
     } 
 
     index++;
