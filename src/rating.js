@@ -125,7 +125,7 @@
         
         slideRight = $.set(gameImages[image - 1], 
         {
-            className: 'gameImageDiv left'
+            className: 'gameImageDiv lowOpacity'
         });
 
         // Set z-index based on position in game.
@@ -172,6 +172,8 @@
         contents: String(answer1),
         className: 'ratingText' 
       });
+
+      
       gameImages[index].append(ratingText);
       animateExit();
       index++;
@@ -183,7 +185,8 @@
     }
 
     else if (index === 2) {
-      
+      var additionalText = $('.additionalText');
+      additionalText.innerHTML = '';
       animateExit();    
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
@@ -218,7 +221,7 @@
           className: 'starRating'
         });
       }
-    }, 400);
+    }, 1000);
 
   }
 
@@ -271,31 +274,6 @@
     var interactionContainer = $('#interactionContainer', mainContainer);
 
     $('#additionalText', mainContainer).innerHTML = '';
-    var showInstructions = $.set($('#additionalText', mainContainer),
-    {
-      contents: [ratingCopy.instruction],
-      className: 'additionalText pushDown'
-    });
-
-    var starRatingContainer = $.create('div', 
-    {
-      className: 'starRatingContainer',
-    });
-
-    for (var i = 1; i < 6; i++)
-    {
-      var starRatingInput = $.create('div',
-      {
-        id: 'starRating' + i,
-        'className': 'starRating'
-      });
-
-      var selectRating = starRatingInput.addEventListener('click', function(event){
-        highlightStars(event.target);
-      });
-      starRatingContainer.append(starRatingInput);
-    }
-
 
     // All divs are displayed with a z-index of -1 to start.
 
@@ -357,19 +335,50 @@
     interactionContainer.removeChild( $('#ctaButton', mainContainer) );
 
 
-    oldMessage = $('#callToAction', mainContainer);
-    oldMessage.innerHTML = '';
+    setTimeout(function()
+    {
 
+      
+      var showInstructions = $.set($('#additionalText', mainContainer),
+      {
+        contents: [ratingCopy.instruction],
+        className: 'additionalText pushDown'
+      });
 
+      var starRatingContainer = $.create('div', 
+      {
+        className: 'starRatingContainer',
+      });
 
-    var gameMessage = $.set($('#callToAction', mainContainer), {
-      id: 'gameMessage',
-      contents: ratingCopy.gameMessageTextOne,
-      className: gameMessageTextType(ratingCopy.gameMessageTextOne)
-    });
+      for (var i = 1; i < 6; i++)
+      {
+        var starRatingInput = $.create('div',
+        {
+          id: 'starRating' + i,
+          'className': 'starRating'
+        });
+
+        var selectRating = starRatingInput.addEventListener('click', function(event){
+          highlightStars(event.target);
+        });
+
+        starRatingContainer.append(starRatingInput);
+      }
+
+      oldMessage = $('#callToAction', mainContainer);
+      oldMessage.innerHTML = '';
+
+      var gameMessage = $.set($('#callToAction', mainContainer), {
+        id: 'gameMessage',
+        contents: ratingCopy.gameMessageTextOne,
+        className: gameMessageTextType(ratingCopy.gameMessageTextOne)
+      });
+      
+      interactionContainer.append(starRatingContainer);
+    }, 1100);
+
     
-    
-    interactionContainer.append(starRatingContainer);
+  
     
   }
 
@@ -426,9 +435,9 @@
 
     // Transition for initial image. Should be changed to class instead of direct element styling.
     ctaButton.addEventListener('click', function(event) {
-      slideRight = $.transition(initialGameImage, 
+      slideRight = $.set(initialGameImage, 
       {
-          left: "500px"
+          className: "gameImageDiv lowOpacity"
       });
 
       buildGameDom();
