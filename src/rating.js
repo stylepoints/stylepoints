@@ -206,7 +206,10 @@
     
     else if (index === 4) {
       animateExit();
-      presentFinalScreen();
+      setTimeout(function()
+      {
+        presentFinalScreen();
+      }, 400);
     } 
 
     index++;
