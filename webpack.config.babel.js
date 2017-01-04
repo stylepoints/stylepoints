@@ -8,14 +8,18 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 
 const isProduction = process.env.NODE_ENV ? true : false
-console.log( "Building for ", isProduction ? "production" : "development")
+console.log( "Building for", isProduction ? "production" : "development")
 export default {
 	debug: false,
   devtool: !isProduction ? 'eval-source-map' : '',
-  entry: {
+  entry: isProduction ? {
     binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     grid: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './grid.js', ],
+  } : {
+    binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
+    rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
+    grid: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './grid.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -84,6 +88,12 @@ export default {
       filename: 'index.html',
       inject: 'body'
     }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/index-article.tpl.ejs',
+      filename: 'index-article.html',
+      inject: 'body'
+    }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
