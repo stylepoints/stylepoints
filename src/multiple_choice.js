@@ -1,6 +1,6 @@
 (function(){
 
-  var css = require("./styles/styles_grid.css");
+  var css = require("./styles/styles_multiple_choice.css");
   var fourImagesCopy = {
     "type": "binary",
     "additionalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus velit non mauris tristique eleifend. ",
