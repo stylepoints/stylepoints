@@ -15,11 +15,11 @@ export default {
   entry: isProduction ? {
     binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
-    grid: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './grid.js', ],
+    multiple_choice: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
   } : {
     binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
-    grid: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './grid.js', ],
+    multiple_choice: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -64,9 +64,9 @@ export default {
   plugins: [
 	  new HtmlWebpackPlugin({
       template: './html_templates/index-type.tpl.ejs',
-      filename: 'index-grid.html',
-      name: 'grid',
-      script: 'grid.js',
+      filename: 'index-multiple_choice.html',
+      name: 'multiple_choice',
+      script: 'multiple_choice.js',
       inject: false
     }),
     new HtmlWebpackPlugin({
