@@ -506,9 +506,9 @@
 
     // Transition for initial image. Should be changed to class instead of direct element styling.
     ctaButton.addEventListener('click', function(event) {
-      slideRight = $.transition(initialGameImage, 
+      slideRight = $.set(initialGameImage, 
       {
-          left: "500px"
+          className: "gameImageDiv lowOpacity"
       });
 
       
