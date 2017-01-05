@@ -1,6 +1,6 @@
 (function(){
 
-  var css = require("./styles/styles_multiple_choice.css");
+  var css = require("./styles/styles_multiple_choice_multiselect.css");
   var fourImagesCopy = {
     "type": "binary",
     "additionalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus velit non mauris tristique eleifend. ",
@@ -57,7 +57,7 @@
 
   var gridImagesFour = [fourImagesCopy.gameImageGridThirteen, fourImagesCopy.gameImageGridFourteen, fourImagesCopy.gameImageGridFifteen, fourImagesCopy.gameImageGridSixteen];
 
-  var mainContainer = $('#multiple-choice-container');
+  var mainContainer = $('#mutliple-choice-multiselect-container');
 
   // The presentFinalScreen function shows the final email screen and POSTs email data to the server.
   var presentFinalScreen = function() {

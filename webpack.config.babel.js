@@ -71,6 +71,13 @@ export default {
     }),
     new HtmlWebpackPlugin({
       template: './html_templates/index-type.tpl.ejs',
+      filename: 'index-multiple_choice_multiselect.html',
+      name: 'multiple_choice_multiselect',
+      script: 'multiple_choice_multiselect.js',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/index-type.tpl.ejs',
       filename: 'index-binary.html',
       name: 'binary',
       script: 'binary.js',
