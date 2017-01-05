@@ -442,13 +442,17 @@
     interactionContainer.append(buttonContainer);
 
     negativeButton.addEventListener('click', function(event) {
-      directionSwiped = 'left';
-      negativeAnswer(index, false);
+      setTimeout(function(){
+        directionSwiped = 'left';
+        negativeAnswer(index, false);
+      }, 300);
     });
 
     positiveButton.addEventListener('click', function(event) {
-      directionSwiped = 'right';
-      positiveAnswer(index, true);
+      setTimeout(function(){
+        directionSwiped = 'right';
+        positiveAnswer(index, true);
+      }, 300);
     });
     
   }
@@ -506,9 +510,9 @@
 
     // Transition for initial image. Should be changed to class instead of direct element styling.
     ctaButton.addEventListener('click', function(event) {
-      slideRight = $.transition(initialGameImage, 
+      slideRight = $.set(initialGameImage, 
       {
-          left: "500px"
+          className: "gameImageDiv lowOpacity"
       });
 
       

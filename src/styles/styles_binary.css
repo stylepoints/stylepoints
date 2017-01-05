@@ -35,6 +35,9 @@
 		margin-right: 10px;
 	}
 
+	.lowOpacity {
+		opacity: 0;
+	}
 	.highlighted {
 		background: rgba(255, 255, 255, 1);
 	}
@@ -77,11 +80,11 @@
 	.gameImageDiv {
 	  position: absolute;
 	  width: 100%;
-	  -moz-transition: left 1s; 
-	  -webkit-transition: left 1s;  
-	  -ms-transition: left 1s;  
-	  -o-transition: left 1s;  
-	  transition: left 1s;  
+	  -moz-transition: opacity 1s; 
+	  -webkit-transition: opacity 1s;  
+	  -ms-transition: opacity 1s;  
+	  -o-transition: opacity 1s;  
+	  transition: opacity 1s;  
 	  z-index: 1;
 	  left: 0px;
 	  display: none;
