@@ -159,58 +159,59 @@
 
   // This function handles animation transitions for 
   // the grid view.
-  // var animateExit = function(event) {
+  var animateExit = function(event) {
 
-  //   // Increment the index.
-  //   var gameImageGrids = $$('.gameImageGrid', mainContainer);
+    // Increment the index.
+    var gameImageGrids = $$('.gameImageGrid', mainContainer);
 
-  //   // When the user clicks on an image, we fade out all OTHER images quickly, then show the next grid.
+    // When the user clicks on an image, we fade out all OTHER images quickly, then show the next grid.
 
-  //   var currentGameImageGrid = gameImageGrids[index];
+    var currentGameImageGrid = gameImageGrids[index];
 
-  //   var currentGameImageGridImages = currentGameImageGrid.children
+    var currentGameImageGridImages = currentGameImageGrid.children
     
-  //   console.log(currentGameImageGridImages);
-  //   for (var i = 0; i < 4; i++)
-  //   {
-  //     if (currentGameImageGrid.children[i].id !== event.target.id)
-  //     {
-  //       console.log('Should fade');
-  //       fadeOutImages = $.set(currentGameImageGrid.children[i], {
-  //         className: "gameImageGridImage lowOpacity"
-  //       });
-  //     }
-  //   }
+    console.log(currentGameImageGridImages);
+    for (var i = 0; i < 4; i++)
+    {
+      if (currentGameImageGrid.children[i].id !== event.target.id)
+      {
+        console.log('Should fade');
+        fadeOutImages = $.set(currentGameImageGrid.children[i], {
+          className: "gameImageGridImage lowOpacity"
+        });
+      }
+    }
 
-  //   setTimeout(function()
-  //   {
-  //     for (gameImageGrid in gameImageGrids)
-  //     {
-  //       if (Number(gameImageGrid) === index)
-  //       {      
-  //         hideGrid = $.set(gameImageGrids[index - 1], {
-  //           "className": "gameImageGrid hidden"
-  //         });
-  //         showNextGrid = $.set(gameImageGrids[index],
-  //         {
-  //             "className": "gameImageGrid"
-  //         });
-  //       }
-  //     }
+    setTimeout(function()
+    {
+      for (gameImageGrid in gameImageGrids)
+      {
+        if (Number(gameImageGrid) === index)
+        {      
+          hideGrid = $.set(gameImageGrids[index - 1], {
+            "className": "gameImageGrid hidden"
+          });
+          showNextGrid = $.set(gameImageGrids[index],
+          {
+              "className": "gameImageGrid"
+          });
+        }
+      }
 
-  //     if (index === 4 )
-  //     {
-  //       presentFinalScreen();
-  //     }
+      if (index === 4 )
+      {
+        console.log(answerGroupOne, answerGroupTwo, answerGroupThree);
+        presentFinalScreen();
+      }
 
-  //   }, 500);
+    }, 500);
 
-  //   index++;
+    index++;
 
 
 
    
-  // }
+  }
 
   // Small helper function to dynamically set gameMessage text size
   // based on message length.
@@ -238,33 +239,44 @@
       {
         animateExit(event);
       }
-
-
+      else
+      {
+        // Add flash message telling user to select
+      }
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
-        contents: fourImagesCopy.gameMessageTextTwo
+        contents: fourImagesCopy.gameMessageTextOne
+      }); 
+    } else if (index === 2) {
+      if (answerGroupTwo.length > 0)
+      {
+        animateExit(event);
+      }
+      else
+      {
+        // Add flash message telling user to select
+      }
+      gameMessage.innerHTML = '';
+      var setText = $.set(gameMessage, {
+        className: gameMessageTextType(fourImagesCopy.gameMessageTextTwo),     
+        contents: fourImagesCopy.gameMessageTextThree
       });
-    }  
-    // } else if (index === 2) {
-    //   var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
-    //   answer2 = newAnswer;
-    //   animateExit(event);    
-    //   gameMessage.innerHTML = '';
-    //   var setText = $.set(gameMessage, {
-    //     className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
-    //     contents: fourImagesCopy.gameMessageTextThree
-    //   });
-    // } else if (index === 3) {
-    //   var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
-    //   answer3 = newAnswer;
-    //   animateExit(event);
-    //   gameMessage.innerHTML = '';
-    //   var setText = $.set(gameMessage, {
-    //     className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
-    //     contents: fourImagesCopy.gameMessageTextThree
-    //   });
-    // }
+    } else if (index === 3) {
+      if (answerGroupThree.length > 0)
+      {
+        animateExit(event);
+      }
+      else
+      {
+        // Add flash message telling user to select
+      }
+      gameMessage.innerHTML = '';
+      var setText = $.set(gameMessage, {
+        className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
+        contents: fourImagesCopy.gameMessageTextThree
+      });
+    }
 
 
     // Increment the index and log each answer.
