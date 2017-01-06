@@ -341,7 +341,24 @@
       gameImageGridTwo.append(gameImageGridImage);
       gameImageGridImage.addEventListener('click', function(event)
       {
-        // Add selection indicator to mark choice.
+        if (answerGroupTwo.indexOf(event.target.id) === -1)
+        {
+          console.log(answerGroupTwo);
+          $.set(event.target, {
+            className: 'gameImageGridImage selected'
+          });
+          answerGroupTwo.push(event.target.id);
+          console.log(answerGroupTwo)  
+        }
+        else
+        {
+          $.set(event.target, {
+            className: 'gameImageGridImage'
+          });
+          answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
+          console.log(answerGroupTwo);
+        }
+        
       });
     }
     var gameImageGridThree = $.create('div', {
@@ -358,7 +375,24 @@
       gameImageGridThree.append(gameImageGridImage);
       gameImageGridImage.addEventListener('click', function(event)
       {
-        // Add selection indicator to mark choice.
+        if (answerGroupThree.indexOf(event.target.id) === -1)
+        {
+          console.log(answerGroupThree);
+          $.set(event.target, {
+            className: 'gameImageGridImage selected'
+          });
+          answerGroupThree.push(event.target.id);
+          console.log(answerGroupThree)  
+        }
+        else
+        {
+          $.set(event.target, {
+            className: 'gameImageGridImage'
+          });
+          answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
+          console.log(answerGroupThree);
+        }
+        
       });
     }
 
