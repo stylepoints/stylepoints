@@ -102,7 +102,10 @@
 		opacity: 1;
 		transition: opacity 500ms;
 		background-color: white;
+	}
 
+	.selected {
+		border-radius: 300px;
 	}
 
 	.lowOpacity {
@@ -136,7 +139,21 @@
 		position: relative;
 		font-family: 'playfair';
 		margin-top: -20px;
+	}
 
+	#nextButton {
+		border: 1px solid #F0F0F0;
+		height: 50px;
+		width: 350px;
+		color: #000000;
+		background: transparent;
+		font-size: 1em;
+		justify-content: center;
+		align-self: center;
+		font-family: 'playfair';	
+		position: relative;
+		top: 260px;
+		flex: none;
 	}
 
 	.gameMessage {

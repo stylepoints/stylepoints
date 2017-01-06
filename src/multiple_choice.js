@@ -59,6 +59,12 @@
 
   var mainContainer = $('#grid-container');
 
+  var answerGroupOne = [];
+
+  var answerGroupTwo = [];
+
+  var answerGroupThree = [];
+
   // The presentFinalScreen function shows the final email screen and POSTs email data to the server.
   var presentFinalScreen = function() {
 
@@ -153,58 +159,58 @@
 
   // This function handles animation transitions for 
   // the grid view.
-  var animateExit = function(event) {
+  // var animateExit = function(event) {
 
-    // Increment the index.
-    var gameImageGrids = $$('.gameImageGrid', mainContainer);
+  //   // Increment the index.
+  //   var gameImageGrids = $$('.gameImageGrid', mainContainer);
 
-    // When the user clicks on an image, we fade out all OTHER images quickly, then show the next grid.
+  //   // When the user clicks on an image, we fade out all OTHER images quickly, then show the next grid.
 
-    var currentGameImageGrid = gameImageGrids[index];
+  //   var currentGameImageGrid = gameImageGrids[index];
 
-    var currentGameImageGridImages = currentGameImageGrid.children
+  //   var currentGameImageGridImages = currentGameImageGrid.children
     
-    console.log(currentGameImageGridImages);
-    for (var i = 0; i < 4; i++)
-    {
-      if (currentGameImageGrid.children[i].id !== event.target.id)
-      {
-        console.log('Should fade');
-        fadeOutImages = $.set(currentGameImageGrid.children[i], {
-          className: "gameImageGridImage lowOpacity"
-        });
-      }
-    }
+  //   console.log(currentGameImageGridImages);
+  //   for (var i = 0; i < 4; i++)
+  //   {
+  //     if (currentGameImageGrid.children[i].id !== event.target.id)
+  //     {
+  //       console.log('Should fade');
+  //       fadeOutImages = $.set(currentGameImageGrid.children[i], {
+  //         className: "gameImageGridImage lowOpacity"
+  //       });
+  //     }
+  //   }
 
-    setTimeout(function()
-    {
-      for (gameImageGrid in gameImageGrids)
-      {
-        if (Number(gameImageGrid) === index)
-        {      
-          hideGrid = $.set(gameImageGrids[index - 1], {
-            "className": "gameImageGrid hidden"
-          });
-          showNextGrid = $.set(gameImageGrids[index],
-          {
-              "className": "gameImageGrid"
-          });
-        }
-      }
+  //   setTimeout(function()
+  //   {
+  //     for (gameImageGrid in gameImageGrids)
+  //     {
+  //       if (Number(gameImageGrid) === index)
+  //       {      
+  //         hideGrid = $.set(gameImageGrids[index - 1], {
+  //           "className": "gameImageGrid hidden"
+  //         });
+  //         showNextGrid = $.set(gameImageGrids[index],
+  //         {
+  //             "className": "gameImageGrid"
+  //         });
+  //       }
+  //     }
 
-      if (index === 4 )
-      {
-        presentFinalScreen();
-      }
+  //     if (index === 4 )
+  //     {
+  //       presentFinalScreen();
+  //     }
 
-    }, 500);
+  //   }, 500);
 
-    index++;
+  //   index++;
 
 
 
    
-  }
+  // }
 
   // Small helper function to dynamically set gameMessage text size
   // based on message length.
@@ -225,34 +231,34 @@
 
     // Select the gameMessage div.
 
-    if (index === 1) {
-      var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
-      answer1 = newAnswer;
-      animateExit(event);
-      gameMessage.innerHTML = '';
-      var setText = $.set(gameMessage, {
-        className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
-        contents: fourImagesCopy.gameMessageTextTwo
-      });  
-    } else if (index === 2) {
-      var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
-      answer2 = newAnswer;
-      animateExit(event);    
-      gameMessage.innerHTML = '';
-      var setText = $.set(gameMessage, {
-        className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
-        contents: fourImagesCopy.gameMessageTextThree
-      });
-    } else if (index === 3) {
-      var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
-      answer3 = newAnswer;
-      animateExit(event);
-      gameMessage.innerHTML = '';
-      var setText = $.set(gameMessage, {
-        className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
-        contents: fourImagesCopy.gameMessageTextThree
-      });
-    }
+    // if (index === 1) {
+    //   var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
+    //   answer1 = newAnswer;
+    //   animateExit(event);
+    //   gameMessage.innerHTML = '';
+    //   var setText = $.set(gameMessage, {
+    //     className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
+    //     contents: fourImagesCopy.gameMessageTextTwo
+    //   });  
+    // } else if (index === 2) {
+    //   var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
+    //   answer2 = newAnswer;
+    //   animateExit(event);    
+    //   gameMessage.innerHTML = '';
+    //   var setText = $.set(gameMessage, {
+    //     className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
+    //     contents: fourImagesCopy.gameMessageTextThree
+    //   });
+    // } else if (index === 3) {
+    //   var newAnswer = event.target.id.substring(event.target.id.length, event.target.id.length - 1);
+    //   answer3 = newAnswer;
+    //   animateExit(event);
+    //   gameMessage.innerHTML = '';
+    //   var setText = $.set(gameMessage, {
+    //     className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
+    //     contents: fourImagesCopy.gameMessageTextThree
+    //   });
+    // }
 
 
     // Increment the index and log each answer.
@@ -281,8 +287,11 @@
     });
 
     // Create our gameImageGrids for the entire game. Each image in the grid is identified
-    // with an ID. Each image also has a click event that calls the nextQuestion function.
+    // with an ID. Each image can be selected or de-selected, and when it is selected/deselected
+    // its ID is placed in an array matching the question number. Items that are deselected are removed from this array.
     // The first grid is the only one not hidden.
+
+    //
 
     var gameImageGridOne = $.create('div', {
       className: 'gameImageGrid', style: {"display": "block"}
@@ -298,7 +307,17 @@
       gameImageGridOne.append(gameImageGridImage);
       gameImageGridImage.addEventListener('click', function(event)
       {
-        nextQuestion(event);
+        if (answerGroupOne.indexOf(event.target.id) === -1)
+        {
+          console.log(answerGroupOne);
+          $.set(event.target, {
+            className: 'gameImageGridImage selected'
+          });
+
+          answerGroupOne.push(event.target.id);
+          console.log(answerGroupOne)  
+        }
+        
       });
     }
     var gameImageGridTwo = $.create('div', {
@@ -315,7 +334,7 @@
       gameImageGridTwo.append(gameImageGridImage);
       gameImageGridImage.addEventListener('click', function(event)
       {
-        nextQuestion(event);
+        // Add selection indicator to mark choice.
       });
     }
     var gameImageGridThree = $.create('div', {
@@ -332,7 +351,7 @@
       gameImageGridThree.append(gameImageGridImage);
       gameImageGridImage.addEventListener('click', function(event)
       {
-        nextQuestion(event);
+        // Add selection indicator to mark choice.
       });
     }
 
@@ -350,6 +369,17 @@
     interactionContainer.removeChild( $('#ctaButton', mainContainer) );
     $('#callToAction', mainContainer).innerHTML = ''
 
+    var nextButton = $.create('button', {
+        id: 'nextButton',
+        contents: "Next Question"
+    });
+
+    nextButton.addEventListener('click', function(event)
+    {
+        nextQuestion(event);
+    })
+
+    interactionContainer.append(nextButton);
     // Set the new gameMessage text, substituting a call to gameMessageTextType,
     // for the normal className, which will dynamically set text size based on length.
     var gameMessage = $.set($('#callToAction', mainContainer), {
