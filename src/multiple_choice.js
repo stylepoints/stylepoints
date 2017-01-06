@@ -313,9 +313,16 @@
           $.set(event.target, {
             className: 'gameImageGridImage selected'
           });
-
           answerGroupOne.push(event.target.id);
           console.log(answerGroupOne)  
+        }
+        else
+        {
+          $.set(event.target, {
+            className: 'gameImageGridImage'
+          });
+          answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
+          console.log(answerGroupOne);
         }
         
       });
