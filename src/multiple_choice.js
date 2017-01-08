@@ -70,6 +70,10 @@
 
     // Select containers we're going to modify.
     var interactionContainer = $("#interactionContainer", mainContainer);
+
+    interactionContainer.removeChild($('#nextButton'), mainContainer);
+
+
     var imageContainer = $("#imageContainer", mainContainer);
     // Remove lowZIndex class from the interactionContainer.
     raiseInteractionContainer = $.set(interactionContainer, {
