@@ -335,6 +335,10 @@
             className: 'gameImageGridImageSelectedIcon',
             id: 'gridOneSelected' + i,
             src: fourImagesCopy.gameImageGridImageSelectedIcon
+        }, {
+            tag: 'span',
+            className: 'gameImageGridImageLabel',
+            contents: "Test Label"
         }]
       });
       gameImageGridOne.append(gameImageGridImageContainer);
@@ -386,6 +390,10 @@
             className: 'gameImageGridImageSelectedIcon',
             id: 'gridTwoSelected' + j,
             src: fourImagesCopy.gameImageGridImageSelectedIcon
+        }, {
+            tag: 'span',
+            className: 'gameImageGridImageLabel',
+            contents: "Test Label"
         }]
       });
       gameImageGridTwo.append(gameImageGridImageContainer);
@@ -435,6 +443,10 @@
             className: 'gameImageGridImageSelectedIcon',
             id: 'gridThreeSelected' + k,
             src: fourImagesCopy.gameImageGridImageSelectedIcon
+        }, {
+            tag: 'span',
+            className: 'gameImageGridImageLabel',
+            contents: "Test Label"
         }]
       });
       gameImageGridThree.append(gameImageGridImageContainer);
