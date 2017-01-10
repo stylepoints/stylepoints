@@ -211,6 +211,13 @@
 
 
 	}
+	.gameImageGridImageLabel {
+		position: absolute;
+	    bottom: 20px;
+	    text-align: center;
+	    left: 50px;
+	    color: white;
+	}
 
 	.lowZIndex {
 		z-index: -1;
