@@ -314,7 +314,7 @@
     // its ID is placed in an array matching the question number. Items that are deselected are removed from this array.
     // The first grid is the only one not hidden.
 
-    //
+    
 
     var gameImageGridOne = $.create('div', {
       className: 'gameImageGrid'
@@ -345,30 +345,27 @@
         // we show the right selected icon.
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length); 
-
         if (answerGroupOne.indexOf(event.target.id) === -1)
         {
             // If the id doesn't exist in the array, add it and 
-            // show the selected icon.
-
-            
-            // Set the correct selection indicator to be visible
-
+            // show the selected icon.  
+            // Set the correct selection indicator to be visible  
             $.set($('#gridOneSelected' + selectedImage), 
             {
                 className: 'gameImageGridImageSelectedIcon show'
             });
-
             answerGroupOne.push(event.target.id);
+            console.log(answerGroupOne);
         } else {
-
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
+            console.log(answerGroupOne);
         }
       });
+    } 
       // var gameImageGridImageContainer = $.create('img',
       // {
       //   className: 'gameImageGridImage',
@@ -397,41 +394,41 @@
       //   }
         
       // });
-    }
-    var gameImageGridTwo = $.create('div', {
-      className: 'gameImageGrid hidden', style: {"display": "block"}
-    });
-    for (var j = 0; j < 4; j++)
-    {
-      var gameImageGridImage = $.create('img',
-      {
-        className: 'gameImageGridImage',
-        src: gridImagesThree[j],
-        id: "gridTwo" + j
-      });
-      gameImageGridTwo.append(gameImageGridImage);
-      gameImageGridImage.addEventListener('click', function(event)
-      {
-        if (answerGroupTwo.indexOf(event.target.id) === -1)
-        {
-          console.log(answerGroupTwo);
-          $.set(event.target, {
-            className: 'gameImageGridImage gameImageGridImageSelected'
-          });
-          answerGroupTwo.push(event.target.id);
-          console.log(answerGroupTwo)  
-        }
-        else
-        {
-          $.set(event.target, {
-            className: 'gameImageGridImage'
-          });
-          answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
-          console.log(answerGroupTwo);
-        }
+    // }
+    // var gameImageGridTwo = $.create('div', {
+    //   className: 'gameImageGrid hidden', style: {"display": "block"}
+    // });
+    // for (var j = 0; j < 4; j++)
+    // {
+    //   var gameImageGridImage = $.create('img',
+    //   {
+    //     className: 'gameImageGridImage',
+    //     src: gridImagesThree[j],
+    //     id: "gridTwo" + j
+    //   });
+    //   gameImageGridTwo.append(gameImageGridImage);
+    //   gameImageGridImage.addEventListener('click', function(event)
+    //   {
+    //     if (answerGroupTwo.indexOf(event.target.id) === -1)
+    //     {
+    //       console.log(answerGroupTwo);
+    //       $.set(event.target, {
+    //         className: 'gameImageGridImage gameImageGridImageSelected'
+    //       });
+    //       answerGroupTwo.push(event.target.id);
+    //       console.log(answerGroupTwo)  
+    //     }
+    //     else
+    //     {
+    //       $.set(event.target, {
+    //         className: 'gameImageGridImage'
+    //       });
+    //       answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
+    //       console.log(answerGroupTwo);
+    //     }
         
-      });
-    }
+    //   });
+    // }
     var gameImageGridThree = $.create('div', {
       className: 'gameImageGrid hidden', style: {"display": "block"}
     });
