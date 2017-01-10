@@ -395,40 +395,40 @@
         
       // });
     // }
-    // var gameImageGridTwo = $.create('div', {
-    //   className: 'gameImageGrid hidden', style: {"display": "block"}
-    // });
-    // for (var j = 0; j < 4; j++)
-    // {
-    //   var gameImageGridImage = $.create('img',
-    //   {
-    //     className: 'gameImageGridImage',
-    //     src: gridImagesThree[j],
-    //     id: "gridTwo" + j
-    //   });
-    //   gameImageGridTwo.append(gameImageGridImage);
-    //   gameImageGridImage.addEventListener('click', function(event)
-    //   {
-    //     if (answerGroupTwo.indexOf(event.target.id) === -1)
-    //     {
-    //       console.log(answerGroupTwo);
-    //       $.set(event.target, {
-    //         className: 'gameImageGridImage gameImageGridImageSelected'
-    //       });
-    //       answerGroupTwo.push(event.target.id);
-    //       console.log(answerGroupTwo)  
-    //     }
-    //     else
-    //     {
-    //       $.set(event.target, {
-    //         className: 'gameImageGridImage'
-    //       });
-    //       answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
-    //       console.log(answerGroupTwo);
-    //     }
+    var gameImageGridTwo = $.create('div', {
+      className: 'gameImageGrid hidden', style: {"display": "block"}
+    });
+    for (var j = 0; j < 4; j++)
+    {
+      var gameImageGridImage = $.create('img',
+      {
+        className: 'gameImageGridImage',
+        src: gridImagesThree[j],
+        id: "gridTwo" + j
+      });
+      gameImageGridTwo.append(gameImageGridImage);
+      gameImageGridImage.addEventListener('click', function(event)
+      {
+        if (answerGroupTwo.indexOf(event.target.id) === -1)
+        {
+          console.log(answerGroupTwo);
+          $.set(event.target, {
+            className: 'gameImageGridImage gameImageGridImageSelected'
+          });
+          answerGroupTwo.push(event.target.id);
+          console.log(answerGroupTwo)  
+        }
+        else
+        {
+          $.set(event.target, {
+            className: 'gameImageGridImage'
+          });
+          answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
+          console.log(answerGroupTwo);
+        }
         
-    //   });
-    // }
+      });
+    }
     var gameImageGridThree = $.create('div', {
       className: 'gameImageGrid hidden', style: {"display": "block"}
     });
