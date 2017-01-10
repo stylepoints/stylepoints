@@ -126,9 +126,9 @@
 		height: 170px;
 		opacity: 0.5;
 		z-index: 1; /* FF3.6-15 */
-	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
-	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
-	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 		opacity: 0.5;
 		position: absolute;
