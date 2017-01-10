@@ -335,6 +335,10 @@
             tag: 'span',
             className: 'gameImageGridImageLabel',
             contents: "Test Label"
+        }, {
+            tag: 'div',
+            className: 'gameImageGridImageOverlay',
+            id: 'gridOneSelected' + i
         }]
       });
       gameImageGridOne.append(gameImageGridImageContainer);
@@ -390,6 +394,10 @@
             tag: 'span',
             className: 'gameImageGridImageLabel',
             contents: "Test Label"
+        }, {
+            tag: 'div',
+            className: 'gameImageGridImageOverlay',
+            id: 'gridTwoSelected' + j
         }]
       });
       gameImageGridTwo.append(gameImageGridImageContainer);
@@ -443,6 +451,10 @@
             tag: 'span',
             className: 'gameImageGridImageLabel',
             contents: "Test Label"
+        }, {
+            tag: 'div',
+            className: 'gameImageGridImageOverlay',
+            id: 'gridThreeSelected' + k
         }]
       });
       gameImageGridThree.append(gameImageGridImageContainer);
