@@ -66,7 +66,6 @@
 	  width: 350px;
 	  height: 320px;
 	  overflow: hidden;
-	  z-index: 10000;
 	}
 
 	#publisherLogo {
@@ -94,11 +93,13 @@
 		overflow: hidden;
 		position: absolute;
 
+
 	}
 	.gameImageGridImageContainer {
 		width: 175px;
 		height: 159px;
 		position: relative;
+		z-index: 15;
 	}
 	.gameImageGridImage {
 		width: 175px;
@@ -107,6 +108,7 @@
 		opacity: 1;
 		transition: opacity 500ms;
 		background-color: white;
+		z-index: 9;
 	}
 
 	.gameImageGridImageSelectedIcon {
@@ -116,7 +118,33 @@
 		display: none;
 		top: 10px;
 		right: 20px;
+		z-index: 8;
 	}
+
+	.gameImageGridImageOverlay {
+		width: 175px;
+		height: 170px;
+		opacity: 0.5;
+		z-index: 1; /* FF3.6-15 */
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+		opacity: 0.5;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.gameImageGridImageLabel {
+		position: absolute;
+	    bottom: 30px;
+	    text-align: center;
+	    left: 50px;
+	    color: white;
+	    z-index: 7;
+	}
+
 
 	.show {
 		display: block;
@@ -211,14 +239,7 @@
 
 
 	}
-	.gameImageGridImageLabel {
-		position: absolute;
-	    bottom: 20px;
-	    text-align: center;
-	    left: 50px;
-	    color: white;
-	}
-
+	
 	.lowZIndex {
 		z-index: -1;
 	}
