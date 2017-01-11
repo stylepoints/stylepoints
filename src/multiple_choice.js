@@ -349,13 +349,16 @@
         {
             // If the id doesn't exist in the array, add it and 
             // show the selected icon.  
-            // Set the correct selection indicator to be visible  
-            $.set($('#gridOneSelected' + selectedImage), 
+            // Set the correct selection indicator to be visible
+            if (answerGroupOne.length < 1)
             {
-                className: 'gameImageGridImageSelectedIcon show'
-            });
-            answerGroupOne.push(event.target.id);
-            console.log(answerGroupOne);
+                $.set($('#gridOneSelected' + selectedImage), 
+                {
+                    className: 'gameImageGridImageSelectedIcon show'
+                });
+                answerGroupOne.push(event.target.id);
+                console.log(answerGroupOne);
+            }
         } else {
             $.set($('#gridOneSelected' + selectedImage),
             {
