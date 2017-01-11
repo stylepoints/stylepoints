@@ -253,16 +253,22 @@
 	}
 
 	#resultMessageText {
-	  font-family: 'Open Sans';
-	  width: 50%;
-	  z-index: 6;
-	  font-size: 1em;
-	  color: white;
-	  text-align: center;
-	  position: relative;
-	  top: 100px;
-	  align-self: center;
-	  justify-content: center;
+	  	font-family: 'Open Sans';
+	    width: 300px;
+	    display: block;
+	    z-index: 6;
+	    font-size: 1em;
+	    color: white;
+	    text-align: center;
+	    position: relative;
+	    top: 100px;
+	    left: 30px;
+	    -ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
 
 	}
 	#emailSubmitForm {
