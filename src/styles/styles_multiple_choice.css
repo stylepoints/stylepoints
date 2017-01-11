@@ -252,6 +252,17 @@
 		z-index: -1;
 	}
 
+	.itemDescription {
+		font-family: "Open Sans";
+    position: absolute;
+    font-size: 0.75em;
+    color: white;
+    text-align: center;
+    top: 50px;
+    left: 85px;
+    font-weight: normal;
+	}
+
 	#resultMessageText {
 	  	font-family: 'Open Sans';
 	    width: 300px;
