@@ -261,15 +261,16 @@
 		z-index: -1;
 	}
 
-	.itemDescription {
+	.gadgetRecommendation {
 		font-family: "DIN Condensed";
-	    position: absolute;
-	    font-size: 1.125em;
-	    color: white;
-	    text-align: center;
-	    top: 50px;
-	    left: 90px;
-	    font-weight: normal;
+    	position: absolute;
+    	font-size: 1.125em;
+    	color: white;
+    	text-align: center;
+    	top: 50px;
+    	left: 41px;
+    	font-weight: normal;
+    	width: 80%;
 	}
 
 	#resultMessageText {
@@ -295,7 +296,7 @@
 		margin-top: -20px;
 	    z-index: 10000;
 	    position: absolute;
-	    top: 100PX;
+	    top: 80px;
 	}
 	#emailFormInput {
 	display: block;
