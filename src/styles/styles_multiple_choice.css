@@ -192,7 +192,7 @@
 		align-self: center;
 		justify-content: center;
 		position: relative;
-		font-family: 'playfair';
+		font-family: 'Open Sans';
 	}
 
 	#nextButton {
@@ -204,7 +204,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'playfair';	
+		font-family: 'Open Sans';	
 		position: relative;
 		top: 280px;
 		flex: none;
@@ -217,7 +217,7 @@
 	  width: 100%;
 	  color: black;
 	  position: relative;
-	  font-family: 'playfair';
+	  font-family: 'Open Sans';
 	}
 
 	#ctaButton {
@@ -230,7 +230,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'playfair';
+		font-family: 'Open Sans';
 		
 		position: relative;
 		top: 280px;
