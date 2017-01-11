@@ -66,7 +66,6 @@
 	  width: 350px;
 	  height: 320px;
 	  overflow: hidden;
-	  z-index: 10000;
 	}
 
 	#publisherLogo {
@@ -94,11 +93,25 @@
 		overflow: hidden;
 		position: absolute;
 
+
+	}
+	.confirmationMessage {
+	  font-family: 'playfair';
+	  width: 80%;
+	  z-index: 6;
+	  font-size: 1.5em;
+	  color: white;
+	  text-align: center;
+	  position: relative;
+      top: 50px;
+      align-self: center;
+      justify-content: center;
 	}
 	.gameImageGridImageContainer {
 		width: 175px;
 		height: 159px;
 		position: relative;
+		z-index: 15;
 	}
 	.gameImageGridImage {
 		width: 175px;
@@ -107,16 +120,43 @@
 		opacity: 1;
 		transition: opacity 500ms;
 		background-color: white;
+		z-index: 9;
 	}
 
 	.gameImageGridImageSelectedIcon {
-		width: 24px;
-		height: 24px;
+		width: 48px;
+		height: 48px;
 		position: absolute;
 		display: none;
-		top: 10px;
-		right: 20px;
+		top: 50px;
+		right: 60px;
+		z-index: 8;
 	}
+
+	.gameImageGridImageOverlay {
+		width: 175px;
+		height: 170px;
+		opacity: 0.5;
+		z-index: 1; /* FF3.6-15 */
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+		opacity: 0.5;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.gameImageGridImageLabel {
+		position: absolute;
+	    bottom: 30px;
+	    text-align: center;
+	    left: 50px;
+	    color: white;
+	    z-index: 7;
+	}
+
 
 	.show {
 		display: block;
@@ -152,8 +192,7 @@
 		align-self: center;
 		justify-content: center;
 		position: relative;
-		font-family: 'playfair';
-		margin-top: -20px;
+		font-family: 'Open Sans';
 	}
 
 	#nextButton {
@@ -165,7 +204,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'playfair';	
+		font-family: 'Open Sans';	
 		position: relative;
 		top: 280px;
 		flex: none;
@@ -177,11 +216,8 @@
 	  font-size: 1.25em;
 	  width: 100%;
 	  color: black;
-	  align-self: center;
-	  justify-content: center;
 	  position: relative;
-	  font-family: 'playfair';
-	  top: 10px;
+	  font-family: 'Open Sans';
 	}
 
 	#ctaButton {
@@ -194,7 +230,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'playfair';
+		font-family: 'Open Sans';
 		
 		position: relative;
 		top: 280px;
@@ -211,28 +247,40 @@
 
 
 	}
-	.gameImageGridImageLabel {
-		position: absolute;
-	    bottom: 20px;
-	    text-align: center;
-	    left: 50px;
-	    color: white;
-	}
-
+	
 	.lowZIndex {
 		z-index: -1;
 	}
 
+	.itemDescription {
+		font-family: "Open Sans";
+    position: absolute;
+    font-size: 0.75em;
+    color: white;
+    text-align: center;
+    top: 50px;
+    left: 85px;
+    font-weight: normal;
+	}
+
 	#resultMessageText {
-	  font-family: 'playfair';
-	  width: 100%;
-	  z-index: 6;
-	  font-size: 1em;
-	  color: white;
-	  text-align: center;
-	  display: block;
-	      position: relative;
+	  	font-family: 'Open Sans';
+	    width: 300px;
+	    display: block;
+	    z-index: 6;
+	    font-size: 1em;
+	    color: white;
+	    text-align: center;
+	    position: relative;
 	    top: 100px;
+	    left: 30px;
+	    -ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+
 	}
 	#emailSubmitForm {
 		margin-top: -20px;
@@ -248,6 +296,7 @@
 	font-family: 'Open Sans';
 	padding-left: 17px;
 	position: relative;
+	text-align: center;
 	top: 100px;
 	border-bottom: 1px solid white;
 	color: white; 
