@@ -146,7 +146,7 @@
           tag: 'input',
           id: 'emailFormInput',
           type: 'text',
-          'placeholder': 'myemail@myemailprovider.com'
+          'placeholder': 'EMAIL ADDRESS'
         },
         {
           tag: 'input',
@@ -407,13 +407,16 @@
         {
             // If the id doesn't exist in the array, add it and 
             // show the selected icon.  
-            // Set the correct selection indicator to be visible  
-            $.set($('#gridTwoSelected' + selectedImage), 
+            // Set the correct selection indicator to be visible
+            if (answerGroupTwo.length < 1)
             {
-                className: 'gameImageGridImageSelectedIcon show'
-            });
-            answerGroupTwo.push(event.target.id);
-            console.log(answerGroupTwo);
+                $.set($('#gridTwoSelected' + selectedImage), 
+                {
+                    className: 'gameImageGridImageSelectedIcon show'
+                });
+                answerGroupTwo.push(event.target.id);
+                console.log(answerGroupTwo);
+            }
         } else {
             $.set($('#gridTwoSelected' + selectedImage),
             {
