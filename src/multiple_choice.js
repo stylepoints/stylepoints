@@ -70,8 +70,12 @@
 
     interactionContainer.removeChild($('#gameMessage'));
     interactionContainer.removeChild($('.gadgetRecommendation'));
-    $('#emailSubmitForm').innerHTML = '';
+    interactionContainer.removeChild($('form'));
 
+    var resultImage = $('.resultImage');
+    $.set(resultImage, {
+        src: fourImagesCopy.gameImageGridThree
+    });
     var oldResultMessage = $('#gameMessage', mainContainer);
 
     var confirmationMessage = $.create('p', {
@@ -261,14 +265,14 @@
 
     console.log('next');
 
-    if (index === 1) {
+    if (index === 1 && answerGroupOne.length > 0) {
       animateExit(event);
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
         contents: fourImagesCopy.gameMessageTextTwo
       }); 
-    } else if (index === 2) {
+    } else if (index === 2 && answerGroupTwo.length > 0) {
       var nextButton = $('#nextButton');
       nextButton.innerHTML = ''
       $.set(nextButton, {

@@ -158,8 +158,7 @@
 	}
 
 	.gameImageGridImageLabel {
-		    position: absolute;
-    bottom: 30px;
+	position: absolute;
     color: white;
     text-align: center;
     left: 0px;
@@ -168,6 +167,7 @@
     font-size: 1.25em;
     margin: 0 auto;
     width: 175px;
+    bottom: 10px;
 	}
 
 
