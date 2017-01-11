@@ -580,6 +580,16 @@
       buildGameDom();
     });
 
+    initialGameImageGrid.addEventListener('click', function(event)
+    {
+      hide = $.set(initialGameImageGrid, 
+      {
+          className: "gameImageGrid hidden"
+      });
+
+      buildGameDom();
+    })
+
     // Append all containers to the DOM
     gameContainer.append(imageContainer);
     imageContainer.append(initialGameImageGrid);
