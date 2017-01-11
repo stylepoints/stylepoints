@@ -243,10 +243,10 @@
   var gameMessageTextType = function(message) {
     if (message.length < 30) {
       return "gameMessage"
-    } else if (message.length > 30 && message.length < 35 ) {
+    } else if (message.length > 30 && message.length < 50 ) {
       return "gameMessage gameMessageMediumText"
     } else {
-      return "gameMessage gameMessageSmallText"
+      return "gameMessage"
     }
   }
 
@@ -501,7 +501,7 @@
     
     var nextButton = $.create('button', {
         id: 'nextButton',
-        contents: "Next Question"
+        contents: "NEXT QUESTION"
     });
 
     nextButton.addEventListener('click', function(event) {
