@@ -126,21 +126,11 @@
       }]
     }));
 
-    // Make sure resultMessage is correctly sized.
-    if (fourImagesCopy.resultMessageHeader.length > 32) {
-      var changeToSmallText = $.set(oldGameMessage, {
-        className: 'gameMessage gameMessageSmallText'
-      });
-    }
-    else {
-      var changeToSmallText = $.set(oldGameMessage, {
-        className: 'gameMessage'
-      });
-    }
 
     // Set new result message
     var resultMessageHeader = $.set(oldGameMessage, {
-      contents: fourImagesCopy.resultMessageHeader
+      contents: fourImagesCopy.resultMessageHeader,
+      className: 'gameMessage gameMessageEmailScreen'
     });
 
     // Create email submit form and append it to the interactionContainer.
@@ -229,7 +219,7 @@
         }
       }
 
-      if (index === 4 )
+      if (index === 3 )
       {
         console.log(answerGroupOne, answerGroupTwo, answerGroupThree);
         presentEmailScreen();
@@ -263,16 +253,16 @@
 
     // Select the gameMessage div.
 
-    console.log('next');
+    console.log('next', index);
 
-    if (index === 1 && answerGroupOne.length > 0) {
+    if (index === 0 && answerGroupOne.length > 0) {
       animateExit(event);
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
         contents: fourImagesCopy.gameMessageTextTwo
       }); 
-    } else if (index === 2 && answerGroupTwo.length > 0) {
+    } else if (index === 1 && answerGroupTwo.length > 0) {
       var nextButton = $('#nextButton');
       nextButton.innerHTML = ''
       $.set(nextButton, {
@@ -284,7 +274,7 @@
         className: gameMessageTextType(fourImagesCopy.gameMessageTextTwo),     
         contents: fourImagesCopy.gameMessageTextThree
       });
-    } else if (index === 3) {
+    } else if (index === 2) {
       animateExit(event);
       var nextButton = $('#nextButton');
       
@@ -303,12 +293,25 @@
 
   // This function builds the game DOM.
   var buildGameDom = function() {
+    console.log(index);
 
     // Increment our global view index.
-    index++;
+    // index++;
+
+    console.log(index);
+
+    var gameContainer = $.create('div', {
+      id: 'gameContainer'
+    });
+    var imageContainer = $.create('div', {
+      id: 'imageContainer'
+    });
+    var interactionContainer = $.create('div', {
+      id: 'interactionContainer'
+    });
+
 
     // Select interaction container and set new text.
-    var interactionContainer = $('#interactionContainer', mainContainer);
     var showInstructions = $.set($('#additionalText', mainContainer),
     {
       contents: [fourImagesCopy.instruction],
@@ -506,17 +509,16 @@
     // Create an array of these new image grids so that we can append them to the dom.
     var gameImageGrids = [gameImageGridOne, gameImageGridTwo, gameImageGridThree];
     
-    var imageContainer = $("#imageContainer", mainContainer);
+    gameContainer.append(imageContainer);
+    gameContainer.append(interactionContainer);
+    mainContainer.append(gameContainer);
     
     for (image in gameImageGrids) 
     {
       imageContainer.append(gameImageGrids[image]);
     }
 
-    // Remove the call to action button and reset the callToAction div text.
-    interactionContainer.removeChild( $('#ctaButton', mainContainer) );
-    $('#callToAction', mainContainer).innerHTML = '';
-
+    // Remove the call to action button and reset the callToAction div text
     
     var nextButton = $.create('button', {
         id: 'nextButton',
@@ -529,97 +531,96 @@
     });
 
     interactionContainer.append(nextButton);
-
-    
-    // Set the new gameMessage text, substituting a call to gameMessageTextType,
-    // for the normal className, which will dynamically set text size based on length.
-    var gameMessage = $.set($('#callToAction', mainContainer), {
+    var gameMessage = $.create('div', {
       id: 'gameMessage',
       contents: fourImagesCopy.gameMessageTextOne,
       className: gameMessageTextType(fourImagesCopy.gameMessageTextOne)
     });  
+
+    interactionContainer.append(gameMessage);
+    
+    // Set the new gameMessage text, substituting a call to gameMessageTextType,
+    // for the normal className, which will dynamically set text size based on length.
+    
   }
 
-  var buildInitialDom = function() {
-    // Select the container we will be appending. Create game, image and interaction containers.
-    // The game container is the top level container, and the image and interaction containers
-    // Show images and contain interactive/text elements.
+  // var buildInitialDom = function() {
+  //   // Select the container we will be appending. Create game, image and interaction containers.
+  //   // The game container is the top level container, and the image and interaction containers
+  //   // Show images and contain interactive/text elements.
     
-    var gameContainer = $.create('div', {
-      id: 'gameContainer'
-    });
-    var imageContainer = $.create('div', {
-      id: 'imageContainer'
-    });
-    var interactionContainer = $.create('div', {
-      id: 'interactionContainer'
-    });
+  //   var gameContainer = $.create('div', {
+  //     id: 'gameContainer'
+  //   });
+  //   var imageContainer = $.create('div', {
+  //     id: 'imageContainer'
+  //   });
+  //   var interactionContainer = $.create('div', {
+  //     id: 'interactionContainer'
+  //   });
 
 
-    // Create our inital image grid for display before game DOM is loaded.
-    var initialGameImageGrid = $.create('div', {
-      className: 'gameImageGrid'
-    });
+  //   // Create our inital image grid for display before game DOM is loaded.
+  //   var initialGameImageGrid = $.create('div', {
+  //     className: 'gameImageGrid'
+  //   });
    
-    // Create four image tags and append them to the image grid.
-    for (var i = 0; i < 4; i++)
-    {
-      var gameImageGridImage = $.create('img',
-      {
-        className: 'gameImageGridImage',
-        src: gridImagesInitial[i]
-      });
-      initialGameImageGrid.append(gameImageGridImage);
-    }
+  //   // Create four image tags and append them to the image grid.
+  //   for (var i = 0; i < 4; i++)
+  //   {
+  //     var gameImageGridImage = $.create('img',
+  //     {
+  //       className: 'gameImageGridImage',
+  //       src: gridImagesInitial[i]
+  //     });
+  //     initialGameImageGrid.append(gameImageGridImage);
+  //   }
     
 
     
 
-    // Create the remaining text elements, the call to action and call to action button.
-    var callToAction = $.create('div', {
-      id: 'callToAction',
-      contents: fourImagesCopy.callToActionMessage
-    });
+  //   // Create the remaining text elements, the call to action and call to action button.
+  //   var callToAction = $.create('div', {
+  //     id: 'callToAction',
+  //     contents: fourImagesCopy.callToActionMessage
+  //   });
     
-    var ctaButton = $.create('button', {
-      id: 'ctaButton', 
-      contents: fourImagesCopy.callToActionButtonText
-    });
+  //   var ctaButton = $.create('button', {
+  //     id: 'ctaButton', 
+  //     contents: fourImagesCopy.callToActionButtonText
+  //   });
 
-    // Create event listener to trigger the buildGameDom function when button is clicked.
-    ctaButton.addEventListener('click', function(event) {
-      // We want to hide the initialGameImage grid.
-      hide = $.set(initialGameImageGrid, 
-      {
-          className: "gameImageGrid hidden"
-      });
+  //   // Create event listener to trigger the buildGameDom function when button is clicked.
+  //   ctaButton.addEventListener('click', function(event) {
+  //     // We want to hide the initialGameImage grid.
+  //     hide = $.set(initialGameImageGrid, 
+  //     {
+  //         className: "gameImageGrid hidden"
+  //     });
 
-      buildGameDom();
-    });
+  //     buildGameDom();
+  //   });
 
-    initialGameImageGrid.addEventListener('click', function(event)
-    {
-      hide = $.set(initialGameImageGrid, 
-      {
-          className: "gameImageGrid hidden"
-      });
+  //   initialGameImageGrid.addEventListener('click', function(event)
+  //   {
+  //     hide = $.set(initialGameImageGrid, 
+  //     {
+  //         className: "gameImageGrid hidden"
+  //     });
 
-      buildGameDom();
-    })
+  //     buildGameDom();
+  //   })
 
-    // Append all containers to the DOM
-    gameContainer.append(imageContainer);
-    imageContainer.append(initialGameImageGrid);
-    interactionContainer.append(callToAction);
-    interactionContainer.append(ctaButton);
-    gameContainer.append(interactionContainer);
-    mainContainer.append(gameContainer);
+  //   // Append all containers to the DOM
+  //   gameContainer.append(imageContainer);
+  //   gameContainer.append(interactionContainer);
+  //   mainContainer.append(gameContainer);
 
-  }
+  // }
 
 
 
   // Bliss won't execute any JS until the page is ready, so we are fine calling this as a global function call.
-  buildInitialDom();
+  buildGameDom();
 
 })();

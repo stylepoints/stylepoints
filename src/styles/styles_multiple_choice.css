@@ -158,16 +158,16 @@
 	}
 
 	.gameImageGridImageLabel {
-	position: absolute;
-    color: white;
-    text-align: center;
-    left: 0px;
-    z-index: 7;
-    font-family: 'DIN Condensed';
-    font-size: 1.25em;
-    margin: 0 auto;
-    width: 175px;
-    bottom: 10px;
+		position: absolute;
+	    color: white;
+	    text-align: center;
+	    left: 0px;
+	    z-index: 7;
+	    font-family: 'DIN Condensed';
+	    font-size: 1.25em;
+	    margin: 0 auto;
+	    width: 175px;
+	    bottom: 10px;
 	}
 
 
@@ -220,7 +220,7 @@
 		align-self: center;
 		font-family: 'DIN Condensed';	
 		position: relative;
-		top: 280px;
+		top: 375px;
 		flex: none;
 		z-index: 10000;
 	}
@@ -232,8 +232,12 @@
 	  color: black;
 	  position: relative;
 	  font-family: 'DIN Condensed';
+	  top: -50px;
 	}
-
+	
+	.gameMessageEmailScreen {
+		top: 15px
+	}
 	#ctaButton {
 
 		border: 1px solid #F0F0F0;
@@ -357,7 +361,7 @@
 	}
 
 	.gameMessageMediumText {
-		top: -10px;
+		top: -60px;
 	}
 
 	@media (max-height:400px){
