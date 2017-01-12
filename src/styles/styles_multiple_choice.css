@@ -388,7 +388,7 @@
 	}
 
 	.gameMessageMediumText {
-		top: -60px;
+		top: -50px;
 	}
 
 	@media (max-height:400px){
