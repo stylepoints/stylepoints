@@ -310,7 +310,18 @@
       id: 'interactionContainer'
     });
 
+    var nextButton = $.create('button', {
+        id: 'nextButton',
+        contents: "NEXT QUESTION"
+    });
 
+    nextButton.addEventListener('click', function(event) {
+      // Reset next button activity state after transitioning.
+      $.set(nextButton, {
+        className: ''
+      });
+      nextQuestion(event);
+    });
     // Select interaction container and set new text.
     var showInstructions = $.set($('#additionalText', mainContainer),
     {
@@ -375,6 +386,10 @@
                 {
                     className: 'gameImageGridImageSelectedIcon show'
                 });
+
+                $.set(nextButton, {
+                    className: 'nextButtonActive'
+                });
                 answerGroupOne.push(event.target.id);
                 console.log(answerGroupOne);
             }
@@ -382,6 +397,9 @@
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
+            });
+            $.set(nextButton, {
+                    className: ''
             });
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
             console.log(answerGroupOne);
@@ -433,6 +451,9 @@
                 {
                     className: 'gameImageGridImageSelectedIcon show'
                 });
+                $.set(nextButton, {
+                    className: 'nextButtonActive'
+                });
                 answerGroupTwo.push(event.target.id);
                 console.log(answerGroupTwo);
             }
@@ -441,6 +462,9 @@
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
+            $.set(nextButton, {
+                    className: ''
+                });
             answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
             console.log(answerGroupTwo);
         }
@@ -494,6 +518,13 @@
                 className: 'gameImageGridImageSelectedIcon show'
             });
             answerGroupThree.push(event.target.id);
+            if (answerGroupThree.length > 0){
+                console.log('Test');
+                $.set(nextButton, {
+                        className: 'nextButtonActive'
+                });
+            }
+            
             console.log(answerGroupThree);
         } else {
             $.set($('#gridThreeSelected' + selectedImage),
@@ -501,6 +532,14 @@
                 className: 'gameImageGridImageSelectedIcon'
             });
             answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
+            if (answerGroupThree.length === 0)
+            {
+                $.set(nextButton, {
+                    className: ''
+                });
+            }
+            
+            
             console.log(answerGroupThree);
         }
       });
@@ -517,18 +556,8 @@
     {
       imageContainer.append(gameImageGrids[image]);
     }
-
-    // Remove the call to action button and reset the callToAction div text
     
-    var nextButton = $.create('button', {
-        id: 'nextButton',
-        contents: "NEXT QUESTION"
-    });
-
-    nextButton.addEventListener('click', function(event) {
-      // We want to hide the initialGameImage grid.
-      nextQuestion(event);
-    });
+    
 
     interactionContainer.append(nextButton);
     var gameMessage = $.create('div', {

@@ -266,6 +266,11 @@
 
 	}
 	
+	.nextButtonActive {
+		background: #7ed321 !important;
+		color: white !important;
+	}
+
 	.lowZIndex {
 		z-index: -1;
 	}
