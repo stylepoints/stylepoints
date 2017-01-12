@@ -72,6 +72,17 @@
     interactionContainer.removeChild($('.gadgetRecommendation'));
     interactionContainer.removeChild($('form'));
 
+    var shareButton = $.create('button', {
+        className: 'shareButton',
+        id: '#shareButton',
+        contents: "SHARE THIS ARTICLE"
+    });
+
+    shareButton.addEventListener('click', function()
+    {
+        alert('Shared!');
+    });
+
     var resultImage = $('.resultImage');
     $.set(resultImage, {
         src: fourImagesCopy.gameImageGridThree
@@ -83,6 +94,7 @@
         className: "confirmationMessage"
     });
 
+    interactionContainer.append(shareButton);
     interactionContainer.append(confirmationMessage);
   }
 
