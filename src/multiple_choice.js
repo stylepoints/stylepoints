@@ -519,7 +519,8 @@
         }, {
             tag: 'span',
             className: 'gameImageGridImageLabel',
-            contents: imageLabels[k]
+            contents: imageLabels[k],
+            id: 'gridThreeSelected' + k
         }]
       });
       
