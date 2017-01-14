@@ -328,11 +328,22 @@
     });
 
     nextButton.addEventListener('click', function(event) {
+      console.log(index);
       // Reset next button activity state after transitioning.
-      $.set(nextButton, {
-        className: ''
-      });
-      nextQuestion(event);
+      if (index !== 1)
+      {
+          $.set(nextButton, {
+            className: ''
+          });
+          nextQuestion(event);
+      }
+      else 
+      {
+          $.set(nextButton, {
+            className: 'nextButtonActive'
+          });
+          nextQuestion(event);
+      }
     });
     // Select interaction container and set new text.
     var showInstructions = $.set($('#additionalText', mainContainer),
@@ -508,7 +519,8 @@
         }, {
             tag: 'span',
             className: 'gameImageGridImageLabel',
-            contents: imageLabels[k]
+            contents: imageLabels[k],
+            id: 'gridThreeSelected' + k
         }]
       });
       
@@ -544,12 +556,7 @@
                 className: 'gameImageGridImageSelectedIcon'
             });
             answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
-            if (answerGroupThree.length === 0)
-            {
-                $.set(nextButton, {
-                    className: ''
-                });
-            }
+            
             
             
             console.log(answerGroupThree);

@@ -98,7 +98,6 @@
 		width: 350px;
 		height: 310px;
 		background-color: white;
-		overflow: hidden;
 		position: absolute;
 
 
@@ -118,7 +117,7 @@
 	}
 	.gameImageGridImageContainer {
 		width: 175px;
-		height: 159px;
+		height: 170px;
 		position: relative;
 		z-index: 15;
 	}
@@ -220,7 +219,7 @@
 		align-self: center;
 		font-family: 'DIN Condensed';	
 		position: relative;
-		top: 375px;
+		top: 385px;
 		flex: none;
 		z-index: 10000;
 	}
@@ -289,7 +288,7 @@
 	}
 	
 	.nextButtonActive {
-		background: #7ed321 !important;
+		background: #68B45E !important;
 		color: white !important;
 	}
 
