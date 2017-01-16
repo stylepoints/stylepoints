@@ -108,10 +108,11 @@
 	  z-index: 6;
 	  font-size: 1.5em;
 	  letter-spacing: 1px;
-	  color: white;
+	  color: black;
 	  text-align: center;
 	  position: relative;
-      top: 150px;
+      top: 160px;
+      left: 350px;
       align-self: center;
       justify-content: center;
 	}
@@ -239,7 +240,7 @@
 	    align-self: center;
 	    font-family: 'DIN Condensed';
 	    position: relative;
-	    top: 100px;
+	    top: 250px;
 	    -webkit-box-flex: 0;
 	    -ms-flex: none;
 	    flex: none;
