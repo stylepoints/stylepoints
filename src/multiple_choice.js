@@ -9,7 +9,7 @@
     "callToActionButtonText": "LET'S GO!",
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
     "gameMessageTextTwo": "2. WHICH PICTURE DESCRIBES WHY YOU DRIVE MOST OFTEN?",
-    "gameMessageTextThree": "3. WHICH OF THESE GADGETS DO YOU ALREADY OWN? (TICK ALL THAT APPLY)",
+    "gameMessageTextThree": "3. DO YOU HAVE ANY OF THE GADGETS BELOW? TAP ALL THAT YOU OWN THEN GET YOUR RESULTS!",
     "resultMessageHeader": "OUR RECOMMENDATION:",
     "resultMessageText": "ENTER YOUR EMAIL BELOW TO RECEIVE A £10 VOUCHER OFF THE PURCHASE OF ANY GADGET AT HALFORDS.COM",
     "confirmationMessageText": "Thanks for playing! You will receieve an email with your voucher within 24 hours.",
@@ -24,14 +24,14 @@
     "gameImageGridTwo": require("./images/multiple_choice/1_2.png"),
     "gameImageGridThree": require("./images/multiple_choice/1_3.png"),
     "gameImageGridFour": require("./images/multiple_choice/1_4.png"),
-    "gameImageGridFive": require("./images/multiple_choice/2_1.png"),
-    "gameImageGridSix": require("./images/multiple_choice/2_2.png"),
-    "gameImageGridSeven": require("./images/multiple_choice/2_3.png"),
-    "gameImageGridEight": require("./images/multiple_choice/2_4.png"),
-    "gameImageGridNine": require("./images/multiple_choice/1_1.png"),
-    "gameImageGridTen": require("./images/multiple_choice/1_2.png"),
-    "gameImageGridEleven": require("./images/multiple_choice/1_3.png"),
-    "gameImageGridTwelve": require("./images/multiple_choice/1_4.png"),
+    "gameImageGridFive": require("./images/multiple_choice/1_1.png"),
+    "gameImageGridSix": require("./images/multiple_choice/1_2.png"),
+    "gameImageGridSeven": require("./images/multiple_choice/1_3.png"),
+    "gameImageGridEight": require("./images/multiple_choice/1_4.png"),
+    "gameImageGridNine": require("./images/multiple_choice/2_1.png"),
+    "gameImageGridTen": require("./images/multiple_choice/2_2.png"),
+    "gameImageGridEleven": require("./images/multiple_choice/2_3.png"),
+    "gameImageGridTwelve": require("./images/multiple_choice/2_4.png"),
     "gameImageGridThirteen": require("./images/multiple_choice/3_1.png"),
     "gameImageGridFourteen": require("./images/multiple_choice/3_2.png"),
     "gameImageGridFifteen": require("./images/multiple_choice/3_3.png"),
@@ -283,7 +283,7 @@
       animateExit(event);
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
-        className: gameMessageTextType(fourImagesCopy.gameMessageTextTwo),     
+        className: 'gameMessage gameMessageFinalQuestion',     
         contents: fourImagesCopy.gameMessageTextThree
       });
     } else if (index === 2) {
@@ -496,7 +496,7 @@
     var gameImageGridThree = $.create('div', {
       className: 'gameImageGrid hidden'
     });
-    var imageLabels = ["DVD PLAYER", "SATNAV", "TILE", "DIAGNOSTIC TOOL"];
+    var imageLabels = ["DVD PLAYER", "SATNAV", "DASH CAM", "DIAGNOSTIC TOOL"];
     for (var k = 0; k < 4; k++)
     {
       var gameImageGridImageContainer = $.create('div', 

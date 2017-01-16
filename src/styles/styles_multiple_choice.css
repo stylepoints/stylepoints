@@ -108,10 +108,11 @@
 	  z-index: 6;
 	  font-size: 1.5em;
 	  letter-spacing: 1px;
-	  color: white;
+	  color: black;
 	  text-align: center;
 	  position: relative;
-      top: 150px;
+      top: 160px;
+      left: 350px;
       align-self: center;
       justify-content: center;
 	}
@@ -239,7 +240,7 @@
 	    align-self: center;
 	    font-family: 'DIN Condensed';
 	    position: relative;
-	    top: 100px;
+	    top: 250px;
 	    -webkit-box-flex: 0;
 	    -ms-flex: none;
 	    flex: none;
@@ -259,6 +260,11 @@
 	.gameMessageEmailScreen {
 		top: 15px
 	}
+
+	.gameMessageFinalQuestion {
+		width: 100%;
+	}
+
 	#ctaButton {
 
 		border: 1px solid #F0F0F0;
@@ -406,4 +412,60 @@
 			padding: 0px 0px 0px 0px;
 		}
 	}
+
+	@media screen and (min-width: 700px) {
+	#gameContainer {
+		width: 768px;
+		margin-left: 50px;
+	}
+
+	#nextButton {
+		left: 350px;
+		width: 80%;
+		height: 75px;
+		top: 295px;
+		font-size: 1.5em;
+	}
+
+	#gameMessage {
+		left: 390px;
+		top: -25px;
+		font-size: 2em;
+	}
+
+	.gameImageGridImageLabel {
+		top: 115px;
+	}
+
+	.gameMessageEmailScreen {
+		top: 50px !important;
+		margin-left: -15px;
+	}
+
+	.gadgetRecommendation {
+		color: black;
+		left: 375px;
+		text-align: left;
+	}
+
+	#resultMessageText {
+		left: 375px;
+		color: black;
+		text-align: left;
+	}
+
+	#emailFormInput {
+		left: 355px;
+		background: none;
+		color: black;
+		border-bottom: 1px solid #F0F0F0;
+	}
+
+	#emailFormButton {
+		left: 355px;
+		height: 50px;
+		bottom: 5px;
+	}
 }
+}
+
