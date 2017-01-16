@@ -496,7 +496,7 @@
     var gameImageGridThree = $.create('div', {
       className: 'gameImageGrid hidden'
     });
-    var imageLabels = ["DVD PLAYER", "SATNAV", "TILE", "DIAGNOSTIC TOOL"];
+    var imageLabels = ["DVD PLAYER", "SATNAV", "DASH CAM", "DIAGNOSTIC TOOL"];
     for (var k = 0; k < 4; k++)
     {
       var gameImageGridImageContainer = $.create('div', 
