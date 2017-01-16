@@ -261,6 +261,10 @@
 		top: 15px
 	}
 
+	.gameMessageFinalQuestion {
+		width: 100%;
+	}
+
 	#ctaButton {
 
 		border: 1px solid #F0F0F0;
