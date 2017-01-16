@@ -108,11 +108,11 @@
 	  z-index: 6;
 	  font-size: 1.5em;
 	  letter-spacing: 1px;
-	  color: black;
+	  color: white;
 	  text-align: center;
 	  position: relative;
-      top: 160px;
-      left: 350px;
+      top: 60px;
+      left: 0px;
       align-self: center;
       justify-content: center;
 	}
@@ -167,7 +167,7 @@
 	    font-size: 1.25em;
 	    margin: 0 auto;
 	    width: 175px;
-	    bottom: 10px;
+	    bottom: 30px;
 	}
 
 
@@ -465,6 +465,21 @@
 		left: 355px;
 		height: 50px;
 		bottom: 5px;
+	}
+
+	.confirmationMessage {
+	  font-family: 'DIN Condensed';
+	  width: 80%;
+	  z-index: 6;
+	  font-size: 1.5em;
+	  letter-spacing: 1px;
+	  color: black;
+	  text-align: center;
+	  position: relative;
+      top: 160px;
+      left: 350px;
+      align-self: center;
+      justify-content: center;
 	}
 }
 }

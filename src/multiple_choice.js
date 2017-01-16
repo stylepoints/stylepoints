@@ -286,6 +286,8 @@
         className: 'gameMessage gameMessageFinalQuestion',     
         contents: fourImagesCopy.gameMessageTextThree
       });
+
+    
     } else if (index === 2) {
       animateExit(event);
       var nextButton = $('#nextButton');
