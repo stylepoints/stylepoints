@@ -388,7 +388,7 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay',
+            className: 'gameImageGridImageOverlay hidden',
             id: 'gridOneSelected' + i
         }]
       });
@@ -453,7 +453,7 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay',
+            className: 'gameImageGridImageOverlay hidden',
             id: 'gridTwoSelected' + j
         }]
       });
