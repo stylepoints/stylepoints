@@ -176,6 +176,9 @@
     // Create email submit form and append it to the interactionContainer.
     var emailSubmitForm = $.create('form', {
       id: 'emailSubmitForm',
+      action: '//stylepoints.us14.list-manage.com/subscribe/post?u=56a2ff2655e74c7b8d44b955e&amp;id=87d115b894',
+      'method': 'post',
+      'target': '_blank',
       contents: [
         {
           tag: 'label',
@@ -185,12 +188,13 @@
         {
           tag: 'input',
           id: 'emailFormInput',
-          type: 'text',
+          type: 'email',
+          name: 'EMAIL',
           'placeholder': 'EMAIL ADDRESS'
         },
         {
           tag: 'input',
-          type: 'button',
+          type: 'submit',
           id: 'emailFormButton',
           value: fourImagesCopy.emailFormButtonText
         }
