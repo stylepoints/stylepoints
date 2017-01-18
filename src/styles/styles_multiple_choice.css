@@ -226,12 +226,12 @@
 		z-index: 10000;
 	}
 
-	.shareButton {
+	.shareButtonsContainer {
 		border: none;
 	    height: 50px;
-	    width: 200px;
+	    width: 300px;
 	    color: #000000;
-	    background: #fff;
+		background: none;
 	    font-size: 1em;
 	    -webkit-box-pack: center;
 	    -ms-flex-pack: center;
@@ -247,7 +247,13 @@
 	    flex: none;
 	    z-index: 10000;
 	}
+	
+	.shareButton {
+		transform: scale(0.5);
+		width: 65px;
+		margin-right: -15px;
 
+	}
 	.gameMessage {
 	  height: 100px;
 	  font-size: 1.25em;
