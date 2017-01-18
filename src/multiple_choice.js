@@ -376,6 +376,7 @@
       var gameImageGridImageContainer = $.create('div', 
       {
         className: 'gameImageGridImageContainer',
+        id: 'gridOne' + i,
         contents: [{
             tag: 'img',
             className: 'gameImageGridImage',
@@ -389,12 +390,13 @@
         }, {
             tag: 'div',
             className: 'gameImageGridImageOverlay hidden',
-            id: 'gridOneSelected' + i
+            id: 'gridOneOverlay' + i
         }]
       });
       gameImageGridOne.append(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
-      {
+      { 
+        
 
         // Have to get the ID from the element ID to make sure
         // we show the right selected icon.
@@ -417,6 +419,19 @@
                 });
                 answerGroupOne.push(event.target.id);
                 console.log(answerGroupOne);
+                for( var i = 0; i < 4; i++)
+                {
+                  if ("gridOne" + i !== event.target.id)
+                  {
+                    $.set($("#gridOneOverlay" + i), {
+                      className: 'gameImageGridImageOverlay'
+                    });
+                  } else {
+                    $.set($("#gridOneOverlay" + i), {
+                      className: 'gameImageGridImageOverlay hidden'
+                    });
+                  }
+                }
             }
         } else {
             $.set($('#gridOneSelected' + selectedImage),
@@ -426,6 +441,13 @@
             $.set(nextButton, {
                     className: ''
             });
+            for( var i = 0; i < 4; i++)
+                {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                   
+                }
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
             console.log(answerGroupOne);
         }
@@ -454,7 +476,7 @@
         }, {
             tag: 'div',
             className: 'gameImageGridImageOverlay hidden',
-            id: 'gridTwoSelected' + j
+            id: 'gridTwoOverlay' + j
         }]
       });
       gameImageGridTwo.append(gameImageGridImageContainer);
@@ -479,6 +501,19 @@
                 $.set(nextButton, {
                     className: 'nextButtonActive'
                 });
+                for( var i = 0; i < 4; i++)
+                {
+                  if ("gridTwo" + i !== event.target.id)
+                  {
+                    $.set($("#gridTwoOverlay" + i), {
+                      className: 'gameImageGridImageOverlay'
+                    });
+                  } else {
+                    $.set($("#gridTwoOverlay" + i), {
+                      className: 'gameImageGridImageOverlay hidden'
+                    });
+                  }
+                }
                 answerGroupTwo.push(event.target.id);
                 console.log(answerGroupTwo);
             }
@@ -490,6 +525,13 @@
             $.set(nextButton, {
                     className: ''
                 });
+            for( var i = 0; i < 4; i++)
+                {
+                  $.set($("#gridTwoOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                   
+                }
             answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
             console.log(answerGroupTwo);
         }
