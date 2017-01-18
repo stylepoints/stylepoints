@@ -138,8 +138,8 @@
 		height: 48px;
 		position: absolute;
 		display: none;
-		top: 50px;
-		right: 60px;
+		top: 60px;
+		right: 65px;
 		z-index: 8;
 	}
 
@@ -222,6 +222,7 @@
 		font-family: 'DIN Condensed';	
 		position: relative;
 		top: 405px;
+		line-height: 50px;
 		flex: none;
 		z-index: 10000;
 	}
@@ -380,6 +381,7 @@
 		font-size: 1.25em;
 		position: relative;
 		top: 110px;
+		line-height: 40px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -424,14 +426,16 @@
 		left: 350px;
 		width: 80%;
 		height: 75px;
-		top: 295px;
+		top: 318px;
 		font-size: 1.5em;
+		line-height: 75px;
 	}
 
 	#gameMessage {
 		left: 390px;
 		top: -25px;
 		font-size: 2em;
+		width: 80%;
 	}
 
 	.gameImageGridImageLabel {
@@ -466,6 +470,7 @@
 		left: 355px;
 		height: 50px;
 		bottom: 5px;
+		line-height: 50px;
 	}
 
 	.confirmationMessage {
