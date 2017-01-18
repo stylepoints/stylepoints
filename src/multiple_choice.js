@@ -380,20 +380,7 @@
     {
       contents: [fourImagesCopy.instruction],
       className: 'additionalText pushDown'
-    });
-
-    // Need to lower the interactionContainer's z-index, do this by setting class name.
-    // var lowerInteractionContainer = $.set(interactionContainer, 
-    // {
-    //   className: 'lowZIndex'
-    // });
-
-    // Create our gameImageGrids for the entire game. Each image in the grid is identified
-    // with an ID. Each image can be selected or de-selected, and when it is selected/deselected
-    // its ID is placed in an array matching the question number. Items that are deselected are removed from this array.
-    // The first grid is the only one not hidden.
-
-    
+    });    
 
     var gameImageGridOne = $.create('div', {
       className: 'gameImageGrid'
