@@ -12,7 +12,7 @@ case $ENV in
 esac
 
 #create a build
-npm run build
+npm run build-production
 
 echo "deploying build to $S3_BUCKET"
 aws s3  --profile 'stylepoints' sync ./build $S3_BUCKET --exclude 'deploy.sh' --exclude '.DS_Store' --delete

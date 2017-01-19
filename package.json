@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack -c --progress -v",
+    "build-production": "NODE_ENV=production webpack -c --progress",
     "lint": "eslint --ignore-path .gitignore . --fix",
     "prebuild": "rimraf build/*",
     "prestart": "npm run build",
