@@ -53,8 +53,8 @@ export default {
 	      ]
 	    },
       {
-        test: /\.(ttf|svg|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader'
+        test: /\.(ttf|otf|svg|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file?limit=80000&name=[name].[ext]'
       }
     ]
   },
