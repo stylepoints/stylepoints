@@ -73,7 +73,6 @@
 	  margin-top: 50px;
 	  width: 350px;
 	  height: 320px;
-	  overflow: hidden;
 	}
 
 	#publisherLogo {
@@ -84,6 +83,7 @@
 		width: 350px;
 		height: 300px;
 	}
+	
 
 	.resultImageDiv {
 		position: absolute;
@@ -95,7 +95,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		width: 350px;
+		width: 355px;
 		height: 310px;
 		background-color: white;
 		position: absolute;
@@ -103,16 +103,16 @@
 
 	}
 	.confirmationMessage {
-	  font-family: 'DIN Condensed';
+	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
 	  width: 80%;
 	  z-index: 6;
 	  font-size: 1.5em;
 	  letter-spacing: 1px;
-	  color: black;
+	  color: white;
 	  text-align: center;
 	  position: relative;
-      top: 160px;
-      left: 350px;
+      top: 30px;
+      left: 0px;
       align-self: center;
       justify-content: center;
 	}
@@ -121,6 +121,7 @@
 		height: 170px;
 		position: relative;
 		z-index: 15;
+		padding: 1px 1px 1px 1px;
 	}
 	.gameImageGridImage {
 		width: 175px;
@@ -137,8 +138,8 @@
 		height: 48px;
 		position: absolute;
 		display: none;
-		top: 50px;
-		right: 60px;
+		top: 60px;
+		right: 65px;
 		z-index: 8;
 	}
 
@@ -167,7 +168,7 @@
 	    font-size: 1.25em;
 	    margin: 0 auto;
 	    width: 175px;
-	    bottom: 10px;
+	    bottom: 15px;
 	}
 
 
@@ -220,7 +221,8 @@
 		align-self: center;
 		font-family: 'DIN Condensed';	
 		position: relative;
-		top: 385px;
+		top: 405px;
+		line-height: 50px;
 		flex: none;
 		z-index: 10000;
 	}
@@ -240,7 +242,7 @@
 	    align-self: center;
 	    font-family: 'DIN Condensed';
 	    position: relative;
-	    top: 250px;
+	    top: 270px;
 	    -webkit-box-flex: 0;
 	    -ms-flex: none;
 	    flex: none;
@@ -303,7 +305,7 @@
 	}
 
 	.gadgetRecommendation {
-		font-family: "DIN Condensed";
+	font-family: "DIN Condensed";
     position: absolute;
     font-size: 1.25em;
     color: white;
@@ -315,7 +317,7 @@
 	}
 
 	#resultMessageText {
-	  	font-family: 'DIN Condensed';
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     width: 300px;
     display: block;
     z-index: 6;
@@ -337,7 +339,7 @@
 		margin-top: -20px;
 	    z-index: 10000;
 	    position: absolute;
-	    top: 80px;
+	    top: 70px;
 	}
 	#emailFormInput {
 	display: block;
@@ -379,6 +381,7 @@
 		font-size: 1.25em;
 		position: relative;
 		top: 110px;
+		line-height: 40px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -423,18 +426,20 @@
 		left: 350px;
 		width: 80%;
 		height: 75px;
-		top: 295px;
+		top: 318px;
 		font-size: 1.5em;
+		line-height: 75px;
 	}
 
 	#gameMessage {
 		left: 390px;
 		top: -25px;
 		font-size: 2em;
+		width: 80%;
 	}
 
 	.gameImageGridImageLabel {
-		top: 115px;
+
 	}
 
 	.gameMessageEmailScreen {
@@ -465,6 +470,20 @@
 		left: 355px;
 		height: 50px;
 		bottom: 5px;
+		line-height: 50px;
+	}
+
+	.confirmationMessage {
+	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	  width: 85%;
+	  z-index: 6;
+	  font-size: 1.5em;
+	  color: black;
+	  text-align: left;
+	  position: relative;
+      top: 138px;
+      left: 350px;
+      
 	}
 }
 }
