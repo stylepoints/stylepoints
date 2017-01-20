@@ -13,12 +13,12 @@ export default {
 	debug: false,
   devtool: !isProduction ? 'eval-source-map' : '',
   entry: isProduction ? {
-    binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
-    rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
+    // binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
+    // rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
   } : {
-    binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
-    rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
+    // binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
+    // rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
   },
   context: path.resolve(__dirname, 'src'),
@@ -62,27 +62,27 @@ export default {
     configFile: './.eslintrc'
   },
   plugins: [
-	  new HtmlWebpackPlugin({
-      template: './html_templates/index-type.tpl.ejs',
-      filename: 'index-multiple_choice.html',
-      name: 'multiple_choice',
-      script: 'multiple_choice.js',
-      inject: false
-    }),
-    new HtmlWebpackPlugin({
-      template: './html_templates/index-type.tpl.ejs',
-      filename: 'index-binary.html',
-      name: 'binary',
-      script: 'binary.js',
-      inject: false
-    }),
-    new HtmlWebpackPlugin({
-      template: './html_templates/index-type.tpl.ejs',
-      filename: 'index-rating.html',
-      name: 'rating',
-      script: 'rating.js',
-      inject: false
-    }),
+	  // new HtmlWebpackPlugin({
+   //    template: './html_templates/index-type.tpl.ejs',
+   //    filename: 'index-multiple_choice.html',
+   //    name: 'multiple_choice',
+   //    script: 'multiple_choice.js',
+   //    inject: false
+   //  }),
+    // new HtmlWebpackPlugin({
+    //   template: './html_templates/index-type.tpl.ejs',
+    //   filename: 'index-binary.html',
+    //   name: 'binary',
+    //   script: 'binary.js',
+    //   inject: false
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './html_templates/index-type.tpl.ejs',
+    //   filename: 'index-rating.html',
+    //   name: 'rating',
+    //   script: 'rating.js',
+    //   inject: false
+    // }),
     new HtmlWebpackPlugin({
       template: './html_templates/index.tpl.ejs',
       filename: 'index.html',
