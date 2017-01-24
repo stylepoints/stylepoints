@@ -91,6 +91,7 @@ export default {
 		new HtmlWebpackPlugin({
       template: './html_templates/iframe.tpl.ejs',
       filename: 'iframe.html',
+			src: isProduction ? 'http://app.stylepoints.com' : 'http://localhost:8080',
       inject: false
     }),
     new HtmlWebpackPlugin({
