@@ -10,13 +10,7 @@
 }
 
 
-#grid-container{	
-	
-
-	
-
-
-
+#grid-container{
 
 	section {
 	  font-family: sans-serif;
@@ -66,18 +60,16 @@
 	#publisherLogo {
 	  display: none;
 	}
-	.resultImage 
+	.resultImage
 	{
 		width: 350px;
 		height: 300px;
 	}
-	
 
 	.resultImageDiv {
 		position: absolute;
 	    width: 100%;
 	    height: 100%;
-	    z-index: -5;
 	}
 	.gameImageGrid {
 		display: flex;
@@ -86,8 +78,6 @@
 		width: 355px;
 		height: 310px;
 		position: absolute;
-
-
 	}
 	.confirmationMessage {
 	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
@@ -109,7 +99,7 @@
 		position: relative;
 		padding: 1px 1px 1px 1px !important;
 		z-index: 1;
-		
+
 	}
 	.gameImageGridImage {
 		width: 175px;
@@ -237,7 +227,7 @@
 	    flex: none;
 	    z-index: 10000;
 	}
-	
+
 	.shareButton {
 		transform: scale(0.5);
 		width: 65px;
@@ -254,7 +244,7 @@
 	  font-family: 'DIN Condensed';
 	  top: -50px;
 	}
-	
+
 	.gameMessageEmailScreen {
 		top: 15px
 	}
@@ -274,7 +264,7 @@
 		justify-content: center;
 		align-self: center;
 		font-family: 'DIN Condensed';
-		
+
 		position: relative;
 		top: 280px;
 		flex: none;
@@ -290,7 +280,7 @@
 
 
 	}
-	
+
 	.nextButtonActive {
 		background: #68B45E !important;
 		color: white !important;
@@ -480,8 +470,7 @@
 	  position: relative;
       top: 138px;
       left: 350px;
-      
+
 	}
 }
 }
-
