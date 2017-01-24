@@ -10,13 +10,7 @@
 }
 
 
-#grid-container{	
-	
-
-	
-
-
-
+#grid-container{
 
 	section {
 	  font-family: sans-serif;
@@ -25,10 +19,11 @@
 	}
 
 	#gameContainer {
-		height: 460px;
-		width: 350px;
+		/*height: 460px;
+		width: 350px;*/
 		margin: 0 auto;
-		margin-top: 50px;
+		/*margin-top: 50px;*/
+    background:white;
 		display: flex;
 		flex-direction: column;
 	}
@@ -65,18 +60,16 @@
 	#publisherLogo {
 	  display: none;
 	}
-	.resultImage 
+	.resultImage
 	{
 		width: 350px;
 		height: 300px;
 	}
-	
 
 	.resultImageDiv {
 		position: absolute;
 	    width: 100%;
 	    height: 100%;
-	    z-index: -5;
 	}
 	.gameImageGrid {
 		display: flex;
@@ -85,8 +78,6 @@
 		width: 355px;
 		height: 310px;
 		position: absolute;
-
-
 	}
 	.confirmationMessage {
 	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
@@ -108,7 +99,7 @@
 		position: relative;
 		padding: 1px 1px 1px 1px !important;
 		z-index: 1;
-		
+
 	}
 	.gameImageGridImage {
 		width: 175px;
@@ -236,7 +227,7 @@
 	    flex: none;
 	    z-index: 10000;
 	}
-	
+
 	.shareButton {
 		transform: scale(0.5);
 		width: 65px;
@@ -253,7 +244,7 @@
 	  font-family: 'DIN Condensed';
 	  top: -50px;
 	}
-	
+
 	.gameMessageEmailScreen {
 		top: 15px
 	}
@@ -273,7 +264,7 @@
 		justify-content: center;
 		align-self: center;
 		font-family: 'DIN Condensed';
-		
+
 		position: relative;
 		top: 280px;
 		flex: none;
@@ -289,7 +280,7 @@
 
 
 	}
-	
+
 	.nextButtonActive {
 		background: #68B45E !important;
 		color: white !important;
@@ -348,7 +339,7 @@
 	text-align: center;
 	top: 100px;
 	border-bottom: 1px solid white;
-	color: white; 
+	color: #ffffff;
 	font-size: 1.25em;
 	flex: none;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
@@ -413,8 +404,9 @@
 
 	@media screen and (min-width: 700px) {
 	#gameContainer {
-		width: 768px;
-		margin-left: 50px;
+		/*width: 768px;*/
+		padding-left: 50px;
+    padding-bottom: 50px;
 	}
 
 	#nextButton {
@@ -478,8 +470,7 @@
 	  position: relative;
       top: 138px;
       left: 350px;
-      
+
 	}
 }
 }
-

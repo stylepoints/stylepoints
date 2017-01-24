@@ -88,6 +88,12 @@ export default {
       filename: 'index.html',
       inject: 'body'
     }),
+		new HtmlWebpackPlugin({
+      template: './html_templates/iframe.tpl.ejs',
+      filename: 'iframe.html',
+			src: isProduction ? 'http://app.stylepoints.com' : 'http://localhost:8080',
+      inject: false
+    }),
     new HtmlWebpackPlugin({
       template: './html_templates/index-article.tpl.ejs',
       filename: 'index-article.html',

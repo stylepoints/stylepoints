@@ -7,7 +7,7 @@
     "build-production": "NODE_ENV=production webpack -c --progress",
     "lint": "eslint --ignore-path .gitignore . --fix",
     "prebuild": "rimraf build/*",
-    "prestart": "npm run build",
+    "prestart": "npm run build-production",
     "start": "(cd build ; python -m SimpleHTTPServer 8080)",
     "start-dev": "nodemon server -w server",
     "styleguide": "nucleus --config config.nucleus.json"
