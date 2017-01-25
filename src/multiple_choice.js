@@ -6,7 +6,7 @@
     "callToActionButtonText": "LET'S GO!",
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
     "gameMessageTextTwo": "2. WHICH PICTURE DESCRIBES WHY YOU DRIVE MOST OFTEN?",
-    "gameMessageTextThree": "3. TAP ALL OF THE GADGETS YOU ALREADY OWN AND THEN GET RESULTS!",
+    "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
     "resultMessageHeader": "OUR RECOMMENDATION:",
     "resultMessageText": "Enter your email below to receive a £5 voucher off any purchase at Halfords.com",
     "confirmationMessageText": "Thanks for playing! You will receive an email with your voucher within 24 hours.",
@@ -317,7 +317,7 @@
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: 'gameMessage gameMessageFinalQuestion',     
-        contents: fourImagesCopy.gameMessageTextThree
+        contents: fourImagesCopy.gameMessageTextThree.toUpperCase()
       });
 
     
