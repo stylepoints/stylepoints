@@ -641,21 +641,10 @@
       imageContainer.append(gameImageGrids[image]);
     }
 
-
-
-    var gameMessage = $.create('div', {
-      id: 'gameMessage',
-      contents: fourImagesCopy.gameMessageTextOne,
-      className: gameMessageTextType(fourImagesCopy.gameMessageTextOne)
-    });
-
-    interactionContainer.append(gameMessage);
-
-
     var gameTitle = $.create('div', {
       id: 'gameTitle',
       contents: fourImagesCopy.gameTitle.toUpperCase(),
-      className: gameTitle
+      className: 'gameTitle'
     });
 
     interactionContainer.append(gameTitle);
