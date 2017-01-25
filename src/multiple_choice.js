@@ -304,7 +304,6 @@
     if (index === 0 && answerGroupOne.length > 0) {
       animateExit(event);
       gameMessage.innerHTML = '';
-      gameTitle.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),
         contents: fourImagesCopy.gameMessageTextTwo
@@ -312,7 +311,6 @@
     } else if (index === 1 && answerGroupTwo.length > 0) {
       var nextButton = $('#nextButton');
       nextButton.innerHTML = ''
-      gameTitle.innerHTML = '';
       $.set(nextButton, {
         contents: "GET RESULTS"
       });
@@ -329,7 +327,6 @@
       var nextButton = $('#nextButton');
 
       gameMessage.innerHTML = '';
-      gameTitle.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),
         contents: fourImagesCopy.gameMessageTextThree
