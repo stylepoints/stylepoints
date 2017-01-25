@@ -6,7 +6,7 @@
     "callToActionButtonText": "LET'S GO!",
     "gameTitle": "What gadget best fits your driving style? Click below to find out!",
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
-    "gameMessageTextTwo": "2. WHICH PICTURE DESCRIBES WHY YOU DRIVE MOST OFTEN?",
+    "gameMessageTextTwo": "2 of 3: Which picture describes why you drive most often?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
     "resultMessageHeader": "OUR RECOMMENDATION:",
     "resultMessageText": "Enter your email below to receive a £5 voucher off any purchase at Halfords.com",
@@ -306,7 +306,7 @@
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),
-        contents: fourImagesCopy.gameMessageTextTwo
+        contents: fourImagesCopy.gameMessageTextTwo.toUpperCase()
       });
     } else if (index === 1 && answerGroupTwo.length > 0) {
       var nextButton = $('#nextButton');
@@ -317,7 +317,7 @@
       animateExit(event);
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
-        className: 'gameMessage gameMessageFinalQuestion',    
+        className: 'gameMessage gameMessageFinalQuestion',   
         contents: fourImagesCopy.gameMessageTextThree.toUpperCase()
       });
 
