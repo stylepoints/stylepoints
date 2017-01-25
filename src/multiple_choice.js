@@ -4,6 +4,7 @@
   var fourImagesCopy = {
     "callToActionMessage": "FIND THE PERFECT DRIVING ACCESSORY FOR YOU",
     "callToActionButtonText": "LET'S GO!",
+    "gameTitle": "What gadget best fits your driving style? Click below to find out!",
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
     "gameMessageTextTwo": "2. WHICH PICTURE DESCRIBES WHY YOU DRIVE MOST OFTEN?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
@@ -303,6 +304,7 @@
     if (index === 0 && answerGroupOne.length > 0) {
       animateExit(event);
       gameMessage.innerHTML = '';
+      gameTitle.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),     
         contents: fourImagesCopy.gameMessageTextTwo
@@ -310,6 +312,7 @@
     } else if (index === 1 && answerGroupTwo.length > 0) {
       var nextButton = $('#nextButton');
       nextButton.innerHTML = ''
+      gameTitle.innerHTML = '';
       $.set(nextButton, {
         contents: "GET RESULTS"
       });  
@@ -326,6 +329,7 @@
       var nextButton = $('#nextButton');
       
       gameMessage.innerHTML = '';
+      gameTitle.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextThree),     
         contents: fourImagesCopy.gameMessageTextThree
@@ -651,6 +655,15 @@
 
     interactionContainer.append(gameMessage);
     
+
+    var gameTitle = $.create('div', {
+      id: 'gameTitle',
+      contents: fourImagesCopy.gameTitle.toUpperCase(),
+      className: gameTitle
+    });
+
+    interactionContainer.append(gameTitle);
+
     // Set the new gameMessage text, substituting a call to gameMessageTextType,
     // for the normal className, which will dynamically set text size based on length.
     
