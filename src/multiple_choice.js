@@ -664,6 +664,17 @@
 
     interactionContainer.append(gameTitle);
 
+    var gameMessage = $.create('div', {
+      id: 'gameMessage',
+      contents: fourImagesCopy.gameMessageTextOne,
+      className: gameMessageTextType(fourImagesCopy.gameMessageTextOne)
+    });
+
+    interactionContainer.append(gameMessage);
+
+    interactionContainer.append(nextButton);
+
+
     // Set the new gameMessage text, substituting a call to gameMessageTextType,
     // for the normal className, which will dynamically set text size based on length.
     
