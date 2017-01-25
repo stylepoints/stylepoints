@@ -21,7 +21,7 @@
 	#gameContainer {
 		/*height: 460px;
 		width: 350px;*/
-		margin: 0 auto;
+		margin: 0;
 		/*margin-top: 50px;*/
     background:white;
 		display: flex;
@@ -30,7 +30,7 @@
 
 	.gameImage {
 		width: 350px;
-		height: 320px;  
+		height: 320px;
 	}
 
 	.overlay {
@@ -52,7 +52,7 @@
 
 	#imageContainer {
 	  position: absolute;
-	  margin-top: 50px;
+	  margin-top: 100px;
 	  width: 350px;
 	  height: 320px;
 	}
@@ -88,7 +88,7 @@
 	  color: white;
 	  text-align: center;
 	  position: relative;
-      top: 30px;
+      top: 80px;
       left: 0px;
       align-self: center;
       justify-content: center;
@@ -197,20 +197,20 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'DIN Condensed';	
-		position: relative;
-		top: 405px;
+		font-family: 'DIN Condensed';
+		position: absolute;;
+		top: 455px;
 		line-height: 50px;
 		flex: none;
 		z-index: 10000;
 	}
 
 	.shareButtonsContainer {
-		border: none;
+		  border: none;
 	    height: 50px;
 	    width: 300px;
 	    color: #000000;
-		background: none;
+  		background: none;
 	    font-size: 1em;
 	    text-align:center;
 	    -webkit-box-pack: center;
@@ -221,7 +221,7 @@
 	    align-self: center;
 	    font-family: 'DIN Condensed';
 	    position: relative;
-	    top: 270px;
+	    top: 320px;
 	    -webkit-box-flex: 0;
 	    -ms-flex: none;
 	    flex: none;
@@ -236,17 +236,15 @@
 
 	}
 	.gameMessage {
-	  height: 100px;
 	  font-size: 1.25em;
-	  width: 75%;
 	  color: black;
-	  position: relative;
+	  position: absolute;
 	  font-family: 'DIN Condensed';
-	  top: -50px;
+	  bottom: 400px;
 	}
 
 	.gameMessageEmailScreen {
-		top: 15px
+		top: 65px
 	}
 
 	.gameMessageFinalQuestion {
@@ -254,7 +252,6 @@
 	}
 
 	#ctaButton {
-
 		border: 1px solid #F0F0F0;
 		height: 50px;
 		width: 350px;
@@ -266,7 +263,7 @@
 		font-family: 'DIN Condensed';
 
 		position: relative;
-		top: 280px;
+		top: 300px;
 		flex: none;
 	}
 
@@ -274,7 +271,7 @@
 	  display: flex;
 	flex-direction: column;
 	width: 350px;
-	height: 400px;
+	height: 500px;
 	position: relative;
 	left: 0px;
 
@@ -296,7 +293,7 @@
     font-size: 1.25em;
     color: white;
     text-align: center;
-    top: 70px;
+    top: 120px;
     left: 41px;
     font-weight: normal;
     width: 80%;
@@ -325,7 +322,7 @@
 		margin-top: -20px;
 	    z-index: 10000;
 	    position: absolute;
-	    top: 70px;
+	    top: 120px;
 	}
 	#emailFormInput {
 	display: block;
@@ -382,8 +379,18 @@
 	}
 
 	.gameMessageMediumText {
-		top: -50px;
+		/*top: -50px;*/
 	}
+
+  .gameTitle {
+    top: 0;
+    font-size: 1.63em;
+	  color: black;
+	  position: absolute;
+	  font-family: 'DIN Condensed';
+    line-height:25px;
+    padding-bottom:10px;
+  }
 
 	@media (max-height:400px){
 		#rating-container {
@@ -403,74 +410,115 @@
 	}
 
 	@media screen and (min-width: 700px) {
-	#gameContainer {
-		/*width: 768px;*/
-		padding-left: 50px;
-    padding-bottom: 50px;
-	}
+  	#gameContainer {
+      padding-top: 50px;
+      width:670px;
+      height:345px;
 
-	#nextButton {
-		left: 350px;
-		width: 80%;
-		height: 75px;
-		top: 318px;
-		font-size: 1.5em;
-		line-height: 75px;
-	}
+  	}
 
-	#gameMessage {
-		left: 390px;
-		top: -25px;
-		font-size: 2em;
-		width: 80%;
-	}
+    #imageContainer {
+      margin-top: 0px;
+    }
 
-	.gameImageGridImageLabel {
+    #interactionContainer {
+      margin-top: 0px;
+      width: 100%;
+      /*padding: 10px;*/
+      /*border: solid 1px gray;*/
+    }
 
-	}
+    #nextButton {
+      width: 300px;
+      height: 75px;
+      top: inherit;
+      bottom: 0px;
+      right: 0px;
+      font-size: 1.5em;
+      line-height: 75px;
+      margin-left:30px;
+      padding: 0px;
+    }
 
-	.gameMessageEmailScreen {
-		top: 50px !important;
-		margin-left: -15px;
-	}
+    .gameMessage {
+      right: 0px;
+      padding-left:30px;
+      width: 300px;
+      top: inherit;
+      font-size: 2em;
+      color: #000;
+      font-family: DIN Condensed;
+      top:0px;
+    }
 
-	.gadgetRecommendation {
-		color: black;
-		left: 375px;
-		text-align: left;
-	}
+    .gameTitle {
+      left: 0px;
+      top: -35px;
+      width: 100%;
+    }
 
-	#resultMessageText {
-		left: 375px;
-		color: black;
-		text-align: left;
-	}
 
-	#emailFormInput {
-		left: 355px;
-		background: none;
-		color: black;
-		border-bottom: 1px solid #F0F0F0;
-	}
+  	.gameMessageEmailScreen {
+  		top: 0px !important;
+  	}
 
-	#emailFormButton {
-		left: 355px;
-		height: 50px;
-		bottom: 5px;
-		line-height: 50px;
-	}
+  	.gadgetRecommendation {
+  		color: #000000;
+  		right: 0px;
+      top: 20px;
+      left: initial;
+      width: 300px;
+  		text-align: left;
+  	}
+    #emailSubmitForm {
+      right: 0;
+      bottom: 20px;
+      position:absolute;
+      width: 300px;
+    }
 
-	.confirmationMessage {
-	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-	  width: 85%;
-	  z-index: 6;
-	  font-size: 1.5em;
-	  color: black;
-	  text-align: left;
-	  position: relative;
+  	#resultMessageText {
+  		/*left: 375px;*/
+      margin: 0;
+      padding: 0;
+      width:initial;
+      left: initial;
+  		color: black;
+  		text-align: left;
+      top: 0;
+  	}
+
+  	#emailFormInput {
+  		/*left: 355px;*/
+      margin-left: 0px;
+  		background: none;
+  		color: black;
+      width: 300px;
+      top: 0;
+  		border-bottom: 1px solid #F0F0F0;
+  	}
+
+  	#emailFormButton {
+  		right: 0;
+  		height: 50px;
+  		top: 10px;
+      width: 300px;
+      margin-left: 0px;
+  		line-height: 50px;
+  	}
+
+  	.confirmationMessage {
+  	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  	  width: 300px;
+  	  z-index: 6;
+  	  font-size: 1.5em;
+  	  color: black;
+  	  text-align: left;
+  	  position: absolute;
       top: 138px;
-      left: 350px;
+      left: initial;
+      right: 0;
 
-	}
-}
+  	}
+  }
 }
