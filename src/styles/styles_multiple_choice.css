@@ -382,8 +382,17 @@
 	}
 
 	.gameMessageMediumText {
-		top: -50px;
+		/*top: -50px;*/
 	}
+
+  .gameTitle {
+    top: 0;
+    font-size: 1.63em;
+	  color: black;
+	  position: relative;
+	  font-family: 'DIN Condensed';
+    padding-bottom:10px;
+  }
 
 	@media (max-height:400px){
 		#rating-container {
