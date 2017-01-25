@@ -1,5 +1,3 @@
-(function(){
-
   var css = require("./styles/styles_multiple_choice.css");
   var fourImagesCopy = {
     "callToActionMessage": "FIND THE PERFECT DRIVING ACCESSORY FOR YOU",
@@ -107,8 +105,8 @@
         className: "confirmationMessage"
     });
 
-    interactionContainer.append(shareButtonsContainer);
-    interactionContainer.append(confirmationMessage);
+    interactionContainer.appendChild(shareButtonsContainer);
+    interactionContainer.appendChild(confirmationMessage);
 
     $('#facebookShareButton').addEventListener('click', function()
     {
@@ -146,15 +144,15 @@
         className: 'gadgetRecommendation',
         contents: fourImagesCopy.finalRecommendationOne.toUpperCase()
     });
-    interactionContainer.append(gadgetRecommendation);
-    // Select current game message and remove content so we can
+
+    interactionContainer.appendChild(gadgetRecommendation);
+    // Select current game message and remove content so we can 
     // re set it.
     var oldGameMessage = $('#gameMessage', mainContainer);
-    oldGameMessage.innerHTML = ''
-
+    oldGameMessage.innerHTML = '';
     // Clear out imageContainer and then append new image
     imageContainer.innerHTML = '';
-    imageContainer.append($.create('div',
+    imageContainer.appendChild($.create('div',
     {
       className: 'resultImageDiv',
       contents: [{
@@ -203,8 +201,8 @@
       ]
     });
 
-
-    interactionContainer.append(emailSubmitForm);
+    console.log(emailSubmitForm);
+    $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
 
     // Create submit button event listener so that we can POST emails.
     var submitButton = $('#emailFormButton', mainContainer).addEventListener('click', function()
@@ -358,6 +356,8 @@
       id: 'interactionContainer'
     });
 
+    
+
     var nextButton = $.create('button', {
         id: 'nextButton',
         contents: "NEXT QUESTION"
@@ -393,11 +393,9 @@
     });
     for (var i = 0; i < 4; i++)
     {
-
       var gameImageGridImageContainer = $.create('div',
       {
         className: 'gameImageGridImageContainer',
-        id: 'gridOne' + i,
         contents: [{
             tag: 'img',
             className: 'gameImageGridImage',
@@ -410,14 +408,15 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay hidden',
-            id: 'gridOneOverlay' + i
+            className: 'gameImageGridImageOverlay',
+            id: 'gridOneSelected' + i
         }]
       });
-      gameImageGridOne.append(gameImageGridImageContainer);
+
+      
+      gameImageGridOne.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
-
 
         // Have to get the ID from the element ID to make sure
         // we show the right selected icon.
@@ -428,48 +427,28 @@
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
-            if (answerGroupOne.length < 1)
+            $.set($('#gridOneSelected' + selectedImage),
             {
-                $.set($('#gridOneSelected' + selectedImage),
-                {
-                    className: 'gameImageGridImageSelectedIcon show'
-                });
-
+                className: 'gameImageGridImageSelectedIcon show'
+            });
+            answerGroupOne.push(event.target.id);
+            if (answerGroupOne.length > 0){
+                console.log('Test');
                 $.set(nextButton, {
-                    className: 'nextButtonActive'
+                        className: 'nextButtonActive'
                 });
-                answerGroupOne.push(event.target.id);
-                console.log(answerGroupOne);
-                for( var i = 0; i < 4; i++)
-                {
-                  if ("gridOne" + i !== event.target.id)
-                  {
-                    $.set($("#gridOneOverlay" + i), {
-                      className: 'gameImageGridImageOverlay'
-                    });
-                  } else {
-                    $.set($("#gridOneOverlay" + i), {
-                      className: 'gameImageGridImageOverlay hidden'
-                    });
-                  }
-                }
             }
+
+            console.log(answerGroupOne);
         } else {
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
-            $.set(nextButton, {
-                    className: ''
-            });
-            for( var i = 0; i < 4; i++)
-                {
-                  $.set($("#gridOneOverlay" + i), {
-                    className: 'gameImageGridImageOverlay hidden'
-                  });
-
-                }
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
+
+
+
             console.log(answerGroupOne);
         }
       });
@@ -480,7 +459,6 @@
     });
     for (var j = 0; j < 4; j++)
     {
-
       var gameImageGridImageContainer = $.create('div',
       {
         className: 'gameImageGridImageContainer',
@@ -496,11 +474,13 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay hidden',
-            id: 'gridTwoOverlay' + j
+            className: 'gameImageGridImageOverlay',
+            id: 'gridTwoSelected' + j
         }]
       });
-      gameImageGridTwo.append(gameImageGridImageContainer);
+
+      
+      gameImageGridTwo.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
 
@@ -513,47 +493,28 @@
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
-            if (answerGroupTwo.length < 1)
+            $.set($('#gridTwoSelected' + selectedImage),
             {
-                $.set($('#gridTwoSelected' + selectedImage),
-                {
-                    className: 'gameImageGridImageSelectedIcon show'
-                });
+                className: 'gameImageGridImageSelectedIcon show'
+            });
+            answerGroupTwo.push(event.target.id);
+            if (answerGroupTwo.length > 0){
+                console.log('Test');
                 $.set(nextButton, {
-                    className: 'nextButtonActive'
+                        className: 'nextButtonActive'
                 });
-                for( var i = 0; i < 4; i++)
-                {
-                  if ("gridTwo" + i !== event.target.id)
-                  {
-                    $.set($("#gridTwoOverlay" + i), {
-                      className: 'gameImageGridImageOverlay'
-                    });
-                  } else {
-                    $.set($("#gridTwoOverlay" + i), {
-                      className: 'gameImageGridImageOverlay hidden'
-                    });
-                  }
-                }
-                answerGroupTwo.push(event.target.id);
-                console.log(answerGroupTwo);
             }
+
+            console.log(answerGroupTwo);
         } else {
             $.set($('#gridTwoSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
-            $.set(nextButton, {
-                    className: ''
-                });
-            for( var i = 0; i < 4; i++)
-                {
-                  $.set($("#gridTwoOverlay" + i), {
-                    className: 'gameImageGridImageOverlay hidden'
-                  });
-
-                }
             answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
+
+
+
             console.log(answerGroupTwo);
         }
       });
@@ -589,7 +550,8 @@
         }]
       });
 
-      gameImageGridThree.append(gameImageGridImageContainer);
+      
+      gameImageGridThree.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
 
@@ -629,16 +591,17 @@
       });
     }
 
-    // Create an array of these new image grids so that we can append them to the dom.
+    // Create an array of these new image grids so that we can appendChild them to the dom.
     var gameImageGrids = [gameImageGridOne, gameImageGridTwo, gameImageGridThree];
 
-    gameContainer.append(imageContainer);
-    gameContainer.append(interactionContainer);
-    mainContainer.append(gameContainer);
-
-    for (image in gameImageGrids)
+    
+    gameContainer.appendChild(imageContainer);
+    gameContainer.appendChild(interactionContainer);
+    mainContainer.appendChild(gameContainer);
+    
+    for (image in gameImageGrids) 
     {
-      imageContainer.append(gameImageGrids[image]);
+      imageContainer.appendChild(gameImageGrids[image]);
     }
 
     var gameTitle = $.create('div', {
@@ -647,101 +610,25 @@
       className: 'gameTitle'
     });
 
-    interactionContainer.append(gameTitle);
+    interactionContainer.appendChild(gameTitle);
 
+    interactionContainer.appendChild(nextButton);
     var gameMessage = $.create('div', {
       id: 'gameMessage',
       contents: fourImagesCopy.gameMessageTextOne,
       className: gameMessageTextType(fourImagesCopy.gameMessageTextOne)
     });
 
-    interactionContainer.append(gameMessage);
+    interactionContainer.appendChild(gameMessage);
 
-    interactionContainer.append(nextButton);
+    interactionContainer.appendChild(nextButton);
 
-
+    
     // Set the new gameMessage text, substituting a call to gameMessageTextType,
     // for the normal className, which will dynamically set text size based on length.
 
-  }
-
-  // var buildInitialDom = function() {
-  //   // Select the container we will be appending. Create game, image and interaction containers.
-  //   // The game container is the top level container, and the image and interaction containers
-  //   // Show images and contain interactive/text elements.
-
-  //   var gameContainer = $.create('div', {
-  //     id: 'gameContainer'
-  //   });
-  //   var imageContainer = $.create('div', {
-  //     id: 'imageContainer'
-  //   });
-  //   var interactionContainer = $.create('div', {
-  //     id: 'interactionContainer'
-  //   });
+}
 
 
-  //   // Create our inital image grid for display before game DOM is loaded.
-  //   var initialGameImageGrid = $.create('div', {
-  //     className: 'gameImageGrid'
-  //   });
-
-  //   // Create four image tags and append them to the image grid.
-  //   for (var i = 0; i < 4; i++)
-  //   {
-  //     var gameImageGridImage = $.create('img',
-  //     {
-  //       className: 'gameImageGridImage',
-  //       src: gridImagesInitial[i]
-  //     });
-  //     initialGameImageGrid.append(gameImageGridImage);
-  //   }
-
-
-
-
-  //   // Create the remaining text elements, the call to action and call to action button.
-  //   var callToAction = $.create('div', {
-  //     id: 'callToAction',
-  //     contents: fourImagesCopy.callToActionMessage
-  //   });
-
-  //   var ctaButton = $.create('button', {
-  //     id: 'ctaButton',
-  //     contents: fourImagesCopy.callToActionButtonText
-  //   });
-
-  //   // Create event listener to trigger the buildGameDom function when button is clicked.
-  //   ctaButton.addEventListener('click', function(event) {
-  //     // We want to hide the initialGameImage grid.
-  //     hide = $.set(initialGameImageGrid,
-  //     {
-  //         className: "gameImageGrid hidden"
-  //     });
-
-  //     buildGameDom();
-  //   });
-
-  //   initialGameImageGrid.addEventListener('click', function(event)
-  //   {
-  //     hide = $.set(initialGameImageGrid,
-  //     {
-  //         className: "gameImageGrid hidden"
-  //     });
-
-  //     buildGameDom();
-  //   })
-
-  //   // Append all containers to the DOM
-  //   gameContainer.append(imageContainer);
-  //   gameContainer.append(interactionContainer);
-  //   mainContainer.append(gameContainer);
-
-  // }
-
-
-
-  // Bliss won't execute any JS until the page is ready, so we are fine calling this as a global function call.
+  // $ won't execute any JS until the page is ready, so we are fine calling this as a global function call.
   buildGameDom();
-
-})();
