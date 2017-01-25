@@ -12,6 +12,9 @@
 
 #grid-container{
 
+  padding:10px;
+  background-color:#ffffff;
+
 	section {
 	  font-family: sans-serif;
 	  width: 960px;
@@ -34,9 +37,9 @@
 	}
 
 	.overlay {
-		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.85) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.85) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 		position: absolute;
 		top: 0px;
@@ -244,7 +247,8 @@
 	}
 
 	.gameMessageEmailScreen {
-		top: 65px
+		/*top: 65px*/
+    bottom: 410px;
 	}
 
 	.gameMessageFinalQuestion {
@@ -301,15 +305,14 @@
 
 	#resultMessageText {
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    width: 300px;
+    width: 100%;
     display: block;
     z-index: 6;
-    font-size: 1.25em;
+    font-size: 0.85em;
     color: white;
     text-align: center;
     position: relative;
     top: 100px;
-    left: 30px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -320,30 +323,28 @@
 	}
 	#emailSubmitForm {
 		margin-top: -20px;
-	    z-index: 10000;
-	    position: absolute;
-	    top: 120px;
+    z-index: 10000;
+    position: absolute;
+    top: 160px;
 	}
 	#emailFormInput {
-	display: block;
-	margin-left: 9px;
-	width: 333px;
-	border: none;
-	height: 50px;
-	margin-top: 10px;
-	font-family: 'DIN Condensed';
-	position: relative;
-	text-align: center;
-	top: 100px;
-	border-bottom: 1px solid white;
-	color: #ffffff;
-	font-size: 1.25em;
-	flex: none;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-	  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-	  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
-	-webkit-appearance: none;
+  	display: block;
+    margin: 0 auto;
+  	width: 325px;
+  	border: none;
+  	height: 50px;
+  	margin-top: 10px;
+  	font-family: 'DIN Condensed';
+  	position: relative;
+  	text-align: center;
+  	top: 100px;
+  	border-bottom: 1px solid white;
+  	color: #ffffff;
+  	font-size: 1.25em;
+  	flex: none;
+  	background: rgba(0,0,0,0);
+
+  	-webkit-appearance: none;
 		-webkit-border-radius: 0px;
 
 	}
@@ -355,8 +356,9 @@
 	}
 
 	#emailFormButton {
-		width: 95%;
-		margin-left: 12px;
+		width: 325px;
+    display: block;
+		margin: 0 auto;
 		height: 40px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
@@ -459,7 +461,14 @@
 
 
   	.gameMessageEmailScreen {
-  		top: 0px !important;
+      width:100%;
+      top: -35px;
+      font-size: 1.63em;
+      color: black;
+      position: absolute;
+      font-family: 'DIN Condensed';
+      line-height:25px;
+      padding-bottom:10px;
   	}
 
   	.gadgetRecommendation {
@@ -472,7 +481,8 @@
   	}
     #emailSubmitForm {
       right: 0;
-      bottom: 20px;
+      top: initial;
+      bottom: 50px;
       position:absolute;
       width: 300px;
     }
