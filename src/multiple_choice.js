@@ -182,7 +182,6 @@
     var emailSubmitForm = $.create('form', {
       id: 'emailSubmitForm',
       action: '',
-      'method': 'post',
       'target': '_blank',
       contents: [
         {
