@@ -330,6 +330,7 @@ html {
     text-align: center;
     position: relative;
     top: 100px;
+    left: 10px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -347,8 +348,7 @@ html {
 	#emailFormInput {
   	display: block;
     margin: 0 auto;
-  	width: 320px;
-  	left: 5px;
+  	width: 300px;
   	border: none;
   	height: 50px;
   	margin-top: 10px;
@@ -375,7 +375,7 @@ html {
 
 	#emailFormButton {
 		width: 300px;
-    display: block;
+    	display: block;
 		margin: 0 auto;
 		height: 40px;
 		border: 1px solid #F6F6F6;
