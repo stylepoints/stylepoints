@@ -15,7 +15,7 @@ export default {
   entry: isProduction ? {
     // binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
-    multiple_choice: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
+    multiple_choice: [ './vendor_scripts/bliss.js', './multiple_choice.js'  ],
   } : {
     // binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
@@ -107,17 +107,17 @@ export default {
     ...isProduction ? [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          dead_code: true,
-	        unused: true,
-	        warnings: false,
-	        screw_ie8: true,
-        },
-        output: {
-          comments: false
-        }
-      }),
+      // new webpack.optimize.UglifyJsPlugin({
+      //   compress: {
+      //     dead_code: true,
+	     //    unused: true,
+	     //    warnings: false,
+	     //    screw_ie8: true,
+      //   },
+      //   output: {
+      //     comments: false
+      //   }
+      // }),
     ] : [
       
     ]
