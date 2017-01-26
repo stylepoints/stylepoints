@@ -196,8 +196,7 @@
         },
         {
           tag: 'input',
-          // type: 'submit',
-          type: 'div',
+          type: 'submit',
           id: 'emailFormButton',
           value: fourImagesCopy.emailFormButtonText
         }
