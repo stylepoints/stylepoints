@@ -233,18 +233,13 @@ html {
   		background: none;
 	    font-size: 1em;
 	    text-align:center;
-	    -webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	    justify-content: center;
-	    -ms-flex-item-align: center;
-	    -ms-grid-row-align: center;
-	    align-self: center;
+	    
+	    
 	    font-family: 'DIN Condensed';
 	    position: relative;
 	    top: 320px;
-	    -webkit-box-flex: 0;
-	    -ms-flex: none;
-	    flex: none;
+	    
+	    
 	    z-index: 10000;
 	}
 
@@ -449,7 +444,7 @@ html {
 	    #nextButton {
 	      width: 300px;
 	      height: 75px;
-	      top: inherit;
+	      top: 250px;
 	      bottom: 0px;
 	      right: 0px;
 	      font-size: 1.5em;
@@ -501,7 +496,7 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: initial;
+	      top: 150px;
 	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
@@ -550,5 +545,13 @@ html {
 	      right: 0;
 
 	  	}
+	  	.gameTitleFinalScreen {
+    	  top: -35px;
+ 		}
+
+ 		.shareButtonsContainer {
+ 			left: 15px;
+ 			top: 220px;
+ 		}
   }
 }
