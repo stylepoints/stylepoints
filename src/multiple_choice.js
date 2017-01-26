@@ -154,7 +154,8 @@
     var oldGameMessage = $('#gameMessage', mainContainer);
     oldGameMessage.innerHTML = '';
     $.set(oldGameMessage, {
-      contents: [fourImagesCopy.resultMessageHeader]
+      contents: [fourImagesCopy.resultMessageHeader.toUpperCase()],
+      className: 'gameMessageEmailScreen'
     });
     // Clear out imageContainer and then append new image
     imageContainer.innerHTML = '';
