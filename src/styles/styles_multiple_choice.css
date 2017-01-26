@@ -203,7 +203,7 @@ html {
 	#nextButton {
 	border: 1px solid #F0F0F0;
     height: 40px;
-    width: 330px;
+    width: 343px;
     color: #000000;
     background: transparent;
     font-size: 1em;
@@ -216,7 +216,7 @@ html {
     font-family: 'DIN Condensed';
     position: absolute;
     top: 450px;
-    left: 13px;
+    left: 2px;
     line-height: 30px;
     -webkit-box-flex: 0;
     -ms-flex: none;
