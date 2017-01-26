@@ -94,10 +94,12 @@
 
 
 
+
+
     var resultImage = $('.resultImage');
-    // $.set(resultImage, {
-    //     src: fourImagesCopy.gameImageGridThree
-    // });
+    $.set(resultImage, {
+        src: fourImagesCopy.gameImageGridEleven
+    });
     var oldResultMessage = $('#gameMessage', mainContainer);
 
     var confirmationTitle = $.create('div', {
@@ -176,10 +178,10 @@
 
 
     // Create email submit form and append it to the interactionContainer.
+    //  Add this when ready to activate mailchimp: //stylepoints.us14.list-manage.com/subscribe/post?u=56a2ff2655e74c7b8d44b955e&amp;id=87d115b894
     var emailSubmitForm = $.create('form', {
       id: 'emailSubmitForm',
-      action: '//stylepoints.us14.list-manage.com/subscribe/post?u=56a2ff2655e74c7b8d44b955e&amp;id=87d115b894',
-      'method': 'post',
+      action: '',
       'target': '_blank',
       contents: [
         {
@@ -196,8 +198,7 @@
         },
         {
           tag: 'input',
-          // type: 'submit',
-          type: 'div',
+          type: 'submit',
           id: 'emailFormButton',
           value: fourImagesCopy.emailFormButtonText
         }
