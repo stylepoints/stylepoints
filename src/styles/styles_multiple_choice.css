@@ -98,7 +98,7 @@ html {
 	  text-align: center;
 	  position: relative;
       top: 80px;
-      left: 0px;
+      left: 40px;
       -webkit-justify-content: center;
       -webkit-align-self: center;
       align-self: center;
@@ -228,6 +228,7 @@ html {
 		  border: none;
 	    height: 50px;
 	    width: 300px;
+	    left: 20px;
 	    color: #000000;
   		background: none;
 	    font-size: 1em;
@@ -404,6 +405,17 @@ html {
 
   .gameTitle {
         top: 0;
+    font-size: 1.5em;
+    color: black;
+    position: absolute;
+    font-family: 'DIN Condensed';
+    line-height: 25px;
+    padding-bottom: 10px;
+    width: 95%;
+    left: 5px;
+  }
+  .gameTitleFinalScreen {
+    top: 30px;
     font-size: 1.5em;
     color: black;
     position: absolute;
