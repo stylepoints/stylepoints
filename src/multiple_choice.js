@@ -3,6 +3,7 @@
     "callToActionMessage": "FIND THE PERFECT DRIVING ACCESSORY FOR YOU",
     "callToActionButtonText": "LET'S GO!",
     "gameTitle": "What gadget best fits your driving style? Click below to find out!",
+    "gameTitleTruncated": "What gadget best fits your driving style?",
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
     "gameMessageTextTwo": "2 of 3: Which picture describes why you drive most often?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
@@ -207,7 +208,10 @@
 
     console.log(emailSubmitForm);
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
-
+    // block the default behavior of the submit button. For testing only
+    $(emailSubmitForm).addEventListener('click', function(e) {
+      e.preventDefault();
+    })
     // Create submit button event listener so that we can POST emails.
     var submitButton = $('#emailFormButton', mainContainer).addEventListener('click', function()
     {
@@ -305,6 +309,11 @@
 
     if (index === 0 && answerGroupOne.length > 0) {
       animateExit(event);
+      var gameMessage = $('#gameMessage');
+      $('#gameTitle').innerHTML = '';
+      $.set($('#gameTitle'), {
+        contents: fourImagesCopy.gameTitleTruncated.toUpperCase()
+      });
       gameMessage.innerHTML = '';
       var setText = $.set(gameMessage, {
         className: gameMessageTextType(fourImagesCopy.gameMessageTextOne),

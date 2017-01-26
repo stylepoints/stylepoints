@@ -566,4 +566,32 @@ html {
  			top: 220px;
  		}
   }
+
+  @media screen and (max-width:345px){
+  	.gameMessage { display: none;}
+
+  	.interactionContainer { width: 320px; }
+
+  	.gameImageGridImageContainer { width: 160px; }
+
+  	.gameImageGrid { width: 320px; }
+
+  	#gameContainer { width: 320px; }
+
+  	#nextButton { width: 320px; }
+
+  	.gameTitle { font-size: 1.4em; width: 90%; }
+
+  	.gameMessageEmailScreen { font-size: 1.2em; width: 90%; }
+
+  	.resultImage { width: 320px; }
+
+  	.gadgetRecommendation { left: 30px; }
+
+  	#resultMessageText { width: 90%; left: 2px; font-size: 1.2em;}
+
+  	#emailFormInput { right: 15px; }
+
+
+  }
 }
