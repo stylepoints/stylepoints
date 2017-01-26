@@ -321,7 +321,7 @@ html {
     width: 95%;
     display: block;
     z-index: 6;
-    font-size: 0.85em;
+    font-size: 1.15em;
     color: white;
     text-align: center;
     position: relative;
@@ -336,7 +336,7 @@ html {
 
 	}
 	#emailSubmitForm {
-		margin-top: -20px;
+		margin-top: -50px;
     z-index: 10000;
     position: absolute;
     top: 160px;
@@ -410,15 +410,18 @@ html {
     left: 5px;
   }
   .gameTitleFinalScreen {
-    top: 30px;
+    top: 175px;
     font-size: 1.5em;
+	line-height: 30px;
     color: black;
     position: absolute;
-    font-family: 'DIN Condensed';
-    line-height: 25px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: white;
     padding-bottom: 10px;
     width: 95%;
-    left: 5px;
+    left: 10px;
+    text-align: center;
+   
   }
 
 

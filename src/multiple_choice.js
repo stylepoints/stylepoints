@@ -6,7 +6,7 @@
     "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
     "gameMessageTextTwo": "2 of 3: Which picture describes why you drive most often?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
-    "resultMessageHeader": "You know what you like and aren't afraid to voice it!",
+    "resultMessageHeader": "Your car reflects your personal driving style. Driving is part of your daily routine!",
     "resultMessageText": "Enter your email below for a chance to win a £100 voucher for Halfords.com!. Standard T&C’s apply",
     "confirmationMessageText": "Thanks for entering! You will receive an email confirming your entry shortly!",
     "emailFormButtonText": "SUBMIT",
@@ -14,7 +14,7 @@
     "positiveButtonImage": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyOXB4IiB2aWV3Qm94PSIwIDAgMzAgMjkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iaVBob25lLTctQ29weS01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjMyLjAwMDAwMCwgLTU0MC4wMDAwMDApIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4wMDAwMDAsIDExNS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC01LUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OS4wMDAwMDAsIDQxMy4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzAuOTU3MTI4OSwxOS4wMTk2Njk4IEM3MC41NTcyNjQ1LDE1LjA3NjUzNDkgNjcuMjM0NDYwOCwxMiA2My4xOTQ0MjEsMTIgQzU5Ljk1NjIwOTgsMTIgNTcuMTc5OTU3MywxMy45NzYzNzY5IDU1Ljk5ODY2MjYsMTYuNzkwNDk3IEM1NC44MTczNjgsMTMuOTc2Mzc2OSA1Mi4wNDExMTU1LDEyIDQ4LjgwMzIwNDIsMTIgQzQ0Ljc2Mjg2NDUsMTIgNDEuNDM5NzYwOCwxNS4wNzY1MzQ5IDQxLjA0MDE5NjQsMTkuMDE5NjY5OCBDNDEuMDEzNDk4OCwxOS4yODIzODUxIDQxLDE5LjU0OTMwODcgNDEsMTkuODE5MjM4MiBDNDEsMjkuMzE5Njc0MyA1Mi42MzUzNjI1LDMzLjgwMzU2OTkgNTUuOTk4NjYyNiw0MC4xMzk5OTk0IEM1OS4zNjE5NjI4LDMzLjgwMzg3MDQgNzAuOTk3MzI1MywyOS4zMTk5NzQ4IDcwLjk5NzMyNTMsMTkuODE5MjM4MiBDNzAuOTk3MzI1MywxOS41NDkzMDg3IDcwLjk4MzgyNjUsMTkuMjgyMzg1MSA3MC45NTcxMjg5LDE5LjAxOTY2OTggWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==",
     "gameImageGridImageSelectedIcon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMTggMTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+R3JvdXA8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAiPgogICAgICAgICAgICA8cGF0aCBkPSJNOSwwIEM0LjAyOTQzNzI1LC0zLjA0MzU5MTg4ZS0xNiA2LjA4NzE4Mzc2ZS0xNiw0LjAyOTQzNzI1IDAsOSBDLTYuMDg3MTgzNzZlLTE2LDEzLjk3MDU2MjcgNC4wMjk0MzcyNSwxOCA5LDE4IEMxMy45NzA1NjI3LDE4IDE4LDEzLjk3MDU2MjcgMTgsOSBDMTgsNi42MTMwNTE1OSAxNy4wNTE3ODg0LDQuMzIzODY2MzggMTUuMzYzOTYxLDIuNjM2MDM4OTcgQzEzLjY3NjEzMzYsMC45NDgyMTE1NjMgMTEuMzg2OTQ4NCwxLjQ2MTU4NDM2ZS0xNiA5LDAgWiIgaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiM3RUQzMjEiIHBvaW50cz0iOCAxMi45MSA1IDEwIDYuNDYgOC41NCA4IDEwLjA5IDEyLjc5IDUuMjkgMTQuMjEgNi43MSI+PC9wb2x5Z29uPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+",
     "itemDescription": "AUTOMATIC SMART METER £99",
-    "finalRecommendationOne": "Driving is part of your daily routine. A dashcam can help keep your costs down!",
+    "finalRecommendationOne": "A dashcam can help keep your costs down!",
     "gameImageGridOne": require("./images/multiple_choice/1_1.png"),
     "gameImageGridTwo": require("./images/multiple_choice/1_2.png"),
     "gameImageGridThree": require("./images/multiple_choice/1_3.png"),
@@ -36,7 +36,7 @@
     "gplusShare": 'data:image/png;base64,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'
   }
 
-  fourImagesCopy.resultImage = fourImagesCopy.gameImageGridEleven;
+  fourImagesCopy.resultImage = fourImagesCopy.gameImageGridOne;
 
   console.log(fourImagesCopy.gameImageGridOne);
   // Create global variables for answers to questions.
@@ -68,9 +68,9 @@
   {
     var interactionContainer = $('#interactionContainer', mainContainer);
 
-    interactionContainer.removeChild($('#gameMessage'));
     interactionContainer.removeChild($('.gadgetRecommendation'));
     interactionContainer.removeChild($('form'));
+    interactionContainer.removeChild($('#gameMessage'));
 
     var shareButtonsContainer = $.create('div', {
         className: 'shareButtonsContainer',
@@ -105,6 +105,8 @@
       contents: [fourImagesCopy.confirmationMessageText]
     });
 
+
+   
     interactionContainer.appendChild(shareButtonsContainer);
     interactionContainer.appendChild(confirmationTitle);
 
@@ -132,8 +134,6 @@
     var interactionContainer = $("#interactionContainer", mainContainer);
 
     interactionContainer.removeChild($('#nextButton'), mainContainer);
-    interactionContainer.removeChild($('#gameTitle'), mainContainer);
-
     var imageContainer = $("#imageContainer", mainContainer);
     // Remove lowZIndex class from the interactionContainer.
     raiseInteractionContainer = $.set(interactionContainer, {
@@ -145,11 +145,17 @@
         contents: fourImagesCopy.finalRecommendationOne.toUpperCase()
     });
 
+
+    
+
     interactionContainer.appendChild(gadgetRecommendation);
     // Select current game message and remove content so we can
     // re set it.
     var oldGameMessage = $('#gameMessage', mainContainer);
     oldGameMessage.innerHTML = '';
+    $.set(oldGameMessage, {
+      contents: [fourImagesCopy.resultMessageHeader]
+    });
     // Clear out imageContainer and then append new image
     imageContainer.innerHTML = '';
     imageContainer.appendChild($.create('div',
@@ -166,11 +172,7 @@
     }));
 
 
-    // Set new result message
-    var resultMessageHeader = $.set(oldGameMessage, {
-      contents: fourImagesCopy.resultMessageHeader.toUpperCase(),
-      className: 'gameMessage gameMessageEmailScreen'
-    });
+
 
     // Create email submit form and append it to the interactionContainer.
     var emailSubmitForm = $.create('form', {
