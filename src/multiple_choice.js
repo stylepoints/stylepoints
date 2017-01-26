@@ -7,13 +7,12 @@
     "gameMessageTextTwo": "2 of 3: Which picture describes why you drive most often?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then, Get Results!",
     "resultMessageHeader": "You know what you like and aren't afraid to voice it!",
-    "resultMessageText": "Enter your email below to receive a £5 voucher off any purchase at Halfords.com. Standard T&C's apply",
-    "confirmationMessageText": "Thanks for playing! You will receive an email with your voucher within 24 hours.",
+    "resultMessageText": "Enter your email below for a chance to win a £100 voucher for Halfords.com!. Standard T&C’s apply",
+    "confirmationMessageText": "Thanks for entering! You will receive a confirmation email shortly.",
     "emailFormButtonText": "SUBMIT",
     "negativeButtonImage": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIzMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjUiPgogICAgICAgIDxnIGlkPSIwLjItRGVza3RvcC1pbmxpbmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MDEuMDAwMDAwLCAtMzA4LjAwMDAwMCkiIGZpbGw9IiM1RTVFNUUiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTQ2LjAwMDAwMCwgMjkzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjE4MC40Njk2NzkgMTUgMTcwLjAxNzgzNiAyNS40NTE4NDMgMTU5LjU2NTk5MyAxNSAxNTUgMTkuNTMwMzIxIDE2NS40NTE4NDMgMjkuOTgyMTY0MSAxNTUgNDAuNDM0MDA3MSAxNTkuNTY1OTkzIDQ1IDE3MC4wMTc4MzYgMzQuNTQ4MTU3IDE4MC40Njk2NzkgNDUgMTg1IDQwLjQzNDAwNzEgMTc0LjU0ODE1NyAyOS45ODIxNjQxIDE4NSAxOS41MzAzMjEiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+",
     "positiveButtonImage": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyOXB4IiB2aWV3Qm94PSIwIDAgMzAgMjkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iaVBob25lLTctQ29weS01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjMyLjAwMDAwMCwgLTU0MC4wMDAwMDApIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4wMDAwMDAsIDExNS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC01LUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OS4wMDAwMDAsIDQxMy4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzAuOTU3MTI4OSwxOS4wMTk2Njk4IEM3MC41NTcyNjQ1LDE1LjA3NjUzNDkgNjcuMjM0NDYwOCwxMiA2My4xOTQ0MjEsMTIgQzU5Ljk1NjIwOTgsMTIgNTcuMTc5OTU3MywxMy45NzYzNzY5IDU1Ljk5ODY2MjYsMTYuNzkwNDk3IEM1NC44MTczNjgsMTMuOTc2Mzc2OSA1Mi4wNDExMTU1LDEyIDQ4LjgwMzIwNDIsMTIgQzQ0Ljc2Mjg2NDUsMTIgNDEuNDM5NzYwOCwxNS4wNzY1MzQ5IDQxLjA0MDE5NjQsMTkuMDE5NjY5OCBDNDEuMDEzNDk4OCwxOS4yODIzODUxIDQxLDE5LjU0OTMwODcgNDEsMTkuODE5MjM4MiBDNDEsMjkuMzE5Njc0MyA1Mi42MzUzNjI1LDMzLjgwMzU2OTkgNTUuOTk4NjYyNiw0MC4xMzk5OTk0IEM1OS4zNjE5NjI4LDMzLjgwMzg3MDQgNzAuOTk3MzI1MywyOS4zMTk5NzQ4IDcwLjk5NzMyNTMsMTkuODE5MjM4MiBDNzAuOTk3MzI1MywxOS41NDkzMDg3IDcwLjk4MzgyNjUsMTkuMjgyMzg1MSA3MC45NTcxMjg5LDE5LjAxOTY2OTggWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==",
     "gameImageGridImageSelectedIcon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMTggMTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxICgzNTMyNikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+R3JvdXA8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAiPgogICAgICAgICAgICA8cGF0aCBkPSJNOSwwIEM0LjAyOTQzNzI1LC0zLjA0MzU5MTg4ZS0xNiA2LjA4NzE4Mzc2ZS0xNiw0LjAyOTQzNzI1IDAsOSBDLTYuMDg3MTgzNzZlLTE2LDEzLjk3MDU2MjcgNC4wMjk0MzcyNSwxOCA5LDE4IEMxMy45NzA1NjI3LDE4IDE4LDEzLjk3MDU2MjcgMTgsOSBDMTgsNi42MTMwNTE1OSAxNy4wNTE3ODg0LDQuMzIzODY2MzggMTUuMzYzOTYxLDIuNjM2MDM4OTcgQzEzLjY3NjEzMzYsMC45NDgyMTE1NjMgMTEuMzg2OTQ4NCwxLjQ2MTU4NDM2ZS0xNiA5LDAgWiIgaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiM3RUQzMjEiIHBvaW50cz0iOCAxMi45MSA1IDEwIDYuNDYgOC41NCA4IDEwLjA5IDEyLjc5IDUuMjkgMTQuMjEgNi43MSI+PC9wb2x5Z29uPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+",
-    "resultImage": require("./images/multiple_choice/3_1.png"),
     "itemDescription": "AUTOMATIC SMART METER £99",
     "finalRecommendationOne": "Driving is part of your daily routine. A dashcam can help keep your costs down!",
     "gameImageGridOne": require("./images/multiple_choice/1_1.png"),
@@ -35,8 +34,9 @@
     "facebookShare": 'data:image/png;base64,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',
     "twitterShare": 'data:image/png;base64,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',
     "gplusShare": 'data:image/png;base64,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'
-
   }
+
+  fourImagesCopy.resultImage = fourImagesCopy.gameImageGridEleven;
 
   console.log(fourImagesCopy.gameImageGridOne);
   // Create global variables for answers to questions.
@@ -95,9 +95,9 @@
 
 
     var resultImage = $('.resultImage');
-    $.set(resultImage, {
-        src: fourImagesCopy.gameImageGridThree
-    });
+    // $.set(resultImage, {
+    //     src: fourImagesCopy.gameImageGridThree
+    // });
     var oldResultMessage = $('#gameMessage', mainContainer);
 
     var confirmationMessage = $.create('p', {
@@ -146,7 +146,7 @@
     });
 
     interactionContainer.appendChild(gadgetRecommendation);
-    // Select current game message and remove content so we can 
+    // Select current game message and remove content so we can
     // re set it.
     var oldGameMessage = $('#gameMessage', mainContainer);
     oldGameMessage.innerHTML = '';
@@ -356,7 +356,7 @@
       id: 'interactionContainer'
     });
 
-    
+
 
     var nextButton = $.create('button', {
         id: 'nextButton',
@@ -413,7 +413,7 @@
         }]
       });
 
-      
+
       gameImageGridOne.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
@@ -437,6 +437,8 @@
                 $.set(nextButton, {
                         className: 'nextButtonActive'
                 });
+                answerGroupOne.push(event.target.id);
+
             }
 
             console.log(answerGroupOne);
@@ -479,7 +481,7 @@
         }]
       });
 
-      
+
       gameImageGridTwo.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
@@ -550,7 +552,7 @@
         }]
       });
 
-      
+
       gameImageGridThree.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
@@ -594,12 +596,12 @@
     // Create an array of these new image grids so that we can appendChild them to the dom.
     var gameImageGrids = [gameImageGridOne, gameImageGridTwo, gameImageGridThree];
 
-    
+
     gameContainer.appendChild(imageContainer);
     gameContainer.appendChild(interactionContainer);
     mainContainer.appendChild(gameContainer);
-    
-    for (image in gameImageGrids) 
+
+    for (image in gameImageGrids)
     {
       imageContainer.appendChild(gameImageGrids[image]);
     }
@@ -623,7 +625,7 @@
 
     interactionContainer.appendChild(nextButton);
 
-    
+
     // Set the new gameMessage text, substituting a call to gameMessageTextType,
     // for the normal className, which will dynamically set text size based on length.
 

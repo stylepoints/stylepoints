@@ -62,7 +62,6 @@ html {
     margin-top: 100px;
     width: 350px;
     height: 320px;
-    left: 5px;
 	}
 
 	#publisherLogo {
@@ -115,7 +114,7 @@ html {
 
 	}
 	.gameImageGridImage {
-		width: 175px;
+		width: 170px;
 		padding: 1px 1px 1px 1px !important;
 		height: 170px;
 		opacity: 1;
@@ -507,7 +506,7 @@ html {
 	    #emailSubmitForm {
 	      right: 0px;
 	      top: initial;
-	      bottom: 50px;
+	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
 	    }
