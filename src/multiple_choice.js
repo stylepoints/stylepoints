@@ -408,8 +408,8 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay',
-            id: 'gridOneSelected' + i
+            className: 'gameImageGridImageOverlay hidden',
+            id: 'gridOneOverlay' + i
         }]
       });
 
@@ -427,26 +427,49 @@
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
-            $.set($('#gridOneSelected' + selectedImage),
+            if (answerGroupOne.length < 1)
             {
-                className: 'gameImageGridImageSelectedIcon show'
-            });
-            answerGroupOne.push(event.target.id);
-            if (answerGroupOne.length > 0){
-                console.log('Test');
-                $.set(nextButton, {
-                        className: 'nextButtonActive'
-                });
-                answerGroupOne.push(event.target.id);
-
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+              
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              answerGroupOne.push(event.target.id);
+              console.log(answerGroupOne);
+              for( var i = 0; i < 4; i++)
+              {
+                if ("gridOne" + i !== event.target.id)
+                {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay'
+                  });
+                } else {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                }
+              }
             }
-
-            console.log(answerGroupOne);
         } else {
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
+            $.set(nextButton, {
+                    className: ''
+            });
+            
+            for( var i = 0; i < 4; i++)
+            {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+
+            }
+                
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
 
 
@@ -476,8 +499,8 @@
             src: fourImagesCopy.gameImageGridImageSelectedIcon
         }, {
             tag: 'div',
-            className: 'gameImageGridImageOverlay',
-            id: 'gridTwoSelected' + j
+            className: 'gameImageGridImageOverlay hidden',
+            id: 'gridTwoOverlay' + j
         }]
       });
 
@@ -495,24 +518,46 @@
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
-            $.set($('#gridTwoSelected' + selectedImage),
+            if (answerGroupTwo.length < 1)
             {
-                className: 'gameImageGridImageSelectedIcon show'
-            });
-            answerGroupTwo.push(event.target.id);
-            if (answerGroupTwo.length > 0){
-                console.log('Test');
-                $.set(nextButton, {
-                        className: 'nextButtonActive'
-                });
+              $.set($('#gridTwoSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              for( var i = 0; i < 4; i++)
+              {
+                if ("gridTwo" + i !== event.target.id)
+                {
+                  $.set($("#gridTwoOverlay" + i), {
+                    className: 'gameImageGridImageOverlay'
+                  });
+                } else {
+                  $.set($("#gridTwoOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                }
+              }
+              answerGroupTwo.push(event.target.id);
+              console.log(answerGroupTwo);
             }
-
-            console.log(answerGroupTwo);
         } else {
             $.set($('#gridTwoSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
+            $.set(nextButton, {
+                    className: ''
+            });
+            for( var i = 0; i < 4; i++)
+            {
+              $.set($("#gridTwoOverlay" + i), {
+                className: 'gameImageGridImageOverlay hidden'
+              });
+
+            }
             answerGroupTwo.splice(answerGroupTwo.indexOf(event.target.id), 1);
 
 

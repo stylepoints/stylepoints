@@ -414,22 +414,6 @@ html {
     left: 5px;
   }
 
-	@media (max-height:400px){
-		#rating-container {
-			transform: scale(0.75);
-		}
-
-		section {
-			text-align: center;
-			margin: 0 auto;
-		}
-
-		#gameContainer {
-			margin-top: 0px;
-			margin-bottom: 0px;
-			padding: 0px 0px 0px 0px;
-		}
-	}
 
 	@media screen and (min-width: 700px) {
 	  	#gameContainer {
