@@ -258,11 +258,19 @@ html {
 	    bottom: 400px;
 	    left: 6px;
 	}
-
 	.gameMessageEmailScreen {
+	      font-size: 1.25em;
+	    color: black;
+	    position: absolute;
+	    font-family: 'DIN Condensed';
+	    bottom: 400px;
+	    left: 6px;
+	}
+
+	/*.gameMessageEmailScreen {
     bottom: 410px;
     width: 95%;
-	}
+	}*/
 
 	.gameMessageFinalQuestion {
 		width: 100%;
@@ -321,7 +329,7 @@ html {
     width: 95%;
     display: block;
     z-index: 6;
-    font-size: 0.85em;
+    font-size: 1.15em;
     color: white;
     text-align: center;
     position: relative;
@@ -336,7 +344,7 @@ html {
 
 	}
 	#emailSubmitForm {
-		margin-top: -20px;
+		margin-top: -50px;
     z-index: 10000;
     position: absolute;
     top: 160px;
@@ -410,15 +418,18 @@ html {
     left: 5px;
   }
   .gameTitleFinalScreen {
-    top: 30px;
+    top: 175px;
     font-size: 1.5em;
+	line-height: 30px;
     color: black;
     position: absolute;
-    font-family: 'DIN Condensed';
-    line-height: 25px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: white;
     padding-bottom: 10px;
     width: 95%;
-    left: 5px;
+    left: 10px;
+    text-align: center;
+   
   }
 
 
@@ -474,21 +485,21 @@ html {
 
 
 	  	.gameMessageEmailScreen {
-	      width:100%;
-	      top: -35px;
-	      font-size: 1.63em;
+	      width:50%;
+	      top: 15px;
+	      font-size: 1.25em;
 	      color: black;
 	      position: absolute;
 	      font-family: 'DIN Condensed';
 	      line-height:25px;
 	      padding-bottom:10px;
-        left: initial;
+          left: 370px;
 	  	}
 
 	  	.gadgetRecommendation {
 	  		color: #000000;
 	  		right: 0px;
-	      top: -4px;
+	      top: 70px;
 	      margin:0px;
 	      left: initial;
 	      width: 300px;
@@ -496,7 +507,7 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: 150px;
+	      top: 175px;
 	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
@@ -546,7 +557,8 @@ html {
 
 	  	}
 	  	.gameTitleFinalScreen {
-    	  top: -35px;
+    	      top: 50px;
+    		width: 50%;
  		}
 
  		.shareButtonsContainer {
