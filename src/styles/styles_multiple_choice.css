@@ -326,11 +326,11 @@ html {
 	}
 
 	#resultMessageText {
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     width: 95%;
     display: block;
     z-index: 6;
-    font-size: 1.15em;
+    font-size: 0.85em;
     color: white;
     text-align: center;
     position: relative;
@@ -347,7 +347,7 @@ html {
 	#emailSubmitForm {
     z-index: 10000;
     position: absolute;
-    top: 160px;
+    top: 193px;
 	}
 	#emailFormInput {
   	display: block;
@@ -518,7 +518,7 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: 132px;
+	      top: 165px;
 	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
