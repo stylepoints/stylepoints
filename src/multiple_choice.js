@@ -137,7 +137,7 @@
     var interactionContainer = $("#interactionContainer", mainContainer);
 
     interactionContainer.removeChild($('#nextButton'), mainContainer);
-    interactionContainer.removeChild($('#gameTitle'), mainContainer);
+    // interactionContainer.removeChild($('#gameTitle'), mainContainer);
     var imageContainer = $("#imageContainer", mainContainer);
     // Remove lowZIndex class from the interactionContainer.
     raiseInteractionContainer = $.set(interactionContainer, {
