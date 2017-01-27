@@ -1,0 +1,18 @@
+config:
+  target: "http://127.0.0.1:3000"
+  phases:
+    - duration: 120
+      arrivalRate: 10
+  defaults:
+    headers:
+      content-type: "application/json"
+      x-my-service-auth: fedcba9876543210
+scenarios:
+  - flow:
+      - get:
+          url: "/test"
+      - think: 1
+      - post:
+          url: "/test"
+          json:
+            name: "Hassy"
