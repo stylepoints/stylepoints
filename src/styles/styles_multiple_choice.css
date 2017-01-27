@@ -353,7 +353,7 @@ html {
 	#emailFormInput {
   	display: block;
     margin: 0 auto;
-  	width: 300px;
+  	width: 337px;
   	border: none;
   	height: 50px;
   	margin-top: 10px;
@@ -379,7 +379,7 @@ html {
 	}
 
 	#emailFormButton {
-		width: 300px;
+		width: 337px;
     	display: block;
 		margin: 0 auto;
 		height: 40px;
@@ -517,7 +517,7 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: 175px;
+	      top: 155px;
 	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
