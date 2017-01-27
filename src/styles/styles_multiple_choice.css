@@ -486,19 +486,10 @@ html {
 
 
 	  	.gameMessageEmailScreen {
-  	      /*width:50%;
-  	      top: 15px;
-  	      font-size: 1.125em;
-  	      color: black;
-  	      position: absolute;
-  	      font-family: 'DIN Condensed';
-  	      line-height:25px;
-  	      padding-bottom:10px;
-          left: 370px;*/
         font-size: 1.25em;
         color: #000000;
         right: 0px;
-        
+
         margin: 0px;
         left: auto;
         left: initial;
@@ -517,7 +508,7 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: 155px;
+	      top: 132px;
 	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
