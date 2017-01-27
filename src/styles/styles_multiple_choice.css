@@ -586,13 +586,14 @@ html {
 
   	.interactionContainer { width: 320px; }
 
-  	.gameImageGridImageContainer { width: 160px; }
+  	.gameImageGridImageContainer { width: 160px; height: 150px; }
 
     .gameImageGridImage { width: 160px; }
 
-    .gameImageGridImageOverlay { width: 160px; }
+    .gameImageGridImageOverlay { width: 160px; height: 150px; }
 
-  	.gameImageGrid { width: 330px; }
+	.gameImageGridImageSelectedIcon { top: 55px; right: 55px; }
+  	.gameImageGrid { width: 330px; height: 300px;}
 
   	#gameContainer { width: 320px; }
 
@@ -610,6 +611,8 @@ html {
       width: 90%;
       padding:initial;
     }
+
+    #nextButton { margin-top: -40px; }
     #emailSubmitForm { top: 156px; }
 
     #emailFormInput { width: 305px; }
