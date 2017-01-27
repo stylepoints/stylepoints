@@ -6,6 +6,7 @@ import cssimport from 'postcss-import';
 import cssnext from 'postcss-cssnext';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV ? true : false
 console.log( "Building for", isProduction ? "production" : "development")
