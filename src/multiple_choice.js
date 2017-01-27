@@ -352,7 +352,6 @@
 
   // This function builds the game DOM.
   var buildGameDom = function() {
-    console.log(index);
 
     // Increment our global view index.
     // index++;
@@ -435,11 +434,12 @@
         // we show the right selected icon.
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
-        if (answerGroupOne.indexOf(event.target.id) === -1)
+        if (answerGroupOne.indexOf(event.target.id))
         {
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
+
             if (answerGroupOne.length < 1)
             {
               $.set($('#gridOneSelected' + selectedImage),
@@ -466,7 +466,41 @@
                 }
               }
             }
+            else 
+            {
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              console.log(event.target.id);
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              for(var i = 0; i < 4; i++)
+              {
+                if ("gridOneOverlay" + i !== event.target.id)
+                {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay'
+                  });
+                } else {
+                  $.set($("#gridOneOverlay" + i), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                }
+              }
+            }
         } else {
+            console.log(event.target.id);
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
