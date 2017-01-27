@@ -487,7 +487,7 @@ html {
 	  	.gameMessageEmailScreen {
 	      width:50%;
 	      top: 15px;
-	      font-size: 1.25em;
+	      font-size: 1.125em;
 	      color: black;
 	      position: absolute;
 	      font-family: 'DIN Condensed';
@@ -565,5 +565,40 @@ html {
  			left: 15px;
  			top: 220px;
  		}
+  }
+
+  @media screen and (max-width:345px){
+  	.gameMessage { }
+
+  	.interactionContainer { width: 320px; }
+
+  	.gameImageGridImageContainer { width: 160px; }
+
+  	.gameImageGrid { width: 330px; }
+
+  	#gameContainer { width: 320px; }
+
+  	#nextButton { width: 320px; }
+
+  	.gameTitle { font-size: 1.4em; width: 90%; }
+
+  	.gameMessageEmailScreen { font-size: 1.2em; width: 90%; }
+
+  	.resultImage { width: 320px; }
+
+  	.overlay { width: 320px; }
+
+  	.gadgetRecommendation { left: 30px; }
+
+  	#resultMessageText { width: 90%; left: 2px; font-size: 1.2em;}
+
+  	#emailFormInput { right: 15px; }
+
+  	#emailFormButton { right: 15px; }
+
+	.gameTitleFinalScreen { width: 80%; left: 20px; }
+
+	.shareButtonsContainer { left: 0px; }
+
   }
 }
