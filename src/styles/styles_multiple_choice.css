@@ -315,15 +315,14 @@ html {
 	}
 
 	.gadgetRecommendation {
-	   font-family: "DIN Condensed";
+    font-family: "DIN Condensed";
     position: absolute;
-    font-size: 1.25em;
+    font-size: 1em;
     color: white;
     text-align: center;
-    top: 120px;
-    left: 41px;
-    font-weight: normal;
-    width: 80%;
+    top: 192.2px;
+    padding: 0 20px;
+    width: 100;
 	}
 
 	#resultMessageText {
@@ -500,11 +499,22 @@ html {
 	  	.gadgetRecommendation {
 	  		color: #000000;
 	  		right: 0px;
-	      top: 70px;
+	      top: 53px;
 	      margin:0px;
 	      left: initial;
 	      width: 300px;
+        padding:0px;
 	  		text-align: left;
+        font-size: 1.25em;
+
+
+        /*position: absolute;
+        font-size: 1em;
+        color: white;
+        text-align: center;
+        top: 192.2px;
+        padding: 0 20px;
+        width: 100;*/
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
