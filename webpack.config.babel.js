@@ -6,6 +6,7 @@ import cssimport from 'postcss-import';
 import cssnext from 'postcss-cssnext';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV ? true : false
 console.log( "Building for", isProduction ? "production" : "development")
@@ -103,10 +104,11 @@ export default {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    
+		new CopyWebpackPlugin([{from:'./robots.txt'}]),
     ...isProduction ? [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
+
       // new webpack.optimize.UglifyJsPlugin({
       //   compress: {
       //     dead_code: true,
@@ -119,7 +121,7 @@ export default {
       //   }
       // }),
     ] : [
-      
+
     ]
   ],
   postcss: [
