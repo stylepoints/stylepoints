@@ -109,7 +109,7 @@
     });
 
 
-   
+
     interactionContainer.appendChild(shareButtonsContainer);
     interactionContainer.appendChild(confirmationTitle);
 
@@ -150,7 +150,7 @@
     });
 
 
-    
+
 
     interactionContainer.appendChild(gadgetRecommendation);
     // Select current game message and remove content so we can
@@ -446,7 +446,7 @@
               {
                   className: 'gameImageGridImageSelectedIcon show'
               });
-              
+
               $.set(nextButton, {
                   className: 'nextButtonActive'
               });
@@ -474,7 +474,7 @@
             $.set(nextButton, {
                     className: ''
             });
-            
+
             for( var i = 0; i < 4; i++)
             {
                   $.set($("#gridOneOverlay" + i), {
@@ -482,7 +482,7 @@
                   });
 
             }
-                
+
             answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
 
 
