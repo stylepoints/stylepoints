@@ -299,7 +299,6 @@ html {
 	  display: flex;
 	flex-direction: column;
 	width: 350px;
-	height: 500px;
 	position: relative;
 	left: 0px;
 
@@ -328,7 +327,7 @@ html {
 
 	#resultMessageText {
   	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    width: 100%;
+    width: 95%;
     display: block;
     z-index: 6;
     font-size: 0.85em;
@@ -336,20 +335,17 @@ html {
     text-align: center;
     position: relative;
     top: 100px;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+
 
 	}
 	#emailSubmitForm {
     z-index: 10000;
     position: absolute;
-    top: 180px;
-    width: 324px;
-    padding:10px;
+    width: 335px;
+    top: initial;
+    left:7px;
+    bottom: -327px;
+
 	}
 	#emailFormInput {
   	display: block;
@@ -518,9 +514,10 @@ html {
 	  	}
 	    #emailSubmitForm {
 	      right: 0px;
-	      top: 165px;
+        left: initial;
+        top: initial;
+        bottom: -312px;
         padding: 0 0 0 30px;
-	      bottom: 33px;
 	      position:absolute;
 	      width: 300px;
 	    }
@@ -529,10 +526,10 @@ html {
 	  		/*left: 375px;*/
 	      margin: 0px;
 	      padding: 0px;
-	      width:initial;
+	      width:103%;
 	      left: initial;
 	  		color: black;
-	  		text-align: left;
+	  		text-align: center;
 	      top: 0px;
 	  	}
 
