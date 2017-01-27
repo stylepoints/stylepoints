@@ -59,7 +59,7 @@ html {
 
 	#imageContainer {
 	  position: absolute;
-    margin-top: 100px;
+    margin-top: 125px;
     width: 350px;
     height: 320px;
 	}
@@ -201,7 +201,7 @@ html {
 	}
 
 	#nextButton {
-	border: 1px solid #F0F0F0;
+	   border: 1px solid #F0F0F0;
     height: 40px;
     width: 343px;
     color: #000000;
@@ -215,7 +215,7 @@ html {
     align-self: center;
     font-family: 'DIN Condensed';
     position: absolute;
-    top: 450px;
+    top: 475px;
     left: 2px;
     line-height: 30px;
     -webkit-box-flex: 0;
@@ -233,13 +233,13 @@ html {
   		background: none;
 	    font-size: 1em;
 	    text-align:center;
-	    
-	    
+
+
 	    font-family: 'DIN Condensed';
 	    position: relative;
 	    top: 320px;
-	    
-	    
+
+
 	    z-index: 10000;
 	}
 
@@ -251,20 +251,22 @@ html {
 
 	}
 	.gameMessage {
-	      font-size: 1.25em;
+      font-size: 1.25em;
 	    color: black;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
-	    bottom: 400px;
+	    top: 75px;
 	    left: 6px;
 	}
 	.gameMessageEmailScreen {
-	      font-size: 1.25em;
+	    /*font-size: 1.25em;
 	    color: black;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
 	    bottom: 400px;
-	    left: 6px;
+	    left: 6px;*/
+
+
 	}
 
 	/*.gameMessageEmailScreen {
@@ -344,7 +346,6 @@ html {
 
 	}
 	#emailSubmitForm {
-		margin-top: -50px;
     z-index: 10000;
     position: absolute;
     top: 160px;
@@ -429,7 +430,7 @@ html {
     width: 95%;
     left: 10px;
     text-align: center;
-   
+
   }
 
 
@@ -479,21 +480,30 @@ html {
 
 	    .gameTitle {
 	      left: 0px;
-	      top: -35px;
+	      top: -50px;
 	      width: 100%;
 	    }
 
 
 	  	.gameMessageEmailScreen {
-	      width:50%;
-	      top: 15px;
-	      font-size: 1.125em;
-	      color: black;
-	      position: absolute;
-	      font-family: 'DIN Condensed';
-	      line-height:25px;
-	      padding-bottom:10px;
-          left: 370px;
+  	      /*width:50%;
+  	      top: 15px;
+  	      font-size: 1.125em;
+  	      color: black;
+  	      position: absolute;
+  	      font-family: 'DIN Condensed';
+  	      line-height:25px;
+  	      padding-bottom:10px;
+          left: 370px;*/
+        font-size: 1.25em;
+        color: #000000;
+        right: 0px;
+        
+        margin: 0px;
+        left: auto;
+        left: initial;
+        width: 300px;
+        text-align: left;
 	  	}
 
 	  	.gadgetRecommendation {
