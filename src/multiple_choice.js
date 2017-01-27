@@ -159,7 +159,7 @@
     oldGameMessage.innerHTML = '';
     $.set(oldGameMessage, {
       contents: [fourImagesCopy.resultMessageHeader.toUpperCase()],
-      className: 'gameMessageEmailScreen'
+      className: 'gameMessage gameMessageEmailScreen'
     });
     // Clear out imageContainer and then append new image
     imageContainer.innerHTML = '';
