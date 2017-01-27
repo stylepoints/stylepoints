@@ -144,7 +144,7 @@
       className: ''
     });
 
-    var gadgetRecommendation = $.create('h2', {
+    var gadgetRecommendation = $.create('div', {
         className: 'gadgetRecommendation',
         contents: fourImagesCopy.finalRecommendationOne.toUpperCase()
     });
