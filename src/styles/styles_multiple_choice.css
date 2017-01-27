@@ -566,9 +566,14 @@ html {
 	      right: 0;
 
 	  	}
-	  	.gameTitleFinalScreen {
-    	      top: 50px;
-    		width: 50%;
+  	.gameTitleFinalScreen {
+        top: 176px;
+        padding-left: 30px;
+        width: 50%;
+        left: 350px;
+        text-align: left;
+        /* right: 0; */
+        color: black;
  		}
 
  		.shareButtonsContainer {
