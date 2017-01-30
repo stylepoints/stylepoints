@@ -46,6 +46,9 @@
   // Initialize global view index to zero.
   var index = 0;
 
+  var json = require('./gamelogic.json');
+
+
   // Create image grid arrays. This will be removed once test object is converted to true JSON.
   var gridImagesInitial = [fourImagesCopy.gameImageGridOne, fourImagesCopy.gameImageGridTwo, fourImagesCopy.gameImageGridThree, fourImagesCopy.gameImageGridFour];
 
@@ -130,11 +133,484 @@
     });
   }
 
+  var determineScreenThreeValue = function()
+  {
+    var boolList = [false, false, false, false];
+    var screenThreeValue;
+    for (var i = 0; i < 4; i++)
+    {
+      if( answerGroupThree[i] === "gridThreeSelected0" )
+      {
+        boolList[0] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected1")
+      {
+        boolList[1] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected2")
+      {
+        boolList[2] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected3")
+      {
+        boolList[3] = true;
+      }
+    }
+    if (JSON.stringify(boolList) === JSON.stringify([true, true, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, false, true]))
+    {
+      screenThreeValue = 10;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, true, false]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, false, true]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, false, false]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, true, false]))
+    {
+      screenThreeValue = 21;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, false, false]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, false, false]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, true, false]))
+    {
+      screenThreeValue = 1;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, false, true]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, false, false]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, true, false]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, false, true]))
+    {
+      screenThreeValue = 10;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+
+    return screenThreeValue
+  }
   var logicSelector = function()
   {
-    var json = require('./gamelogic.json');
 
-    console.log(json);
+      
+    var screenThreeValue = determineScreenThreeValue();
+    console.log(screenThreeValue);
+    if(answerGroupOne[0] === "gridOne0")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+            switch (screenThreeValue){
+              case 0:
+                //Condition One
+                break;
+              case 1:
+                //Condition Two
+                break;
+              case 11:
+                // Condition Three
+                break;
+              case 10:
+                // Condition Four
+                break;
+              case 21:
+                // Condition five
+                break;
+              case 20:
+                // Condition six
+                break;
+            }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition Seven
+              break;
+            case 1:
+              //Condition Eight
+              break;
+            case 11:
+              // Condition Nine
+              break;
+            case 10:
+              // Condition Ten
+              break;
+            case 21:
+              // Condition Eleven
+              break;
+            case 20:
+              // Condition Twelve
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 13
+              break;
+            case 1:
+              //Condition 14
+              break;
+            case 11:
+              // Condition 15
+              break;
+            case 10:
+              // Condition 16
+              break;
+            case 21:
+              // Condition 17
+              break;
+            case 20:
+              // Condition 18
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 19
+              break;
+            case 1:
+              //Condition 20
+              break;
+            case 11:
+              // Condition 21
+              break;
+            case 10:
+              // Condition 22
+              break;
+            case 21:
+              // Condition 23
+              break;
+            case 20:
+              // Condition 24
+              break;
+          }
+      }
+    }
+    else if(answerGroupOne[0] === "gridOne1")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 25
+              break;
+            case 1:
+              //Condition 26
+              break;
+            case 11:
+              // Condition 27
+              break;
+            case 10:
+              // Condition 28
+              break;
+            case 21:
+              // Condition 29
+              break;
+            case 20:
+              // Condition 30
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 31
+              break;
+            case 1:
+              //Condition 32
+              break;
+            case 11:
+              // Condition 33
+              break;
+            case 10:
+              // Condition 34
+              break;
+            case 21:
+              // Condition 35
+              break;
+            case 20:
+              // Condition 36
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 37
+              break;
+            case 1:
+              //Condition 38
+              break;
+            case 11:
+              // Condition 39
+              break;
+            case 10:
+              // Condition 40
+              break;
+            case 21:
+              // Condition 41
+              break;
+            case 20:
+              // Condition 42
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 43
+              break;
+            case 1:
+              //Condition 44
+              break;
+            case 11:
+              // Condition 45
+              break;
+            case 10:
+              // Condition 46
+              break;
+            case 21:
+              // Condition 47
+              break;
+            case 20:
+              // Condition 48
+              break;
+          }
+      }
+    }
+    else if (answerGroupOne[0] === "gridOne2")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 49
+              break;
+            case 1:
+              //Condition 50
+              break;
+            case 11:
+              // Condition 51
+              break;
+            case 10:
+              // Condition 52
+              break;
+            case 21:
+              // Condition 53
+              break;
+            case 20:
+              // Condition 54
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 55
+              break;
+            case 1:
+              //Condition 56
+              break;
+            case 11:
+              // Condition 57
+              break;
+            case 10:
+              // Condition 58
+              break;
+            case 21:
+              // Condition 59
+              break;
+            case 20:
+              // Condition 60
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 61
+              break;
+            case 1:
+              //Condition 62
+              break;
+            case 11:
+              // Condition 63
+              break;
+            case 10:
+              // Condition 64
+              break;
+            case 21:
+              // Condition 65
+              break;
+            case 20:
+              // Condition 66
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 67
+              break;
+            case 1:
+              //Condition 68
+              break;
+            case 11:
+              // Condition 69
+              break;
+            case 10:
+              // Condition 70
+              break;
+            case 21:
+              // Condition 71
+              break;
+            case 20:
+              // Condition 72
+              break;
+          }
+      }
+    }
+    else if (answerGroupOne[0] === "gridOne3")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 73
+              break;
+            case 1:
+              //Condition 74
+              break;
+            case 11:
+              // Condition 75
+              break;
+            case 10:
+              // Condition 76
+              break;
+            case 21:
+              // Condition 77
+              break;
+            case 20:
+              // Condition 78
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 79
+              break;
+            case 1:
+              //Condition 80
+              break;
+            case 11:
+              // Condition 81
+              break;
+            case 10:
+              // Condition 82
+              break;
+            case 21:
+              // Condition 83
+              break;
+            case 20:
+              // Condition 84
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 85
+              break;
+            case 1:
+              //Condition 86
+              break;
+            case 11:
+              // Condition 87
+              break;
+            case 10:
+              // Condition 88
+              break;
+            case 21:
+              // Condition 89
+              break;
+            case 20:
+              // Condition 90
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              //Condition 91
+              break;
+            case 1:
+              //Condition 92
+              break;
+            case 11:
+              // Condition 93
+              break;
+            case 10:
+              // Condition 94
+              break;
+            case 21:
+              // Condition 95
+              break;
+            case 20:
+              // Condition 96
+              break;
+          }
+      }
+    }
+        
+
   }
   // The presentEmailScreen function shows the email screen and POSTs email data to the server.
   var presentEmailScreen = function() {
