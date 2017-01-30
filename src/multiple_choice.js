@@ -207,6 +207,7 @@
       ]
     });
 
+    
     console.log(emailSubmitForm);
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
     // block the default behavior of the submit button. For testing only
@@ -228,6 +229,11 @@
         input.value = "";
         presentFinalScreen();
       });
+    });
+
+    $('#resultMessageText').addEventListener('click', function()
+    {
+      window.open("https://www.driving.co.uk/terms-conditions/");
     });
   }
 
