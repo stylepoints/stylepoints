@@ -130,11 +130,19 @@
     });
   }
 
+  var logicSelector = function()
+  {
+    var json = require('./gamelogic.json');
+
+    console.log(json);
+  }
   // The presentEmailScreen function shows the email screen and POSTs email data to the server.
   var presentEmailScreen = function() {
 
+    logicSelector();
     // Select containers we're going to modify.
     var interactionContainer = $("#interactionContainer", mainContainer);
+
 
     interactionContainer.removeChild($('#nextButton'), mainContainer);
     // interactionContainer.removeChild($('#gameTitle'), mainContainer);

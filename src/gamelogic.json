@@ -1,0 +1,392 @@
+{
+	"conditionOne": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. A dashcam can help keep your driving costs down."
+	},
+	"conditionTwo": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionThree": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. Gadgets that keep you connected and informed on the road are the best for you."
+	},
+	"conditionFour": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. A dashcam can help keep your driving costs down."
+	},
+	"conditionFive": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionSix": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Driving is part of your daily routine. A dashcam can help keep your driving costs down."
+	},
+	"conditionSeven": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down"
+	},
+	"conditionEight": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionNine": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionTen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionEleven": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionTwelve": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionThirteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionFourteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionFifteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSixteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionSeventeen": {
+		"recommendationTextOne": "Your car reflects your personal style.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionEighteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionNinteen": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionTwenty": {
+		"recommendationTextOne": "You know what you like and aren't afraid to voice it.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionTwentyOne": {
+		"recommendationTextOne":"You know what you like and aren't afraid to voice it.", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionTwentyTwo": {
+		"recommendationTextOne":"You know what you like and aren't afraid to voice it.", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionTwentyThree": {
+		"recommendationTextOne":"You know what you like and aren't afraid to voice it.", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionTwentyFour": {
+		"recommendationTextOne":"You know what you like and aren't afraid to voice it.", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionTwentyFive": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionTwentySix": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionTwentySeven": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionTwentyEight": {
+		"recommendationTextOne":"You're a measured, careful driver.", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionTwentyNine": {
+		"recommendationTextOne":"You're a measured, careful driver.", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionThirty": {
+		"recommendationTextOne":"You're a measured, careful driver.", 
+		"recommendationTextTwo":"Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionThirtyOne": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionThirtyTwo": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionThirtyThree": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionThirtyFour": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionThirtyFive": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionThirtySix": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionThirtySeven": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionThirtyEight": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionThirtyNine": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionForty": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionFortyOne": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionFortyTwo": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionFortyThree": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. A dashcam can help you reduce insurance costs."
+	},
+	"conditionFortyFour": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionFortyFive": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionFortySix": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionFortySeven": {
+		"recommendationTextOne":"You're a measured, careful driver", 
+		"recommendationTextTwo":"Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionFortyEight": {
+		"recommendationTextOne": "You're a measured, careful driver",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionFortyNine": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionFifty": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionFiftyOne": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionFiftyTwo": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionFiftyThree": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionFiftyFour": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionFiftyFive": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionFiftySix": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionFiftySeven": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionFiftyEight": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionFiftyNine": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionSixty": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionSixtyOne": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionSixtyTwo": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionSixtyThree": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSixtyFour": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionSixtyFive": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSixtySix": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionSixtySeven": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionSixtyEight": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionSixtyNine": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSeventy": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionSeventyOne": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSeventyTwo": {
+		"recommendationTextOne": "The performance of your car is key.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionSeventyThree": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionSeventyFour": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionSeventyFive": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSeventySix": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionSeventySeven": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionSeventyEight": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Driving is a part of your daily routine. A dashcam helps keep your driving costs down."
+	},
+	"conditionSeventyNine": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionEighty": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionEightyOne": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionEightyTwo": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionEightyThree": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. In-car wifi is one idea to keep everyone happy during the journey."
+	},
+	"conditionEightyFour": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam helps keep your driving costs down."
+	},
+	"conditionEightyFive": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "You want your passengers to be safe and entertained. A dashcam can help you reduce insurance costs."
+	},
+	"conditionEightySix": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionEightySeven": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionEightyEight": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionEightyNine": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionNinety": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam can help you reduce insurance costs."
+	},
+	"conditionNinetyOne": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Your vehicle is your lifeblood. A dashcam helps keep your driving costs down."
+	},
+	"conditionNinetyTwo": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A diagnostic tool will help you keep your vehicle on the road."
+	},
+	"conditionNinetyThree": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionNinetyFour": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	},
+	"conditionNinetyFive": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. Gadgets that keep you connected and informed on the road are best for you."
+	},
+	"conditionNinetySix": {
+		"recommendationTextOne": "Driving makes you smile. A lot.",
+		"recommendationTextTwo": "Being on the road is exciting and fun. A dashcam helps keep your driving costs down."
+	}
+
+
+
+
+
+
+}
