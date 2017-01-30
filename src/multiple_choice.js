@@ -435,7 +435,8 @@
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
         if (answerGroupOne.indexOf(event.target.id))
-        {
+        { 
+            console.log('INITIAL IF');
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
@@ -468,13 +469,12 @@
             }
             else 
             {
+              console.log('INSIDE ELSE');
               answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
               for(var i = 0; i < 4; i++)
               {
-                console.log($('#gridOneSelected' + selectedImage).className);
                 if ($("#gridOneSelected" + i).className === "gameImageGridImageSelectedIcon show")
                 {
-                  console.log('Should Remove');
                   $.set($("#gridOneSelected" + i), {
                     className: 'gameImageGridImageSelectedIcon'
                   });
@@ -498,12 +498,13 @@
               });
               for(var j = 0; j < 4; j++)
               {
-                if ("gridOneOverlay" + j !== event.target.id)
+                if ("gridOneOverlay" + j !== event.target.id && "gridOne" + j !== event.target.id)
                 {
                   $.set($("#gridOneOverlay" + j), {
                     className: 'gameImageGridImageOverlay'
                   });
                 } else {
+                  console.log('Last condition');
                   $.set($("#gridOneOverlay" + j), {
                     className: 'gameImageGridImageOverlay hidden'
                   });
@@ -513,6 +514,7 @@
             console.log(answerGroupOne);
         } else {
 
+            console.log('OUTSIDE ELSE');
 
             console.log(event.target.id);
             $.set($('#gridOneSelected' + selectedImage),
