@@ -468,38 +468,52 @@
             }
             else 
             {
-              $.set($('#gridOneSelected' + selectedImage),
-              {
-                  className: 'gameImageGridImageSelectedIcon show'
-              });
-
-              $.set(nextButton, {
-                  className: 'nextButtonActive'
-              });
-              console.log(event.target.id);
-              $.set($('#gridOneSelected' + selectedImage),
-              {
-                  className: 'gameImageGridImageSelectedIcon show'
-              });
-
-              $.set(nextButton, {
-                  className: 'nextButtonActive'
-              });
+              answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
               for(var i = 0; i < 4; i++)
               {
-                if ("gridOneOverlay" + i !== event.target.id)
+                console.log($('#gridOneSelected' + selectedImage).className);
+                if ($("#gridOneSelected" + i).className === "gameImageGridImageSelectedIcon show")
                 {
-                  $.set($("#gridOneOverlay" + i), {
+                  console.log('Should Remove');
+                  $.set($("#gridOneSelected" + i), {
+                    className: 'gameImageGridImageSelectedIcon'
+                  });
+                }
+              }
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+              answerGroupOne.push(event.target.id);
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              for(var j = 0; j < 4; j++)
+              {
+                if ("gridOneOverlay" + j !== event.target.id)
+                {
+                  $.set($("#gridOneOverlay" + j), {
                     className: 'gameImageGridImageOverlay'
                   });
                 } else {
-                  $.set($("#gridOneOverlay" + i), {
+                  $.set($("#gridOneOverlay" + j), {
                     className: 'gameImageGridImageOverlay hidden'
                   });
                 }
               }
             }
+            console.log(answerGroupOne);
         } else {
+
+
             console.log(event.target.id);
             $.set($('#gridOneSelected' + selectedImage),
             {
