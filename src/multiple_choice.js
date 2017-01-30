@@ -66,6 +66,10 @@
 
   var answerGroupThree = [];
 
+  var logicRecommendationOne = "";
+
+  var logicRecommendationTwo = "";
+
 
   // The presentFinalScreen function shows the final screen with a confirmation.
   var presentFinalScreen = function()
@@ -135,6 +139,7 @@
 
   var determineScreenThreeValue = function()
   {
+
     var boolList = [false, false, false, false];
     var screenThreeValue;
     for (var i = 0; i < 4; i++)
@@ -235,22 +240,28 @@
       {
             switch (screenThreeValue){
               case 0:
-                //Condition One
+                logicRecommendationOne = json.conditionOne.recommendationTextOne;
+                logicRecommendationTwo = json.conditionOne.recommendationTextTwo;
                 break;
               case 1:
-                //Condition Two
+                logicRecommendationOne = json.conditionTwo.recommendationTextOne;
+                logicRecommendationTwo = json.conditionTwo.recommendationTextTwo;
                 break;
               case 11:
-                // Condition Three
+                logicRecommendationOne = json.conditionThree.recommendationTextOne;
+                logicRecommendationTwo = json.conditionThree.recommendationTextTwo;
                 break;
               case 10:
-                // Condition Four
+                logicRecommendationOne = json.conditionFour.recommendationTextOne;
+                logicRecommendationTwo = json.conditionFour.recommendationTextTwo;
                 break;
               case 21:
-                // Condition five
+                logicRecommendationOne = json.conditionFive.recommendationTextOne;
+                logicRecommendationTwo = json.conditionFive.recommendationTextTwo;
                 break;
               case 20:
-                // Condition six
+                logicRecommendationOne = json.conditionSix.recommendationTextOne;
+                logicRecommendationTwo = json.conditionSix.recommendationTextTwo;
                 break;
             }
       }
@@ -258,22 +269,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition Seven
+              logicRecommendationOne = json.conditionSeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeven.recommendationTextTwo;
               break;
             case 1:
-              //Condition Eight
+              logicRecommendationOne = json.conditionEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEight.recommendationTextTwo;
               break;
             case 11:
-              // Condition Nine
+              logicRecommendationOne = json.conditionNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNine.recommendationTextTwo;
               break;
             case 10:
-              // Condition Ten
+              logicRecommendationOne = json.conditionTen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTen.recommendationTextTwo;
               break;
             case 21:
-              // Condition Eleven
+              logicRecommendationOne = json.conditionEleven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEleven.recommendationTextTwo;
               break;
             case 20:
-              // Condition Twelve
+              logicRecommendationOne = json.conditionTwelve.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwelve.recommendationTextTwo;
               break;
           }
       }
@@ -281,22 +298,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 13
+              logicRecommendationOne = json.conditionThirteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirteen.recommendationTextTwo;
               break;
             case 1:
-              //Condition 14
+              logicRecommendationOne = json.conditionFourteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFourteen.recommendationTextTwo;
               break;
             case 11:
-              // Condition 15
+              logicRecommendationOne = json.conditionFifteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFifteen.recommendationTextTwo;
               break;
             case 10:
-              // Condition 16
+              logicRecommendationOne = json.conditionSixteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixteen.recommendationTextTwo;
               break;
             case 21:
-              // Condition 17
+              logicRecommendationOne = json.conditionSeventeen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventeen.recommendationTextTwo;
               break;
             case 20:
-              // Condition 18
+              logicRecommendationOne = json.conditionEighteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEighteen.recommendationTextTwo;
               break;
           }
       }
@@ -304,22 +327,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 19
+              logicRecommendationOne = json.conditionNineteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNineteen.recommendationTextTwo;
               break;
             case 1:
-              //Condition 20
+              logicRecommendationOne = json.conditionTwenty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwenty.recommendationTextTwo;
               break;
             case 11:
-              // Condition 21
+              logicRecommendationOne = json.conditionTwentyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyOne.recommendationTextTwo;
               break;
             case 10:
-              // Condition 22
+              logicRecommendationOne = json.conditionTwentyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyTwo.recommendationTextTwo;
               break;
             case 21:
-              // Condition 23
+              logicRecommendationOne = json.conditionTwentyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyThree.recommendationTextTwo;
               break;
             case 20:
-              // Condition 24
+              logicRecommendationOne = json.conditionTwentyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyFour.recommendationTextTwo;
               break;
           }
       }
@@ -330,22 +359,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 25
+              logicRecommendationOne = json.conditionTwentyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyFive.recommendationTextTwo;
               break;
             case 1:
-              //Condition 26
+              logicRecommendationOne = json.conditionTwentySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentySix.recommendationTextTwo;
               break;
             case 11:
-              // Condition 27
+              logicRecommendationOne = json.conditionTwentySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentySeven.recommendationTextTwo;
               break;
             case 10:
-              // Condition 28
+              logicRecommendationOne = json.conditionTwentyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyEight.recommendationTextTwo;
               break;
             case 21:
-              // Condition 29
+              logicRecommendationOne = json.conditionTwentyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyNine.recommendationTextTwo;
               break;
             case 20:
-              // Condition 30
+              logicRecommendationOne = json.conditionThirty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirty.recommendationTextTwo;
               break;
           }
       }
@@ -353,22 +388,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 31
+              logicRecommendationOne = json.conditionThirtyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyOne.recommendationTextTwo;
               break;
             case 1:
-              //Condition 32
+              logicRecommendationOne = json.conditionThirtyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyTwo.recommendationTextTwo;
               break;
             case 11:
-              // Condition 33
+              logicRecommendationOne = json.conditionThirtyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyThree.recommendationTextTwo;
               break;
             case 10:
-              // Condition 34
+              logicRecommendationOne = json.conditionThirtyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyFour.recommendationTextTwo;
               break;
             case 21:
-              // Condition 35
+              logicRecommendationOne = json.conditionThirtyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyFive.recommendationTextTwo;
               break;
             case 20:
-              // Condition 36
+              logicRecommendationOne = json.conditionThirtySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtySix.recommendationTextTwo;
               break;
           }
       }
@@ -376,22 +417,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 37
+              logicRecommendationOne = json.conditionThirtySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtySeven.recommendationTextTwo;
               break;
             case 1:
-              //Condition 38
+              logicRecommendationOne = json.conditionThirtyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyEight.recommendationTextTwo;
               break;
             case 11:
-              // Condition 39
+              logicRecommendationOne = json.conditionThirtyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyNine.recommendationTextTwo;
               break;
             case 10:
-              // Condition 40
+              logicRecommendationOne = json.conditionForty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionForty.recommendationTextTwo;
               break;
             case 21:
-              // Condition 41
+              logicRecommendationOne = json.conditionFortyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyOne.recommendationTextTwo;
               break;
             case 20:
-              // Condition 42
+              logicRecommendationOne = json.conditionFortyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyTwo.recommendationTextTwo;
               break;
           }
       }
@@ -399,22 +446,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 43
+              logicRecommendationOne = json.conditionFortyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyThree.recommendationTextTwo;
               break;
             case 1:
-              //Condition 44
+              logicRecommendationOne = json.conditionFortyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyFour.recommendationTextTwo;
               break;
             case 11:
-              // Condition 45
+              logicRecommendationOne = json.conditionFortyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyFive.recommendationTextTwo;
               break;
             case 10:
-              // Condition 46
+              logicRecommendationOne = json.conditionFortySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortySix.recommendationTextTwo;
               break;
             case 21:
-              // Condition 47
+              logicRecommendationOne = json.conditionFortySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortySeven.recommendationTextTwo;
               break;
             case 20:
-              // Condition 48
+              logicRecommendationOne = json.conditionFortyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyEight.recommendationTextTwo;
               break;
           }
       }
@@ -425,22 +478,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 49
+              logicRecommendationOne = json.conditionFortyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyNine.recommendationTextTwo;
               break;
             case 1:
-              //Condition 50
+              logicRecommendationOne = json.conditionFifty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFifty.recommendationTextTwo;
               break;
             case 11:
-              // Condition 51
+              logicRecommendationOne = json.conditionFiftyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyOne.recommendationTextTwo;
               break;
             case 10:
-              // Condition 52
+              logicRecommendationOne = json.conditionFiftyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyTwo.recommendationTextTwo;
               break;
             case 21:
-              // Condition 53
+              logicRecommendationOne = json.conditionFiftyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyThree.recommendationTextTwo;
               break;
             case 20:
-              // Condition 54
+              logicRecommendationOne = json.conditionFiftyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyFour.recommendationTextTwo;
               break;
           }
       }
@@ -448,22 +507,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 55
+              logicRecommendationOne = json.conditionFiftyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyFive.recommendationTextTwo;
               break;
             case 1:
-              //Condition 56
+              logicRecommendationOne = json.conditionFiftySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftySix.recommendationTextTwo;
               break;
             case 11:
-              // Condition 57
+              logicRecommendationOne = json.conditionFiftySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftySeven.recommendationTextTwo;
               break;
             case 10:
-              // Condition 58
+              logicRecommendationOne = json.conditionFiftyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyEight.recommendationTextTwo;
               break;
             case 21:
-              // Condition 59
+              logicRecommendationOne = json.conditionFiftyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyNine.recommendationTextTwo;
               break;
             case 20:
-              // Condition 60
+              logicRecommendationOne = json.conditionSixty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixty.recommendationTextTwo;
               break;
           }
       }
@@ -471,22 +536,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 61
+              logicRecommendationOne = json.conditionSixtyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyOne.recommendationTextTwo;
               break;
             case 1:
-              //Condition 62
+              logicRecommendationOne = json.conditionSixtyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyTwo.recommendationTextTwo;
               break;
             case 11:
-              // Condition 63
+              logicRecommendationOne = json.conditionSixtyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyThree.recommendationTextTwo;
               break;
             case 10:
-              // Condition 64
+              logicRecommendationOne = json.conditionSixtyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyFour.recommendationTextTwo;
               break;
             case 21:
-              // Condition 65
+              logicRecommendationOne = json.conditionSixtyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyFive.recommendationTextTwo;
               break;
             case 20:
-              // Condition 66
+              logicRecommendationOne = json.conditionSixtySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtySix.recommendationTextTwo;
               break;
           }
       }
@@ -494,22 +565,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 67
+              logicRecommendationOne = json.conditionSixtySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtySeven.recommendationTextTwo;
               break;
             case 1:
-              //Condition 68
+              logicRecommendationOne = json.conditionSixtyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyEight.recommendationTextTwo;
               break;
             case 11:
-              // Condition 69
+              logicRecommendationOne = json.conditionSixtyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyNine.recommendationTextTwo;
               break;
             case 10:
-              // Condition 70
+              logicRecommendationOne = json.conditionSeventy.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventy.recommendationTextTwo;
               break;
             case 21:
-              // Condition 71
+              logicRecommendationOne = json.conditionSeventyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyOne.recommendationTextTwo;
               break;
             case 20:
-              // Condition 72
+              logicRecommendationOne = json.conditionSeventyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyTwo.recommendationTextTwo;
               break;
           }
       }
@@ -520,22 +597,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 73
+              logicRecommendationOne = json.conditionSeventyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyThree.recommendationTextTwo;
               break;
             case 1:
-              //Condition 74
+              logicRecommendationOne = json.conditionSeventyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyFour.recommendationTextTwo;
               break;
             case 11:
-              // Condition 75
+              logicRecommendationOne = json.conditionSeventyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyFive.recommendationTextTwo;
               break;
             case 10:
-              // Condition 76
+              logicRecommendationOne = json.conditionSeventySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventySix.recommendationTextTwo;
               break;
             case 21:
-              // Condition 77
+              logicRecommendationOne = json.conditionSeventySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventySeven.recommendationTextTwo;
               break;
             case 20:
-              // Condition 78
+              logicRecommendationOne = json.conditionSeventyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyEight.recommendationTextTwo;
               break;
           }
       }
@@ -543,22 +626,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 79
+              logicRecommendationOne = json.conditionSeventyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyNine.recommendationTextTwo;
               break;
             case 1:
-              //Condition 80
+              logicRecommendationOne = json.conditionEighty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEighty.recommendationTextTwo;
               break;
             case 11:
-              // Condition 81
+              logicRecommendationOne = json.conditionEightyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyOne.recommendationTextTwo;
               break;
             case 10:
-              // Condition 82
+              logicRecommendationOne = json.conditionEightyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyTwo.recommendationTextTwo;
               break;
             case 21:
-              // Condition 83
+              logicRecommendationOne = json.conditionEightyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyThree.recommendationTextTwo;
               break;
             case 20:
-              // Condition 84
+              logicRecommendationOne = json.conditionEightyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyFour.recommendationTextTwo;
               break;
           }
       }
@@ -566,22 +655,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 85
+              logicRecommendationOne = json.conditionEightyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyFive.recommendationTextTwo;
               break;
             case 1:
-              //Condition 86
+              logicRecommendationOne = json.conditionEightySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightySix.recommendationTextTwo;
               break;
             case 11:
-              // Condition 87
+              logicRecommendationOne = json.conditionEightySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightySeven.recommendationTextTwo;
               break;
             case 10:
-              // Condition 88
+              logicRecommendationOne = json.conditionEightyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyEight.recommendationTextTwo;
               break;
             case 21:
-              // Condition 89
+              logicRecommendationOne = json.conditionEightyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyNine.recommendationTextTwo;
               break;
             case 20:
-              // Condition 90
+              logicRecommendationOne = json.conditionNinety.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinety.recommendationTextTwo;
               break;
           }
       }
@@ -589,22 +684,28 @@
       {
           switch (screenThreeValue){
             case 0:
-              //Condition 91
+              logicRecommendationOne = json.conditionNinetyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyOne.recommendationTextTwo;
               break;
             case 1:
-              //Condition 92
+              logicRecommendationOne = json.conditionNinetyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyTwo.recommendationTextTwo;
               break;
             case 11:
-              // Condition 93
+              logicRecommendationOne = json.conditionNinetyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyThree.recommendationTextTwo;
               break;
             case 10:
-              // Condition 94
+              logicRecommendationOne = json.conditionNinetyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyFour.recommendationTextTwo;
               break;
             case 21:
-              // Condition 95
+              logicRecommendationOne = json.conditionNinetyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyFive.recommendationTextTwo;
               break;
             case 20:
-              // Condition 96
+              logicRecommendationOne = json.conditionNinetySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetySix.recommendationTextTwo;
               break;
           }
       }
@@ -630,7 +731,7 @@
 
     var gadgetRecommendation = $.create('div', {
         className: 'gadgetRecommendation',
-        contents: fourImagesCopy.finalRecommendationOne.toUpperCase()
+        contents: logicRecommendationTwo.toUpperCase()
     });
 
 
@@ -642,7 +743,7 @@
     var oldGameMessage = $('#gameMessage', mainContainer);
     oldGameMessage.innerHTML = '';
     $.set(oldGameMessage, {
-      contents: [fourImagesCopy.resultMessageHeader.toUpperCase()],
+      contents: [logicRecommendationOne.toUpperCase()],
       className: 'gameMessage gameMessageEmailScreen'
     });
     // Clear out imageContainer and then append new image
