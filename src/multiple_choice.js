@@ -747,19 +747,71 @@
       className: 'gameMessage gameMessageEmailScreen'
     });
     // Clear out imageContainer and then append new image
-    imageContainer.innerHTML = '';
-    imageContainer.appendChild($.create('div',
+    if (answerGroupOne[0] === 'gridOne0')
     {
-      className: 'resultImageDiv',
-      contents: [{
-        tag: 'img',
-        src: fourImagesCopy.resultImage,
-        className: 'resultImage'
-      }, {
-        tag: 'div',
-        className: 'overlay'
-      }]
-    }));
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridOne,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne1')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridTwo,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne2')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridThree,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne3')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridFour,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    
 
 
 
