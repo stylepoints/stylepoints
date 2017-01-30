@@ -233,7 +233,11 @@
 
       
     var screenThreeValue = determineScreenThreeValue();
-    console.log(screenThreeValue);
+
+    // Change all the names for answer groups from overlay to just gridOneX
+    answerGroupOne[0] = "gridOne" + answerGroupOne[0].slice(answerGroupOne[0].length - 1, answerGroupOne[0].length);
+    answerGroupTwo[0] = "gridTwo" + answerGroupTwo[0].slice(answerGroupTwo[0].length - 1, answerGroupTwo[0].length);
+    console.log(answerGroupOne[0]);
     if(answerGroupOne[0] === "gridOne0")
     {
       if(answerGroupTwo[0] === "gridTwo0")
@@ -720,7 +724,6 @@
     // Select containers we're going to modify.
     var interactionContainer = $("#interactionContainer", mainContainer);
 
-
     interactionContainer.removeChild($('#nextButton'), mainContainer);
     // interactionContainer.removeChild($('#gameTitle'), mainContainer);
     var imageContainer = $("#imageContainer", mainContainer);
@@ -733,9 +736,6 @@
         className: 'gadgetRecommendation',
         contents: logicRecommendationTwo.toUpperCase()
     });
-
-
-
 
     interactionContainer.appendChild(gadgetRecommendation);
     // Select current game message and remove content so we can
