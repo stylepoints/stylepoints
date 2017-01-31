@@ -48,6 +48,10 @@ export default {
         ]
       },
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
 	      test: /\.(jpg|png|gif|svg)$/,
 	      loaders: [
 	        'url?limit=8000!image-webpack'

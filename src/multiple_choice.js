@@ -46,6 +46,9 @@
   // Initialize global view index to zero.
   var index = 0;
 
+  var json = require('./gamelogic.json');
+
+
   // Create image grid arrays. This will be removed once test object is converted to true JSON.
   var gridImagesInitial = [fourImagesCopy.gameImageGridOne, fourImagesCopy.gameImageGridTwo, fourImagesCopy.gameImageGridThree, fourImagesCopy.gameImageGridFour];
 
@@ -62,6 +65,10 @@
   var answerGroupTwo = [];
 
   var answerGroupThree = [];
+
+  var logicRecommendationOne = "";
+
+  var logicRecommendationTwo = "";
 
 
   // The presentFinalScreen function shows the final screen with a confirmation.
@@ -130,9 +137,590 @@
     });
   }
 
+  var determineScreenThreeValue = function()
+  {
+
+    var boolList = [false, false, false, false];
+    var screenThreeValue;
+    for (var i = 0; i < 4; i++)
+    {
+      if( answerGroupThree[i] === "gridThreeSelected0" )
+      {
+        boolList[0] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected1")
+      {
+        boolList[1] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected2")
+      {
+        boolList[2] = true;
+      }
+      else if (answerGroupThree[i] === "gridThreeSelected3")
+      {
+        boolList[3] = true;
+      }
+    }
+    if (JSON.stringify(boolList) === JSON.stringify([true, true, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, false, true]))
+    {
+      screenThreeValue = 10;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, true, false]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, false, true]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, true, false, false]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, true, false]))
+    {
+      screenThreeValue = 21;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([true, false, false, false]))
+    {
+      screenThreeValue = 20;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, false, false]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, true, false]))
+    {
+      screenThreeValue = 1;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, false, true]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, false, false]))
+    {
+      screenThreeValue = 0;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, false, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, true, false]))
+    {
+      screenThreeValue = 11;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, false, true]))
+    {
+      screenThreeValue = 10;
+    }
+    else if (JSON.stringify(boolList) === JSON.stringify([false, true, true, true]))
+    {
+      screenThreeValue = 11;
+    }
+
+    return screenThreeValue
+  }
+  var logicSelector = function()
+  {
+
+      
+    var screenThreeValue = determineScreenThreeValue();
+
+    // Change all the names for answer groups from overlay to just gridOneX
+    answerGroupOne[0] = "gridOne" + answerGroupOne[0].slice(answerGroupOne[0].length - 1, answerGroupOne[0].length);
+    answerGroupTwo[0] = "gridTwo" + answerGroupTwo[0].slice(answerGroupTwo[0].length - 1, answerGroupTwo[0].length);
+    console.log(answerGroupOne[0]);
+    if(answerGroupOne[0] === "gridOne0")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+            switch (screenThreeValue){
+              case 0:
+                logicRecommendationOne = json.conditionOne.recommendationTextOne;
+                logicRecommendationTwo = json.conditionOne.recommendationTextTwo;
+                break;
+              case 1:
+                logicRecommendationOne = json.conditionTwo.recommendationTextOne;
+                logicRecommendationTwo = json.conditionTwo.recommendationTextTwo;
+                break;
+              case 11:
+                logicRecommendationOne = json.conditionThree.recommendationTextOne;
+                logicRecommendationTwo = json.conditionThree.recommendationTextTwo;
+                break;
+              case 10:
+                logicRecommendationOne = json.conditionFour.recommendationTextOne;
+                logicRecommendationTwo = json.conditionFour.recommendationTextTwo;
+                break;
+              case 21:
+                logicRecommendationOne = json.conditionFive.recommendationTextOne;
+                logicRecommendationTwo = json.conditionFive.recommendationTextTwo;
+                break;
+              case 20:
+                logicRecommendationOne = json.conditionSix.recommendationTextOne;
+                logicRecommendationTwo = json.conditionSix.recommendationTextTwo;
+                break;
+            }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionSeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeven.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEight.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNine.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionTen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTen.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionEleven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEleven.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionTwelve.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwelve.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionThirteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirteen.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionFourteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFourteen.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionFifteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFifteen.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionSixteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixteen.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionSeventeen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventeen.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionEighteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEighteen.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionNineteen.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNineteen.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionTwenty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwenty.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionTwentyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyOne.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionTwentyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyTwo.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionTwentyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyThree.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionTwentyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyFour.recommendationTextTwo;
+              break;
+          }
+      }
+    }
+    else if(answerGroupOne[0] === "gridOne1")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionTwentyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyFive.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionTwentySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentySix.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionTwentySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentySeven.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionTwentyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyEight.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionTwentyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionTwentyNine.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionThirty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirty.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionThirtyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyOne.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionThirtyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyTwo.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionThirtyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyThree.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionThirtyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyFour.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionThirtyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyFive.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionThirtySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtySix.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionThirtySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtySeven.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionThirtyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyEight.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionThirtyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionThirtyNine.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionForty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionForty.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionFortyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyOne.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionFortyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyTwo.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionFortyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyThree.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionFortyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyFour.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionFortyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyFive.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionFortySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortySix.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionFortySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortySeven.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionFortyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyEight.recommendationTextTwo;
+              break;
+          }
+      }
+    }
+    else if (answerGroupOne[0] === "gridOne2")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionFortyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFortyNine.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionFifty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFifty.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionFiftyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyOne.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionFiftyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyTwo.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionFiftyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyThree.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionFiftyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyFour.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionFiftyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyFive.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionFiftySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftySix.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionFiftySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftySeven.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionFiftyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyEight.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionFiftyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionFiftyNine.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionSixty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixty.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionSixtyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyOne.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionSixtyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyTwo.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionSixtyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyThree.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionSixtyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyFour.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionSixtyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyFive.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionSixtySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtySix.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionSixtySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtySeven.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionSixtyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyEight.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionSixtyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSixtyNine.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionSeventy.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventy.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionSeventyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyOne.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionSeventyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyTwo.recommendationTextTwo;
+              break;
+          }
+      }
+    }
+    else if (answerGroupOne[0] === "gridOne3")
+    {
+      if(answerGroupTwo[0] === "gridTwo0")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionSeventyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyThree.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionSeventyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyFour.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionSeventyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyFive.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionSeventySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventySix.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionSeventySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventySeven.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionSeventyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyEight.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo1")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionSeventyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionSeventyNine.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionEighty.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEighty.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionEightyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyOne.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionEightyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyTwo.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionEightyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyThree.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionEightyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyFour.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo2")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionEightyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyFive.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionEightySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightySix.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionEightySeven.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightySeven.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionEightyEight.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyEight.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionEightyNine.recommendationTextOne;
+              logicRecommendationTwo = json.conditionEightyNine.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionNinety.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinety.recommendationTextTwo;
+              break;
+          }
+      }
+      else if (answerGroupTwo[0] === "gridTwo3")
+      {
+          switch (screenThreeValue){
+            case 0:
+              logicRecommendationOne = json.conditionNinetyOne.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyOne.recommendationTextTwo;
+              break;
+            case 1:
+              logicRecommendationOne = json.conditionNinetyTwo.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyTwo.recommendationTextTwo;
+              break;
+            case 11:
+              logicRecommendationOne = json.conditionNinetyThree.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyThree.recommendationTextTwo;
+              break;
+            case 10:
+              logicRecommendationOne = json.conditionNinetyFour.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyFour.recommendationTextTwo;
+              break;
+            case 21:
+              logicRecommendationOne = json.conditionNinetyFive.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetyFive.recommendationTextTwo;
+              break;
+            case 20:
+              logicRecommendationOne = json.conditionNinetySix.recommendationTextOne;
+              logicRecommendationTwo = json.conditionNinetySix.recommendationTextTwo;
+              break;
+          }
+      }
+    }
+        
+
+  }
   // The presentEmailScreen function shows the email screen and POSTs email data to the server.
   var presentEmailScreen = function() {
 
+    logicSelector();
     // Select containers we're going to modify.
     var interactionContainer = $("#interactionContainer", mainContainer);
 
@@ -146,11 +734,8 @@
 
     var gadgetRecommendation = $.create('div', {
         className: 'gadgetRecommendation',
-        contents: fourImagesCopy.finalRecommendationOne.toUpperCase()
+        contents: logicRecommendationTwo.toUpperCase()
     });
-
-
-
 
     interactionContainer.appendChild(gadgetRecommendation);
     // Select current game message and remove content so we can
@@ -158,23 +743,75 @@
     var oldGameMessage = $('#gameMessage', mainContainer);
     oldGameMessage.innerHTML = '';
     $.set(oldGameMessage, {
-      contents: [fourImagesCopy.resultMessageHeader.toUpperCase()],
+      contents: [logicRecommendationOne.toUpperCase()],
       className: 'gameMessage gameMessageEmailScreen'
     });
     // Clear out imageContainer and then append new image
-    imageContainer.innerHTML = '';
-    imageContainer.appendChild($.create('div',
+    if (answerGroupOne[0] === 'gridOne0')
     {
-      className: 'resultImageDiv',
-      contents: [{
-        tag: 'img',
-        src: fourImagesCopy.resultImage,
-        className: 'resultImage'
-      }, {
-        tag: 'div',
-        className: 'overlay'
-      }]
-    }));
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridOne,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne1')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridTwo,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne2')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridThree,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    else if (answerGroupOne[0] === 'gridOne3')
+    {
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild($.create('div',
+      {
+        className: 'resultImageDiv',
+        contents: [{
+          tag: 'img',
+          src: fourImagesCopy.gameImageGridFour,
+          className: 'resultImage'
+        }, {
+          tag: 'div',
+          className: 'overlay'
+        }]
+      }));
+    }
+    
 
 
 
@@ -352,7 +989,6 @@
 
   // This function builds the game DOM.
   var buildGameDom = function() {
-    console.log(index);
 
     // Increment our global view index.
     // index++;
@@ -435,11 +1071,13 @@
         // we show the right selected icon.
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
-        if (answerGroupOne.indexOf(event.target.id) === -1)
-        {
+        if (answerGroupOne.indexOf(event.target.id))
+        { 
+            console.log('INITIAL IF');
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
+
             if (answerGroupOne.length < 1)
             {
               $.set($('#gridOneSelected' + selectedImage),
@@ -466,7 +1104,56 @@
                 }
               }
             }
+            else 
+            {
+              console.log('INSIDE ELSE');
+              answerGroupOne.splice(answerGroupOne.indexOf(event.target.id), 1);
+              for(var i = 0; i < 4; i++)
+              {
+                if ($("#gridOneSelected" + i).className === "gameImageGridImageSelectedIcon show")
+                {
+                  $.set($("#gridOneSelected" + i), {
+                    className: 'gameImageGridImageSelectedIcon'
+                  });
+                }
+              }
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+              answerGroupOne.push(event.target.id);
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              $.set($('#gridOneSelected' + selectedImage),
+              {
+                  className: 'gameImageGridImageSelectedIcon show'
+              });
+
+              $.set(nextButton, {
+                  className: 'nextButtonActive'
+              });
+              for(var j = 0; j < 4; j++)
+              {
+                if ("gridOneOverlay" + j !== event.target.id && "gridOne" + j !== event.target.id)
+                {
+                  $.set($("#gridOneOverlay" + j), {
+                    className: 'gameImageGridImageOverlay'
+                  });
+                } else {
+                  console.log('Last condition');
+                  $.set($("#gridOneOverlay" + j), {
+                    className: 'gameImageGridImageOverlay hidden'
+                  });
+                }
+              }
+            }
+            console.log(answerGroupOne);
         } else {
+
+            console.log('OUTSIDE ELSE');
+
+            console.log(event.target.id);
             $.set($('#gridOneSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
