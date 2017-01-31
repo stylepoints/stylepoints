@@ -863,10 +863,11 @@
         if(response.status == 200) {
           var resp = JSON.parse(response.response)
           //mailchimp response
-          if(resp.status == 200) {
+          if(resp.status == "subscribed") {
             console.log('email sent successfully!');
             presentFinalScreen();
           } else {
+            console.log('error 400 or other');
             console.log(resp);
           }
 
