@@ -298,7 +298,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo2")
+      else if (answerGroupTwo[0] == "gridTwo3")
       {
           switch (screenThreeValue){
             case 0:
@@ -327,7 +327,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo3")
+      else if (answerGroupTwo[0] === "gridTwo2")
       {
           switch (screenThreeValue){
             case 0:
@@ -417,7 +417,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo2")
+      else if (answerGroupTwo[0] === "gridTwo3")
       {
           switch (screenThreeValue){
             case 0:
@@ -446,7 +446,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo3")
+      else if (answerGroupTwo[0] === "gridTwo2")
       {
           switch (screenThreeValue){
             case 0:
@@ -536,7 +536,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo2")
+      else if (answerGroupTwo[0] === "gridTwo3")
       {
           switch (screenThreeValue){
             case 0:
@@ -565,7 +565,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo3")
+      else if (answerGroupTwo[0] === "gridTwo2")
       {
           switch (screenThreeValue){
             case 0:
@@ -655,7 +655,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo2")
+      else if (answerGroupTwo[0] === "gridTwo3")
       {
           switch (screenThreeValue){
             case 0:
@@ -684,7 +684,7 @@
               break;
           }
       }
-      else if (answerGroupTwo[0] === "gridTwo3")
+      else if (answerGroupTwo[0] === "gridTwo2")
       {
           switch (screenThreeValue){
             case 0:
