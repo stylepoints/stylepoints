@@ -844,28 +844,54 @@
       ]
     });
 
-    console.log(emailSubmitForm);
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
     // block the default behavior of the submit button. For testing only
-    $(emailSubmitForm).addEventListener('click', function(e) {
+    $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
+      var inputValue = $('#emailFormInput', mainContainer).value;
+      $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy',
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        data:JSON.stringify({
+          email_address: inputValue,
+          status: 'subscribed'
+        })
+      }).then(function(response) {
+        if(response.status == 200) {
+          var resp = JSON.parse(response.response)
+          //mailchimp response
+          if(resp.status == 200) {
+            console.log('email sent successfully!');
+            presentFinalScreen();
+          } else {
+            console.log(resp);
+          }
+
+        } else {
+          console.log('error submitting email')
+        }
+      })
     })
+
     // Create submit button event listener so that we can POST emails.
-    var submitButton = $('#emailFormButton', mainContainer).addEventListener('click', function()
-    {
-      var input = $('#emailFormInput', mainContainer);
-
-      var email = input.value;
-
-      $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
-      {
-        method: "POST"
-      }).then(function()
-      {
-        input.value = "";
-        presentFinalScreen();
-      });
-    });
+    // var submitButton = $('#emailFormButton', mainContainer).addEventListener('click', function()
+    // {
+    //   var input = $('#emailFormInput', mainContainer);
+    //
+    //   var email = input.value;
+    //
+    //   $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
+    //   {
+    //     method: "POST"
+    //   }).then(function()
+    //   {
+    //     input.value = "";
+    //     presentFinalScreen();
+    //   });
+    // });
   }
 
   // This function handles animation transitions for
