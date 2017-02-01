@@ -1090,9 +1090,8 @@
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
         ga('send', 'event', {
-          eventCategory: 'game',
-          eventAction: 'selection made',
-          eventLabel: 'question 1',
+          eventCategory: 'Question 1',
+          eventAction: 'selected '+selectedImage,
           eventValue: selectedImage
         });
 
@@ -1227,9 +1226,8 @@
           answerGroupTwo.push(event.target.id);
 
           ga('send', 'event', {
-            eventCategory: 'game',
-            eventAction: 'selection made',
-            eventLabel: 'question 2',
+            eventCategory: 'Question 2',
+            eventAction: 'selected '+selectedImage,
             eventValue: selectedImage
           });
 
@@ -1363,9 +1361,8 @@
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
 
         ga('send', 'event', {
-          eventCategory: 'game',
-          eventAction: 'selection made',
-          eventLabel: 'question 3',
+          eventCategory: 'Question 3',
+          eventAction: 'selected '+selectedImage,
           eventValue: selectedImage
         });
 
@@ -1443,7 +1440,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-88292469-1', 'auto');
   ga('send', 'pageview');
