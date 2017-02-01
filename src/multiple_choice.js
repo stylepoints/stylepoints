@@ -231,7 +231,7 @@
   var logicSelector = function()
   {
 
-      
+
     var screenThreeValue = determineScreenThreeValue();
 
     // Change all the names for answer groups from overlay to just gridOneX
@@ -714,7 +714,7 @@
           }
       }
     }
-        
+
 
   }
   // The presentEmailScreen function shows the email screen and POSTs email data to the server.
@@ -811,7 +811,7 @@
         }]
       }));
     }
-    
+
 
 
 
@@ -869,10 +869,14 @@
           } else {
             console.log('error 400 or other');
             console.log(resp);
+            // TODO handle this error. As a short term fix we are proceeding to the final screen anyway
+            presentFinalScreen();
           }
 
         } else {
           console.log('error submitting email')
+          // TODO handle this error. As a short term fix we are proceeding to the final screen anyway
+          presentFinalScreen();
         }
       })
     })
@@ -1107,11 +1111,11 @@
           console.log('Selected an image');
           for( var i = 0; i < 4; i++ )
           {
-            
+
               if( i !== Number(selectedImage) )
               {
                 console.log('Should dim all but ', selectedImage);
-                $.set($('#gridOneOverlay' + i), 
+                $.set($('#gridOneOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay'
                 });
@@ -1119,7 +1123,7 @@
               else
               {
                 console.log('should only show once');
-                $.set($('#gridOneOverlay' + i), 
+                $.set($('#gridOneOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay hidden'
                 });
@@ -1133,8 +1137,8 @@
           $.set($('#nextButton'), {
             className: 'nextButton nextButtonActive'
           });
-        } 
-        else 
+        }
+        else
         {
           $.set($('#nextButton'), {
             className: 'nextButton'
@@ -1171,9 +1175,9 @@
                   className: 'gameImageGridImageOverlay'
                 });
               }
-              else 
+              else
               {
-                $.set($('#gridOneOverlay' + j), 
+                $.set($('#gridOneOverlay' + j),
                 {
                   className: 'gameImageGridImageOverlay hidden'
                 });
@@ -1237,11 +1241,11 @@
           console.log('Selected an image');
           for( var i = 0; i < 4; i++ )
           {
-            
+
               if( i !== Number(selectedImage) )
               {
                 console.log('Should dim all but ', selectedImage);
-                $.set($('#gridTwoOverlay' + i), 
+                $.set($('#gridTwoOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay'
                 });
@@ -1249,7 +1253,7 @@
               else
               {
                 console.log('should only show once');
-                $.set($('#gridTwoOverlay' + i), 
+                $.set($('#gridTwoOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay hidden'
                 });
@@ -1263,8 +1267,8 @@
           $.set($('#nextButton'), {
             className: 'nextButton nextButtonActive'
           });
-        } 
-        else 
+        }
+        else
         {
           $.set($('#nextButton'), {
             className: 'nextButton'
@@ -1301,9 +1305,9 @@
                   className: 'gameImageGridImageOverlay'
                 });
               }
-              else 
+              else
               {
-                $.set($('#gridTwoOverlay' + j), 
+                $.set($('#gridTwoOverlay' + j),
                 {
                   className: 'gameImageGridImageOverlay hidden'
                 });
