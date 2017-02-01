@@ -237,7 +237,6 @@
     // Change all the names for answer groups from overlay to just gridOneX
     answerGroupOne[0] = "gridOne" + answerGroupOne[0].slice(answerGroupOne[0].length - 1, answerGroupOne[0].length);
     answerGroupTwo[0] = "gridTwo" + answerGroupTwo[0].slice(answerGroupTwo[0].length - 1, answerGroupTwo[0].length);
-    console.log(answerGroupOne[0]);
     if(answerGroupOne[0] === "gridOne0")
     {
       if(answerGroupTwo[0] === "gridTwo0")
@@ -812,10 +811,6 @@
       }));
     }
 
-
-
-
-
     // Create email submit form and append it to the interactionContainer.
     //  Add this when ready to activate mailchimp: //stylepoints.us14.list-manage.com/subscribe/post?u=56a2ff2655e74c7b8d44b955e&amp;id=87d115b894
     var emailSubmitForm = $.create('form', {
@@ -881,22 +876,6 @@
       })
     })
 
-    // Create submit button event listener so that we can POST emails.
-    // var submitButton = $('#emailFormButton', mainContainer).addEventListener('click', function()
-    // {
-    //   var input = $('#emailFormInput', mainContainer);
-    //
-    //   var email = input.value;
-    //
-    //   $.fetch('http://private-bc5f06-stylepoints.apiary-mock.com/emails',
-    //   {
-    //     method: "POST"
-    //   }).then(function()
-    //   {
-    //     input.value = "";
-    //     presentFinalScreen();
-    //   });
-    // });
   }
 
   // This function handles animation transitions for
@@ -917,7 +896,6 @@
     {
       if (currentGameImageGrid.children[i].id !== event.target.id)
       {
-        console.log('Should fade');
         fadeOutImages = $.set(currentGameImageGrid.children[i], {
           className: "gameImageGridImage lowOpacity"
         });
@@ -1044,7 +1022,7 @@
     });
 
     nextButton.addEventListener('click', function(event) {
-      console.log(index);
+
       // Reset next button activity state after transitioning.
       if (index !== 1)
       {
@@ -1061,6 +1039,8 @@
           nextQuestion(event);
       }
     });
+
+
     // Select interaction container and set new text.
     var showInstructions = $.set($('#additionalText', mainContainer),
     {
@@ -1101,20 +1081,19 @@
         // Have to get the ID from the element ID to make sure
         // we show the right selected icon.
 
+
+
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
         // If there are no answers in array.
         if (answerGroupOne.length === 0)
         {
           // Push id
           answerGroupOne.push(event.target.id);
-          console.log(answerGroupOne);
-          console.log('Selected an image');
           for( var i = 0; i < 4; i++ )
           {
 
               if( i !== Number(selectedImage) )
               {
-                console.log('Should dim all but ', selectedImage);
                 $.set($('#gridOneOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay'
@@ -1122,7 +1101,6 @@
               }
               else
               {
-                console.log('should only show once');
                 $.set($('#gridOneOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay hidden'
@@ -1144,7 +1122,6 @@
             className: 'nextButton'
           });
           answerGroupOne.splice(0, 1);
-          console.log(answerGroupOne);
           for (var i = 0; i < 4; i++)
           {
             // Remove any selected icons
@@ -1166,7 +1143,6 @@
           // if so, switch the selected icon
           if( event.target.id.indexOf("gridOneOverlay") === 0)
           {
-            console.log('selected overlay');
             for (var j = 0; j < 4; j++)
             {
               if (j !== Number(selectedImage) )
@@ -1192,7 +1168,6 @@
               className: 'nextButton nextButtonActive'
             });
             answerGroupOne.push(event.target.id);
-            console.log(answerGroupOne);
           }
 
         }
@@ -1237,8 +1212,6 @@
         {
           // Push id
           answerGroupTwo.push(event.target.id);
-          console.log(answerGroupTwo);
-          console.log('Selected an image');
           for( var i = 0; i < 4; i++ )
           {
 
@@ -1296,7 +1269,7 @@
           // if so, switch the selected icon
           if( event.target.id.indexOf("gridTwoOverlay") === 0)
           {
-            console.log('selected overlay');
+
             for (var j = 0; j < 4; j++)
             {
               if (j !== Number(selectedImage) )
@@ -1322,7 +1295,6 @@
               className: 'nextButton nextButtonActive'
             });
             answerGroupTwo.push(event.target.id);
-            console.log(answerGroupTwo);
           }
 
         }
@@ -1379,13 +1351,10 @@
             });
             answerGroupThree.push(event.target.id);
             if (answerGroupThree.length > 0){
-                console.log('Test');
                 $.set(nextButton, {
                         className: 'nextButtonActive'
                 });
             }
-
-            console.log(answerGroupThree);
         } else {
             $.set($('#gridThreeSelected' + selectedImage),
             {
