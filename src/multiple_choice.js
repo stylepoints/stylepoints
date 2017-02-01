@@ -843,6 +843,10 @@
     // block the default behavior of the submit button. For testing only
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
+      ga('send', 'event', {
+        eventCategory: 'game',
+        eventAction: 'email submitted',
+      });
       var inputValue = $('#emailFormInput', mainContainer).value;
       $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy',
       {
@@ -1024,6 +1028,7 @@
     nextButton.addEventListener('click', function(event) {
 
       // Reset next button activity state after transitioning.
+      ga('send', 'event', 'NextButton', 'clicked');
       if (index !== 1)
       {
           $.set(nextButton, {
@@ -1084,6 +1089,13 @@
 
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
+        ga('send', 'event', {
+          eventCategory: 'game',
+          eventAction: 'selection made',
+          eventLabel: 'question 1',
+          eventValue: selectedImage
+        });
+
         // If there are no answers in array.
         if (answerGroupOne.length === 0)
         {
@@ -1168,6 +1180,7 @@
               className: 'nextButton nextButtonActive'
             });
             answerGroupOne.push(event.target.id);
+            // ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
           }
 
         }
@@ -1212,6 +1225,14 @@
         {
           // Push id
           answerGroupTwo.push(event.target.id);
+
+          ga('send', 'event', {
+            eventCategory: 'game',
+            eventAction: 'selection made',
+            eventLabel: 'question 2',
+            eventValue: selectedImage
+          });
+
           for( var i = 0; i < 4; i++ )
           {
 
@@ -1340,6 +1361,14 @@
         // we show the right selected icon.
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
+
+        ga('send', 'event', {
+          eventCategory: 'game',
+          eventAction: 'selection made',
+          eventLabel: 'question 3',
+          eventValue: selectedImage
+        });
+
         if (answerGroupThree.indexOf(event.target.id) === -1)
         {
             // If the id doesn't exist in the array, add it and
@@ -1414,7 +1443,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
 
   ga('create', 'UA-88292469-1', 'auto');
   ga('send', 'pageview');
