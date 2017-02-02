@@ -77,7 +77,7 @@
     var interactionContainer = $('#interactionContainer', mainContainer);
 
     interactionContainer.removeChild($('.gadgetRecommendation'));
-    interactionContainer.removeChild($('form'));
+    interactionContainer.removeChild($('#emailSubmitForm'));
     interactionContainer.removeChild($('#gameMessage'));
 
     var shareButtonsContainer = $.create('div', {
