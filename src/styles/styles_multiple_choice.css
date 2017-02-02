@@ -51,8 +51,9 @@ html {
 		position: absolute;
 		top: 0px;
 		width: 350px;
-		z-index: 1;
+		z-index: 0;
 		height: 320px;
+		display: block;
 
 	}
 
@@ -101,7 +102,7 @@ html {
 	  text-align: center;
 	  position: relative;
       top: 80px;
-      left: 40px;
+      left: 20px;
       -webkit-justify-content: center;
       -webkit-align-self: center;
       align-self: center;
@@ -234,7 +235,7 @@ html {
 		  border: none;
 	    height: 50px;
 	    width: 300px;
-	    left: 20px;
+	    left: 10px;
 	    color: #000000;
   		background: none;
 	    font-size: 1em;
@@ -433,7 +434,7 @@ html {
     color: white;
     padding-bottom: 10px;
     width: 95%;
-    left: 10px;
+    left: 0px;
     text-align: center;
 
   }
