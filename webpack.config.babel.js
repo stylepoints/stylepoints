@@ -26,7 +26,7 @@ export default {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, './build'),
-    publicPath: '/'
+    publicPath: isProduction ? 'https://d30xossl6j142v.cloudfront.net/' : '/'
   },
   module: {
     preLoaders: [
@@ -112,18 +112,17 @@ export default {
     ...isProduction ? [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
-
-      // new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     dead_code: true,
-	     //    unused: true,
-	     //    warnings: false,
-	     //    screw_ie8: true,
-      //   },
-      //   output: {
-      //     comments: false
-      //   }
-      // }),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          dead_code: true,
+	        unused: true,
+	        warnings: false,
+	        screw_ie8: true,
+        },
+        output: {
+          comments: false
+        }
+      })
     ] : [
 
     ]
