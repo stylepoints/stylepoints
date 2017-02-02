@@ -28,12 +28,15 @@ html {
 
 	#gameContainer {
 		/*height: 460px;
+
 */		width: 350px;
 		margin: 0;
+		height: 500px;
 		/*margin-top: 50px;*/
     	background:white;
 		display: flex;
 		flex-direction: column;
+		margin-left: -15px;
 	}
 
 	.gameImage {
@@ -50,6 +53,7 @@ html {
 		top: 0px;
 		width: 350px;
 		z-index: 0;
+		display: block;
 		height: 320px;
 
 	}
@@ -219,7 +223,7 @@ html {
     position: absolute;
     top: 475px;
     left: 2px;
-    line-height: 30px;
+    line-height: 0px;
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
@@ -258,7 +262,7 @@ html {
 	    color: black;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
-	    top: 75px;
+	    top: 60px;
 	    left: 6px;
 	}
 	.gameMessageEmailScreen {
@@ -322,7 +326,7 @@ html {
     font-size: 1em;
     color: white;
     text-align: center;
-    top: 192.2px;
+    top: 180px;
     padding: 0 20px;
     width: 100;
 	}
@@ -387,7 +391,7 @@ html {
 		font-size: 1.25em;
 		position: relative;
 		top: 110px;
-		line-height: 40px;
+		line-height: 0px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -601,7 +605,7 @@ html {
 	.gameImageGridImageSelectedIcon { top: 55px; right: 55px; }
   	.gameImageGrid { width: 330px; height: 300px;}
 
-  	#gameContainer { width: 320px; }
+  	#gameContainer { width: 320px; height: 500px;}
 
   	#nextButton { width: 323px; }
 
