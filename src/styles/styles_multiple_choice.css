@@ -329,6 +329,7 @@ html {
     color: white;
     text-align: center;
     top: 192.2px;
+    left: 20px;
     padding: 0 20px;
     right: 20px;
     width: 100;
@@ -339,6 +340,7 @@ html {
     width: 95%;
     display: block;
     z-index: 6;
+    left: 15px;
     font-size: 0.85em;
     color: white;
     text-align: center;
@@ -367,6 +369,7 @@ html {
   	position: relative;
   	text-align: center;
   	top: 100px;
+  	left: 7.5px;
   	border-bottom: 1px solid white;
   	color: #ffffff;
   	font-size: 1.25em;
@@ -388,6 +391,7 @@ html {
 		margin: 0 auto;
 		height: 50px;
     width:100%;
+    left: 7.5px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
 		font-family: 'DIN Condensed';
