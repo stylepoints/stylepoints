@@ -135,10 +135,11 @@ html {
 	}
 
 	.gameImageGridImageOverlay {
-		width: 170px;
+		width: 166px;
 		height: 170px;
 		opacity: 0.85;
-		margin: 1.5px 1px 1px 1.5px;
+		margin-left: 2px;
+
 		z-index: 1; /* FF3.6-15 */
 	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
@@ -223,6 +224,7 @@ html {
     -ms-flex: none;
     flex: none;
     z-index: 10000;
+    box-shadow: none;
 	}
 
 	.shareButtonsContainer {
@@ -390,6 +392,7 @@ html {
 		align-self: center;
 		flex: none;
 		appearance: none;
+		box-shadow: none;
 		-webkit-appearance: none;
 		-webkit-border-radius: 0px;
 	}
@@ -433,8 +436,8 @@ html {
 	@media screen and (min-width: 700px) {
 	  	#gameContainer {
 	      padding-top: 50px;
-	      width:670px;
-	      height:345px;
+	      width:500px;
+	      height:400px;
 
 	  	}
 
@@ -450,21 +453,21 @@ html {
 	    }
 
 	    #nextButton {
-	      width: 300px;
+	      width: 200px;
 	      height: 75px;
-	      top: 270px;
-	      right: 0px;
+	      top: 260px;
+	      right: -80px;
 	      font-size: 1.5em;
 	      line-height: 75px;
-	      margin-left:30px;
+	      box-shadow: none;
 	      padding: 0px;
-        left: initial;
+          left: initial;
 	    }
 
 	    .gameMessage {
 	      right: 0px;
 	      padding-left:30px;
-	      width: 300px;
+	      width: 50%;
 	      top: inherit;
 	      left: 350px;
 	      font-size: 1.35em;
@@ -481,14 +484,13 @@ html {
 
 
 	  	.gameMessageEmailScreen {
-        font-size: 1.25em;
+        font-size: 1.125em;
         color: #000000;
-        right: 0px;
-
+        right: -90px;
+		width: 50%;
         margin: 0px;
         left: auto;
-        left: initial;
-        width: 300px;
+        
         text-align: left;
 	  	}
 
@@ -496,12 +498,13 @@ html {
 	  		color: #000000;
 	  		right: 0px;
 	      top: 53px;
+	      right: -95px;
 	      margin:0px;
 	      left: initial;
-	      width: 300px;
+	      width: 45%;
         padding:0px;
 	  		text-align: left;
-        font-size: 1.25em;
+        font-size: 1em;
 
 
         /*position: absolute;
@@ -513,24 +516,25 @@ html {
         width: 100;*/
 	  	}
 	    #emailSubmitForm {
-	      right: 0px;
+	      right: -50px;
         left: initial;
         top: initial;
         bottom: -312px;
         padding: 0 0 0 30px;
 	      position:absolute;
-	      width: 300px;
+	      width: 50%;
 	    }
 
 	  	#resultMessageText {
 	  		/*left: 375px;*/
 	      margin: 0px;
 	      padding: 0px;
-	      width:103%;
+	      width:120%;
 	      left: initial;
 	  		color: black;
-	  		text-align: center;
-	      top: 0px;
+	  		text-align: left;
+	      top: 10px;
+	      right: -40px;
 	  	}
 
 	  	#emailFormInput {
@@ -538,18 +542,20 @@ html {
 	      margin-left: 0px;
 	  		background: none;
 	  		color: black;
-	      width: 300px;
-	      top: 0;
-	  		border-bottom: 1px solid #F0F0F0;
+	      width: 100%;
+	      top: 10px;
+	      right: -45px;
+	  	  border-bottom: 1px solid #F0F0F0;
 	  	}
 
 	  	#emailFormButton {
-	  		right: 0;
-	  		height: 50px;
-	  		top: 10px;
-	      width: 300px;
-	      margin-left: 0px;
-	  		line-height: 50px;
+	  		right: -50px;
+	  		height: 30px;
+	  		top: 20px;
+	      	width: 75%;
+	      	box-shadow: none;
+	  		line-height: 0px;
+
 	  	}
 
 	  	.confirmationMessage {
