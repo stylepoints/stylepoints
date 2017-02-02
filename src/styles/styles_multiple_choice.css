@@ -29,7 +29,9 @@ html {
 	#gameContainer {
 		/*height: 460px;
 */		width: 350px;
-		margin: 0;
+		height: 500px;
+		margin-left: -15px;
+		margin-bottom: 40px;
 		/*margin-top: 50px;*/
     	background:white;
 		display: flex;
@@ -49,7 +51,7 @@ html {
 		position: absolute;
 		top: 0px;
 		width: 350px;
-		z-index: 0;
+		z-index: 1;
 		height: 320px;
 
 	}
@@ -130,7 +132,7 @@ html {
 		position: absolute;
 		display: none;
 		top: 60px;
-		right: 65px;
+		right: 55px;
 		z-index: 8;
 	}
 
@@ -219,7 +221,8 @@ html {
     position: absolute;
     top: 475px;
     left: 2px;
-    line-height: 30px;
+
+    line-height: 0px;
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
@@ -258,8 +261,9 @@ html {
 	    color: black;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
-	    top: 75px;
+	    top: 70px;
 	    left: 6px;
+	    width: 90%;
 	}
 	.gameMessageEmailScreen {
 	    /*font-size: 1.25em;
@@ -278,7 +282,8 @@ html {
 	}*/
 
 	.gameMessageFinalQuestion {
-		width: 100%;
+		width: 90%;
+		top: 60px;
 	}
 
 	#ctaButton {
@@ -324,6 +329,7 @@ html {
     text-align: center;
     top: 192.2px;
     padding: 0 20px;
+    right: 20px;
     width: 100;
 	}
 
@@ -345,7 +351,7 @@ html {
     position: absolute;
     width: 335px;
     top: initial;
-    left:7px;
+    left:0px;
     bottom: -327px;
 
 	}
@@ -379,7 +385,7 @@ html {
 	#emailFormButton {
   	display: block;
 		margin: 0 auto;
-		height: 40px;
+		height: 50px;
     width:100%;
 		border: 1px solid #F6F6F6;
 		background-color: white;
@@ -387,7 +393,7 @@ html {
 		font-size: 1.25em;
 		position: relative;
 		top: 110px;
-		line-height: 40px;
+		line-height: 0px;
 		text-align: center;
 		align-self: center;
 		flex: none;
