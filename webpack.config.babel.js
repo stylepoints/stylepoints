@@ -100,8 +100,8 @@ export default {
       inject: false
     }),
     new HtmlWebpackPlugin({
-      template: './html_templates/index-article.tpl.ejs',
-      filename: 'index-article.html',
+      template: './html_templates/article.tpl.ejs',
+      filename: 'article.html',
       inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin(),
