@@ -882,6 +882,21 @@
     {
       window.open('https://www.driving.co.uk/terms-conditions/');
     });
+    $('#resultMessageText', mainContainer).addEventListener('mouseover', function(e)
+    {
+      console.log(e);
+      $.set($("#resultMessageText", mainContainer), {
+        className: 'mouseOver'
+      });
+    });
+    $('#resultMessageText', mainContainer).addEventListener('mouseout', function(e)
+    {
+      console.log(e);
+      $.set($('#resultMessageText', mainContainer), {
+        className: ''
+      });
+    });
+
 
   }
 
