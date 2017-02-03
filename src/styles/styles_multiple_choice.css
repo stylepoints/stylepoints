@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'DIN Condensed';
-  src: url('./DINCond-Bold.eot');
-  src: url('./DINCond-Bold.woff2') format('woff2'),
-       url('./DINCond-Bold.woff') format('woff'),
-       url('./DINCond-Bold.ttf') format('truetype'),
-       url('./DINCond-Bold.svg#DINCond-Bold') format('svg'),
-       url('./DINCond-Bold.otf') format('opentype'),
-       url('./DINCond-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('./DINCond-Bold.eot'),
+  	url('./DINCond-Bold.woff2') format('woff2'),
+  	url('./DINCond-Bold.woff') format('woff'),
+  	url('./DINCond-Bold.ttf') format('truetype'),
+  	url('./DINCond-Bold.svg#DINCond-Bold') format('svg'),
+  	url('./DINCond-Bold.otf') format('opentype'),
+  	url('./DINCond-Bold.eot?#iefix') format('embedded-opentype');
 }
 
 html {
@@ -501,7 +501,7 @@ html {
 		width: 50%;
         margin: 0px;
         left: auto;
-        
+
         text-align: left;
 	  	}
 
