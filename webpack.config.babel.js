@@ -74,6 +74,15 @@ export default {
   eslint: {
     configFile: './.eslintrc'
   },
+	imageWebpackLoader: {
+    mozjpeg: {
+      quality: 65
+    },
+    pngquant:{
+      quality: "65-90",
+      speed: 4
+    }
+  },
   plugins: [
 	  // new HtmlWebpackPlugin({
    //    template: './html_templates/index-type.tpl.ejs',
