@@ -812,7 +812,6 @@
     }
 
     // Create email submit form and append it to the interactionContainer.
-    //  Add this when ready to activate mailchimp: //stylepoints.us14.list-manage.com/subscribe/post?u=56a2ff2655e74c7b8d44b955e&amp;id=87d115b894
     var emailSubmitForm = $.create('form', {
       id: 'emailSubmitForm',
       action: '',
@@ -878,7 +877,11 @@
           presentFinalScreen();
         }
       })
-    })
+    });
+    $('#resultMessageText', mainContainer).addEventListener('click', function(e)
+    {
+      window.open('https://www.driving.co.uk/terms-conditions/');
+    });
 
   }
 
