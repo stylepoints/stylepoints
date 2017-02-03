@@ -8,19 +8,21 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-const isProduction = process.env.NODE_ENV ? true : false
-console.log( "Building for", isProduction ? "production" : "development")
+const isStaging = process.env.NODE_ENV == 'staging' ? true : false
+const isProduction = process.env.NODE_ENV == 'production' ? true : false
+
+console.log( "Building for", process.env.NODE_ENV || 'development')
 export default {
 	debug: false,
-  devtool: !isProduction ? 'eval-source-map' : '',
-  entry: isProduction ? {
+  devtool: (!isProduction) ? 'eval-source-map' : '',
+  entry: (isProduction || isStaging) ? {
     // binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
-    multiple_choice: [ './vendor_scripts/bliss.js', './multiple_choice.js'  ],
+    multiple_choice: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice.js'  ],
   } : {
     // binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
-    multiple_choice: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
+    multiple_choice: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -57,10 +59,16 @@ export default {
 	        'url?limit=8000!image-webpack'
 	      ]
 	    },
-      {
-        test: /\.(ttf|otf|svg|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file?limit=80000&name=[name].[ext]'
-      }
+      // Font Definitions
+      { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=[name].[ext]' },
+      { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=[name].[ext]' },
+      { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=[name].[ext]' },
+      { test: /\.[ot]tf$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=[name].[ext]' },
+      { test: /\.eot$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=[name].[ext]' }
+      // {
+      //   test: /\.(ttf|otf|svg|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+      //   loader: 'file?limit=80000&name=[name]-[hash].[ext]'
+      // }
     ]
   },
   eslint: {
@@ -96,7 +104,7 @@ export default {
 		new HtmlWebpackPlugin({
       template: './html_templates/iframe.tpl.ejs',
       filename: 'iframe.html',
-			src: isProduction ? 'http://app.stylepoints.com' : 'http://localhost:8080',
+			src: isProduction ? 'http://app.stylepoints.com' : (isStaging ? 'http://app.staging.stylepoints' : 'http://localhost:8080'),
       inject: false
     }),
     new HtmlWebpackPlugin({
@@ -132,8 +140,8 @@ export default {
     cssnext(),
     cssimport()
   ],
-  bail: isProduction,
-  cache: !isProduction,
+  bail: (isProduction || isStaging),
+  cache: (!isProduction || !isStaging),
   stats: {
     children: false
   }

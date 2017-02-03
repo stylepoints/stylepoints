@@ -7,12 +7,19 @@ BUILD_DIR=./build
 command -v aws s3 >/dev/null 2>&1 || { printf >&2 "AWS Command line interface not found. Aborting.\nSee https://aws.amazon.com/cli/ for more information \n"; exit 1; }
 
 case $ENV in
-	production) S3_BUCKET='s3://app.stylepoints.com' ;;
- 	*) S3_BUCKET='s3://app.staging.stylepoints.com' ;;
+	production)
+		S3_BUCKET='s3://app.stylepoints.com'
+		npm run build-production
+		;;
+	staging)
+		S3_BUCKET='s3://app.staging.stylepoints.com'
+		npm run build-staging
+		;;
+ 	*)
+		S3_BUCKET='s3://app.staging.stylepoints.com'
+		npm run build-staging
+		;;
 esac
-
-#create a build
-npm run build
 
 echo "deploying build to $S3_BUCKET"
 aws s3  --profile 'stylepoints' sync ./build $S3_BUCKET --exclude 'deploy.sh' --exclude '.DS_Store' --delete
@@ -25,5 +32,11 @@ then
 	aws cloudfront --profile 'stylepoints' create-invalidation --distribution-id ESLF5DK9C4OE9 \
 	  --paths /multiple_choice.js \
 			/index.html \
-			/article.html
+			/article.html \
+			/DINCond-Bold.eot \
+			/DINCond-Bold.otf \
+			/DINCond-Bold.svg \
+			/DINCond-Bold.ttf \
+			/DINCond-Bold.woff \
+			/DINCond-Bold.woff2
 fi
