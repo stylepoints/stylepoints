@@ -363,6 +363,9 @@ html {
     bottom: -327px;
 
 	}
+	.mouseOver {
+		text-decoration: underline !important;
+	}
 	#emailFormInput {
   	display: block;
     margin: 0 auto;
@@ -467,6 +470,10 @@ html {
 	      /*padding: 10px;*/
 	      /*border: solid 1px gray;*/
 	    }
+
+	    .mouseOver {
+		text-decoration: underline !important;
+	}
 
 	    #nextButton {
 	      width: 200px;
@@ -925,8 +932,10 @@ padding-top: 50px;
     text-align: center;
     position: relative;
     top: 100px;
+	}
 
-
+	.mouseOver {
+		text-decoration: underline !important;
 	}
 	#emailSubmitForm {
     z-index: 10000;
