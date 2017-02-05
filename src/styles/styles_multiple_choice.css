@@ -28,7 +28,9 @@ html {
 
 	#gameContainer {
 		/*height: 460px;
+
 */		width: 350px;
+
 		height: 500px;
 		margin-left: -15px;
 		margin-bottom: 40px;
@@ -36,6 +38,7 @@ html {
     	background:white;
 		display: flex;
 		flex-direction: column;
+		margin-left: -15px;
 	}
 
 	.gameImage {
@@ -52,6 +55,7 @@ html {
 		top: 0px;
 		width: 350px;
 		z-index: 0;
+		display: block;
 		height: 320px;
 		display: block;
 
@@ -222,7 +226,6 @@ html {
     position: absolute;
     top: 475px;
     left: 2px;
-
     line-height: 0px;
     -webkit-box-flex: 0;
     -ms-flex: none;
@@ -262,7 +265,8 @@ html {
 	    color: black;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
-	    top: 70px;
+	    top: 60px;
+
 	    left: 6px;
 	    width: 90%;
 	}
@@ -328,8 +332,9 @@ html {
     font-size: 1em;
     color: white;
     text-align: center;
-    top: 192.2px;
-    left: 20px;
+    top: 180px;
+
+
     padding: 0 20px;
     right: 20px;
     width: 100;
@@ -357,6 +362,9 @@ html {
     left:0px;
     bottom: -327px;
 
+	}
+	.mouseOver {
+		text-decoration: underline !important;
 	}
 	#emailFormInput {
   	display: block;
@@ -463,13 +471,17 @@ html {
 	      /*border: solid 1px gray;*/
 	    }
 
+	    .mouseOver {
+		text-decoration: underline !important;
+	}
+
 	    #nextButton {
 	      width: 200px;
-	      height: 75px;
+	      height: 70px;
 	      top: 260px;
 	      right: -80px;
 	      font-size: 1.5em;
-	      line-height: 75px;
+	      line-height: 70px;
 	      box-shadow: none;
 	      padding: 0px;
           left: initial;
@@ -555,15 +567,15 @@ html {
 	  		color: black;
 	      width: 100%;
 	      top: 10px;
-	      right: -45px;
+	      left: 40px;
 	  	  border-bottom: 1px solid #F0F0F0;
 	  	}
 
 	  	#emailFormButton {
-	  		right: -50px;
+	  		left: 40px;
 	  		height: 30px;
 	  		top: 20px;
-	      	width: 75%;
+	      	width: 100%;
 	      	box-shadow: none;
 	  		line-height: 0px;
 
@@ -598,6 +610,428 @@ html {
  		}
   }
 
+  @media screen and (max-width: 1260px)
+  {
+  	background-color:#ffffff;
+
+	section {
+	  font-family: sans-serif;
+	  width: 960px;
+	  margin: 0 auto;
+	}
+
+	#gameContainer {
+		/*height: 460px;
+padding-top: 50px;
+	      width:500px;
+	      height:400px;
+*/		width: 350px;
+
+		height: 500px;
+		padding-top: 0px;
+		/*margin-top: 50px;*/
+    	
+	}
+
+	.gameImage {
+		width: 350px;
+		height: 320px;
+	}
+
+	.overlay {
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.85) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.85) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+		position: absolute;
+		top: 0px;
+		width: 350px;
+		z-index: 0;
+		display: block;
+		height: 320px;
+		display: block;
+
+	}
+
+	.pushDown {
+		margin-top: 50px;
+	}
+
+	#imageContainer {
+	  position: absolute;
+    margin-top: 125px;
+    width: 350px;
+    height: 320px;
+	}
+
+	#publisherLogo {
+	  display: none;
+	}
+	.resultImage
+	{
+		width: 350px;
+    height: 320px;
+	}
+
+	.resultImageDiv {
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+	}
+	.gameImageGrid {
+		display: flex;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		width: 355px;
+		height: 310px;
+		position: absolute;
+	}
+	.confirmationMessage {
+	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+	  width: 80%;
+	  z-index: 6;
+	  font-size: 1.5em;
+	  letter-spacing: 1px;
+	  color: white;
+	  text-align: center;
+	  position: relative;
+      top: 80px;
+      left: 20px;
+      -webkit-justify-content: center;
+      -webkit-align-self: center;
+      align-self: center;
+      justify-content: center;
+	}
+	.gameImageGridImageContainer {
+		    width: 170px;
+    height: 170px;
+    position: relative;
+    padding: 1px 1px 1px 1px !important;
+    z-index: 1;
+    overflow: hidden;
+
+	}
+	.gameImageGridImage {
+		width: 170px;
+		padding: 1px 1px 1px 1px !important;
+		height: 170px;
+		opacity: 1;
+		transition: opacity 500ms;
+		background-color: white;
+		z-index: 9;
+	}
+
+	.gameImageGridImageSelectedIcon {
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		display: none;
+		top: 60px;
+		right: 55px;
+		z-index: 8;
+	}
+
+	.gameImageGridImageOverlay {
+		width: 166px;
+		height: 170px;
+		opacity: 0.85;
+		margin-left: 2px;
+
+		z-index: 1; /* FF3.6-15 */
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.gameImageGridImageLabel {
+		position: absolute;
+	    color: white;
+	    text-align: center;
+	    left: 0px;
+	    z-index: 7;
+	    font-family: 'DIN Condensed';
+	    font-size: 1.25em;
+	    margin: 0 auto;
+	    width: 175px;
+	    bottom: 15px;
+	}
+
+
+	.show {
+		display: block;
+	}
+
+
+	.lowOpacity {
+		opacity: 0;
+	}
+
+
+	.hidden {
+		display: none !important;
+	}
+	#additionalText {
+		font-size: 1em;
+		position: absolute;
+		font-family: 'playfair';
+		z-index: 6;
+		top: 210px;
+		width: 325px;
+		text-align: center;
+		left: 15px;
+		color: white;
+	}
+
+
+	#callToAction {
+		height: 100px;
+		font-size: 1.4em;
+		width: 100%;
+		color: black;
+		align-self: center;
+		justify-content: center;
+		position: relative;
+		font-family: 'DIN Condensed';
+		top: 10px;
+	}
+
+	#nextButton {
+	   border: 1px solid #F0F0F0;
+    height: 40px;
+    width: 343px;
+    color: #000000;
+    background: transparent;
+    font-size: 1em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-family: 'DIN Condensed';
+    position: absolute;
+    top: 475px;
+    left: 2px;
+    line-height: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    z-index: 10000;
+    box-shadow: none;
+	}
+
+	.shareButtonsContainer {
+		  border: none;
+	    height: 50px;
+	    width: 300px;
+	    left: 20px;
+	    color: #000000;
+  		background: none;
+	    font-size: 1em;
+	    text-align:center;
+
+
+	    font-family: 'DIN Condensed';
+	    position: relative;
+	    top: 320px;
+
+
+	    z-index: 10000;
+	}
+
+	.shareButton {
+		transform: scale(0.5);
+		width: 65px;
+		margin-right: -15px;
+		cursor: pointer;
+
+	}
+	.gameMessage {
+		
+
+      font-size: 1.25em;
+	    color: black;
+	    position: absolute;
+	    font-family: 'DIN Condensed';
+	    top: 60px;
+	    left: -25px;
+	    width: 90%;
+	}
+	
+
+	.gameMessageFinalQuestion {
+		width: 90%;
+		top: 60px;
+	}
+
+	#ctaButton {
+		border: 1px solid #F0F0F0;
+		height: 50px;
+		width: 350px;
+		color: #000000;
+		background: transparent;
+		font-size: 1em;
+		justify-content: center;
+		align-self: center;
+		font-family: 'DIN Condensed';
+
+		position: relative;
+		top: 300px;
+		flex: none;
+	}
+
+	#interactionContainer {
+	  display: flex;
+	flex-direction: column;
+	width: 350px;
+	position: relative;
+	left: 0px;
+
+
+	}
+
+	.nextButtonActive {
+		background: #68B45E !important;
+		color: white !important;
+	}
+
+	.lowZIndex {
+		z-index: -1;
+	}
+
+	.gadgetRecommendation {
+    font-family: "DIN Condensed";
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    top: 180px;
+    width: 100%;
+    left: 5px;
+
+
+    padding: 0 20px;
+    right: 20px;
+    width: 100;
+	}
+
+	#resultMessageText {
+  	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    width: 90%;
+    display: block;
+    z-index: 6;
+    left: 5px;
+    font-size: 0.85em;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 100px;
+	}
+
+	.mouseOver {
+		text-decoration: underline !important;
+	}
+	#emailSubmitForm {
+    z-index: 10000;
+    position: absolute;
+    width: 335px;
+    top: initial;
+    left:0px;
+    bottom: -327px;
+
+	}
+	#emailFormInput {
+  	display: block;
+    margin: 0 auto;
+  	border: none;
+  	height: 50px;
+    width:100%;
+  	margin-top: 10px;
+  	font-family: 'DIN Condensed';
+  	position: relative;
+  	text-align: center;
+  	top: 100px;
+  	left: -7.5px;
+  	border-bottom: 1px solid white;
+  	color: #ffffff;
+  	font-size: 1.25em;
+  	flex: none;
+  	background: rgba(0,0,0,0);
+  	-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+
+	}
+
+	input[type="text"]{
+	   -moz-box-sizing:    border-box;
+	   -webkit-box-sizing: border-box;
+	    box-sizing:        border-box;
+	}
+
+	#emailFormButton {
+  	display: block;
+		margin: 0 auto;
+		height: 50px;
+    width:100%;
+    left: -7.5px;
+		border: 1px solid #F6F6F6;
+		background-color: white;
+		font-family: 'DIN Condensed';
+		font-size: 1.25em;
+		position: relative;
+		top: 110px;
+		line-height: 0px;
+		text-align: center;
+		align-self: center;
+		flex: none;
+		appearance: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+	}
+
+	.gameMessageSmallText {
+	     font-size: 1.125em;
+	    top: -10px;
+	}
+
+	.gameMessageMediumText {
+		/*top: -50px;*/
+	}
+
+  .gameTitle {
+        top: 0;
+    font-size: 1.5em;
+    color: black;
+    position: absolute;
+    font-family: 'DIN Condensed';
+    line-height: 25px;
+    padding-bottom: 10px;
+    width: 95%;
+    left: 5px;
+  }
+  .gameTitleFinalScreen {
+    top: 175px;
+    font-size: 1.5em;
+	line-height: 30px;
+    color: black;
+    position: absolute;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: white;
+    padding-bottom: 10px;
+    width: 95%;
+    left: 10px;
+    text-align: center;
+
+  }
+  }
+
   @media screen and (max-width:345px){
   	.gameMessage { width: 80%; }
 
@@ -614,7 +1048,7 @@ html {
 	.gameImageGridImageSelectedIcon { top: 55px; right: 55px; }
   	.gameImageGrid { width: 330px; height: 300px;}
 
-  	#gameContainer { width: 320px; }
+  	#gameContainer { width: 320px; height: 500px;}
 
   	#imageContainer { width: 320px; }
 
