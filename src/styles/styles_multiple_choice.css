@@ -804,7 +804,7 @@ padding-top: 50px;
 	#nextButton {
 	   border: 1px solid #F0F0F0;
     height: 40px;
-    width: 343px;
+    width: 96.5%;
     color: #000000;
     background: transparent;
     font-size: 1em;
@@ -860,7 +860,7 @@ padding-top: 50px;
 	    position: absolute;
 	    font-family: 'DIN Condensed';
 	    top: 60px;
-	    left: -25px;
+	    left: 5px;
 	    width: 90%;
 	}
 	
@@ -926,7 +926,7 @@ padding-top: 50px;
     width: 90%;
     display: block;
     z-index: 6;
-    left: 5px;
+    left: 25px;
     font-size: 0.85em;
     color: white;
     text-align: center;
@@ -957,7 +957,7 @@ padding-top: 50px;
   	position: relative;
   	text-align: center;
   	top: 100px;
-  	left: -7.5px;
+  	left: 7.5px;
   	border-bottom: 1px solid white;
   	color: #ffffff;
   	font-size: 1.25em;
@@ -979,7 +979,7 @@ padding-top: 50px;
 		margin: 0 auto;
 		height: 50px;
     width:100%;
-    left: -7.5px;
+    left: 7.5px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
 		font-family: 'DIN Condensed';
@@ -1054,7 +1054,7 @@ padding-top: 50px;
 
   	#interactionContaner { width: 320px; }
 
-  	#nextButton { width: 323px; }
+  	#nextButton { width: 91%; }
 
   	.gameTitle { font-size: 1.4em; width: 90%; }
 
