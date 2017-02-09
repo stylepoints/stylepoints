@@ -56,7 +56,8 @@ export default {
       {
 	      test: /\.(jpg|png|gif|svg)$/,
 	      loaders: [
-	        'url?limit=8000!image-webpack'
+	        'url?limit=10000',
+					'image-webpack'
 	      ]
 	    },
       // Font Definitions
@@ -73,15 +74,6 @@ export default {
   },
   eslint: {
     configFile: './.eslintrc'
-  },
-	imageWebpackLoader: {
-    mozjpeg: {
-      quality: 65
-    },
-    pngquant:{
-      quality: "65-90",
-      speed: 4
-    }
   },
   plugins: [
 	  // new HtmlWebpackPlugin({
@@ -149,6 +141,25 @@ export default {
     cssnext(),
     cssimport()
   ],
+	imageWebpackLoader: {
+    mozjpeg: {
+      quality: 65
+    },
+    pngquant:{
+      quality: "30-60",
+      speed: 2
+    },
+    svgo:{
+      plugins: [
+        {
+          removeViewBox: false
+        },
+        {
+          removeEmptyAttrs: false
+        }
+      ]
+    }
+  },
   bail: (isProduction || isStaging),
   cache: (!isProduction || !isStaging),
   stats: {
