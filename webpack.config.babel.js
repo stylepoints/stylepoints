@@ -56,7 +56,8 @@ export default {
       {
 	      test: /\.(jpg|png|gif|svg)$/,
 	      loaders: [
-	        'url?limit=8000!image-webpack'
+	        'url?limit=10000',
+					'image-webpack'
 	      ]
 	    },
       // Font Definitions
