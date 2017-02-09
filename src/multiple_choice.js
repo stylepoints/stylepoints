@@ -1111,7 +1111,7 @@
         ga('send', 'event', {
           eventCategory: 'Question 1',
           eventAction: 'selected '+selectedImage,
-          eventValue: selectedImage
+          eventValue: (1).toString() + (parseInt(selectedImage)+1)
         });
 
         // If there are no answers in array.
@@ -1247,7 +1247,7 @@
           ga('send', 'event', {
             eventCategory: 'Question 2',
             eventAction: 'selected '+selectedImage,
-            eventValue: selectedImage
+            eventValue: (2).toString() + (parseInt(selectedImage)+1)
           });
 
           for( var i = 0; i < 4; i++ )
@@ -1382,7 +1382,7 @@
         ga('send', 'event', {
           eventCategory: 'Question 3',
           eventAction: 'selected '+selectedImage,
-          eventValue: selectedImage
+          eventValue: (3).toString() + (parseInt(selectedImage)+1)
         });
 
         if (answerGroupThree.indexOf(event.target.id) === -1)
