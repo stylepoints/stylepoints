@@ -4,7 +4,7 @@
     "callToActionButtonText": "LET'S GO!",
     "gameTitle": "What gadget best fits your driving style? Click below to find out!",
     "gameTitleTruncated": "What gadget best fits your driving style?",
-    "gameMessageTextOne": "1. WHICH TYPE OF DRIVER ARE YOU?",
+    "gameMessageTextOne": "1. If your car was an animal, which animal would it be?",
     "gameMessageTextTwo": "2 of 3: Which picture describes why you drive most often?",
     "gameMessageTextThree": "3 of 3: Tap all the gadgets you already own then get results!",
     "resultMessageHeader": "Your know what you like and aren't afraid to voice it.",
@@ -1438,7 +1438,7 @@
     interactionContainer.appendChild(nextButton);
     var gameMessage = $.create('div', {
       id: 'gameMessage',
-      contents: fourImagesCopy.gameMessageTextOne,
+      contents: fourImagesCopy.gameMessageTextOne.toUpperCase(),
       className: gameMessageTextType(fourImagesCopy.gameMessageTextOne)
     });
 
