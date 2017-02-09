@@ -839,7 +839,6 @@
     });
 
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
-    // block the default behavior of the submit button. For testing only
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
       ga('send', 'event', {
@@ -1011,10 +1010,13 @@
       //   contents: fourImagesCopy.gameMessageTextThree
       // });
     }
-
-
     // Increment the index and log each answer.
-
+    ga('send', 'event', {
+      eventCategory: 'NextButton',
+      eventAction: 'clicked',
+      eventLabel: 'nextbtn' + (index+1),
+      eventValue: (index+1)
+    });
   }
 
 
@@ -1046,7 +1048,6 @@
     nextButton.addEventListener('click', function(event) {
 
       // Reset next button activity state after transitioning.
-      ga('send', 'event', 'NextButton', 'clicked');
       if (index !== 1)
       {
           $.set(nextButton, {
@@ -1110,7 +1111,7 @@
         ga('send', 'event', {
           eventCategory: 'Question 1',
           eventAction: 'selected '+selectedImage,
-          eventValue: selectedImage
+          eventValue: (1).toString() + (parseInt(selectedImage)+1)
         });
 
         // If there are no answers in array.
@@ -1246,7 +1247,7 @@
           ga('send', 'event', {
             eventCategory: 'Question 2',
             eventAction: 'selected '+selectedImage,
-            eventValue: selectedImage
+            eventValue: (2).toString() + (parseInt(selectedImage)+1)
           });
 
           for( var i = 0; i < 4; i++ )
@@ -1381,7 +1382,7 @@
         ga('send', 'event', {
           eventCategory: 'Question 3',
           eventAction: 'selected '+selectedImage,
-          eventValue: selectedImage
+          eventValue: (3).toString() + (parseInt(selectedImage)+1)
         });
 
         if (answerGroupThree.indexOf(event.target.id) === -1)
