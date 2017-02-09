@@ -839,7 +839,6 @@
     });
 
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
-    // block the default behavior of the submit button. For testing only
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
       ga('send', 'event', {
@@ -1011,10 +1010,13 @@
       //   contents: fourImagesCopy.gameMessageTextThree
       // });
     }
-
-
     // Increment the index and log each answer.
-
+    ga('send', 'event', {
+      eventCategory: 'NextButton',
+      eventAction: 'clicked',
+      eventLabel: 'nextbtn' + (index+1),
+      eventValue: (index+1)
+    });
   }
 
 
@@ -1046,7 +1048,6 @@
     nextButton.addEventListener('click', function(event) {
 
       // Reset next button activity state after transitioning.
-      ga('send', 'event', 'NextButton', 'clicked');
       if (index !== 1)
       {
           $.set(nextButton, {
