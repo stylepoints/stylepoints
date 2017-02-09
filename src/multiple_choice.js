@@ -917,10 +917,15 @@
     {
       if (currentGameImageGrid.children[i].id !== event.target.id)
       {
+        console.log(currentGameImageGrid.children);
         fadeOutImages = $.set(currentGameImageGrid.children[i], {
           className: "gameImageGridImage lowOpacity"
-        });
+        }); 
       }
+
+      $.set(currentGameImageGrid.children[i].children[1], {
+        className: "gameImageGridImageSelectedIcon"
+      });
     }
 
     setTimeout(function()
