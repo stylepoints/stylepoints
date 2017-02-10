@@ -842,8 +842,9 @@
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
       ga('send', 'event', {
-        eventCategory: 'game',
-        eventAction: 'email submitted',
+        eventCategory: 'Entry',
+        eventLabel: 'Email Submitted',
+        eventAction: 'email submitted'
       });
       var inputValue = $('#emailFormInput', mainContainer).value;
       $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy',
@@ -1014,8 +1015,8 @@
     ga('send', 'event', {
       eventCategory: 'NextButton',
       eventAction: 'clicked',
-      eventLabel: 'nextbtn' + (index+1),
-      eventValue: (index+1)
+      eventLabel: 'Next Button ' + (index),
+      eventValue: (index)
     });
   }
 
@@ -1110,7 +1111,8 @@
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
         ga('send', 'event', {
           eventCategory: 'Question 1',
-          eventAction: 'selected '+selectedImage,
+          eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
+          eventLabel: 'Question 1',
           eventValue: (1).toString() + (parseInt(selectedImage)+1)
         });
 
@@ -1246,7 +1248,8 @@
 
           ga('send', 'event', {
             eventCategory: 'Question 2',
-            eventAction: 'selected '+selectedImage,
+            eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
+            eventLabel: 'Question 2',
             eventValue: (2).toString() + (parseInt(selectedImage)+1)
           });
 
@@ -1381,7 +1384,8 @@
 
         ga('send', 'event', {
           eventCategory: 'Question 3',
-          eventAction: 'selected '+selectedImage,
+          eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
+          eventLabel: 'Question 3',
           eventValue: (3).toString() + (parseInt(selectedImage)+1)
         });
 
