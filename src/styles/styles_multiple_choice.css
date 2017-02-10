@@ -482,7 +482,10 @@ html {
 	      height:400px;
 
 	  	}
-
+		.errorMessage {
+			left: 60px;
+			top: -80px;
+		}
 	    #imageContainer {
 	      margin-top: 0px;
 	    }
@@ -589,7 +592,7 @@ html {
 	  		background: none;
 	  		color: black;
 	      width: 100%;
-	      top: 10px;
+	      top: 40px !important;
 	      left: 40px;
 	  	  border-bottom: 1px solid #F0F0F0;
 	  	}
@@ -597,7 +600,7 @@ html {
 	  	#emailFormButton {
 	  		left: 40px;
 	  		height: 30px;
-	  		top: 20px;
+	  		top: 50px !important;
 	      	width: 100%;
 	      	box-shadow: none;
 	  		line-height: 0px;
@@ -694,6 +697,10 @@ html {
   }
   @media screen and (min-width: 900px) and (max-width: 1260px)
   {
+
+  	.errorMessage {
+  		left: 50px;
+  	}
   	background-color:#ffffff;
 
 	section {

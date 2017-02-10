@@ -39,7 +39,6 @@
 
   fourImagesCopy.resultImage = fourImagesCopy.gameImageGridOne;
 
-  console.log(fourImagesCopy.gameImageGridOne);
   // Create global variables for answers to questions.
   var answer1, answer2, answer3, image1, image2, image3;
 
@@ -864,8 +863,13 @@
             console.log('email sent successfully!');
             presentFinalScreen();
           } else {
+
             console.log('error 400 or other');
-            console.log(resp);
+            
+            if ($('#errorMessage'))
+            {
+              $('#errorMessage').innerHTML = '';
+            }
             $.set($('#emailFormInput'), {
               className: 'emailFormInputBadInput'
             });
@@ -877,12 +881,12 @@
             });
             var errorMessage = $.create('span', {
               'className': 'errorMessage',
+              'id': 'errorMessage',
               contents: 'Please enter a valid email address'
             });
             $('#emailSubmitForm').appendChild(errorMessage);
 
 
-            console.log($('#resultMessageText'));
           }
 
         } else {
@@ -898,14 +902,12 @@
     });
     $('#resultMessageText', mainContainer).addEventListener('mouseover', function(e)
     {
-      console.log(e);
       $.set($("#resultMessageText", mainContainer), {
         className: 'mouseOver'
       });
     });
     $('#resultMessageText', mainContainer).addEventListener('mouseout', function(e)
     {
-      console.log(e);
       $.set($('#resultMessageText', mainContainer), {
         className: ''
       });
@@ -927,12 +929,10 @@
 
     var currentGameImageGridImages = currentGameImageGrid.children
 
-    console.log(currentGameImageGridImages);
     for (var i = 0; i < 4; i++)
     {
       if (currentGameImageGrid.children[i].id !== event.target.id)
       {
-        console.log(currentGameImageGrid.children);
         fadeOutImages = $.set(currentGameImageGrid.children[i], {
           className: "gameImageGridImage lowOpacity"
         }); 
@@ -961,7 +961,6 @@
 
       if (index === 3 )
       {
-        console.log(answerGroupOne, answerGroupTwo, answerGroupThree);
         presentEmailScreen();
       }
 
@@ -993,7 +992,6 @@
 
     // Select the gameMessage div.
 
-    console.log('next', index);
 
     if (index === 0 && answerGroupOne.length > 0) {
       animateExit(event);
@@ -1046,7 +1044,6 @@
     // Increment our global view index.
     // index++;
 
-    console.log(index);
 
     var gameContainer = $.create('div', {
       id: 'gameContainer'
@@ -1121,7 +1118,6 @@
       gameImageGridOne.appendChild(gameImageGridImageContainer);
       gameImageGridImageContainer.addEventListener('click', function(event)
       {
-        console.log(event.target.id.indexOf('gridOneOverlay'));
         // Have to get the ID from the element ID to make sure
         // we show the right selected icon.
 
@@ -1275,7 +1271,6 @@
 
               if( i !== Number(selectedImage) )
               {
-                console.log('Should dim all but ', selectedImage);
                 $.set($('#gridTwoOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay'
@@ -1283,7 +1278,6 @@
               }
               else
               {
-                console.log('should only show once');
                 $.set($('#gridTwoOverlay' + i),
                 {
                   className: 'gameImageGridImageOverlay hidden'
@@ -1305,7 +1299,6 @@
             className: 'nextButton'
           });
           answerGroupTwo.splice(0, 1);
-          console.log(answerGroupTwo);
           for (var i = 0; i < 4; i++)
           {
             // Remove any selected icons
@@ -1426,10 +1419,6 @@
                 className: 'gameImageGridImageSelectedIcon'
             });
             answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
-
-
-
-            console.log(answerGroupThree);
         }
       });
     }
