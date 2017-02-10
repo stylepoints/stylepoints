@@ -866,8 +866,23 @@
           } else {
             console.log('error 400 or other');
             console.log(resp);
-            // TODO handle this error. As a short term fix we are proceeding to the final screen anyway
-            presentFinalScreen();
+            $.set($('#emailFormInput'), {
+              className: 'emailFormInputBadInput'
+            });
+            $.set($('#resultMessageText'), {
+              className: 'resultMessageTextPushedUp'
+            });
+            $.set($('#emailFormButton'), {
+              className: 'emailFormButtonPushedDown'
+            });
+            var errorMessage = $.create('span', {
+              'className': 'errorMessage',
+              contents: 'Please enter a valid email address'
+            });
+            $('#emailSubmitForm').appendChild(errorMessage);
+
+
+            console.log($('#resultMessageText'));
           }
 
         } else {
