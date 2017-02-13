@@ -865,8 +865,7 @@
             presentFinalScreen();
           } else {
 
-            console.log('error 400 or other');
-            console.log($('#errorMessage'));
+            
 
             if (isError === true)
             {
