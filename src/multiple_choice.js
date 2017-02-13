@@ -836,7 +836,7 @@
         }
       ]
     });
-
+    var isError = false;
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
@@ -856,6 +856,7 @@
           status: 'subscribed'
         })
       }).then(function(response) {
+        
         if(response.status == 200) {
           var resp = JSON.parse(response.response)
           //mailchimp response
@@ -865,11 +866,13 @@
           } else {
 
             console.log('error 400 or other');
-            
-            if ($('#errorMessage'))
+            console.log($('#errorMessage'));
+
+            if (isError === true)
             {
-              $('#errorMessage').innerHTML = '';
+              $('#emailSubmitForm').removeChild($('#errorMessage'));
             }
+            
             $.set($('#emailFormInput'), {
               className: 'emailFormInputBadInput'
             });
@@ -884,6 +887,8 @@
               'id': 'errorMessage',
               contents: 'Please enter a valid email address'
             });
+            isError = true;
+
             $('#emailSubmitForm').appendChild(errorMessage);
 
 
