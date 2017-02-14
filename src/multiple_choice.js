@@ -884,7 +884,7 @@
             var errorMessage = $.create('span', {
               'className': 'errorMessage',
               'id': 'errorMessage',
-              contents: 'Please enter a valid email address'
+              contents: 'Please enter a valid/unique email address'
             });
             isError = true;
 
