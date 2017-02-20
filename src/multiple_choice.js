@@ -876,14 +876,15 @@ var stylepointsGame = function() {
     $('#interactionContainer', mainContainer).appendChild(emailSubmitForm);
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
+      var inputValue = $('#emailFormInput', mainContainer).value;
       ga('send', 'event', {
         eventCategory: 'Entry',
         eventLabel: 'Email Submitted',
         eventAction: 'email submitted'
       });
-      mixpanel.track("Email Submitted");
 
-      var inputValue = $('#emailFormInput', mainContainer).value;
+
+      mixpanel.track("Email Submitted", {email: inputValue});
       $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy',
       {
         method: "POST",
@@ -901,6 +902,7 @@ var stylepointsGame = function() {
           //mailchimp response
           if(resp.status == "subscribed") {
             console.log('email sent successfully!');
+            mixpanel.people.set({$email:inputValue});
             presentFinalScreen();
           } else {
 
@@ -1175,7 +1177,7 @@ var stylepointsGame = function() {
           eventValue: (1).toString() + (parseInt(selectedImage)+1)
         });
 
-        mixpanel.track("Question 1");
+        mixpanel.track("Question 1", { value: parseInt(selectedImage)+1 });
 
         // If there are no answers in array.
         if (answerGroupOne.length === 0)
@@ -1314,7 +1316,7 @@ var stylepointsGame = function() {
             eventValue: (2).toString() + (parseInt(selectedImage)+1)
           });
 
-          mixpanel.track("Question 2");
+          mixpanel.track("Question 2", { value: parseInt(selectedImage)+1 });
 
           for( var i = 0; i < 4; i++ )
           {
@@ -1449,7 +1451,7 @@ var stylepointsGame = function() {
           eventValue: (3).toString() + (parseInt(selectedImage)+1)
         });
 
-        mixpanel.track("Question 3");
+        mixpanel.track("Question 3", { value: parseInt(selectedImage)+1 });
 
         if (answerGroupThree.indexOf(event.target.id) === -1)
         {
