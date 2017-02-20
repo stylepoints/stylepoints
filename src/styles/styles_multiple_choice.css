@@ -703,24 +703,24 @@ html {
   	}
   	background-color:#ffffff;
 
-	section {
-	  font-family: sans-serif;
-	  width: 960px;
-	  margin: 0 auto;
-	}
+  	section {
+  	  font-family: sans-serif;
+  	  width: 960px;
+  	  margin: 0 auto;
+  	}
 
-	#gameContainer {
-		/*height: 460px;
-padding-top: 50px;
-	      width:500px;
-	      height:400px;
+  	#gameContainer {
+  		/*height: 460px;
+      padding-top: 50px;
+      width:500px;
+      height:400px;
 */		width: 350px;
 
-		height: 500px;
-		padding-top: 0px;
-		/*margin-top: 50px;*/
-    	
-	}
+  		height: 500px;
+  		padding-top: 0px;
+  		/*margin-top: 50px;*/
+
+	   }
 
 	.gameImage {
 		width: 350px;
@@ -1020,7 +1020,7 @@ padding-top: 50px;
     color: white;
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 30px;
 	}
 
 	.mouseOver {
@@ -1032,7 +1032,7 @@ padding-top: 50px;
     width: 335px;
     top: initial;
     left: 0px;
-    bottom: -327px;
+    bottom: -377px;
 
 	}
 	#emailFormInput {
