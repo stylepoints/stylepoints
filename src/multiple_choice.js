@@ -6,7 +6,7 @@ var stylepointsGame = function() {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
 
   ga('create', 'UA-88292469-1', 'auto');
   ga('send', 'pageview');
@@ -22,8 +22,6 @@ var stylepointsGame = function() {
         mixpanel.track("Widget loaded");
     }
   });
-
-
 
 
   var css = require("./styles/styles_multiple_choice.css");
@@ -149,17 +147,35 @@ var stylepointsGame = function() {
 
     $('#facebookShareButton').addEventListener('click', function()
     {
+      mixpanel.track("Share Facebook");
+      ga('send', 'event', {
+        eventCategory: 'Share',
+        eventLabel: 'Facebook',
+        eventAction: 'facebook share clicked'
+      });
       window.open('https://www.facebook.com/sharer.php?u=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/');
     });
 
     $('#twitterShareButton').addEventListener('click', function()
     {
+      mixpanel.track("Share Twitter");
+      ga('send', 'event', {
+        eventCategory: 'Share',
+        eventLabel: 'Twitter',
+        eventAction: 'twitter share clicked'
+      });
       window.open('https://twitter.com/intent/tweet?url=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/&text=Driving%20Accessories%20Buying%20Guide');
 
     });
 
     $('#gPlusShareButton').addEventListener('click', function()
     {
+      mixpanel.track("Share Google Plus");
+      ga('send', 'event', {
+        eventCategory: 'Share',
+        eventLabel: 'Google Plus',
+        eventAction: 'google plus share clicked'
+      });
       window.open('https://plus.google.com/share?url=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/');
     });
   }
@@ -869,11 +885,6 @@ var stylepointsGame = function() {
     $('#emailFormButton', mainContainer).addEventListener('click', function(e) {
       e.preventDefault();
       var inputValue = $('#emailFormInput', mainContainer).value;
-      ga('send', 'event', {
-        eventCategory: 'Entry',
-        eventLabel: 'Email Submitted',
-        eventAction: 'email submitted'
-      });
 
 
       mixpanel.track("Email Submission attempt", {email: inputValue});
