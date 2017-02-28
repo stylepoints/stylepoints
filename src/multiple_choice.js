@@ -950,7 +950,7 @@ var stylepointsGame = function() {
     });
     $('#resultMessageText', mainContainer).addEventListener('click', function(e)
     {
-      window.open('https://www.driving.co.uk/terms-conditions/');
+      window.open('http://www.stylepoints.com/terms-conditions');
     });
     $('#resultMessageText', mainContainer).addEventListener('mouseover', function(e)
     {
