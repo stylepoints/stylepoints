@@ -19,10 +19,12 @@ export default {
     // binary: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice.js'  ],
+    multiple_choice_sun: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice_sun.js'  ],
   } : {
     // binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
+    multiple_choice_sun: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice_sun.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -76,42 +78,29 @@ export default {
     configFile: './.eslintrc'
   },
   plugins: [
-	  // new HtmlWebpackPlugin({
-   //    template: './html_templates/index-type.tpl.ejs',
-   //    filename: 'index-multiple_choice.html',
-   //    name: 'multiple_choice',
-   //    script: 'multiple_choice.js',
-   //    inject: false
-   //  }),
-    // new HtmlWebpackPlugin({
-    //   template: './html_templates/index-type.tpl.ejs',
-    //   filename: 'index-binary.html',
-    //   name: 'binary',
-    //   script: 'binary.js',
-    //   inject: false
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './html_templates/index-type.tpl.ejs',
-    //   filename: 'index-rating.html',
-    //   name: 'rating',
-    //   script: 'rating.js',
-    //   inject: false
-    // }),
     new HtmlWebpackPlugin({
       template: './html_templates/index.tpl.ejs',
       filename: 'index.html',
-      inject: 'body'
+      inject: 'body',
+      chunks: ['multiple_choice']
     }),
 		new HtmlWebpackPlugin({
       template: './html_templates/iframe.tpl.ejs',
       filename: 'iframe.html',
 			src: isProduction ? 'http://app.stylepoints.com' : (isStaging ? 'http://app.staging.stylepoints' : 'http://localhost:8080'),
-      inject: false
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: './html_templates/article.tpl.ejs',
       filename: 'article.html',
-      inject: 'body'
+      inject: 'body',
+      chunks: ['multiple_choice']
+    }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/article.tpl.ejs',
+      filename: 'article_sun.html',
+      inject: 'body',
+      chunks: ['multiple_choice_sun']
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
