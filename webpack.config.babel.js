@@ -84,6 +84,12 @@ export default {
       inject: 'body',
       chunks: ['multiple_choice']
     }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/index.tpl.ejs',
+      filename: 'sun.html',
+      inject: 'body',
+      chunks: ['multiple_choice_sun']
+    }),
 		new HtmlWebpackPlugin({
       template: './html_templates/iframe.tpl.ejs',
       filename: 'iframe.html',
