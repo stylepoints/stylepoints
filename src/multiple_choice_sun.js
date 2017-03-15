@@ -26,7 +26,7 @@ var stylepointsGame = function() {
 
 
 
-  var css = require("./styles/styles_multiple_choice.css");
+  var css = require("./styles/styles_multiple_choice_sun.css");
   var fourImagesCopy = {
     "callToActionMessage": "FIND THE PERFECT DRIVING ACCESSORY FOR YOU",
     "callToActionButtonText": "LET'S GO!",
