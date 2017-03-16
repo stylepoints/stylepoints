@@ -981,21 +981,11 @@ var stylepointsGame = function() {
 
     var currentGameImageGrid = gameImageGrids[index];
 
-    var currentGameImageGridImages = currentGameImageGrid.children
+    var currentGameImageGridImages = currentGameImageGrid.children;
 
-    for (var i = 0; i < 4; i++)
-    {
-      if (currentGameImageGrid.children[i].id !== event.target.id)
-      {
-        fadeOutImages = $.set(currentGameImageGrid.children[i], {
-          className: "gameImageGridImage lowOpacity"
-        });
-      }
-
-      $.set(currentGameImageGrid.children[i].children[1], {
-        className: "gameImageGridImageSelectedIcon"
-      });
-    }
+    $.set(currentGameImageGrid, {
+      className: "gameImageGrid lowOpacity"
+    })
 
     setTimeout(function()
     {
