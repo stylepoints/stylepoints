@@ -187,19 +187,19 @@ var stylepointsGame = function() {
     var screenThreeValue;
     for (var i = 0; i < 4; i++)
     {
-      if( answerGroupThree[i] === "gridThreeSelected0" )
+      if( answerGroupThree[i] === "0" )
       {
         boolList[0] = true;
       }
-      else if (answerGroupThree[i] === "gridThreeSelected1")
+      else if (answerGroupThree[i] === "1")
       {
         boolList[1] = true;
       }
-      else if (answerGroupThree[i] === "gridThreeSelected2")
+      else if (answerGroupThree[i] === "2")
       {
         boolList[2] = true;
       }
-      else if (answerGroupThree[i] === "gridThreeSelected3")
+      else if (answerGroupThree[i] === "3")
       {
         boolList[3] = true;
       }
@@ -1432,7 +1432,7 @@ var stylepointsGame = function() {
         }, {
             tag: 'div',
             className: 'gameImageGridImageOverlay',
-            id: 'gridThreeSelected' + k
+            id: 'gridThreeSelectedOverlay' + k
         }, {
             tag: 'span',
             className: 'gameImageGridImageLabel',
@@ -1459,29 +1459,39 @@ var stylepointsGame = function() {
         });
 
         mixpanel.track("Question 3", { value: parseInt(selectedImage)+1 });
-
-        if (answerGroupThree.indexOf(event.target.id) === -1)
+        if (answerGroupThree.indexOf(selectedImage) === -1)
         {
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
+
             $.set($('#gridThreeSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon show'
             });
-            answerGroupThree.push(event.target.id);
+            $.set($('#gridThreeSelectedOverlay' + selectedImage), 
+            {
+              className: 'gameImageGridImageOverlay hidden'
+            });
+            answerGroupThree.push(selectedImage);
             if (answerGroupThree.length > 0){
                 $.set(nextButton, {
                         className: 'nextButtonActive'
                 });
             }
+            
         } else {
             $.set($('#gridThreeSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
-            answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
+            $.set($('#gridThreeSelectedOverlay' + selectedImage), 
+            {
+              className: 'gameImageGridImageOverlay'
+            });
+            answerGroupThree.splice(answerGroupThree.indexOf(selectedImage), 1);
         }
+        console.log(answerGroupThree, event.target.id);
       });
     }
 
