@@ -20,11 +20,13 @@ export default {
     // rating: [ './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice.js'  ],
     multiple_choice_sun: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice_sun.js'  ],
+    multiple_choice_look: [ 'babel-polyfill', './vendor_scripts/bliss.js', './multiple_choice_look.js'  ],
   } : {
     // binary: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './binary.js' ],
     // rating: [ 'webpack-hot-middleware/client', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './rating.js' ],
     multiple_choice: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice.js', ],
     multiple_choice_sun: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice_sun.js', ],
+    multiple_choice_look: [ 'webpack-hot-middleware/client', 'babel-polyfill', './vendor_scripts/bliss.js', './vendor_scripts/hammer.min.js', './multiple_choice_look.js', ],
   },
   context: path.resolve(__dirname, 'src'),
   output: {
@@ -89,6 +91,12 @@ export default {
       filename: 'sun.html',
       inject: 'body',
       chunks: ['multiple_choice_sun']
+    }),
+    new HtmlWebpackPlugin({
+      template: './html_templates/index.tpl.ejs',
+      filename: 'look.html',
+      inject: 'body',
+      chunks: ['multiple_choice_look', 'multiple_choice_sun']
     }),
 		new HtmlWebpackPlugin({
       template: './html_templates/iframe.tpl.ejs',

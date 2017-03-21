@@ -2,29 +2,31 @@ var stylepointsGame = function() {
 
 
 
-  //GA
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  // //GA
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-88292469-1', 'auto');
-  ga('send', 'pageview');
-
-  (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-  mixpanel.init("90895c3c0406e9b601e260840ff6d0bb",{
-    loaded: function(mixpanel) {
-        distinct_id = mixpanel.get_distinct_id();
-        mixpanel.identify(distinct_id);
-        mixpanel.people.set({$name:distinct_id});
-        mixpanel.track("Widget loaded");
-    }
-  });
+  // ga('create', 'UA-88292469-2', 'auto');
+  // ga('send', 'pageview');
 
 
-  var css = require("./styles/styles_multiple_choice.css");
+  // (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  // 0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  // for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  // mixpanel.init("401843f4e3365b06db1703eb00220f3f",{
+  //   loaded: function(mixpanel) {
+  //       distinct_id = mixpanel.get_distinct_id();
+  //       mixpanel.identify(distinct_id);
+  //       mixpanel.people.set({$name:distinct_id});
+  //       mixpanel.track("Widget loaded");
+  //   }
+  // });
+
+
+
+  var css = require("./styles/styles_multiple_choice_sun.css");
   var fourImagesCopy = {
     "callToActionMessage": "FIND THE PERFECT DRIVING ACCESSORY FOR YOU",
     "callToActionButtonText": "LET'S GO!",
@@ -147,35 +149,20 @@ var stylepointsGame = function() {
 
     $('#facebookShareButton').addEventListener('click', function()
     {
-      mixpanel.track("Share Facebook");
-      ga('send', 'event', {
-        eventCategory: 'Share',
-        eventLabel: 'Facebook',
-        eventAction: 'facebook share clicked'
-      });
+      
       window.open('https://www.facebook.com/sharer.php?u=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/');
     });
 
     $('#twitterShareButton').addEventListener('click', function()
     {
-      mixpanel.track("Share Twitter");
-      ga('send', 'event', {
-        eventCategory: 'Share',
-        eventLabel: 'Twitter',
-        eventAction: 'twitter share clicked'
-      });
+
       window.open('https://twitter.com/intent/tweet?url=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/&text=Driving%20Accessories%20Buying%20Guide');
 
     });
 
     $('#gPlusShareButton').addEventListener('click', function()
     {
-      mixpanel.track("Share Google Plus");
-      ga('send', 'event', {
-        eventCategory: 'Share',
-        eventLabel: 'Google Plus',
-        eventAction: 'google plus share clicked'
-      });
+
       window.open('https://plus.google.com/share?url=http://www.driving.co.uk/news/products/buying-guide-leading-dashboard-cameras-dash-cams-reviewed/');
     });
   }
@@ -187,19 +174,19 @@ var stylepointsGame = function() {
     var screenThreeValue;
     for (var i = 0; i < 4; i++)
     {
-      if( answerGroupThree[i] === "0" )
+      if( answerGroupThree[i] === "gridThreeSelected0" )
       {
         boolList[0] = true;
       }
-      else if (answerGroupThree[i] === "1")
+      else if (answerGroupThree[i] === "gridThreeSelected1")
       {
         boolList[1] = true;
       }
-      else if (answerGroupThree[i] === "2")
+      else if (answerGroupThree[i] === "gridThreeSelected2")
       {
         boolList[2] = true;
       }
-      else if (answerGroupThree[i] === "3")
+      else if (answerGroupThree[i] === "gridThreeSelected3")
       {
         boolList[3] = true;
       }
@@ -1080,14 +1067,7 @@ var stylepointsGame = function() {
       //   contents: fourImagesCopy.gameMessageTextThree
       // });
     }
-    // Increment the index and log each answer.
-    ga('send', 'event', {
-      eventCategory: 'NextButton',
-      eventAction: 'clicked',
-      eventLabel: 'Next Button ' + (index),
-      eventValue: (index)
-    });
-    mixpanel.track("Next Button " + (index) );
+    
   }
 
 
@@ -1177,14 +1157,6 @@ var stylepointsGame = function() {
 
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
-        ga('send', 'event', {
-          eventCategory: 'Question 1',
-          eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
-          eventLabel: 'Question 1',
-          eventValue: (1).toString() + (parseInt(selectedImage)+1)
-        });
-
-        mixpanel.track("Question 1", { value: parseInt(selectedImage)+1 });
 
         // If there are no answers in array.
         if (answerGroupOne.length === 0)
@@ -1270,7 +1242,7 @@ var stylepointsGame = function() {
               className: 'nextButton nextButtonActive'
             });
             answerGroupOne.push(event.target.id);
-            // ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
+            
           }
 
         }
@@ -1315,15 +1287,6 @@ var stylepointsGame = function() {
         {
           // Push id
           answerGroupTwo.push(event.target.id);
-
-          ga('send', 'event', {
-            eventCategory: 'Question 2',
-            eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
-            eventLabel: 'Question 2',
-            eventValue: (2).toString() + (parseInt(selectedImage)+1)
-          });
-
-          mixpanel.track("Question 2", { value: parseInt(selectedImage)+1 });
 
           for( var i = 0; i < 4; i++ )
           {
@@ -1432,7 +1395,7 @@ var stylepointsGame = function() {
         }, {
             tag: 'div',
             className: 'gameImageGridImageOverlay',
-            id: 'gridThreeSelectedOverlay' + k
+            id: 'gridThreeSelected' + k
         }, {
             tag: 'span',
             className: 'gameImageGridImageLabel',
@@ -1451,47 +1414,30 @@ var stylepointsGame = function() {
 
         var selectedImage = event.target.id.substring(event.target.id.length - 1, event.target.id.length);
 
-        ga('send', 'event', {
-          eventCategory: 'Question 3',
-          eventAction: 'selected '+ (parseInt(selectedImage,10) + 1).toString(),
-          eventLabel: 'Question 3',
-          eventValue: (3).toString() + (parseInt(selectedImage)+1)
-        });
 
-        mixpanel.track("Question 3", { value: parseInt(selectedImage)+1 });
-        if (answerGroupThree.indexOf(selectedImage) === -1)
+
+        if (answerGroupThree.indexOf(event.target.id) === -1)
         {
             // If the id doesn't exist in the array, add it and
             // show the selected icon.
             // Set the correct selection indicator to be visible
-
             $.set($('#gridThreeSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon show'
             });
-            $.set($('#gridThreeSelectedOverlay' + selectedImage), 
-            {
-              className: 'gameImageGridImageOverlay hidden'
-            });
-            answerGroupThree.push(selectedImage);
+            answerGroupThree.push(event.target.id);
             if (answerGroupThree.length > 0){
                 $.set(nextButton, {
                         className: 'nextButtonActive'
                 });
             }
-            
         } else {
             $.set($('#gridThreeSelected' + selectedImage),
             {
                 className: 'gameImageGridImageSelectedIcon'
             });
-            $.set($('#gridThreeSelectedOverlay' + selectedImage), 
-            {
-              className: 'gameImageGridImageOverlay'
-            });
-            answerGroupThree.splice(answerGroupThree.indexOf(selectedImage), 1);
+            answerGroupThree.splice(answerGroupThree.indexOf(event.target.id), 1);
         }
-        console.log(answerGroupThree, event.target.id);
       });
     }
 
