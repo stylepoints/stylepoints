@@ -1,4 +1,4 @@
-@font-face {
+12@font-face {
   font-family: 'DIN Condensed';
   src: url('./DINCond-Bold.eot'),
   	url('./DINCond-Bold.woff2') format('woff2'),
@@ -185,8 +185,8 @@
 	    text-align: center;
 	    left: 0px;
 	    z-index: 7;
-	    font-family: 'DIN Condensed';
-	    font-size: 1.25em;
+	    font-family: "DIN Condensed";
+	    font-size: 1em;
 	    margin: 0 auto;
 	    width: 175px;
 	    bottom: 15px;
@@ -227,7 +227,7 @@
 		align-self: center;
 		justify-content: center;
 		position: relative;
-		font-family: 'DIN Condensed';
+		font-family: 'OpenSans-Bold';
 		top: 10px;
 	}
 
@@ -267,7 +267,7 @@
 	    text-align:center;
 
 
-	    font-family: 'DIN Condensed';
+	    font-family: 'OpenSans-Bold';
 	    position: relative;
 	    top: 320px;
 
@@ -283,10 +283,10 @@
 
 	}
 	.gameMessage {
-      font-size: 1.25em;
+      	font-size: 1em;
 	    color: black;
 	    position: absolute;
-	    font-family: 'DIN Condensed';
+	    font-family: 'OpenSans-Bold';
 	    top: 60px;
 
 	    left: 6px;
@@ -308,7 +308,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'DIN Condensed';
+		font-family: 'OpenSans-Bold';
 
 		position: relative;
 		top: 300px;
@@ -335,16 +335,18 @@
 	}
 
 	.gadgetRecommendation {
-		font-family: "DIN Condensed";
+		/*font-family: "DIN Condensed";*/
+		font-family: "OpenSans-Bold";
 		box-sizing: border-box;
 		position: absolute;
-		font-size: 1em;
+		font-size: 1.1em;
 		color: white;
 		text-align: center;
-		top: 180px;
+		top: 290px;
 		padding: 0 20px;
 		width: 100%;
 	}
+
 
 	#resultMessageText {
 		font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -403,15 +405,15 @@
 		display: block;
 		margin: 0 auto;
 		height: 50px;
-		width:100%;
-		left: 7.5px;
+		width:335px;
+		left: 0px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
-		font-family: 'DIN Condensed';
+		font-family: 'OpenSans-Bold';
 		font-size: 1.25em;
 		position: relative;
-		top: 110px;
-		line-height: 0px;
+		top: 386px;
+		line-height:45px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -419,6 +421,8 @@
 		box-shadow: none;
 		-webkit-appearance: none;
 		-webkit-border-radius: 0px;
+		text-decoration: none;
+		color:black;
 	}
 
 	.gameMessageSmallText {
@@ -499,9 +503,9 @@
 	      padding-left:30px;
 		  width:50%;
 	      top: inherit;
-	      font-size: 1.35em;
+	      font-size: 1em;
 	      color: #000;
-	      font-family: DIN Condensed;
+	      font-family: 'OpenSans-Bold';
 	      top:0px;
 	    }
 
@@ -556,20 +560,25 @@
 
 	  	#emailFormInput {
 	  		/*left: 355px;*/
-	      margin-left: 0px;
+	        margin-left: 0px;
 	  		background: none;
-	  		color: black;
-	      width: 100%;
-	      top: 40px !important;
-	  	  border-bottom: 1px solid #F0F0F0;
+			color: black;
+	        width: 100%;
+	        top: 40px !important;
+	  	    border-bottom: 1px solid #F0F0F0;
 	  	}
 
 	  	#emailFormButton {
 	  		height: 30px;
-	  		top: 50px !important;
-	      	width: 100%;
+	      	width: 50%;
 	      	box-shadow: none;
-	  		line-height: 0px;
+	  		line-height: 30px;
+			  left:0px;
+			  align-self: initial;
+			  margin-left:30px;
+			  top:286px;
+			  text-decoration: none;
+			  
 
 	  	}
 
@@ -623,7 +632,7 @@
 
   	.gameTitle { font-size: 1.4em; width: 100%;}
 
-  	.gameMessageEmailScreen { font-size: 1.2em; width: 80%; }
+  	.gameMessageEmailScreen { font-size: 0.9em; width: 100%; }
 
   	.resultImage { width: 320px; }
 
@@ -645,8 +654,6 @@
   	#resultMessageText { width: 100%; left: 5px; font-size: 1em; top: 90px;}
 
   	#emailFormInput {  left: -7.5px !important; top: 90px !important;}
-
-  	#emailFormButton {  top: 100px !important; left: -7.5px; width: 100%; }
 
 	.gameTitleFinalScreen { width: 80%; left: 20px; }
 
@@ -670,7 +677,7 @@
   	}
 
   	#gameContainer {
-		width: 345px;
+		width: 350px;
   		height: 500px;
   		padding-top: 0px;
 	}
@@ -796,7 +803,7 @@
 	    left: 0px;
 	    z-index: 7;
 	    font-family: 'DIN Condensed';
-	    font-size: 1.25em;
+	    font-size: 1em;
 	    margin: 0 auto;
 	    width: 175px;
 	    bottom: 15px;
@@ -859,7 +866,7 @@
 		position: absolute;
 		top: 475px;
 		left: 2px;
-		line-height: 0px;
+		line-height: 50px;
 		-webkit-box-flex: 0;
 		-ms-flex: none;
 		flex: none;
@@ -896,20 +903,15 @@
 	.gameMessage {
 		
 
-      font-size: 1.25em;
+      font-size: 1em;
 	    color: black;
 	    position: absolute;
-	    font-family: 'DIN Condensed';
-	    top: 60px;
+	    font-family: 'OpenSans-Bold';
+	    top: 80px;
 	    left: -25px;
 	    width: 100%;
 	}
 	
-
-	.gameMessageFinalQuestion {
-		width: 100%;
-		top: 60px;
-	}
 
 	#ctaButton {
 		border: 1px solid #F0F0F0;
@@ -946,12 +948,12 @@
 	}
 
 	.gadgetRecommendation {
-		font-family: "DIN Condensed";
+		font-family: "OpenSans-Bold";
 		position: absolute;
-		font-size: 1em;
+		font-size: 1.1em;
 		color: white;
 		text-align: center;
-		top: 180px;
+		top: 250px;
 		width: 100%;
 		left: 0px;
 
@@ -992,9 +994,9 @@
 		margin: 0 auto;
 		border: none;
 		height: 50px;
-		width:100%;
+		width: 325px;
 		margin-top: 10px;
-		font-family: 'DIN Condensed';
+		font-family: 'OpenSans-Bold';
 		position: relative;
 		text-align: center;
 		top: 100px;
@@ -1002,6 +1004,7 @@
 		border-bottom: 1px solid white;
 		color: #ffffff;
 		font-size: 1.25em;
+		box-sizing: border-box;
 		flex: none;
 		background: rgba(0,0,0,0);
 		-webkit-appearance: none;
@@ -1019,15 +1022,15 @@
   		display: block;
 		margin: 0 auto;
 		height: 50px;
-    	width:100%;
-    	left: -7.5px;
+    	width:325px;
+    	left:0px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
-		font-family: 'DIN Condensed';
+		font-family: 'OpenSans-Bold';
 		font-size: 1.25em;
 		position: relative;
-		top: 110px;
-		line-height: 0px;
+		top: 380px;
+		line-height: 50px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -1035,6 +1038,7 @@
 		box-shadow: none;
 		-webkit-appearance: none;
 		-webkit-border-radius: 0px;
+		text-decoration: none;
 	}
 
 	.gameMessageSmallText {
@@ -1051,7 +1055,7 @@
     font-size: 1.5em;
     color: black;
     position: absolute;
-    font-family: 'DIN Condensed';
+    font-family: 'OpenSans-Bold';
     line-height: 25px;
     padding-bottom: 10px;
     width: 95%;
