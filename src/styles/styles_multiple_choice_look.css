@@ -148,12 +148,13 @@
       justify-content: center;
 	}
 	.gameImageGridImageContainer {
-		    width: 170px;
-    height: 170px;
-    position: relative;
-    padding: 1px 1px 1px 1px !important;
-    z-index: 1;
-    overflow: hidden;
+		width: 170px;
+		height: 170px;
+		position: relative;
+		padding: 1px 1px 1px 1px !important;
+		z-index: 1;
+		overflow: hidden;
+		cursor: pointer;
 
 	}
 	.gameImageGridImage {
@@ -267,7 +268,9 @@
 		flex: none;
 		z-index: 10000;
 		box-shadow: none;
+		
 	}
+
 
 	.shareButtonsContainer {
 		  border: none;
@@ -341,6 +344,7 @@
 	.nextButtonActive {
 		background: #68B45E !important;
 		color: white !important;
+		cursor: pointer;
 	}
 
 	.lowZIndex {
@@ -436,6 +440,12 @@
 		-webkit-border-radius: 0px;
 		text-decoration: none;
 		color:black;
+		cursor: pointer;
+	}
+
+	#emailFormButton:hover{
+		background-color: #68B45E !important;
+		color: white !important;
 	}
 
 	.gameMessageSmallText {
@@ -449,10 +459,10 @@
 
   .gameTitle {
         top: 0;
-		font-size: 1.6em;
+		font-size: 1.3em;
 		color: black;
 		position: absolute;
-		font-family: 'DIN Condensed';
+		font-family: 'open_sansbold';
 		line-height: 25px;
 		padding-bottom: 10px;
 		width: 95%;
@@ -879,7 +889,7 @@
 		position: absolute;
 		top: 475px;
 		left: 2px;
-		line-height: 50px;
+		line-height: 39px;
 		-webkit-box-flex: 0;
 		-ms-flex: none;
 		flex: none;
