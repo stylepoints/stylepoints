@@ -296,12 +296,12 @@
 
 	}
 	.gameMessage {
-      	font-size: 1em;
+      	font-size: 1.1em;
+		line-height:20px;
 	    color: black;
 	    position: absolute;
-	    top: 60px;
-
 	    font-family: 'open_sansbold';
+	    top: 80px;
 	    left: 6px;
 	    width: 100%;
 	}
