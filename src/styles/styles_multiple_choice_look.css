@@ -1,4 +1,4 @@
-12@font-face {
+@font-face {
   font-family: 'DIN Condensed';
   src: url('./DINCond-Bold.eot'),
   	url('./DINCond-Bold.woff2') format('woff2'),
@@ -7,6 +7,19 @@
   	url('./DINCond-Bold.svg#DINCond-Bold') format('svg'),
   	url('./DINCond-Bold.otf') format('opentype'),
   	url('./DINCond-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('opensans-bold-webfont.eot');
+    src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-bold-webfont.woff2') format('woff2'),
+         url('opensans-bold-webfont.woff') format('woff'),
+         url('opensans-bold-webfont.ttf') format('truetype'),
+         url('opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /*html {
@@ -227,7 +240,7 @@
 		align-self: center;
 		justify-content: center;
 		position: relative;
-		font-family: 'OpenSans-Bold';
+		font-family: 'open_sansbold';
 		top: 10px;
 	}
 
@@ -267,7 +280,7 @@
 	    text-align:center;
 
 
-	    font-family: 'OpenSans-Bold';
+	    font-family: 'open_sansbold';
 	    position: relative;
 	    top: 320px;
 
@@ -286,9 +299,9 @@
       	font-size: 1em;
 	    color: black;
 	    position: absolute;
-	    font-family: 'OpenSans-Bold';
 	    top: 60px;
 
+	    font-family: 'open_sansbold';
 	    left: 6px;
 	    width: 100%;
 	}
@@ -308,7 +321,7 @@
 		font-size: 1em;
 		justify-content: center;
 		align-self: center;
-		font-family: 'OpenSans-Bold';
+		font-family: 'open_sansbold';
 
 		position: relative;
 		top: 300px;
@@ -336,13 +349,13 @@
 
 	.gadgetRecommendation {
 		/*font-family: "DIN Condensed";*/
-		font-family: "OpenSans-Bold";
+		font-family: "open_sansbold";
 		box-sizing: border-box;
 		position: absolute;
 		font-size: 1.1em;
 		color: white;
 		text-align: center;
-		top: 290px;
+		top: 250px;
 		padding: 0 20px;
 		width: 100%;
 	}
@@ -409,7 +422,7 @@
 		left: 0px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
-		font-family: 'OpenSans-Bold';
+		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
 		top: 386px;
@@ -436,7 +449,7 @@
 
   .gameTitle {
         top: 0;
-		font-size: 1.5em;
+		font-size: 1.6em;
 		color: black;
 		position: absolute;
 		font-family: 'DIN Condensed';
@@ -505,7 +518,7 @@
 	      top: inherit;
 	      font-size: 1em;
 	      color: #000;
-	      font-family: 'OpenSans-Bold';
+	      font-family: 'open_sansbold';
 	      top:0px;
 	    }
 
@@ -906,7 +919,7 @@
       font-size: 1em;
 	    color: black;
 	    position: absolute;
-	    font-family: 'OpenSans-Bold';
+	    font-family: 'open_sansbold';
 	    top: 80px;
 	    left: -25px;
 	    width: 100%;
@@ -948,7 +961,7 @@
 	}
 
 	.gadgetRecommendation {
-		font-family: "OpenSans-Bold";
+		font-family: "open_sansbold";
 		position: absolute;
 		font-size: 1.1em;
 		color: white;
@@ -996,7 +1009,7 @@
 		height: 50px;
 		width: 325px;
 		margin-top: 10px;
-		font-family: 'OpenSans-Bold';
+		font-family: 'open_sansbold';
 		position: relative;
 		text-align: center;
 		top: 100px;
@@ -1026,7 +1039,7 @@
     	left:0px;
 		border: 1px solid #F6F6F6;
 		background-color: white;
-		font-family: 'OpenSans-Bold';
+		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
 		top: 380px;
@@ -1055,7 +1068,7 @@
     font-size: 1.5em;
     color: black;
     position: absolute;
-    font-family: 'OpenSans-Bold';
+    font-family: 'open_sansbold';
     line-height: 25px;
     padding-bottom: 10px;
     width: 95%;
