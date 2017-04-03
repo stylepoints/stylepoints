@@ -375,7 +375,7 @@ var stylepointsGame = function() {
             animateExit(event);
             $('#gameTitle').innerHTML = '';
             $.set($('#gameTitle'), {
-                contents: fourImagesCopy.gameTitleTruncated.toUpperCase()
+                contents: fourImagesCopy.gameTitleTruncated
             });
             gameMessage.innerHTML = '';
             var setText = $.set(gameMessage, {

@@ -258,7 +258,7 @@
 		-ms-flex-item-align: center;
 		-ms-grid-row-align: center;
 		align-self: center;
-		font-family: 'DIN Condensed';
+		font-family: 'open_sansbold';
 		position: absolute;
 		top: 475px;
 		left: 2px;
@@ -300,7 +300,7 @@
 	}
 	.gameMessage {
       	font-size: 1.1em;
-		line-height:20px;
+		line-height:18px;
 	    color: black;
 	    position: absolute;
 	    font-family: 'open_sansbold';
@@ -424,13 +424,13 @@
 		height: 50px;
 		width:335px;
 		left: 0px;
-		border: 1px solid #F6F6F6;
+		border: none;
 		background-color: white;
 		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
 		top: 386px;
-		line-height:45px;
+		line-height:50px;
 		text-align: center;
 		align-self: center;
 		flex: none;
@@ -459,11 +459,11 @@
 
   .gameTitle {
         top: 0;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		color: black;
 		position: absolute;
 		font-family: 'open_sansbold';
-		line-height: 25px;
+		line-height: 24px;
 		padding-bottom: 10px;
 		width: 95%;
 		left: 5px;
@@ -495,11 +495,11 @@
 			top: -80px;
 		}
 	    #imageContainer {
-	      margin-top: 0px;
+	      margin-top: 10px;
 	    }
 
 	    #interactionContainer {
-	      margin-top: 0px;
+	      margin-top: 10px;
 		  margin-left: 350px;
 	      width: 100%;
 		  
@@ -516,7 +516,7 @@
 	      height: 70px;
 	      top: 270px;
 		  margin-left:30px;
-	      font-size: 1.5em;
+	      font-size: 18px;
 	      line-height: 70px;
 	      box-shadow: none;
 	      padding: 0px;
@@ -524,17 +524,18 @@
 
 	    .gameMessage {
 	      padding-left:30px;
-		  width:50%;
+		  width:40%;
 	      top: inherit;
-	      font-size: 1em;
+	      font-size: 21px;
 	      color: #000;
+		  line-height: 24px;
 	      font-family: 'open_sansbold';
 	      top:0px;
 	    }
 
 	    .gameTitle {
 	      left: -345px;
-	      top: -50px;
+	      top: -60px;
 	      width: 80%;
 	    }
 
@@ -596,11 +597,12 @@
 	      	width: 50%;
 	      	box-shadow: none;
 	  		line-height: 30px;
-			  left:0px;
-			  align-self: initial;
-			  margin-left:30px;
-			  top:286px;
-			  text-decoration: none;
+			border: 1px solid #F6F6F6;
+			left:0px;
+			align-self: initial;
+			margin-left:30px;
+			top:286px;
+			text-decoration: none;
 			  
 
 	  	}
@@ -655,7 +657,7 @@
 
   	.gameTitle { font-size: 1.4em; width: 100%;}
 
-  	.gameMessageEmailScreen { font-size: 0.9em; width: 100%; }
+  	.gameMessageEmailScreen { width: 100%; }
 
   	.resultImage { width: 320px; }
 
@@ -878,14 +880,13 @@
 		margin: 0px;
 		color: #000000;
 		background: transparent;
-		font-size: 1em;
+		font-size: 16px;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
 		-ms-flex-item-align: center;
 		-ms-grid-row-align: center;
 		align-self: center;
-		font-family: 'DIN Condensed';
 		position: absolute;
 		top: 475px;
 		left: 2px;
@@ -929,8 +930,9 @@
       font-size: 1em;
 	    color: black;
 	    position: absolute;
+		line-height: 18px;
 	    font-family: 'open_sansbold';
-	    top: 80px;
+	    top: 70px;
 	    left: -25px;
 	    width: 100%;
 	}
@@ -1047,12 +1049,12 @@
 		height: 50px;
     	width:325px;
     	left:0px;
-		border: 1px solid #F6F6F6;
+		border: none;
 		background-color: white;
 		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
-		top: 380px;
+		top: 370px;
 		line-height: 50px;
 		text-align: center;
 		align-self: center;
@@ -1074,7 +1076,7 @@
 	}
 
   .gameTitle {
-        top: 0;
+        top: -10px;
     font-size: 1.5em;
     color: black;
     position: absolute;
