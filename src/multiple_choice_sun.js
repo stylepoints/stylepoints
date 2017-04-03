@@ -888,7 +888,7 @@ var stylepointsGame = function() {
 
       mixpanel.track("Email Submission attempt", {email: inputValue});
 
-      $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy',
+      $.fetch('https://7p5e0wkd41.execute-api.us-east-1.amazonaws.com/prod/proxy-sun',
       {
         method: "POST",
         headers: {

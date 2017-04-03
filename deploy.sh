@@ -31,12 +31,10 @@ then
 	aws configure --profile 'stylepoints' set preview.cloudfront true
 	aws cloudfront --profile 'stylepoints' create-invalidation --distribution-id ESLF5DK9C4OE9 \
 	  --paths /multiple_choice.js \
+			/multiple_choice_sun.js \
+			/multiple_choice_look.js \
 			/index.html \
 			/article.html \
-			/DINCond-Bold.eot \
-			/DINCond-Bold.otf \
-			/DINCond-Bold.svg \
-			/DINCond-Bold.ttf \
-			/DINCond-Bold.woff \
-			/DINCond-Bold.woff2
+			/look.html \
+			/sun.html
 fi
