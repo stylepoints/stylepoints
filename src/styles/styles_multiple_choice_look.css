@@ -100,10 +100,10 @@
 	}
 
 	#imageContainer {
-	  position: absolute;
-    margin-top: 125px;
-    width: 350px;
-    height: 320px;
+	  	position: absolute;
+		margin-top: 135px;
+		width: 350px;
+		height: 320px;
 	}
 
 	#publisherLogo {
@@ -260,7 +260,7 @@
 		align-self: center;
 		font-family: 'open_sansbold';
 		position: absolute;
-		top: 475px;
+		top: 485px;
 		left: 2px;
 		line-height: 0px;
 		-webkit-box-flex: 0;
@@ -429,7 +429,7 @@
 		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
-		top: 386px;
+		top: 396px;
 		line-height:50px;
 		text-align: center;
 		align-self: center;
@@ -495,7 +495,7 @@
 			top: -80px;
 		}
 	    #imageContainer {
-	      margin-top: 10px;
+	      margin-top: 30px;
 	    }
 
 	    #interactionContainer {
@@ -514,7 +514,7 @@
 	    #nextButton {
 	      width: 200px;
 	      height: 70px;
-	      top: 270px;
+	      top: 295px;
 		  margin-left:30px;
 	      font-size: 18px;
 	      line-height: 70px;
@@ -525,12 +525,11 @@
 	    .gameMessage {
 	      padding-left:30px;
 		  width:40%;
-	      top: inherit;
 	      font-size: 21px;
 	      color: #000;
 		  line-height: 24px;
 	      font-family: 'open_sansbold';
-	      top:0px;
+	      top:20px;
 	    }
 
 	    .gameTitle {
@@ -594,6 +593,7 @@
 
 	  	#emailFormButton {
 	  		height: 30px;
+			padding: 10px 0;
 	      	width: 50%;
 	      	box-shadow: none;
 	  		line-height: 30px;
@@ -733,7 +733,7 @@
 
 	#imageContainer {
 	 	position: absolute;
-    	margin-top: 125px;
+    	margin-top: 135px;
     	width: 100%;
     	height: 320px;
 	}
@@ -744,7 +744,7 @@
 	.resultImage
 	{
 		width: 350px;
-    height: 320px;
+    	height: 320px;
 	}
 
 	.resultImageDiv {
@@ -763,20 +763,20 @@
 		position: absolute;
 	}
 	.confirmationMessage {
-	  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
-	  width: 80%;
-	  z-index: 6;
-	  font-size: 1.5em;
-	  letter-spacing: 1px;
-	  color: white;
-	  text-align: center;
-	  position: relative;
-      top: 80px;
-      left: 0px;
-      -webkit-justify-content: center;
-      -webkit-align-self: center;
-      align-self: center;
-      justify-content: center;
+		font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+		width: 80%;
+		z-index: 6;
+		font-size: 1.5em;
+		letter-spacing: 1px;
+		color: white;
+		text-align: center;
+		position: relative;
+		top: 80px;
+		left: 0px;
+		-webkit-justify-content: center;
+		-webkit-align-self: center;
+		align-self: center;
+		justify-content: center;
 	}
 	.gameImageGridImageContainer {
 		width: 170px;
@@ -785,7 +785,6 @@
 		padding: 1px 1px 1px 1px !important;
 		z-index: 1;
 		overflow: hidden;
-
 	}
 	.gameImageGridImage {
 		width: 170px;
@@ -876,7 +875,7 @@
 	#nextButton {
 	   border: 1px solid #F0F0F0;
 		height: 40px;
-		width: 100%;
+		width: 98%;
 		margin: 0px;
 		color: #000000;
 		background: transparent;
@@ -1054,7 +1053,7 @@
 		font-family: 'open_sansbold';
 		font-size: 1.25em;
 		position: relative;
-		top: 370px;
+		top: 380px;
 		line-height: 50px;
 		text-align: center;
 		align-self: center;
@@ -1064,6 +1063,7 @@
 		-webkit-appearance: none;
 		-webkit-border-radius: 0px;
 		text-decoration: none;
+		padding: initial;
 	}
 
 	.gameMessageSmallText {
